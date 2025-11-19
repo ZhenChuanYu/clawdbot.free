@@ -18,20 +18,20 @@ export default function Footer() {
 
           {/* Links */}
           <div className="md:col-span-2">
-            <h4 className="text-sm font-semibold text-gray-900 mb-4">Product</h4>
+            <h3 className="text-sm font-semibold text-gray-900 mb-4">Official Google</h3>
             <ul className="space-y-3 text-sm">
               <li>
-                <a href="#features" className="text-gray-600 hover:text-gray-900 transition-colors">
+                <a href="#features" className="text-gray-600 hover:text-gray-900 transition-colors" title="View Gemini 3 Features">
                   Features
                 </a>
               </li>
               <li>
-                <a href="#capabilities" className="text-gray-600 hover:text-gray-900 transition-colors">
+                <a href="#capabilities" className="text-gray-600 hover:text-gray-900 transition-colors" title="Gemini 3.0 Capabilities">
                   Capabilities
                 </a>
               </li>
               <li>
-                <a href="#get-started" className="text-gray-600 hover:text-gray-900 transition-colors">
+                <a href="#get-started" className="text-gray-600 hover:text-gray-900 transition-colors" title="Get Started with Gemini 3">
                   Get Started
                 </a>
               </li>
@@ -39,15 +39,15 @@ export default function Footer() {
           </div>
 
           <div className="md:col-span-2">
-            <h4 className="text-sm font-semibold text-gray-900 mb-4">Legal</h4>
+            <h3 className="text-sm font-semibold text-gray-900 mb-4">Legal</h3>
             <ul className="space-y-3 text-sm">
               <li>
-                <Link to="/privacy-policy" className="text-gray-600 hover:text-gray-900 transition-colors">
+                <Link to="/privacy-policy" className="text-gray-600 hover:text-gray-900 transition-colors" title="Privacy Policy">
                   Privacy
                 </Link>
               </li>
               <li>
-                <Link to="/terms-of-service" className="text-gray-600 hover:text-gray-900 transition-colors">
+                <Link to="/terms-of-service" className="text-gray-600 hover:text-gray-900 transition-colors" title="Terms of Service">
                   Terms
                 </Link>
               </li>
@@ -55,7 +55,7 @@ export default function Footer() {
           </div>
 
           <div className="md:col-span-4">
-            <h4 className="text-sm font-semibold text-gray-900 mb-4">Notice</h4>
+            <h3 className="text-sm font-semibold text-gray-900 mb-4">Gemini 3 Community</h3>
             <p className="text-xs text-gray-500 leading-relaxed">
               Independent community platform. Not affiliated with Google LLC. 
               Provides paid access to official Gemini API services.

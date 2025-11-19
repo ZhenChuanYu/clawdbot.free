@@ -28,11 +28,11 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
+          <Link to="/" className="flex items-center gap-2 group" title="Gemini 3 Home">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-lg blur opacity-40 group-hover:opacity-60 transition-opacity"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-lg blur opacity-40 group-hover:opacity-60 transition-opacity" aria-hidden="true"></div>
               <div className="relative w-8 h-8 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center">
-                <Sparkles className="w-4 h-4 text-white" strokeWidth={2.5} />
+                <Sparkles className="w-4 h-4 text-white" strokeWidth={2.5} aria-label="Gemini 3 logo icon" />
               </div>
             </div>
             <span className="text-base font-semibold text-gray-900 tracking-tight">Gemini3</span>
@@ -51,6 +51,7 @@ export default function Header() {
                 }
               }}
               className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-all"
+              title="Gemini 3 Home"
             >
               Home
             </a>
@@ -58,6 +59,7 @@ export default function Header() {
               href="#features"
               onClick={(e) => handleSectionClick(e, 'features')}
               className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-all"
+              title="Gemini 3 Features"
             >
               Features
             </a>
@@ -65,6 +67,7 @@ export default function Header() {
               href="#capabilities"
               onClick={(e) => handleSectionClick(e, 'capabilities')}
               className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-all"
+              title="Gemini 3.0 Capabilities"
             >
               Capabilities
             </a>
@@ -76,6 +79,7 @@ export default function Header() {
               href="#get-started"
               onClick={(e) => handleSectionClick(e, 'get-started')}
               className="px-5 py-2 bg-gray-900 text-white text-sm font-medium rounded-lg hover:bg-gray-800 transition-all duration-200"
+              title="Get Started with Gemini 3"
             >
               Get Started
             </a>

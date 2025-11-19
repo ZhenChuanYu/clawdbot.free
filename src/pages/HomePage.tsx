@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ArrowRight, Sparkles, Brain, Code, Zap, Shield, Globe, MessageSquare } from 'lucide-react'
+import { ArrowRight, Sparkles, Brain, Code, Zap, Shield, Globe, MessageSquare, Target, Laptop, Palette } from 'lucide-react'
 
 export default function HomePage() {
   return (
@@ -26,17 +26,17 @@ export default function HomePage() {
                 <span>Released November 18, 2025</span>
               </div>
 
-              {/* Main Headline */}
+              {/* Main Headline - H1 (Only One) */}
               <h1 className="text-6xl md:text-8xl font-bold text-gray-900 mb-6 tracking-tight leading-none">
-                Gemini 3
+                Gemini 3 & Gemini 3.0
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-600 mb-4 font-light max-w-3xl mx-auto">
-                Google's most advanced AI model
+                Community platform for Gemini AI information
               </p>
 
               <p className="text-base md:text-lg text-gray-500 mb-12 font-light max-w-2xl mx-auto leading-relaxed">
-                PhD-level reasoning • 1M token context • Industry-leading multimodal capabilities
+                Educational resources • Developer tutorials • Community support
               </p>
 
               {/* CTA */}
@@ -91,10 +91,10 @@ export default function HomePage() {
               className="text-center mb-20"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Core Capabilities
+                Gemini 3 Information and Resources
               </h2>
               <p className="text-lg text-gray-600 font-light">
-                Built on Gemini 2.5 Pro with revolutionary upgrades
+                Learn about Google's Gemini AI model capabilities
               </p>
             </motion.div>
 
@@ -102,38 +102,38 @@ export default function HomePage() {
               {[
                 {
                   icon: Brain,
-                  title: 'PhD-Level Reasoning',
-                  description: '91.9% GPQA Diamond • 37.5% Humanity\'s Last Exam • Deep Think mode',
+                  title: 'Gemini 3 PhD-Level Reasoning',
+                  description: 'Gemini 3.0 achieves 91.9% GPQA Diamond • 37.5% Humanity\'s Last Exam • Deep Think mode',
                   gradient: 'from-blue-500 to-cyan-500',
                 },
                 {
                   icon: MessageSquare,
-                  title: '1M Token Context',
-                  description: 'Process entire codebases, massive documents, or hours of video',
+                  title: 'Gemini 3.0 Context Window',
+                  description: 'Gemini 3 offers 1M token context to process entire codebases and massive documents',
                   gradient: 'from-cyan-500 to-blue-500',
                 },
                 {
                   icon: Code,
-                  title: 'Agentic Coding',
-                  description: '76.2% SWE-bench • 1487 Elo WebDev • 35% accuracy improvement',
+                  title: 'Gemini 3 Agentic Coding',
+                  description: 'Gemini 3.0 scores 76.2% SWE-bench • 1487 Elo WebDev • 35% accuracy improvement',
                   gradient: 'from-purple-500 to-pink-500',
                 },
                 {
                   icon: Globe,
-                  title: 'Multimodal Mastery',
-                  description: '81% MMMU-Pro • 87.6% Video-MMMU • Seamless fusion',
+                  title: 'Gemini 3.0 Multimodal',
+                  description: 'Gemini 3 achieves 81% MMMU-Pro • 87.6% Video-MMMU • Seamless multimodal fusion',
                   gradient: 'from-pink-500 to-rose-500',
                 },
                 {
                   icon: Zap,
-                  title: 'LMArena Leader',
-                  description: '1501 Elo score • 23.4% MathArena Apex • State-of-the-art',
+                  title: 'Gemini 3 LMArena Leader',
+                  description: 'Gemini 3.0 leads with 1501 Elo score • 23.4% MathArena Apex • State-of-the-art',
                   gradient: 'from-orange-500 to-yellow-500',
                 },
                 {
                   icon: Shield,
-                  title: 'Maximum Safety',
-                  description: '72.1% SimpleQA • Frontier Safety Framework • Industry-leading',
+                  title: 'Gemini 3.0 Safety',
+                  description: 'Gemini 3 provides 72.1% SimpleQA • Frontier Safety Framework • Industry-leading',
                   gradient: 'from-green-500 to-emerald-500',
                 },
               ].map((feature, i) => (
@@ -167,53 +167,53 @@ export default function HomePage() {
               className="text-center mb-20"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Breakthrough Performance
+                Gemini 3 and Gemini 3.0 Performance
               </h2>
               <p className="text-lg text-gray-600 font-light">
-                Setting new standards across all AI benchmarks
+                Gemini 3 sets new standards across all AI benchmarks
               </p>
             </motion.div>
 
             <div className="grid md:grid-cols-2 gap-8">
               {[
                 {
-                  title: 'Reasoning Excellence',
-                  emoji: '🎯',
+                  title: 'Gemini 3 Reasoning',
+                  icon: Target,
                   metrics: [
-                    { label: 'Humanity\'s Last Exam', value: '37.5%', desc: 'PhD-level reasoning' },
-                    { label: 'GPQA Diamond', value: '91.9%', desc: 'Graduate science' },
-                    { label: 'MathArena Apex', value: '23.4%', desc: 'Mathematics SOTA' },
-                    { label: 'ARC-AGI-2', value: '45.1%', desc: 'Deep Think mode' },
+                    { label: 'Humanity\'s Last Exam', value: '37.5%', desc: 'Gemini 3 PhD-level' },
+                    { label: 'GPQA Diamond', value: '91.9%', desc: 'Gemini 3.0 science' },
+                    { label: 'MathArena Apex', value: '23.4%', desc: 'Gemini 3 math SOTA' },
+                    { label: 'ARC-AGI-2', value: '45.1%', desc: 'Gemini 3.0 Deep Think' },
                   ],
                 },
                 {
-                  title: 'Coding Mastery',
-                  emoji: '💻',
+                  title: 'Gemini 3.0 Coding',
+                  icon: Laptop,
                   metrics: [
-                    { label: 'SWE-bench Verified', value: '76.2%', desc: 'Software engineering' },
-                    { label: 'WebDev Arena', value: '1487', desc: 'Elo score' },
-                    { label: 'Terminal-Bench 2.0', value: '54.2%', desc: 'Command-line' },
-                    { label: 'Accuracy Improvement', value: '+35%', desc: 'vs Gemini 2.5 Pro' },
+                    { label: 'SWE-bench Verified', value: '76.2%', desc: 'Gemini 3 engineering' },
+                    { label: 'WebDev Arena', value: '1487', desc: 'Gemini 3.0 Elo' },
+                    { label: 'Terminal-Bench 2.0', value: '54.2%', desc: 'Gemini 3 CLI' },
+                    { label: 'Accuracy Improvement', value: '+35%', desc: 'Gemini 3.0 boost' },
                   ],
                 },
                 {
-                  title: 'Multimodal Power',
-                  emoji: '🎨',
+                  title: 'Gemini 3 Multimodal',
+                  icon: Palette,
                   metrics: [
-                    { label: 'MMMU-Pro', value: '81%', desc: 'Multimodal understanding' },
-                    { label: 'Video-MMMU', value: '87.6%', desc: 'Video comprehension' },
-                    { label: 'Context Window', value: '1M', desc: 'Tokens' },
-                    { label: 'Document Processing', value: '+50%', desc: 'Low-quality docs' },
+                    { label: 'MMMU-Pro', value: '81%', desc: 'Gemini 3.0 understanding' },
+                    { label: 'Video-MMMU', value: '87.6%', desc: 'Gemini 3 video' },
+                    { label: 'Context Window', value: '1M', desc: 'Gemini 3.0 tokens' },
+                    { label: 'Document Processing', value: '+50%', desc: 'Gemini 3 docs' },
                   ],
                 },
                 {
-                  title: 'Safety & Reliability',
-                  emoji: '🛡️',
+                  title: 'Gemini 3.0 Safety',
+                  icon: Shield,
                   metrics: [
-                    { label: 'SimpleQA Verified', value: '72.1%', desc: 'Factual accuracy' },
-                    { label: 'Safety Framework', value: '✓', desc: 'Frontier certified' },
-                    { label: 'Error Reduction', value: '-30%', desc: 'Tool calling' },
-                    { label: 'Prompt Injection', value: 'Low', desc: 'Risk level' },
+                    { label: 'SimpleQA Verified', value: '72.1%', desc: 'Gemini 3 accuracy' },
+                    { label: 'Safety Framework', value: '✓', desc: 'Gemini 3.0 certified' },
+                    { label: 'Error Reduction', value: '-30%', desc: 'Gemini 3 tools' },
+                    { label: 'Prompt Injection', value: 'Low', desc: 'Gemini 3.0 risk' },
                   ],
                 },
               ].map((category, i) => (
@@ -226,7 +226,9 @@ export default function HomePage() {
                   className="p-8 bg-white border border-gray-200 rounded-2xl"
                 >
                   <div className="flex items-center gap-3 mb-6">
-                    <span className="text-3xl">{category.emoji}</span>
+                    <div className="inline-flex p-2 bg-gray-100 rounded-lg">
+                      <category.icon className="w-6 h-6 text-gray-900" strokeWidth={2} />
+                    </div>
                     <h3 className="text-xl font-semibold text-gray-900">{category.title}</h3>
                   </div>
                   <div className="space-y-4">
@@ -257,7 +259,7 @@ export default function HomePage() {
               className="text-center"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                About Gemini3.us
+                About Gemini 3 Platform
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
                 Community-driven platform providing access to Google's most advanced AI model. 
@@ -287,10 +289,10 @@ export default function HomePage() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Ready to get started?
+                Get Started with Gemini 3
               </h2>
               <p className="text-lg text-gray-400 mb-10 font-light">
-                Join our community and start building with Gemini 3 AI today
+                Access official Gemini 3.0 resources and community support
               </p>
               <button className="group inline-flex items-center gap-2 px-8 py-4 bg-white text-gray-900 text-base font-medium rounded-lg hover:bg-gray-100 transition-all">
                 Get Started
