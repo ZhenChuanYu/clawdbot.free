@@ -8,7 +8,13 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-4">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-7 h-7 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-lg"></div>
+              <img 
+                src="/128.webp" 
+                alt="Gemini 3 Logo" 
+                width="28"
+                height="28"
+                className="w-7 h-7 rounded-xl object-cover"
+              />
               <span className="text-base font-semibold text-gray-900">Gemini3</span>
             </div>
             <p className="text-sm text-gray-500 leading-relaxed max-w-xs">

@@ -28,7 +28,7 @@ export default function HomePage() {
 
               {/* Main Headline - H1 (Only One) */}
               <h1 className="text-6xl md:text-8xl font-bold text-gray-900 mb-6 tracking-tight leading-none">
-                Gemini 3 & Gemini 3.0
+                Gemini 3
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-600 mb-4 font-light max-w-3xl mx-auto">

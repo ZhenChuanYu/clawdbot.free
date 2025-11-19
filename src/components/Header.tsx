@@ -1,5 +1,4 @@
 import { Link, useNavigate, useLocation } from 'react-router-dom'
-import { Sparkles } from 'lucide-react'
 
 export default function Header() {
   const navigate = useNavigate()
@@ -30,10 +29,14 @@ export default function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group" title="Gemini 3 Home">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-lg blur opacity-40 group-hover:opacity-60 transition-opacity" aria-hidden="true"></div>
-              <div className="relative w-8 h-8 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center">
-                <Sparkles className="w-4 h-4 text-white" strokeWidth={2.5} aria-label="Gemini 3 logo icon" />
-              </div>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-xl blur opacity-40 group-hover:opacity-60 transition-opacity" aria-hidden="true"></div>
+              <img 
+                src="/128.webp" 
+                alt="Gemini 3 Logo" 
+                width="32"
+                height="32"
+                className="relative w-8 h-8 rounded-xl object-cover group-hover:scale-105 transition-transform duration-200"
+              />
             </div>
             <span className="text-base font-semibold text-gray-900 tracking-tight">Gemini3</span>
           </Link>
