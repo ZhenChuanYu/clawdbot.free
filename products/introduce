@@ -1,0 +1,8 @@
+Google 于 2025 年 11 月 18 日正式发布了 Gemini 3，这是其最先进的 AI 模型系列，基于 Gemini 2.5 Pro 的基础进行了全面升级，集成了多模态、代理能力和推理优化，旨在提供更智能、更可靠的交互体验。 与前代模型相比，Gemini 3 在基准测试中全面领先，例如在 LMArena Leaderboard 上达到 1501 Elo 分数（领先排行榜），在数学和推理任务中创下新纪录。 以下是其在关键方面的具体进步和提升：
+
+推理能力（Reasoning）：Gemini 3 显著提升了深度理解和细微推理，能更好地捕捉上下文、意图和线索，提供更直接、深刻的响应。在 PhD 级推理基准 Humanity’s Last Exam 上得分 37.5%（无工具），GPQA Diamond 上 91.9%，MathArena Apex 上 23.4%（数学新 SOTA）。 新增 Deep Think 模式进一步强化复杂逻辑、数学和谜题处理，在 ARC-AGI-2 上得分 45.1%（带代码执行）。 与 Gemini 2.5 Pro 相比，软件工程挑战解决准确率提升 35%。
+多模态理解（Multimodal Capabilities）：支持文本、图像、视频、音频和代码的无缝融合，上下文窗口扩展至 100 万 token，提升长上下文性能。 在 MMMU-Pro（多模态理解）上得分 81%，Video-MMMU 上 87.6%。 企业应用中，能分析医疗扫描、生成播客转录或从模糊图像预测设备故障，处理低质量文档照片的准确率提升 50% 以上。
+编码与开发（Coding and Development）：引入代理编码（agentic coding）和零-shot 生成，支持快速原型设计和遗留代码迁移。在 WebDev Arena 上得分 1487 Elo，Terminal-Bench 2.0 上 54.2%，SWE-bench Verified 上 76.2%。 开发者工具中，指令遵循和工具调用错误减少 30%，前端界面生成质量大幅提升。
+规划与代理工作流（Planning and Agentic Workflows）：优化长时程任务执行，如金融规划和合同评估，在 Vending-Bench 2 上领先工具使用一致性。 新 Gemini Agent 工具支持自主任务执行，集成 Google Antigravity 平台。
+安全性和可靠性（Safety and Reliability）：作为最安全的模型，减少奉承行为（sycophancy）和提示注入风险，通过 Frontier Safety Framework 全面评估，提升事实准确性（SimpleQA Verified 上 72.1%）。
+集成与新功能（Integrations and New Features）：深度集成 Google 生态，如 Search 的 AI Mode（生成式 UI 和动态视图）、Gemini 应用重设计、Vertex AI 和 Docs。 支持生成互动闪卡、翻译手写食谱，以及沉浸式杂志式界面，提供更简洁、对话式的响应。

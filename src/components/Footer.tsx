@@ -1,0 +1,80 @@
+import { Link } from 'react-router-dom'
+
+export default function Footer() {
+  return (
+    <footer className="border-t border-gray-100 bg-white">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+        <div className="grid md:grid-cols-12 gap-12 mb-12">
+          {/* Brand */}
+          <div className="md:col-span-4">
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-7 h-7 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-lg"></div>
+              <span className="text-base font-semibold text-gray-900">Gemini3</span>
+            </div>
+            <p className="text-sm text-gray-500 leading-relaxed max-w-xs">
+              Access Google's most advanced AI model through our community platform.
+            </p>
+          </div>
+
+          {/* Links */}
+          <div className="md:col-span-2">
+            <h4 className="text-sm font-semibold text-gray-900 mb-4">Product</h4>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <a href="#features" className="text-gray-600 hover:text-gray-900 transition-colors">
+                  Features
+                </a>
+              </li>
+              <li>
+                <a href="#capabilities" className="text-gray-600 hover:text-gray-900 transition-colors">
+                  Capabilities
+                </a>
+              </li>
+              <li>
+                <a href="#get-started" className="text-gray-600 hover:text-gray-900 transition-colors">
+                  Get Started
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="md:col-span-2">
+            <h4 className="text-sm font-semibold text-gray-900 mb-4">Legal</h4>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <Link to="/privacy-policy" className="text-gray-600 hover:text-gray-900 transition-colors">
+                  Privacy
+                </Link>
+              </li>
+              <li>
+                <Link to="/terms-of-service" className="text-gray-600 hover:text-gray-900 transition-colors">
+                  Terms
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="md:col-span-4">
+            <h4 className="text-sm font-semibold text-gray-900 mb-4">Notice</h4>
+            <p className="text-xs text-gray-500 leading-relaxed">
+              Independent community platform. Not affiliated with Google LLC. 
+              Provides paid access to official Gemini API services.
+            </p>
+          </div>
+        </div>
+
+        {/* Bottom */}
+        <div className="pt-8 border-t border-gray-100">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-xs text-gray-500">
+              © 2025 Gemini3.us. All rights reserved.
+            </p>
+            <p className="text-xs text-gray-400">
+              Powered by Google Gemini API
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  )
+}
