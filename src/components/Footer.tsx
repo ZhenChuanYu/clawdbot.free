@@ -8,9 +8,9 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-4">
             <div className="flex items-center gap-2 mb-4">
-              <img 
-                src="/128.webp" 
-                alt="Gemini 3 Logo" 
+              <img
+                src="/128.webp"
+                alt="Gemini 3 Logo"
                 width="28"
                 height="28"
                 className="w-7 h-7 rounded-xl object-cover"
@@ -37,7 +37,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#get-started" className="text-gray-600 hover:text-gray-900 transition-colors" title="Get Started with Gemini 3">
+                <a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-colors" title="Get Started with Gemini">
                   Get Started
                 </a>
               </li>
@@ -63,7 +63,7 @@ export default function Footer() {
           <div className="md:col-span-4">
             <h3 className="text-sm font-semibold text-gray-900 mb-4">Gemini 3 Community</h3>
             <p className="text-xs text-gray-500 leading-relaxed">
-              Independent community platform. Not affiliated with Google LLC. 
+              Independent community platform. Not affiliated with Google LLC.
               Provides paid access to official Gemini API services.
             </p>
           </div>
