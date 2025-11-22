@@ -1,0 +1,10 @@
+访问 RealFaviconGenerator：https://realfavicongenerator.net/
+上传高清logo（至少512x512 PNG）
+下载生成的favicon包
+替换 
+public\favicon.ico
+生成后的文件应该：
+
+✅ 包含 16x16, 32x32, 48x48 三个尺寸
+✅ 文件大小在 15-50KB 之间
+✅ 符合谷歌搜索结果标准

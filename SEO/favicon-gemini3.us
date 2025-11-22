@@ -1,0 +1,21 @@
+admin@ip-172-31-29-110:/var/html/newapi$ curl -I https://gemini3.us/favicon.ico
+HTTP/2 200
+date: Fri, 21 Nov 2025 19:42:57 GMT
+content-type: image/vnd.microsoft.icon
+access-control-allow-origin: *
+cache-control: public, max-age=14400, must-revalidate
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+permissions-policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-xss-protection: 1; mode=block
+vary: accept-encoding
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=XFxd1ULDbHB77Gqfq52sR3TLyvP9AAT6txevuiw0xaCW6J0XkZxRPLJoO5hS2LNczu75TYsL81VAu%2BGOrfBNqGZ%2BLZ%2B2Nsivfuw%3D"}]}
+etag: W/"b1153cc53c44573ac78204f59970cc18"
+server: cloudflare
+cf-cache-status: REVALIDATED
+cf-ray: 9a22ac5bc9740dcf-PDX
+alt-svc: h3=":443"; ma=86400
+
+admin@ip-172-31-29-110:/var/html/newapi$

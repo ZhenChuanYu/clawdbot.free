@@ -1,0 +1,57 @@
+要检查一个网站的 favicon 是否能在 Google 搜索结果（SERP）中正常显示，可以用以下几种工具和方法组合验证，最常用且靠谱的几个如下：
+
+### 1. Google 官方的富媒体结果测试工具（Rich Results Test）
+链接：https://search.google.com/test/rich-results
+
+- 输入你的网址（可以是首页或任意页面）
+- 测试完成后，往下拉会专门有一项 “Favicon” 的检测
+- 它会明确告诉你：
+  - Google 是否检测到了你的 favicon
+  - 图标尺寸是否符合要求（最低 48×48px，推荐 512×512px，且必须是正方形）
+  - 是否有多尺寸版本（多个 <link rel="icon">）
+  - 是否可以通过公开 URL 直接访问（不能被 robots.txt 屏蔽）
+  - 是否有缓存问题
+
+这是最权威的工具，如果这里显示“检测到 favicon”且没有错误，基本就能在 Google 搜索结果中显示。
+
+### 2. Google Favicon 抓取模拟工具
+Google 官方提供的 favicon 检查器（最直接看 Google 怎么抓你的图标）：
+https://www.google.com/s2/favicons?domain=yourdomain.com
+
+用法：
+把 yourdomain.com 换成你的域名，比如：
+https://www.google.com/s2/favicons?domain=baidu.com
+
+- 如果返回一个清晰的 16×16 或 32×32 像素的 favicon，说明 Google 已经成功抓取并缓存了
+- 如果返回灰色缺省图标，说明 Google 目前没抓到或抓错了
+
+### 3. 手动强制刷新 Google 的 favicon 缓存
+有时即使你改了 favicon，Google 还是显示旧的，可以用这个 URL 强制让 Google 重新抓取：
+
+```
+https://www.google.com/s2/favicons?sz=64&domain=yourdomain.com
+```
+
+多访问几次，或者换不同 sz 参数（16、32、64、128），可以刺激 Google 重新爬取。
+
+### 4. 实时搜索验证（最终确认）
+在 Google 搜索框直接 site:yourdomain.com  
+- 如果你的网站排名靠前（一般前几页），看看标题左侧是不是已经换成新 favicon
+- 注意：Google favicon 更新通常需要 1-7 天，有时甚至几周，改完后耐心等几天
+
+### 5. 其他辅助工具
+- https://realfavicongenerator.net/favicon_checker  
+  （专门检查 favicon 在各种环境下的表现，包括 Google）
+- https://technicalseo.com/tools/favicon/  
+  （批量检查多个域名）
+- 用浏览器开发者工具查看 Network，看 /favicon.ico 或 <link rel="icon"> 是否 200 且响应快
+
+### 总结：推荐检查流程
+1. 先上 Rich Results Test，看 Google 官方有没有报错
+2. 打开 https://www.google.com/s2/favicons?domain=你的域名，看实际抓出来的是不是你想要的图标
+3. site:你的域名 看真实搜索结果
+4. 如果还是旧的，等几天或多触发几次抓取
+
+只要 Rich Results Test 通过 + favicon 文件公开可访问 + 尺寸≥48px 且是正方形，99% 的情况下都会正常显示。
+
+有具体网站的话可以把域名发我，我帮你直接测一下现在 Google 抓的是啥样。
