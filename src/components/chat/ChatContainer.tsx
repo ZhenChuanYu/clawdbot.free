@@ -1,17 +1,24 @@
-import React, { useState, useRef, useEffect, useMemo } from 'react'
+import React, { useState, useRef, useEffect, useMemo, useImperativeHandle, forwardRef } from 'react'
 import { ChatMessage } from './ChatMessage'
 import { ChatInput } from './ChatInput'
 import type { ChatMessage as ChatMessageType, AIMessage, StreamingState } from '../../types/chat'
 import { createOpenAIClient } from '../../services/ai/openai'
-import { getApiKey, getBaseUrl, getDefaultModel } from '../../services/ai/api'
+import { getApiKey, getBaseUrl, getDefaultModel, getDefaultProvider } from '../../services/ai/api'
 
 interface ChatContainerProps {
   initialMessage?: string
+  showInput?: boolean // 是否显示输入框，默认 true
 }
 
-export const ChatContainer: React.FC<ChatContainerProps> = ({
-  initialMessage
-}) => {
+// 暴露给父组件的方法
+export interface ChatContainerRef {
+  sendMessage: (message: string) => void
+}
+
+export const ChatContainer = forwardRef<ChatContainerRef, ChatContainerProps>(({
+  initialMessage,
+  showInput = true
+}, ref) => {
   const [messages, setMessages] = useState<ChatMessageType[]>([])
   const [displayList, setDisplayList] = useState<ChatMessageType[]>([])
   const [loading, setLoading] = useState(false)
@@ -23,19 +30,28 @@ export const ChatContainer: React.FC<ChatContainerProps> = ({
   })
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const abortControllerRef = useRef<AbortController | null>(null)
+  const messagesRef = useRef<ChatMessageType[]>([]) // 用于在异步操作中获取最新的消息列表
 
   // 创建 AI 客户端
   const aiClient = useMemo(() => {
     try {
-      const apiKey = getApiKey()
-      const baseUrl = getBaseUrl()
+      // 使用 WorldBase（与 OpenAI 兼容）
+      const provider = getDefaultProvider()
+      const apiKey = getApiKey(provider)
+      const baseUrl = getBaseUrl(provider)
       const model = getDefaultModel()
+      console.log('[ChatContainer] Creating AI client:', { provider, model, baseUrl })
       return createOpenAIClient(apiKey, model, baseUrl)
     } catch (error) {
       console.error('Failed to create AI client:', error)
       return null
     }
   }, [])
+
+  // 同步 messagesRef 和 messages 状态
+  useEffect(() => {
+    messagesRef.current = messages
+  }, [messages])
 
   // 自动滚动到底部
   const scrollToBottom = () => {
@@ -88,9 +104,11 @@ export const ChatContainer: React.FC<ChatContainerProps> = ({
   // 开始 AI 流式响应
   const startAIStream = async (userMessage: string) => {
     if (!aiClient) {
-      console.error('AI client not initialized')
+      console.error('[ChatContainer] AI client not initialized')
       return
     }
+
+    console.log('[ChatContainer] Starting AI stream for message:', userMessage)
 
     setLoading(true)
 
@@ -106,7 +124,7 @@ export const ChatContainer: React.FC<ChatContainerProps> = ({
       modelName: getDefaultModel()
     }
 
-    // 更新消息列表
+    // 更新消息列表（添加 AI 消息占位符）
     setMessages(prev => [...prev, aiMessage])
     setDisplayList(prev => [...prev, aiMessage])
 
@@ -122,35 +140,51 @@ export const ChatContainer: React.FC<ChatContainerProps> = ({
     const controller = new AbortController()
     abortControllerRef.current = controller
 
-    // 构建对话历史
-    const aiMessages: AIMessage[] = [
-      ...messages.map(msg => ({
-        role: msg.type === 'user' ? 'user' as const : 'assistant' as const,
-        content: msg.content
-      })),
-      {
-        role: 'user',
-        content: userMessage
+    // 使用 ref 获取最新的消息列表来构建对话历史
+    // 等待状态更新完成
+    setTimeout(() => {
+      // 使用 ref 获取最新的消息列表（已经通过 useEffect 同步更新）
+      const currentMessages = messagesRef.current
+      
+      // 构建对话历史（过滤掉空的 AI 消息占位符）
+      const aiMessages: AIMessage[] = currentMessages
+        .filter(msg => {
+          // 如果是 AI 消息且内容为空，说明是占位符，跳过（除了当前正在创建的）
+          if (msg.type === 'ai' && !msg.content && msg.id !== aiMessageId) {
+            return false
+          }
+          return true
+        })
+        .map(msg => ({
+          role: msg.type === 'user' ? 'user' as const : 'assistant' as const,
+          content: msg.content
+        }))
+      
+      console.log('[ChatContainer] Built AI messages:', aiMessages.length, 'messages')
+      console.log('[ChatContainer] AI messages:', aiMessages)
+      
+      let accumulatedBuffer = ''
+      
+      if (!aiClient) {
+        console.error('[ChatContainer] AI client is null in setTimeout')
+        setLoading(false)
+        return
       }
-    ]
-
-    let accumulatedBuffer = ''
-
-    try {
-      await aiClient.createChatCompletionStream(
+      
+      aiClient.createChatCompletionStream(
         aiMessages,
         // onChunk 回调
         (content: string) => {
           accumulatedBuffer += content
 
           // 更新流式状态
-          setStreamingState(prev => ({
-            ...prev,
+          setStreamingState(prevState => ({
+            ...prevState,
             streamBuffer: accumulatedBuffer
           }))
 
           // 更新显示列表中的 AI 消息
-          setDisplayList(prev => prev.map(msg => {
+          setDisplayList(prevList => prevList.map(msg => {
             if (msg.id === aiMessageId) {
               return {
                 ...msg,
@@ -164,15 +198,15 @@ export const ChatContainer: React.FC<ChatContainerProps> = ({
         },
         // onError 回调
         (error: string) => {
-          console.error('Stream error:', error)
-          setStreamingState(prev => ({
-            ...prev,
+          console.error('[ChatContainer] Stream error:', error)
+          setStreamingState(prevState => ({
+            ...prevState,
             error,
             isStreaming: false
           }))
 
           // 更新消息显示错误
-          setDisplayList(prev => prev.map(msg => {
+          setDisplayList(prevList => prevList.map(msg => {
             if (msg.id === aiMessageId) {
               return {
                 ...msg,
@@ -187,46 +221,46 @@ export const ChatContainer: React.FC<ChatContainerProps> = ({
           setLoading(false)
         },
         controller.signal
-      )
+      ).then(() => {
+        // 流式完成
+        setStreamingState(prevState => ({
+          ...prevState,
+          isStreaming: false,
+          currentMessageId: null
+        }))
 
-      // 流式完成
-      setStreamingState(prev => ({
-        ...prev,
-        isStreaming: false,
-        currentMessageId: null
-      }))
-
-      // 更新最终消息
-      setMessages(prev => prev.map(msg => {
-        if (msg.id === aiMessageId) {
-          return {
-            ...msg,
-            content: accumulatedBuffer,
-            loading: false,
-            streaming: false
+        // 更新最终消息
+        setMessages(prevMsgs => prevMsgs.map(msg => {
+          if (msg.id === aiMessageId) {
+            return {
+              ...msg,
+              content: accumulatedBuffer,
+              loading: false,
+              streaming: false
+            }
           }
-        }
-        return msg
-      }))
+          return msg
+        }))
 
-      setDisplayList(prev => prev.map(msg => {
-        if (msg.id === aiMessageId) {
-          return {
-            ...msg,
-            content: accumulatedBuffer,
-            loading: false,
-            streaming: false
+        setDisplayList(prevList => prevList.map(msg => {
+          if (msg.id === aiMessageId) {
+            return {
+              ...msg,
+              content: accumulatedBuffer,
+              loading: false,
+              streaming: false
+            }
           }
-        }
-        return msg
-      }))
+          return msg
+        }))
 
-      setLoading(false)
-    } catch (error) {
-      console.error('Stream processing error:', error)
-      setLoading(false)
-      cleanupStream()
-    }
+        setLoading(false)
+      }).catch((error) => {
+        console.error('[ChatContainer] Stream promise error:', error)
+        setLoading(false)
+        cleanupStream()
+      })
+    }, 0)
   }
 
   // 处理发送消息
@@ -247,6 +281,11 @@ export const ChatContainer: React.FC<ChatContainerProps> = ({
     // 开始 AI 响应
     startAIStream(message)
   }
+
+  // 暴露方法给父组件
+  useImperativeHandle(ref, () => ({
+    sendMessage: handleSendMessage
+  }))
 
   // 处理复制
   const handleCopy = (content: string) => {
@@ -274,7 +313,7 @@ export const ChatContainer: React.FC<ChatContainerProps> = ({
   return (
     <div className="flex flex-col h-full bg-white">
       {/* 消息列表 */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-4">
+      <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-4">
         {displayList.length === 0 ? (
           <div className="text-center text-gray-500 mt-8">
             Start a conversation with Gemini 3
@@ -292,17 +331,21 @@ export const ChatContainer: React.FC<ChatContainerProps> = ({
         <div ref={messagesEndRef} />
       </div>
 
-      {/* 输入框 */}
-      <ChatInput
-        onSendMessage={handleSendMessage}
-        disabled={loading}
-        loading={streamingState.isStreaming}
-        onStopGeneration={handleStopGeneration}
-        placeholder="Type your message..."
-      />
+      {/* 输入框 - 可选 */}
+      {showInput && (
+        <ChatInput
+          onSendMessage={handleSendMessage}
+          disabled={loading}
+          loading={streamingState.isStreaming}
+          onStopGeneration={handleStopGeneration}
+          placeholder="Type your message..."
+        />
+      )}
     </div>
   )
-}
+})
+
+ChatContainer.displayName = 'ChatContainer'
 
 export default ChatContainer
 

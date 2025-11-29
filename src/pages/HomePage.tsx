@@ -1,25 +1,55 @@
-import { useState, lazy, Suspense } from 'react'
+import { useState, lazy, Suspense, useRef, useEffect, forwardRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowRight, Sparkles, Brain, Code, Zap, Shield, Globe, MessageSquare, Target, Laptop, Palette, Send, Square } from 'lucide-react'
+import { ArrowRight, Sparkles, Brain, Code, Zap, Shield, Globe, MessageSquare, Target, Laptop, Palette, Send, Square, X } from 'lucide-react'
+import type { ChatContainerRef } from '../components/chat/ChatContainer'
 
 // 延迟加载 ChatContainer
 const ChatContainer = lazy(() => import('../components/chat/ChatContainer'))
+
+// ChatContainer 包装组件，用于传递 ref
+const ChatContainerWrapper = forwardRef<ChatContainerRef, { initialMessage?: string }>(({ initialMessage }, ref) => {
+  return <ChatContainer ref={ref} initialMessage={initialMessage} showInput={false} />
+})
+
+ChatContainerWrapper.displayName = 'ChatContainerWrapper'
 
 export default function HomePage() {
   const [hasStartedChat, setHasStartedChat] = useState(false)
   const [initialMessage, setInitialMessage] = useState('')
   const [inputValue, setInputValue] = useState('')
+  const [pendingMessage, setPendingMessage] = useState<string | null>(null)
+  const chatContainerRef = useRef<ChatContainerRef>(null)
 
   const handleSendFirstMessage = () => {
     const trimmedValue = inputValue.trim()
     if (trimmedValue && !hasStartedChat) {
+      // 第一次发送：初始化聊天
       setInitialMessage(trimmedValue)
       setHasStartedChat(true)
-      // 滚动到聊天区域
-      setTimeout(() => {
-        document.getElementById('chat-area')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-      }, 100)
+      setInputValue('') // 清空输入框
+    } else if (trimmedValue && hasStartedChat) {
+      // 后续发送：通过状态触发
+      setPendingMessage(trimmedValue)
+      setInputValue('') // 清空输入框
     }
+  }
+
+  // 处理待发送的消息
+  useEffect(() => {
+    if (pendingMessage && chatContainerRef.current) {
+      chatContainerRef.current.sendMessage(pendingMessage)
+      setPendingMessage(null)
+    }
+  }, [pendingMessage])
+
+  // 处理返回首页
+  const handleBackToHome = () => {
+    setHasStartedChat(false)
+    setInitialMessage('')
+    setInputValue('')
+    setPendingMessage(null)
+    // 滚动到顶部
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -67,7 +97,7 @@ export default function HomePage() {
             </motion.div>
           </div>
 
-          {/* 输入框区域 - 独立容器，突破父容器宽度限制 */}
+          {/* 输入框区域 - 初始状态在 Hero 区域 */}
           {!hasStartedChat && (
             <div className="relative w-full max-w-3xl mx-auto px-6 lg:px-8 mb-8">
               <div className="flex gap-4 items-center bg-white rounded-2xl shadow-lg border border-gray-200 p-6 focus-within:border-gray-400 focus-within:shadow-xl transition-all">
@@ -382,32 +412,110 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Chat Section - 显示聊天界面 */}
+        {/* Chat Section - 显示聊天界面（全屏模式） */}
         {hasStartedChat && (
-          <section id="chat-area" className="py-32 bg-gray-50">
-            <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <section id="chat-area" className="fixed inset-0 top-16 bottom-20 bg-gray-50 z-40 overflow-hidden">
+            <div className="h-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.3 }}
+                className="h-full bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden relative"
               >
-                <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden min-h-[600px]">
-                  <Suspense 
-                    fallback={
-                      <div className="h-96 flex items-center justify-center">
-                        <div className="text-center">
-                          <div className="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-                          <p className="text-gray-500 text-sm">Loading chat interface...</p>
-                        </div>
+                {/* 返回按钮 */}
+                <button
+                  onClick={handleBackToHome}
+                  className="absolute top-4 right-4 z-50 p-2 rounded-lg bg-white hover:bg-gray-100 transition-colors text-gray-600 hover:text-gray-900 shadow-md border border-gray-200 hover:border-gray-300"
+                  title="返回首页"
+                  aria-label="返回首页"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+                <Suspense 
+                  fallback={
+                    <div className="h-full flex items-center justify-center">
+                      <div className="text-center">
+                        <div className="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                        <p className="text-gray-500 text-sm">Loading chat interface...</p>
                       </div>
-                    }
-                  >
-                    <ChatContainer initialMessage={initialMessage} />
-                  </Suspense>
-                </div>
+                    </div>
+                  }
+                >
+                  <ChatContainerWrapper ref={chatContainerRef} initialMessage={initialMessage} />
+                </Suspense>
               </motion.div>
             </div>
           </section>
+        )}
+
+        {/* 悬浮输入框 - 固定在底部 */}
+        {hasStartedChat && (
+          <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 shadow-lg">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+              <div className="flex gap-3 items-center bg-gray-50 rounded-xl border border-gray-200 p-3 focus-within:border-gray-400 focus-within:bg-white transition-all">
+                <input
+                  type="text"
+                  value={inputValue}
+                  onChange={(e) => setInputValue(e.target.value)}
+                  onKeyDown={handleKeyDown}
+                  placeholder="Continue the conversation..."
+                  className="flex-1 bg-transparent text-gray-900 placeholder-gray-500 focus:outline-none text-base py-2"
+                />
+                {/* 发送按钮 - 圆形设计 */}
+                <button
+                  onClick={handleSendFirstMessage}
+                  disabled={!inputValue.trim()}
+                  className={`
+                    relative flex-shrink-0 w-10 h-10 rounded-full transition-all duration-300 ease-in-out
+                    flex items-center justify-center group overflow-hidden
+                    ${!inputValue.trim()
+                      ? 'cursor-not-allowed'
+                      : 'shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 cursor-pointer'
+                    }
+                  `}
+                >
+                  {/* 外围圆线 */}
+                  <div className={`
+                    absolute inset-0 rounded-full transition-all duration-300 ease-in-out
+                    border-[2px]
+                    ${!inputValue.trim()
+                      ? 'border-gray-400/30'
+                      : 'border-gray-700/60'
+                    }
+                  `}></div>
+
+                  {/* 内层圆形按钮 */}
+                  <div className={`
+                    rounded-full flex items-center justify-center transition-all duration-300 ease-in-out relative
+                    w-[32px] h-[32px]
+                    ${!inputValue.trim()
+                      ? 'bg-gray-300'
+                      : 'bg-gradient-to-r from-gray-700 to-gray-800 hover:from-gray-800 hover:to-gray-900'
+                    }
+                  `}>
+                    {/* 背景光效 */}
+                    {inputValue.trim() && (
+                      <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-white/30 to-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
+                    )}
+
+                    {/* 图标容器 */}
+                    <div className="relative z-10 flex items-center justify-center">
+                      <Send className={`w-5 h-5 transition-colors duration-200 ${
+                        inputValue.trim()
+                          ? 'text-white'
+                          : 'text-gray-500'
+                      }`} />
+                    </div>
+
+                    {/* 悬停时的光晕效果 */}
+                    {inputValue.trim() && (
+                      <div className="absolute inset-0 bg-gray-700/20 rounded-full blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    )}
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
         )}
 
         {/* CTA Section - Bold & Simple */}

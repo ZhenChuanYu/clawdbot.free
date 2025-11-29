@@ -32,6 +32,11 @@ export class OpenAIClient {
       ...config,
       baseUrl
     }
+    console.log('[OpenAI] Client initialized:', {
+      model: this.config.model,
+      baseUrl: this.config.baseUrl,
+      apiKeyLength: this.config.apiKey.length
+    })
   }
 
   /**
@@ -43,6 +48,12 @@ export class OpenAIClient {
     onError: (error: string) => void,
     signal?: AbortSignal
   ): Promise<void> {
+    console.log('[OpenAI] Starting stream chat completion:', {
+      messagesCount: messages.length,
+      model: this.config.model,
+      baseUrl: this.config.baseUrl
+    })
+    
     try {
       const requestBody = {
         model: this.config.model,
@@ -52,7 +63,14 @@ export class OpenAIClient {
         max_tokens: 4096
       }
 
-      const response = await fetch(`${this.config.baseUrl}/chat/completions`, {
+      const requestUrl = `${this.config.baseUrl}/chat/completions`
+      console.log('[OpenAI] Sending request:', {
+        url: requestUrl,
+        method: 'POST',
+        model: this.config.model
+      })
+
+      const response = await fetch(requestUrl, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.config.apiKey}`,
@@ -62,8 +80,20 @@ export class OpenAIClient {
         signal
       })
 
+      console.log('[OpenAI] Received response:', {
+        status: response.status,
+        statusText: response.statusText,
+        ok: response.ok
+      })
+
       if (!response.ok) {
         const errorText = await response.text()
+        console.error('[OpenAI] Request failed:', {
+          status: response.status,
+          statusText: response.statusText,
+          errorText
+        })
+        
         let errorMessage = `HTTP ${response.status}: ${response.statusText}`
 
         try {
@@ -71,8 +101,9 @@ export class OpenAIClient {
           if (errorData.error?.message) {
             errorMessage = errorData.error.message
           }
+          console.error('[OpenAI] Parsed error info:', errorData)
         } catch {
-          // 忽略解析错误
+          console.warn('[OpenAI] Unable to parse error response as JSON')
         }
 
         throw new Error(errorMessage)
@@ -80,17 +111,24 @@ export class OpenAIClient {
 
       const reader = response.body?.getReader()
       if (!reader) {
+        console.error('[OpenAI] Response body is not readable')
         throw new Error('Response body is not readable')
       }
 
+      console.log('[OpenAI] Starting to read stream data')
       const decoder = new TextDecoder()
       let buffer = ''
+      let chunkCount = 0
 
       try {
         while (true) {
           const { done, value } = await reader.read()
-          if (done) break
+          if (done) {
+            console.log('[OpenAI] Stream reading completed, processed', chunkCount, 'chunks')
+            break
+          }
 
+          chunkCount++
           const chunk = decoder.decode(value, { stream: true })
           buffer += chunk
 
@@ -111,6 +149,7 @@ export class OpenAIClient {
 
               // 流结束标记
               if (data === '[DONE]') {
+                console.log('[OpenAI] Received stream end marker')
                 return
               }
 
@@ -125,11 +164,12 @@ export class OpenAIClient {
 
                 // 检查是否收到结束信号
                 if (finishReason === 'stop') {
+                  console.log('[OpenAI] Received finish_reason: stop, ending stream')
                   return
                 }
               } catch (parseError) {
                 // 忽略无效的 JSON，继续处理
-                console.warn('[OpenAI] Failed to parse SSE data:', parseError)
+                console.warn('[OpenAI] Failed to parse SSE data:', parseError, 'data:', data.substring(0, 100))
               }
             }
           }
