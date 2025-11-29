@@ -1,7 +1,33 @@
-import { motion } from 'framer-motion'
-import { ArrowRight, Sparkles, Brain, Code, Zap, Shield, Globe, MessageSquare, Target, Laptop, Palette } from 'lucide-react'
+import { useState, lazy, Suspense } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { ArrowRight, Sparkles, Brain, Code, Zap, Shield, Globe, MessageSquare, Target, Laptop, Palette, Send, Square } from 'lucide-react'
+
+// 延迟加载 ChatContainer
+const ChatContainer = lazy(() => import('../components/chat/ChatContainer'))
 
 export default function HomePage() {
+  const [hasStartedChat, setHasStartedChat] = useState(false)
+  const [initialMessage, setInitialMessage] = useState('')
+  const [inputValue, setInputValue] = useState('')
+
+  const handleSendFirstMessage = () => {
+    const trimmedValue = inputValue.trim()
+    if (trimmedValue && !hasStartedChat) {
+      setInitialMessage(trimmedValue)
+      setHasStartedChat(true)
+      // 滚动到聊天区域
+      setTimeout(() => {
+        document.getElementById('chat-area')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }, 100)
+    }
+  }
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault()
+      handleSendFirstMessage()
+    }
+  }
   return (
     <div className="min-h-screen bg-white">
       <main className="pt-16">
@@ -38,6 +64,74 @@ export default function HomePage() {
               <p className="text-base md:text-lg text-gray-500 mb-12 font-light max-w-2xl mx-auto leading-relaxed">
                 Educational resources • Developer tutorials • Community support
               </p>
+
+              {/* 输入框区域 */}
+              {!hasStartedChat && (
+                <div className="max-w-2xl mx-auto mb-8">
+                  <div className="flex gap-3 items-center bg-white rounded-xl shadow-lg border border-gray-200 p-4 focus-within:border-gray-400 focus-within:shadow-xl transition-all">
+                    <input
+                      type="text"
+                      value={inputValue}
+                      onChange={(e) => setInputValue(e.target.value)}
+                      onKeyDown={handleKeyDown}
+                      placeholder="Ask Gemini 3 anything..."
+                      className="flex-1 bg-transparent text-gray-900 placeholder-gray-500 focus:outline-none text-base"
+                    />
+                    {/* 发送按钮 - 圆形设计 */}
+                    <button
+                      onClick={handleSendFirstMessage}
+                      disabled={!inputValue.trim()}
+                      className={`
+                        relative flex-shrink-0 w-8 h-8 rounded-full transition-all duration-300 ease-in-out
+                        flex items-center justify-center group overflow-hidden
+                        ${!inputValue.trim()
+                          ? 'cursor-not-allowed'
+                          : 'shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 cursor-pointer'
+                        }
+                      `}
+                    >
+                      {/* 外围圆线 */}
+                      <div className={`
+                        absolute inset-0 rounded-full transition-all duration-300 ease-in-out
+                        border-[2px]
+                        ${!inputValue.trim()
+                          ? 'border-gray-400/30'
+                          : 'border-gray-700/60'
+                        }
+                      `}></div>
+
+                      {/* 内层圆形按钮 */}
+                      <div className={`
+                        rounded-full flex items-center justify-center transition-all duration-300 ease-in-out relative
+                        w-[26px] h-[26px]
+                        ${!inputValue.trim()
+                          ? 'bg-gray-300'
+                          : 'bg-gradient-to-r from-gray-700 to-gray-800 hover:from-gray-800 hover:to-gray-900'
+                        }
+                      `}>
+                        {/* 背景光效 */}
+                        {inputValue.trim() && (
+                          <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-white/30 to-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
+                        )}
+
+                        {/* 图标容器 */}
+                        <div className="relative z-10 flex items-center justify-center">
+                          <Send className={`w-4 h-4 transition-colors duration-200 ${
+                            inputValue.trim()
+                              ? 'text-white'
+                              : 'text-gray-500'
+                          }`} />
+                        </div>
+
+                        {/* 悬停时的光晕效果 */}
+                        {inputValue.trim() && (
+                          <div className="absolute inset-0 bg-gray-700/20 rounded-full blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        )}
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              )}
 
               {/* CTA */}
               <div className="flex items-center justify-center gap-4">
@@ -278,6 +372,34 @@ export default function HomePage() {
             </motion.div>
           </div>
         </section>
+
+        {/* Chat Section - 显示聊天界面 */}
+        {hasStartedChat && (
+          <section id="chat-area" className="py-32 bg-gray-50">
+            <div className="max-w-4xl mx-auto px-6 lg:px-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden min-h-[600px]">
+                  <Suspense 
+                    fallback={
+                      <div className="h-96 flex items-center justify-center">
+                        <div className="text-center">
+                          <div className="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                          <p className="text-gray-500 text-sm">Loading chat interface...</p>
+                        </div>
+                      </div>
+                    }
+                  >
+                    <ChatContainer initialMessage={initialMessage} />
+                  </Suspense>
+                </div>
+              </motion.div>
+            </div>
+          </section>
+        )}
 
         {/* CTA Section - Bold & Simple */}
         <section id="get-started" className="py-32 bg-gray-900 text-white">
