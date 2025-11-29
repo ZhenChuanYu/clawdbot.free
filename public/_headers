@@ -39,5 +39,4 @@
   Cache-Control: public, max-age=3600
 
 /favicon.ico
-  Content-Type: image/x-icon
   Cache-Control: public, max-age=14400
