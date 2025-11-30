@@ -8,12 +8,17 @@ export interface ChatMessage {
   loading?: boolean
   streaming?: boolean
   modelName?: string
+  displayContent?: string
+  thinkingContent?: string
+  answerContent?: string
   attachedFiles?: Array<{
     id: string
     url: string
+    httpsUrl?: string
     type: 'image' | 'file'
     name?: string
     size?: number
+    uploadStatus?: 'pending' | 'uploading' | 'success' | 'failed'
   }>
 }
 

@@ -19,7 +19,7 @@ const parseMarkdown = (text: string, onOpenImageViewer?: (imageUrl: string, imag
       .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // 粗体
       .replace(/\*(.*?)\*/g, '<em>$1</em>') // 斜体
       .replace(/~~(.*?)~~/g, '<del class="line-through">$1</del>') // 删除线
-      .replace(/`([^`]+)`/g, (match, code) => {
+      .replace(/`([^`]+)`/g, (_match, code) => {
         // 对行内代码中的HTML标签进行转义，确保显示为文本
         const escapedCode = code
           .replace(/&/g, '&amp;')
@@ -30,8 +30,7 @@ const parseMarkdown = (text: string, onOpenImageViewer?: (imageUrl: string, imag
         return `<code class="bg-gray-100 px-1 py-0.5 rounded text-sm font-mono">${escapedCode}</code>`
       }) // 行内代码
       // 行内图片 - 在链接之前处理
-      .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (match, altText, imageUrl) => {
-        const imgId = `inline-img-${Math.random().toString(36).substr(2, 9)}`
+      .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (_match, altText, imageUrl) => {
         // 使用 data 属性存储图片信息，稍后通过 React 处理点击事件
         return `<img src="${imageUrl}" alt="${altText}" class="inline-block max-w-full h-auto rounded-lg shadow-md cursor-pointer hover:opacity-80 transition-opacity my-2" data-img-url="${imageUrl}" data-img-alt="${altText}" />`
       })

@@ -1,6 +1,6 @@
 import { useState, lazy, Suspense, useRef, useEffect, forwardRef } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowRight, Sparkles, Brain, Code, Zap, Shield, Globe, MessageSquare, Target, Laptop, Palette, Send, Square, X } from 'lucide-react'
+import { motion } from 'framer-motion'
+import { ArrowRight, Sparkles, Brain, Code, Zap, Shield, Globe, MessageSquare, Target, Laptop, Palette, Send, X } from 'lucide-react'
 import type { ChatContainerRef } from '../components/chat/ChatContainer'
 
 // 延迟加载 ChatContainer
