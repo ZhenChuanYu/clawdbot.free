@@ -461,9 +461,9 @@ export default function HomePage() {
 
         {/* 悬浮输入框 - 固定在底部 */}
         {hasStartedChat && (
-          <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 shadow-lg">
+          <div className="fixed bottom-0 left-0 right-0 z-50 bg-gray-50">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-              <div className="flex gap-3 items-center bg-gray-50 rounded-xl border border-gray-200 p-3 focus-within:border-gray-400 focus-within:bg-white transition-all">
+              <div className="flex gap-3 items-center bg-white rounded-xl border border-gray-200 p-3 focus-within:border-gray-400 focus-within:bg-white transition-all">
                 <input
                   type="text"
                   value={inputValue}
