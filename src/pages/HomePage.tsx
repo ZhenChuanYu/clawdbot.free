@@ -52,6 +52,17 @@ export default function HomePage() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
+  // 处理打开 AI 对话窗口
+  const handleOpenChat = () => {
+    if (!hasStartedChat) {
+      // 如果还没有开始聊天，打开聊天窗口（不发送消息）
+      setHasStartedChat(true)
+      setInitialMessage('')
+      // 滚动到顶部，确保聊天窗口可见
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+  }
+
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault()
@@ -174,13 +185,13 @@ export default function HomePage() {
             >
               {/* CTA */}
               <div className="flex items-center justify-center gap-4">
-                <a
-                  href="#get-started"
+                <button
+                  onClick={handleOpenChat}
                   className="group inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white text-sm font-medium rounded-lg hover:bg-gray-800 transition-all"
                 >
                   Get Started
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </a>
+                </button>
                 <a
                   href="#capabilities"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-white text-gray-900 text-sm font-medium rounded-lg border border-gray-200 hover:border-gray-300 transition-all"
@@ -533,7 +544,10 @@ export default function HomePage() {
               <p className="text-lg text-gray-400 mb-10 font-light">
                 Access official Gemini 3.0 resources and community support
               </p>
-              <button className="group inline-flex items-center gap-2 px-8 py-4 bg-white text-gray-900 text-base font-medium rounded-lg hover:bg-gray-100 transition-all">
+              <button 
+                onClick={handleOpenChat}
+                className="group inline-flex items-center gap-2 px-8 py-4 bg-white text-gray-900 text-base font-medium rounded-lg hover:bg-gray-100 transition-all"
+              >
                 Get Started
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
