@@ -452,8 +452,8 @@ export default function HomePage() {
                 <button
                   onClick={handleBackToHome}
                   className="absolute top-4 left-4 z-50 p-2 rounded-lg bg-white hover:bg-gray-100 transition-colors text-gray-600 hover:text-gray-900 shadow-md border border-gray-200 hover:border-gray-300"
-                  title="返回首页"
-                  aria-label="返回首页"
+                  title="Back to Home"
+                  aria-label="Back to Home"
                 >
                   <X className="w-5 h-5" />
                 </button>

@@ -23,17 +23,17 @@ export const getApiKey = (provider: string = API_CONFIG.DEFAULT_PROVIDER): strin
   if (provider === 'worldbase') {
     const apiKey = API_CONFIG.WORLDBASE_API_KEY
     if (!apiKey) {
-      throw new Error('WorldBase API 密钥未配置，请在环境变量中设置 VITE_WORLDBASE_API_KEY')
+      throw new Error('WorldBase API key is not configured. Please set VITE_WORLDBASE_API_KEY in environment variables')
     }
     return apiKey
   } else if (provider === 'openai') {
     const apiKey = API_CONFIG.OPENAI_API_KEY
     if (!apiKey) {
-      throw new Error('OpenAI API 密钥未配置，请在环境变量中设置 VITE_OPENAI_API_KEY')
+      throw new Error('OpenAI API key is not configured. Please set VITE_OPENAI_API_KEY in environment variables')
     }
     return apiKey
   }
-  throw new Error(`不支持的 API 供应商: ${provider}`)
+  throw new Error(`Unsupported API provider: ${provider}`)
 }
 
 // 获取 API 基础 URL

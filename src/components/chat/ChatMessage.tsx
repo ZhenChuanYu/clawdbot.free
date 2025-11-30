@@ -301,7 +301,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = memo(({
   }
 
   const formatTime = (date: Date) => {
-    return date.toLocaleTimeString('zh-CN', {
+    return date.toLocaleTimeString('en-US', {
       hour: '2-digit',
       minute: '2-digit'
     })
@@ -316,7 +316,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = memo(({
               <div className="w-2 h-2 bg-gray-400 rounded-full animate-pulse"></div>
               <div className="w-2 h-2 bg-gray-400 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
               <div className="w-2 h-2 bg-gray-400 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
-              <span className="text-sm text-gray-500">思考中...</span>
+              <span className="text-sm text-gray-500">Thinking...</span>
             </div>
           </Card>
         </div>
@@ -420,14 +420,14 @@ export const ChatMessage: React.FC<ChatMessageProps> = memo(({
                   <button
                     onClick={handleRegenerate}
                     className="p-1 h-6 w-6 flex items-center justify-center hover:bg-gray-100 rounded transition-colors [&_svg]:text-gray-600"
-                    title="重新生成"
+                    title="Regenerate"
                   >
                     <RotateCcw className="w-[17px] h-[17px] !text-gray-600" />
                   </button>
                   <button
                     onClick={handleCopy}
                     className="p-1 h-6 w-6 flex items-center justify-center hover:bg-gray-100 rounded transition-colors [&_svg]:text-gray-600"
-                    title="复制"
+                    title="Copy"
                   >
                     <Copy className="w-[17px] h-[17px] !text-gray-600" />
                   </button>
