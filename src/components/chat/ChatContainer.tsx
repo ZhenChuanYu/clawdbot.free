@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useMemo, useImperativeHandle, forwardRef } from 'react'
+import { useState, useRef, useEffect, useMemo, useImperativeHandle, forwardRef, useCallback } from 'react'
 import { ChatMessage } from './ChatMessage'
 import { ChatInput } from './ChatInput'
 import type { ChatMessage as ChatMessageType, AIMessage, StreamingState } from '../../types/chat'
@@ -28,7 +28,6 @@ export const ChatContainer = forwardRef<ChatContainerRef, ChatContainerProps>(({
     streamBuffer: '',
     error: null
   })
-  const messagesEndRef = useRef<HTMLDivElement>(null)
   const abortControllerRef = useRef<AbortController | null>(null)
   const messagesRef = useRef<ChatMessageType[]>([]) // 用于在异步操作中获取最新的消息列表
 
@@ -52,15 +51,6 @@ export const ChatContainer = forwardRef<ChatContainerRef, ChatContainerProps>(({
   useEffect(() => {
     messagesRef.current = messages
   }, [messages])
-
-  // 自动滚动到底部
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-  }
-
-  useEffect(() => {
-    scrollToBottom()
-  }, [displayList, streamingState.streamBuffer])
 
   // 处理初始消息
   useEffect(() => {
@@ -177,13 +167,8 @@ export const ChatContainer = forwardRef<ChatContainerRef, ChatContainerProps>(({
         (content: string) => {
           accumulatedBuffer += content
 
-          // 更新流式状态
-          setStreamingState(prevState => ({
-            ...prevState,
-            streamBuffer: accumulatedBuffer
-          }))
-
-          // 更新显示列表中的 AI 消息
+          // 只更新 displayList，减少状态更新次数
+          // streamingState.streamBuffer 主要用于调试，在流式更新时不需要实时更新
           setDisplayList(prevList => prevList.map(msg => {
             if (msg.id === aiMessageId) {
               return {
@@ -222,36 +207,38 @@ export const ChatContainer = forwardRef<ChatContainerRef, ChatContainerProps>(({
         },
         controller.signal
       ).then(() => {
-        // 流式完成
-        setStreamingState(prevState => ({
-          ...prevState,
-          isStreaming: false,
-          currentMessageId: null
-        }))
-
-        // 更新最终消息
-        setMessages(prevMsgs => prevMsgs.map(msg => {
-          if (msg.id === aiMessageId) {
-            return {
-              ...msg,
-              content: accumulatedBuffer,
-              loading: false,
-              streaming: false
-            }
-          }
-          return msg
-        }))
+        // 流式完成 - React 18 会自动批处理这些更新
+        const finalMessage = {
+          content: accumulatedBuffer,
+          loading: false,
+          streaming: false
+        }
 
         setDisplayList(prevList => prevList.map(msg => {
           if (msg.id === aiMessageId) {
             return {
               ...msg,
-              content: accumulatedBuffer,
-              loading: false,
-              streaming: false
+              ...finalMessage
             }
           }
           return msg
+        }))
+
+        setMessages(prevMsgs => prevMsgs.map(msg => {
+          if (msg.id === aiMessageId) {
+            return {
+              ...msg,
+              ...finalMessage
+            }
+          }
+          return msg
+        }))
+
+        setStreamingState(prevState => ({
+          ...prevState,
+          isStreaming: false,
+          currentMessageId: null,
+          streamBuffer: accumulatedBuffer
         }))
 
         setLoading(false)
@@ -287,20 +274,21 @@ export const ChatContainer = forwardRef<ChatContainerRef, ChatContainerProps>(({
     sendMessage: handleSendMessage
   }))
 
-  // 处理复制
-  const handleCopy = (content: string) => {
+  // 处理复制 - 使用 useCallback 优化
+  const handleCopy = useCallback((content: string) => {
     navigator.clipboard.writeText(content)
-  }
+  }, [])
 
-  // 处理重新生成
-  const handleRegenerate = (messageId: string) => {
-    // 找到要重新生成的消息之前的用户消息
-    const messageIndex = messages.findIndex(msg => msg.id === messageId)
+  // 处理重新生成 - 使用 useCallback 优化
+  const handleRegenerate = useCallback((messageId: string) => {
+    // 使用 ref 获取最新的消息列表，避免闭包问题
+    const currentMessages = messagesRef.current
+    const messageIndex = currentMessages.findIndex(msg => msg.id === messageId)
     if (messageIndex > 0) {
-      const userMessage = messages[messageIndex - 1]
+      const userMessage = currentMessages[messageIndex - 1]
       if (userMessage.type === 'user') {
         // 移除当前 AI 消息和之后的所有消息
-        const newMessages = messages.slice(0, messageIndex)
+        const newMessages = currentMessages.slice(0, messageIndex)
         setMessages(newMessages)
         setDisplayList(newMessages)
 
@@ -308,7 +296,7 @@ export const ChatContainer = forwardRef<ChatContainerRef, ChatContainerProps>(({
         startAIStream(userMessage.content)
       }
     }
-  }
+  }, [])
 
   return (
     <div className="flex flex-col h-full bg-white">
@@ -328,7 +316,6 @@ export const ChatContainer = forwardRef<ChatContainerRef, ChatContainerProps>(({
             />
           ))
         )}
-        <div ref={messagesEndRef} />
       </div>
 
       {/* 输入框 - 可选 */}

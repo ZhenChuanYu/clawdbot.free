@@ -20,6 +20,22 @@ export default function HomePage() {
   const [pendingMessage, setPendingMessage] = useState<string | null>(null)
   const chatContainerRef = useRef<ChatContainerRef>(null)
 
+  // 监听全局事件，打开聊天窗口
+  useEffect(() => {
+    const handleOpenChat = () => {
+      if (!hasStartedChat) {
+        setHasStartedChat(true)
+        setInitialMessage('')
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      }
+    }
+
+    window.addEventListener('openChat', handleOpenChat)
+    return () => {
+      window.removeEventListener('openChat', handleOpenChat)
+    }
+  }, [hasStartedChat])
+
   const handleSendFirstMessage = () => {
     const trimmedValue = inputValue.trim()
     if (trimmedValue && !hasStartedChat) {
@@ -50,15 +66,14 @@ export default function HomePage() {
     setPendingMessage(null)
     // 滚动到顶部
     window.scrollTo({ top: 0, behavior: 'smooth' })
+    // 注意：这里不重置 Context 的 isChatOpen，因为 Context 主要用于触发打开
   }
 
   // 处理打开 AI 对话窗口
   const handleOpenChat = () => {
     if (!hasStartedChat) {
-      // 如果还没有开始聊天，打开聊天窗口（不发送消息）
       setHasStartedChat(true)
       setInitialMessage('')
-      // 滚动到顶部，确保聊天窗口可见
       window.scrollTo({ top: 0, behavior: 'smooth' })
     }
   }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { Card } from '../ui/Card'
 import { Toast, useToast } from '../ui/Toast'
 import { Copy, RotateCcw } from 'lucide-react'
@@ -271,7 +271,7 @@ const parseMarkdown = (text: string, onOpenImageViewer?: (imageUrl: string, imag
   return elements.length > 0 ? elements : text
 }
 
-export const ChatMessage: React.FC<ChatMessageProps> = ({
+export const ChatMessage: React.FC<ChatMessageProps> = memo(({
   message,
   onCopy,
   onRegenerate,
@@ -447,6 +447,8 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
       />
     </>
   )
-}
+})
+
+ChatMessage.displayName = 'ChatMessage'
 
 export default ChatMessage

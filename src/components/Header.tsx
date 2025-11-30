@@ -22,6 +22,20 @@ export default function Header() {
     }
   }
 
+  const handleGetStarted = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault()
+    // 如果在首页，触发打开聊天窗口事件
+    if (location.pathname === '/') {
+      window.dispatchEvent(new CustomEvent('openChat'))
+    } else {
+      // 如果不在首页，先导航到首页，然后触发事件
+      navigate('/')
+      setTimeout(() => {
+        window.dispatchEvent(new CustomEvent('openChat'))
+      }, 100)
+    }
+  }
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 glass-effect">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -78,14 +92,13 @@ export default function Header() {
 
           {/* CTA */}
           <div className="flex items-center gap-3">
-            <a
-              href="#get-started"
-              onClick={(e) => handleSectionClick(e, 'get-started')}
+            <button
+              onClick={handleGetStarted}
               className="px-5 py-2 bg-gray-900 text-white text-sm font-medium rounded-lg hover:bg-gray-800 transition-all duration-200"
               title="Get Started with Gemini 3"
             >
               Get Started
-            </a>
+            </button>
           </div>
         </div>
       </div>
