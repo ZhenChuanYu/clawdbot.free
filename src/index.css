@@ -42,4 +42,91 @@
   .glow-effect {
     box-shadow: 0 0 40px rgba(59, 130, 246, 0.15);
   }
+
+  /* 阴影工具类 */
+  .shadow-soft {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  }
+
+  .shadow-medium {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  .shadow-large {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  .shadow-glow {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+
+  /* Emoji优化显示 */
+  .emoji-support {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial,
+      "Segoe UI Emoji", "Apple Color Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif !important;
+    /* 修复空格渲染问题 */
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .emoji-support .emoji {
+    font-family: "Segoe UI Emoji", "Apple Color Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  }
+
+  /* 思考型AI响应样式 */
+  .thinking-section {
+    background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+    border-left: 4px solid #d1d5db;
+    border-radius: 0;
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .thinking-label {
+    font-size: 0.75rem;
+    color: #6b7280;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .thinking-content {
+    color: #374151;
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  .answer-section {
+    animation: fadeInUp 0.3s ease-out;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* AI 正在输出时的光标圆点 */
+  .streaming-cursor::after {
+    content: '\25CF';
+    margin-left: 0.25rem;
+    font-family: sans-serif;
+    animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
 }

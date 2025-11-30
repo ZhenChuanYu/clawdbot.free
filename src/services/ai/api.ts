@@ -15,7 +15,7 @@ export const API_CONFIG = {
   DEFAULT_PROVIDER: 'worldbase' as const,
   
   // 默认模型（WorldBase 支持的模型）
-  DEFAULT_MODEL: 'gpt-4o'
+  DEFAULT_MODEL: 'claude-haiku-4-5-20251001'
 }
 
 // 获取 API 密钥

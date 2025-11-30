@@ -425,7 +425,7 @@ export default function HomePage() {
                 {/* 返回按钮 */}
                 <button
                   onClick={handleBackToHome}
-                  className="absolute top-4 right-4 z-50 p-2 rounded-lg bg-white hover:bg-gray-100 transition-colors text-gray-600 hover:text-gray-900 shadow-md border border-gray-200 hover:border-gray-300"
+                  className="absolute top-4 left-4 z-50 p-2 rounded-lg bg-white hover:bg-gray-100 transition-colors text-gray-600 hover:text-gray-900 shadow-md border border-gray-200 hover:border-gray-300"
                   title="返回首页"
                   aria-label="返回首页"
                 >
