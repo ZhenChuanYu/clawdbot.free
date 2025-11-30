@@ -30,10 +30,16 @@ export default function LanguageSwitcher() {
     setIsOpen(false)
 
     // Update URL with language prefix
-    const pathWithoutLang = location.pathname.replace(/^\/[a-z]{2}(\/|$)/, '/')
+    // Map i18n language codes to URL path codes
+    const pathLangMap: Record<string, string> = {
+      'zh-TW': 'zh-tw'
+    }
+    const pathLang = pathLangMap[langCode] || langCode
+    
+    const pathWithoutLang = location.pathname.replace(/^\/[a-z]{2}(-[a-z]{2})?(\/|$)/, '/')
     const newPath = langCode === 'en' 
       ? pathWithoutLang 
-      : `/${langCode}${pathWithoutLang === '/' ? '' : pathWithoutLang}`
+      : `/${pathLang}${pathWithoutLang === '/' ? '' : pathWithoutLang}`
     
     navigate(newPath, { replace: true })
   }

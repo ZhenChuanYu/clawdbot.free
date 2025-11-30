@@ -1,0 +1,127 @@
+{
+  "common": {
+    "home": "الرئيسية",
+    "features": "الميزات",
+    "capabilities": "القدرات",
+    "getStarted": "ابدأ",
+    "privacy": "الخصوصية",
+    "terms": "الشروط",
+    "loading": "جاري التحميل...",
+    "error": "خطأ",
+    "back": "رجوع",
+    "copy": "نسخ",
+    "regenerate": "إعادة توليد",
+    "thinking": "جاري التفكير...",
+    "backToHome": "العودة إلى الرئيسية"
+  },
+  "home": {
+    "title": "Gemini 3",
+    "subtitle": "منصة مجتمعية لمعلومات Gemini AI",
+    "description": "موارد تعليمية • دروس للمطورين • دعم المجتمع",
+    "badge": "صدر في 18 نوفمبر 2025",
+    "placeholder": "اسأل Gemini 3 أي شيء...",
+    "continuePlaceholder": "تابع المحادثة...",
+    "viewCapabilities": "عرض القدرات",
+    "featuresTitle": "معلومات وموارد Gemini 3",
+    "featuresSubtitle": "تعرف على قدرات نموذج الذكاء الاصطناعي Gemini من Google",
+    "capabilitiesTitle": "أداء Gemini 3 و Gemini 3.0",
+    "capabilitiesSubtitle": "Gemini 3 يضع معايير جديدة في جميع اختبارات الذكاء الاصطناعي",
+    "aboutTitle": "حول منصة Gemini 3",
+    "aboutDescription": "منصة مدفوعة من المجتمع توفر الوصول إلى أحدث نموذج ذكاء اصطناعي من Google. مبني على Gemini 2.5 Pro مع ترقيات ثورية في التفكير والتفهم متعدد الوسائط وسير عمل الوكلاء.",
+    "aboutNotice": "إشعار مهم: Gemini3.us هي منصة مجتمعية ومطورين مستقلة. نحن غير مرتبطين أو معتمدين أو متصلين رسميًا بـ Google LLC. نوفر وصولاً مدفوعًا لخدمات API الرسمية لـ Gemini من Google لدعم بنيتنا التحتية وعملياتنا.",
+    "ctaTitle": "ابدأ مع Gemini 3",
+    "ctaDescription": "الوصول إلى موارد Gemini 3.0 الرسمية ودعم المجتمع",
+    "startConversation": "ابدأ محادثة مع Gemini 3",
+    "loadingChatInterface": "جاري تحميل واجهة الدردشة...",
+    "stats": {
+      "lmArenaElo": "LMArena Elo",
+      "tokenContext": "سياق الرمز المميز",
+      "sweBench": "SWE-bench",
+      "gpqaDiamond": "GPQA Diamond"
+    },
+    "features": {
+      "reasoning": {
+        "title": "تفكير Gemini 3 على مستوى الدكتوراه",
+        "description": "Gemini 3.0 يحقق 91.9% GPQA Diamond • 37.5% الامتحان الأخير للبشرية • وضع Deep Think"
+      },
+      "context": {
+        "title": "نافذة سياق Gemini 3.0",
+        "description": "Gemini 3 يوفر سياق 1M رمز مميز لمعالجة قواعد الكود الكاملة والوثائق الضخمة"
+      },
+      "coding": {
+        "title": "ترميز Gemini 3 الوكيل",
+        "description": "Gemini 3.0 يسجل 76.2% SWE-bench • 1487 Elo WebDev • تحسين دقة 35%"
+      },
+      "multimodal": {
+        "title": "متعدد الوسائط Gemini 3.0",
+        "description": "Gemini 3 يحقق 81% MMMU-Pro • 87.6% Video-MMMU • اندماج متعدد الوسائط سلس"
+      },
+      "leader": {
+        "title": "قائد Gemini 3 LMArena",
+        "description": "Gemini 3.0 يقود بنتيجة Elo 1501 • 23.4% MathArena Apex • أحدث التقنيات"
+      },
+      "safety": {
+        "title": "أمان Gemini 3.0",
+        "description": "Gemini 3 يوفر 72.1% SimpleQA • إطار أمان الحدود • رائد في الصناعة"
+      }
+    },
+    "capabilities": {
+      "reasoning": {
+        "title": "تفكير Gemini 3",
+        "metrics": {
+          "humanityExam": { "label": "الامتحان الأخير للبشرية", "desc": "مستوى الدكتوراه Gemini 3" },
+          "gpqaDiamond": { "label": "GPQA Diamond", "desc": "علوم Gemini 3.0" },
+          "mathArena": { "label": "MathArena Apex", "desc": "رياضيات SOTA Gemini 3" },
+          "arcAgi": { "label": "ARC-AGI-2", "desc": "Deep Think Gemini 3.0" }
+        }
+      },
+      "coding": {
+        "title": "ترميز Gemini 3.0",
+        "metrics": {
+          "sweBench": { "label": "SWE-bench Verified", "desc": "هندسة Gemini 3" },
+          "webDev": { "label": "WebDev Arena", "desc": "Elo Gemini 3.0" },
+          "terminal": { "label": "Terminal-Bench 2.0", "desc": "CLI Gemini 3" },
+          "accuracy": { "label": "تحسين الدقة", "desc": "دفعة Gemini 3.0" }
+        }
+      },
+      "multimodal": {
+        "title": "متعدد الوسائط Gemini 3",
+        "metrics": {
+          "mmmuPro": { "label": "MMMU-Pro", "desc": "فهم Gemini 3.0" },
+          "videoMmmu": { "label": "Video-MMMU", "desc": "فيديو Gemini 3" },
+          "contextWindow": { "label": "نافذة السياق", "desc": "رموز Gemini 3.0" },
+          "documentProcessing": { "label": "معالجة المستندات", "desc": "مستندات Gemini 3" }
+        }
+      },
+      "safety": {
+        "title": "أمان Gemini 3.0",
+        "metrics": {
+          "simpleQA": { "label": "SimpleQA Verified", "desc": "دقة Gemini 3" },
+          "safetyFramework": { "label": "إطار الأمان", "desc": "معتمد Gemini 3.0" },
+          "errorReduction": { "label": "تقليل الأخطاء", "desc": "أدوات Gemini 3" },
+          "promptInjection": { "label": "حقن المطالبة", "desc": "خطر Gemini 3.0" }
+        }
+      }
+    }
+  },
+  "footer": {
+    "brandDescription": "الوصول إلى أحدث نموذج ذكاء اصطناعي من Google من خلال منصتنا المجتمعية.",
+    "officialGoogle": "Google الرسمي",
+    "legal": "قانوني",
+    "community": "مجتمع Gemini 3",
+    "communityDescription": "منصة مجتمعية مستقلة. غير مرتبطة بـ Google LLC. توفر وصولاً مدفوعًا لخدمات API الرسمية لـ Gemini.",
+    "copyright": "© 2025 Gemini3.us. جميع الحقوق محفوظة.",
+    "poweredBy": "مدعوم من Google Gemini API"
+  },
+  "chat": {
+    "copied": "تم النسخ",
+    "copyFailed": "فشل النسخ",
+    "typeMessage": "اكتب رسالتك...",
+    "startConversation": "ابدأ محادثة مع Gemini 3"
+  },
+  "seo": {
+    "title": "Gemini 3 | أحدث نموذج ذكاء اصطناعي من Google",
+    "description": "منصة مجتمعية لمعلومات وموارد Gemini 3. تعرف على نموذج الذكاء الاصطناعي Gemini من Google. مجتمع تقني ومركز موارد يركز على نظام Gemini البيئي.",
+    "keywords": "gemini 3, gemini 3.0, google gemini, مجتمع ai, موارد, دروس"
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "common": {
+    "home": "Ana Sayfa",
+    "features": "Özellikler",
+    "capabilities": "Yetenekler",
+    "getStarted": "Başlayın",
+    "privacy": "Gizlilik",
+    "terms": "Şartlar",
+    "loading": "Yükleniyor...",
+    "error": "Hata",
+    "back": "Geri",
+    "copy": "Kopyala",
+    "regenerate": "Yeniden Oluştur",
+    "thinking": "Düşünüyor...",
+    "backToHome": "Ana Sayfaya Dön"
+  },
+  "home": {
+    "title": "Gemini 3",
+    "subtitle": "Gemini AI bilgileri için topluluk platformu",
+    "description": "Eğitim kaynakları • Geliştirici öğreticileri • Topluluk desteği",
+    "badge": "18 Kasım 2025'te yayınlandı",
+    "placeholder": "Gemini 3'e herhangi bir şey sorun...",
+    "continuePlaceholder": "Konuşmaya devam edin...",
+    "viewCapabilities": "Yetenekleri Görüntüle",
+    "featuresTitle": "Gemini 3 Bilgileri ve Kaynakları",
+    "featuresSubtitle": "Google'ın Gemini AI modelinin yeteneklerini keşfedin",
+    "capabilitiesTitle": "Gemini 3 ve Gemini 3.0 Performansı",
+    "capabilitiesSubtitle": "Gemini 3 tüm AI kıyaslamalarında yeni standartlar belirliyor",
+    "aboutTitle": "Gemini 3 Platformu Hakkında",
+    "aboutDescription": "Google'ın en gelişmiş AI modeline erişim sağlayan topluluk odaklı platform. Gemini 2.5 Pro üzerine inşa edilmiş, akıl yürütme, çok modlu anlama ve ajan iş akışlarında devrim niteliğinde yükseltmelerle.",
+    "aboutNotice": "Önemli Uyarı: Gemini3.us bağımsız bir tutkun topluluğu ve geliştirici platformudur. Google LLC ile bağlantılı, onaylanmış veya resmi olarak bağlantılı değiliz. Altyapımızı ve operasyonlarımızı desteklemek için Google'ın resmi Gemini API hizmetlerine ücretli erişim sağlıyoruz.",
+    "ctaTitle": "Gemini 3 ile Başlayın",
+    "ctaDescription": "Resmi Gemini 3.0 kaynaklarına ve topluluk desteğine erişin",
+    "startConversation": "Gemini 3 ile bir konuşma başlatın",
+    "loadingChatInterface": "Sohbet arayüzü yükleniyor...",
+    "stats": {
+      "lmArenaElo": "LMArena Elo",
+      "tokenContext": "Token Bağlamı",
+      "sweBench": "SWE-bench",
+      "gpqaDiamond": "GPQA Diamond"
+    },
+    "features": {
+      "reasoning": {
+        "title": "Gemini 3 Doktora Seviyesi Akıl Yürütme",
+        "description": "Gemini 3.0 %91.9 GPQA Diamond • %37.5 İnsanlığın Son Sınavı • Deep Think modu elde ediyor"
+      },
+      "context": {
+        "title": "Gemini 3.0 Bağlam Penceresi",
+        "description": "Gemini 3, tüm kod tabanlarını ve büyük belgeleri işlemek için 1M token bağlamı sunar"
+      },
+      "coding": {
+        "title": "Gemini 3 Ajan Kodlama",
+        "description": "Gemini 3.0 %76.2 SWE-bench • 1487 Elo WebDev • %35 doğruluk iyileştirmesi puanı alıyor"
+      },
+      "multimodal": {
+        "title": "Gemini 3.0 Çok Modlu",
+        "description": "Gemini 3 %81 MMMU-Pro • %87.6 Video-MMMU • Sorunsuz çok modlu füzyon elde ediyor"
+      },
+      "leader": {
+        "title": "Gemini 3 LMArena Lideri",
+        "description": "Gemini 3.0 1501 Elo puanı • %23.4 MathArena Apex • En son teknoloji ile liderlik ediyor"
+      },
+      "safety": {
+        "title": "Gemini 3.0 Güvenlik",
+        "description": "Gemini 3 %72.1 SimpleQA • Sınır Güvenlik Çerçevesi • Endüstri lideri sağlar"
+      }
+    },
+    "capabilities": {
+      "reasoning": {
+        "title": "Gemini 3 Akıl Yürütme",
+        "metrics": {
+          "humanityExam": { "label": "İnsanlığın Son Sınavı", "desc": "Gemini 3 doktora seviyesi" },
+          "gpqaDiamond": { "label": "GPQA Diamond", "desc": "Gemini 3.0 bilim" },
+          "mathArena": { "label": "MathArena Apex", "desc": "Gemini 3 matematik SOTA" },
+          "arcAgi": { "label": "ARC-AGI-2", "desc": "Gemini 3.0 Deep Think" }
+        }
+      },
+      "coding": {
+        "title": "Gemini 3.0 Kodlama",
+        "metrics": {
+          "sweBench": { "label": "SWE-bench Doğrulandı", "desc": "Gemini 3 mühendislik" },
+          "webDev": { "label": "WebDev Arena", "desc": "Gemini 3.0 Elo" },
+          "terminal": { "label": "Terminal-Bench 2.0", "desc": "Gemini 3 CLI" },
+          "accuracy": { "label": "Doğruluk İyileştirmesi", "desc": "Gemini 3.0 artışı" }
+        }
+      },
+      "multimodal": {
+        "title": "Gemini 3 Çok Modlu",
+        "metrics": {
+          "mmmuPro": { "label": "MMMU-Pro", "desc": "Gemini 3.0 anlama" },
+          "videoMmmu": { "label": "Video-MMMU", "desc": "Gemini 3 video" },
+          "contextWindow": { "label": "Bağlam Penceresi", "desc": "Gemini 3.0 token'ları" },
+          "documentProcessing": { "label": "Belge İşleme", "desc": "Gemini 3 belgeleri" }
+        }
+      },
+      "safety": {
+        "title": "Gemini 3.0 Güvenlik",
+        "metrics": {
+          "simpleQA": { "label": "SimpleQA Doğrulandı", "desc": "Gemini 3 doğruluğu" },
+          "safetyFramework": { "label": "Güvenlik Çerçevesi", "desc": "Gemini 3.0 sertifikalı" },
+          "errorReduction": { "label": "Hata Azaltma", "desc": "Gemini 3 araçları" },
+          "promptInjection": { "label": "İstem Enjeksiyonu", "desc": "Gemini 3.0 riski" }
+        }
+      }
+    }
+  },
+  "footer": {
+    "brandDescription": "Topluluk platformumuz aracılığıyla Google'ın en gelişmiş AI modeline erişin.",
+    "officialGoogle": "Resmi Google",
+    "legal": "Yasal",
+    "community": "Gemini 3 Topluluğu",
+    "communityDescription": "Bağımsız topluluk platformu. Google LLC ile bağlantılı değildir. Resmi Gemini API hizmetlerine ücretli erişim sağlar.",
+    "copyright": "© 2025 Gemini3.us. Tüm hakları saklıdır.",
+    "poweredBy": "Google Gemini API tarafından desteklenmektedir"
+  },
+  "chat": {
+    "copied": "Kopyalandı",
+    "copyFailed": "Kopyalama başarısız",
+    "typeMessage": "Mesajınızı yazın...",
+    "startConversation": "Gemini 3 ile bir konuşma başlatın"
+  },
+  "seo": {
+    "title": "Gemini 3 | Google'ın En Yeni AI Modeli",
+    "description": "Gemini 3 bilgi ve kaynakları için topluluk platformu. Google'ın Gemini AI modelini keşfedin. Gemini ekosistemine odaklanan teknik topluluk ve kaynak merkezi.",
+    "keywords": "gemini 3, gemini 3.0, google gemini, ai topluluğu, kaynaklar, öğreticiler"
+  }
+}

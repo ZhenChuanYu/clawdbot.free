@@ -14,8 +14,14 @@ export default function SEOHead() {
     document.documentElement.lang = i18n.language
 
     // Get current path without language prefix
-    const pathWithoutLang = location.pathname.replace(/^\/[a-z]{2}(\/|$)/, '/')
+    const pathWithoutLang = location.pathname.replace(/^\/[a-z]{2}(-[a-z]{2})?(\/|$)/, '/')
     const currentPath = pathWithoutLang === '/' ? '' : pathWithoutLang
+
+    // Map i18n language codes to URL path codes
+    const pathLangMap: Record<string, string> = {
+      'zh-TW': 'zh-tw'
+    }
+    const pathLang = pathLangMap[i18n.language] || i18n.language
 
     // Update page title
     const title = t('seo.title')
@@ -44,7 +50,7 @@ export default function SEOHead() {
     // Update canonical URL
     const canonicalUrl = i18n.language === 'en'
       ? `${BASE_URL}${currentPath}`
-      : `${BASE_URL}/${i18n.language}${currentPath}`
+      : `${BASE_URL}/${pathLang}${currentPath}`
     
     let canonical = document.querySelector('link[rel="canonical"]')
     if (!canonical) {
@@ -81,9 +87,10 @@ export default function SEOHead() {
 
     // Add hreflang tags for all supported languages
     SUPPORTED_LANGUAGES.forEach((lang) => {
+      const langPathCode = pathLangMap[lang.code] || lang.code
       const langPath = lang.code === 'en'
         ? `${BASE_URL}${currentPath}`
-        : `${BASE_URL}/${lang.code}${currentPath}`
+        : `${BASE_URL}/${langPathCode}${currentPath}`
 
       const hreflang = document.createElement('link')
       hreflang.setAttribute('rel', 'alternate')

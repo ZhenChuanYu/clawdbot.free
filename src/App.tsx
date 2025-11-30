@@ -15,11 +15,17 @@ function App() {
   // 根据路径判断语言并切换
   useEffect(() => {
     const pathLang = location.pathname.split('/')[1]
-    const supportedLangs = ['zh', 'es', 'ja', 'ko', 'fr', 'de']
+    const supportedLangs = ['zh', 'zh-tw', 'es', 'ja', 'ko', 'fr', 'de', 'pt', 'ru', 'it', 'ar', 'hi', 'tr', 'vi', 'th', 'id', 'nl', 'pl', 'sv', 'no', 'da', 'fi']
+    
+    // 路径语言代码到 i18n 语言代码的映射
+    const langMap: Record<string, string> = {
+      'zh-tw': 'zh-TW'
+    }
     
     if (supportedLangs.includes(pathLang)) {
-      if (i18n.language !== pathLang) {
-        i18n.changeLanguage(pathLang)
+      const i18nLang = langMap[pathLang] || pathLang
+      if (i18n.language !== i18nLang) {
+        i18n.changeLanguage(i18nLang)
       }
     } else {
       // 默认英文

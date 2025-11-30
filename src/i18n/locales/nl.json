@@ -1,0 +1,127 @@
+{
+  "common": {
+    "home": "Home",
+    "features": "Functies",
+    "capabilities": "Mogelijkheden",
+    "getStarted": "Aan de slag",
+    "privacy": "Privacy",
+    "terms": "Voorwaarden",
+    "loading": "Laden...",
+    "error": "Fout",
+    "back": "Terug",
+    "copy": "Kopiëren",
+    "regenerate": "Opnieuw genereren",
+    "thinking": "Denken...",
+    "backToHome": "Terug naar Home"
+  },
+  "home": {
+    "title": "Gemini 3",
+    "subtitle": "Communityplatform voor Gemini AI-informatie",
+    "description": "Educatieve bronnen • Ontwikkelaarstutorials • Communityondersteuning",
+    "badge": "Uitgebracht op 18 november 2025",
+    "placeholder": "Vraag Gemini 3 alles...",
+    "continuePlaceholder": "Ga door met het gesprek...",
+    "viewCapabilities": "Bekijk Mogelijkheden",
+    "featuresTitle": "Gemini 3 Informatie en Bronnen",
+    "featuresSubtitle": "Leer over de mogelijkheden van Google's Gemini AI-model",
+    "capabilitiesTitle": "Gemini 3 en Gemini 3.0 Prestaties",
+    "capabilitiesSubtitle": "Gemini 3 stelt nieuwe normen in alle AI-benchmarks",
+    "aboutTitle": "Over Gemini 3 Platform",
+    "aboutDescription": "Communitygedreven platform dat toegang biedt tot Google's meest geavanceerde AI-model. Gebouwd op Gemini 2.5 Pro met revolutionaire upgrades in redeneren, multimodale begrip en agent workflows.",
+    "aboutNotice": "Belangrijke Mededeling: Gemini3.us is een onafhankelijke enthousiastengemeenschap en ontwikkelaarsplatform. We zijn niet verbonden, goedgekeurd of officieel verbonden met Google LLC. We bieden betaalde toegang tot Google's officiële Gemini API-services om onze infrastructuur en operaties te ondersteunen.",
+    "ctaTitle": "Aan de slag met Gemini 3",
+    "ctaDescription": "Toegang tot officiële Gemini 3.0-bronnen en communityondersteuning",
+    "startConversation": "Start een gesprek met Gemini 3",
+    "loadingChatInterface": "Chatinterface laden...",
+    "stats": {
+      "lmArenaElo": "LMArena Elo",
+      "tokenContext": "Token Context",
+      "sweBench": "SWE-bench",
+      "gpqaDiamond": "GPQA Diamond"
+    },
+    "features": {
+      "reasoning": {
+        "title": "Gemini 3 PhD-niveau Redeneren",
+        "description": "Gemini 3.0 behaalt 91,9% GPQA Diamond • 37,5% Laatste Examen van de Mensheid • Deep Think-modus"
+      },
+      "context": {
+        "title": "Gemini 3.0 Contextvenster",
+        "description": "Gemini 3 biedt 1M token context om volledige codebases en massieve documenten te verwerken"
+      },
+      "coding": {
+        "title": "Gemini 3 Agent Coderen",
+        "description": "Gemini 3.0 scoort 76,2% SWE-bench • 1487 Elo WebDev • 35% nauwkeurigheidsverbetering"
+      },
+      "multimodal": {
+        "title": "Gemini 3.0 Multimodaal",
+        "description": "Gemini 3 behaalt 81% MMMU-Pro • 87,6% Video-MMMU • Naadloze multimodale fusie"
+      },
+      "leader": {
+        "title": "Gemini 3 LMArena Leider",
+        "description": "Gemini 3.0 leidt met Elo-score van 1501 • 23,4% MathArena Apex • State-of-the-art"
+      },
+      "safety": {
+        "title": "Gemini 3.0 Veiligheid",
+        "description": "Gemini 3 biedt 72,1% SimpleQA • Frontier Veiligheidskader • Industrieleider"
+      }
+    },
+    "capabilities": {
+      "reasoning": {
+        "title": "Gemini 3 Redeneren",
+        "metrics": {
+          "humanityExam": { "label": "Laatste Examen van de Mensheid", "desc": "Gemini 3 PhD-niveau" },
+          "gpqaDiamond": { "label": "GPQA Diamond", "desc": "Gemini 3.0 wetenschap" },
+          "mathArena": { "label": "MathArena Apex", "desc": "Gemini 3 wiskunde SOTA" },
+          "arcAgi": { "label": "ARC-AGI-2", "desc": "Gemini 3.0 Deep Think" }
+        }
+      },
+      "coding": {
+        "title": "Gemini 3.0 Coderen",
+        "metrics": {
+          "sweBench": { "label": "SWE-bench Geverifieerd", "desc": "Gemini 3 engineering" },
+          "webDev": { "label": "WebDev Arena", "desc": "Gemini 3.0 Elo" },
+          "terminal": { "label": "Terminal-Bench 2.0", "desc": "Gemini 3 CLI" },
+          "accuracy": { "label": "Nauwkeurigheidsverbetering", "desc": "Gemini 3.0 boost" }
+        }
+      },
+      "multimodal": {
+        "title": "Gemini 3 Multimodaal",
+        "metrics": {
+          "mmmuPro": { "label": "MMMU-Pro", "desc": "Gemini 3.0 begrip" },
+          "videoMmmu": { "label": "Video-MMMU", "desc": "Gemini 3 video" },
+          "contextWindow": { "label": "Contextvenster", "desc": "Gemini 3.0 tokens" },
+          "documentProcessing": { "label": "Documentverwerking", "desc": "Gemini 3 documenten" }
+        }
+      },
+      "safety": {
+        "title": "Gemini 3.0 Veiligheid",
+        "metrics": {
+          "simpleQA": { "label": "SimpleQA Geverifieerd", "desc": "Gemini 3 nauwkeurigheid" },
+          "safetyFramework": { "label": "Veiligheidskader", "desc": "Gemini 3.0 gecertificeerd" },
+          "errorReduction": { "label": "Foutreductie", "desc": "Gemini 3 tools" },
+          "promptInjection": { "label": "Prompt Injectie", "desc": "Gemini 3.0 risico" }
+        }
+      }
+    }
+  },
+  "footer": {
+    "brandDescription": "Toegang tot Google's meest geavanceerde AI-model via ons communityplatform.",
+    "officialGoogle": "Officieel Google",
+    "legal": "Juridisch",
+    "community": "Gemini 3 Gemeenschap",
+    "communityDescription": "Onafhankelijk communityplatform. Niet verbonden met Google LLC. Biedt betaalde toegang tot officiële Gemini API-services.",
+    "copyright": "© 2025 Gemini3.us. Alle rechten voorbehouden.",
+    "poweredBy": "Aangedreven door Google Gemini API"
+  },
+  "chat": {
+    "copied": "Gekopieerd",
+    "copyFailed": "Kopiëren mislukt",
+    "typeMessage": "Typ uw bericht...",
+    "startConversation": "Start een gesprek met Gemini 3"
+  },
+  "seo": {
+    "title": "Gemini 3 | Nieuwste AI-model van Google",
+    "description": "Communityplatform voor Gemini 3-informatie en -bronnen. Leer over het Gemini AI-model van Google. Technische gemeenschap en resourcecentrum gericht op het Gemini-ecosysteem.",
+    "keywords": "gemini 3, gemini 3.0, google gemini, ai gemeenschap, bronnen, tutorials"
+  }
+}

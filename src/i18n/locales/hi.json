@@ -1,0 +1,127 @@
+{
+  "common": {
+    "home": "होम",
+    "features": "सुविधाएं",
+    "capabilities": "क्षमताएं",
+    "getStarted": "शुरू करें",
+    "privacy": "गोपनीयता",
+    "terms": "नियम",
+    "loading": "लोड हो रहा है...",
+    "error": "त्रुटि",
+    "back": "वापस",
+    "copy": "कॉपी करें",
+    "regenerate": "पुन: उत्पन्न करें",
+    "thinking": "सोच रहा है...",
+    "backToHome": "होम पर वापस जाएं"
+  },
+  "home": {
+    "title": "Gemini 3",
+    "subtitle": "Gemini AI जानकारी के लिए सामुदायिक प्लेटफॉर्म",
+    "description": "शैक्षिक संसाधन • डेवलपर ट्यूटोरियल • सामुदायिक सहायता",
+    "badge": "18 नवंबर 2025 को जारी",
+    "placeholder": "Gemini 3 से कुछ भी पूछें...",
+    "continuePlaceholder": "बातचीत जारी रखें...",
+    "viewCapabilities": "क्षमताएं देखें",
+    "featuresTitle": "Gemini 3 जानकारी और संसाधन",
+    "featuresSubtitle": "Google के Gemini AI मॉडल की क्षमताओं के बारे में जानें",
+    "capabilitiesTitle": "Gemini 3 और Gemini 3.0 प्रदर्शन",
+    "capabilitiesSubtitle": "Gemini 3 सभी AI बेंचमार्क में नए मानक स्थापित करता है",
+    "aboutTitle": "Gemini 3 प्लेटफॉर्म के बारे में",
+    "aboutDescription": "Google के सबसे उन्नत AI मॉडल तक पहुंच प्रदान करने वाला सामुदायिक-संचालित प्लेटफॉर्म। Gemini 2.5 Pro पर निर्मित, तर्क, बहु-मोडल समझ और एजेंट वर्कफ़्लो में क्रांतिकारी अपग्रेड के साथ।",
+    "aboutNotice": "महत्वपूर्ण सूचना: Gemini3.us एक स्वतंत्र उत्साही समुदाय और डेवलपर प्लेटफॉर्म है। हम Google LLC से संबद्ध, समर्थित या आधिकारिक रूप से जुड़े नहीं हैं। हम अपने बुनियादी ढांचे और संचालन का समर्थन करने के लिए Google की आधिकारिक Gemini API सेवाओं तक सशुल्क पहुंच प्रदान करते हैं।",
+    "ctaTitle": "Gemini 3 के साथ शुरू करें",
+    "ctaDescription": "आधिकारिक Gemini 3.0 संसाधनों और सामुदायिक सहायता तक पहुंचें",
+    "startConversation": "Gemini 3 के साथ बातचीत शुरू करें",
+    "loadingChatInterface": "चैट इंटरफ़ेस लोड हो रहा है...",
+    "stats": {
+      "lmArenaElo": "LMArena Elo",
+      "tokenContext": "टोकन संदर्भ",
+      "sweBench": "SWE-bench",
+      "gpqaDiamond": "GPQA Diamond"
+    },
+    "features": {
+      "reasoning": {
+        "title": "Gemini 3 पीएचडी-स्तरीय तर्क",
+        "description": "Gemini 3.0 91.9% GPQA Diamond • 37.5% मानवता का अंतिम परीक्षा • Deep Think मोड प्राप्त करता है"
+      },
+      "context": {
+        "title": "Gemini 3.0 संदर्भ विंडो",
+        "description": "Gemini 3 पूरे कोडबेस और बड़े दस्तावेजों को संसाधित करने के लिए 1M टोकन संदर्भ प्रदान करता है"
+      },
+      "coding": {
+        "title": "Gemini 3 एजेंटिक कोडिंग",
+        "description": "Gemini 3.0 76.2% SWE-bench • 1487 Elo WebDev • 35% सटीकता सुधार स्कोर करता है"
+      },
+      "multimodal": {
+        "title": "Gemini 3.0 बहु-मोडल",
+        "description": "Gemini 3 81% MMMU-Pro • 87.6% Video-MMMU • निर्बाध बहु-मोडल फ्यूजन प्राप्त करता है"
+      },
+      "leader": {
+        "title": "Gemini 3 LMArena लीडर",
+        "description": "Gemini 3.0 1501 Elo स्कोर • 23.4% MathArena Apex • अत्याधुनिक के साथ अग्रणी है"
+      },
+      "safety": {
+        "title": "Gemini 3.0 सुरक्षा",
+        "description": "Gemini 3 72.1% SimpleQA • फ्रंटियर सेफ्टी फ्रेमवर्क • उद्योग-अग्रणी प्रदान करता है"
+      }
+    },
+    "capabilities": {
+      "reasoning": {
+        "title": "Gemini 3 तर्क",
+        "metrics": {
+          "humanityExam": { "label": "मानवता का अंतिम परीक्षा", "desc": "Gemini 3 पीएचडी-स्तर" },
+          "gpqaDiamond": { "label": "GPQA Diamond", "desc": "Gemini 3.0 विज्ञान" },
+          "mathArena": { "label": "MathArena Apex", "desc": "Gemini 3 गणित SOTA" },
+          "arcAgi": { "label": "ARC-AGI-2", "desc": "Gemini 3.0 Deep Think" }
+        }
+      },
+      "coding": {
+        "title": "Gemini 3.0 कोडिंग",
+        "metrics": {
+          "sweBench": { "label": "SWE-bench Verified", "desc": "Gemini 3 इंजीनियरिंग" },
+          "webDev": { "label": "WebDev Arena", "desc": "Gemini 3.0 Elo" },
+          "terminal": { "label": "Terminal-Bench 2.0", "desc": "Gemini 3 CLI" },
+          "accuracy": { "label": "सटीकता सुधार", "desc": "Gemini 3.0 बूस्ट" }
+        }
+      },
+      "multimodal": {
+        "title": "Gemini 3 बहु-मोडल",
+        "metrics": {
+          "mmmuPro": { "label": "MMMU-Pro", "desc": "Gemini 3.0 समझ" },
+          "videoMmmu": { "label": "Video-MMMU", "desc": "Gemini 3 वीडियो" },
+          "contextWindow": { "label": "संदर्भ विंडो", "desc": "Gemini 3.0 टोकन" },
+          "documentProcessing": { "label": "दस्तावेज़ प्रसंस्करण", "desc": "Gemini 3 दस्तावेज़" }
+        }
+      },
+      "safety": {
+        "title": "Gemini 3.0 सुरक्षा",
+        "metrics": {
+          "simpleQA": { "label": "SimpleQA Verified", "desc": "Gemini 3 सटीकता" },
+          "safetyFramework": { "label": "सुरक्षा फ्रेमवर्क", "desc": "Gemini 3.0 प्रमाणित" },
+          "errorReduction": { "label": "त्रुटि कमी", "desc": "Gemini 3 उपकरण" },
+          "promptInjection": { "label": "प्रॉम्प्ट इंजेक्शन", "desc": "Gemini 3.0 जोखिम" }
+        }
+      }
+    }
+  },
+  "footer": {
+    "brandDescription": "हमारे सामुदायिक प्लेटफॉर्म के माध्यम से Google के सबसे उन्नत AI मॉडल तक पहुंचें।",
+    "officialGoogle": "आधिकारिक Google",
+    "legal": "कानूनी",
+    "community": "Gemini 3 समुदाय",
+    "communityDescription": "स्वतंत्र सामुदायिक प्लेटफॉर्म। Google LLC से संबद्ध नहीं। आधिकारिक Gemini API सेवाओं तक सशुल्क पहुंच प्रदान करता है।",
+    "copyright": "© 2025 Gemini3.us। सभी अधिकार सुरक्षित।",
+    "poweredBy": "Google Gemini API द्वारा संचालित"
+  },
+  "chat": {
+    "copied": "कॉपी किया गया",
+    "copyFailed": "कॉपी विफल",
+    "typeMessage": "अपना संदेश टाइप करें...",
+    "startConversation": "Gemini 3 के साथ बातचीत शुरू करें"
+  },
+  "seo": {
+    "title": "Gemini 3 | Google का नवीनतम AI मॉडल",
+    "description": "Gemini 3 जानकारी और संसाधनों के लिए सामुदायिक प्लेटफॉर्म। Google के Gemini AI मॉडल के बारे में जानें। Gemini इकोसिस्टम पर केंद्रित तकनीकी समुदाय और संसाधन केंद्र।",
+    "keywords": "gemini 3, gemini 3.0, google gemini, ai समुदाय, संसाधन, ट्यूटोरियल"
+  }
+}

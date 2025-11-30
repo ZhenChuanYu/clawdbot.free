@@ -1,0 +1,127 @@
+{
+  "common": {
+    "home": "Beranda",
+    "features": "Fitur",
+    "capabilities": "Kemampuan",
+    "getStarted": "Mulai",
+    "privacy": "Privasi",
+    "terms": "Ketentuan",
+    "loading": "Memuat...",
+    "error": "Kesalahan",
+    "back": "Kembali",
+    "copy": "Salin",
+    "regenerate": "Buat Ulang",
+    "thinking": "Berpikir...",
+    "backToHome": "Kembali ke Beranda"
+  },
+  "home": {
+    "title": "Gemini 3",
+    "subtitle": "Platform komunitas untuk informasi Gemini AI",
+    "description": "Sumber daya pendidikan • Tutorial pengembang • Dukungan komunitas",
+    "badge": "Dirilis 18 November 2025",
+    "placeholder": "Tanyakan apa saja kepada Gemini 3...",
+    "continuePlaceholder": "Lanjutkan percakapan...",
+    "viewCapabilities": "Lihat Kemampuan",
+    "featuresTitle": "Informasi dan Sumber Daya Gemini 3",
+    "featuresSubtitle": "Pelajari tentang kemampuan model AI Gemini dari Google",
+    "capabilitiesTitle": "Kinerja Gemini 3 dan Gemini 3.0",
+    "capabilitiesSubtitle": "Gemini 3 menetapkan standar baru di semua tolok ukur AI",
+    "aboutTitle": "Tentang Platform Gemini 3",
+    "aboutDescription": "Platform yang digerakkan komunitas yang menyediakan akses ke model AI paling canggih dari Google. Dibangun di atas Gemini 2.5 Pro dengan peningkatan revolusioner dalam penalaran, pemahaman multimodal, dan alur kerja agen.",
+    "aboutNotice": "Pemberitahuan Penting: Gemini3.us adalah komunitas penggemar independen dan platform pengembang. Kami tidak berafiliasi, didukung, atau terhubung secara resmi dengan Google LLC. Kami menyediakan akses berbayar ke layanan API Gemini resmi Google untuk mendukung infrastruktur dan operasi kami.",
+    "ctaTitle": "Mulai dengan Gemini 3",
+    "ctaDescription": "Akses sumber daya Gemini 3.0 resmi dan dukungan komunitas",
+    "startConversation": "Mulai percakapan dengan Gemini 3",
+    "loadingChatInterface": "Memuat antarmuka obrolan...",
+    "stats": {
+      "lmArenaElo": "LMArena Elo",
+      "tokenContext": "Konteks Token",
+      "sweBench": "SWE-bench",
+      "gpqaDiamond": "GPQA Diamond"
+    },
+    "features": {
+      "reasoning": {
+        "title": "Penalaran Tingkat PhD Gemini 3",
+        "description": "Gemini 3.0 mencapai 91.9% GPQA Diamond • 37.5% Ujian Terakhir Kemanusiaan • Mode Deep Think"
+      },
+      "context": {
+        "title": "Jendela Konteks Gemini 3.0",
+        "description": "Gemini 3 menawarkan konteks 1M token untuk memproses seluruh codebase dan dokumen besar"
+      },
+      "coding": {
+        "title": "Pengkodean Agen Gemini 3",
+        "description": "Gemini 3.0 mencetak 76.2% SWE-bench • 1487 Elo WebDev • Peningkatan akurasi 35%"
+      },
+      "multimodal": {
+        "title": "Multimodal Gemini 3.0",
+        "description": "Gemini 3 mencapai 81% MMMU-Pro • 87.6% Video-MMMU • Fusi multimodal yang mulus"
+      },
+      "leader": {
+        "title": "Pemimpin LMArena Gemini 3",
+        "description": "Gemini 3.0 memimpin dengan skor Elo 1501 • 23.4% MathArena Apex • Terdepan"
+      },
+      "safety": {
+        "title": "Keamanan Gemini 3.0",
+        "description": "Gemini 3 menyediakan 72.1% SimpleQA • Kerangka Keamanan Perbatasan • Terdepan di industri"
+      }
+    },
+    "capabilities": {
+      "reasoning": {
+        "title": "Penalaran Gemini 3",
+        "metrics": {
+          "humanityExam": { "label": "Ujian Terakhir Kemanusiaan", "desc": "Tingkat PhD Gemini 3" },
+          "gpqaDiamond": { "label": "GPQA Diamond", "desc": "Sains Gemini 3.0" },
+          "mathArena": { "label": "MathArena Apex", "desc": "Matematika SOTA Gemini 3" },
+          "arcAgi": { "label": "ARC-AGI-2", "desc": "Deep Think Gemini 3.0" }
+        }
+      },
+      "coding": {
+        "title": "Pengkodean Gemini 3.0",
+        "metrics": {
+          "sweBench": { "label": "SWE-bench Terverifikasi", "desc": "Rekayasa Gemini 3" },
+          "webDev": { "label": "WebDev Arena", "desc": "Elo Gemini 3.0" },
+          "terminal": { "label": "Terminal-Bench 2.0", "desc": "CLI Gemini 3" },
+          "accuracy": { "label": "Peningkatan Akurasi", "desc": "Peningkatan Gemini 3.0" }
+        }
+      },
+      "multimodal": {
+        "title": "Multimodal Gemini 3",
+        "metrics": {
+          "mmmuPro": { "label": "MMMU-Pro", "desc": "Pemahaman Gemini 3.0" },
+          "videoMmmu": { "label": "Video-MMMU", "desc": "Video Gemini 3" },
+          "contextWindow": { "label": "Jendela Konteks", "desc": "Token Gemini 3.0" },
+          "documentProcessing": { "label": "Pemrosesan Dokumen", "desc": "Dokumen Gemini 3" }
+        }
+      },
+      "safety": {
+        "title": "Keamanan Gemini 3.0",
+        "metrics": {
+          "simpleQA": { "label": "SimpleQA Terverifikasi", "desc": "Akurasi Gemini 3" },
+          "safetyFramework": { "label": "Kerangka Keamanan", "desc": "Bersertifikat Gemini 3.0" },
+          "errorReduction": { "label": "Pengurangan Kesalahan", "desc": "Alat Gemini 3" },
+          "promptInjection": { "label": "Injeksi Prompt", "desc": "Risiko Gemini 3.0" }
+        }
+      }
+    }
+  },
+  "footer": {
+    "brandDescription": "Akses model AI paling canggih dari Google melalui platform komunitas kami.",
+    "officialGoogle": "Google Resmi",
+    "legal": "Hukum",
+    "community": "Komunitas Gemini 3",
+    "communityDescription": "Platform komunitas independen. Tidak berafiliasi dengan Google LLC. Menyediakan akses berbayar ke layanan API Gemini resmi.",
+    "copyright": "© 2025 Gemini3.us. Hak cipta dilindungi.",
+    "poweredBy": "Didukung oleh Google Gemini API"
+  },
+  "chat": {
+    "copied": "Disalin",
+    "copyFailed": "Gagal menyalin",
+    "typeMessage": "Ketik pesan Anda...",
+    "startConversation": "Mulai percakapan dengan Gemini 3"
+  },
+  "seo": {
+    "title": "Gemini 3 | Model AI Terbaru dari Google",
+    "description": "Platform komunitas informasi dan sumber daya Gemini 3. Pelajari tentang model AI Gemini dari Google. Komunitas teknis dan pusat sumber daya yang berfokus pada ekosistem Gemini.",
+    "keywords": "gemini 3, gemini 3.0, google gemini, komunitas ai, sumber daya, tutorial"
+  }
+}

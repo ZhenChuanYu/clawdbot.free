@@ -12,8 +12,24 @@ try {
     'ja': 'ja',
     'ko': 'ko',
     'fr': 'fr',
-    'de': 'de'
-  };
+    'de': 'de',
+    'pt': 'pt',
+    'ru': 'ru',
+    'it': 'it',
+    'ar': 'ar',
+    'hi': 'hi',
+    'tr': 'tr',
+    'vi': 'vi',
+    'th': 'th',
+    'id': 'id',
+            'nl': 'nl',
+            'pl': 'pl',
+            'sv': 'sv', // Swedish
+            'no': 'no', // Norwegian
+            'da': 'da', // Danish
+            'fi': 'fi', // Finnish
+            'zh-tw': 'zh-tw' // Traditional Chinese
+          };
 
   // 处理每个语言的 HTML 文件
   Object.entries(languageMap).forEach(([langCode, langDir]) => {

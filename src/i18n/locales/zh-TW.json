@@ -1,0 +1,128 @@
+{
+  "common": {
+    "home": "首頁",
+    "features": "功能",
+    "capabilities": "能力",
+    "getStarted": "開始使用",
+    "privacy": "隱私",
+    "terms": "條款",
+    "loading": "載入中...",
+    "error": "錯誤",
+    "back": "返回",
+    "copy": "複製",
+    "regenerate": "重新產生",
+    "thinking": "思考中...",
+    "backToHome": "返回首頁"
+  },
+  "home": {
+    "title": "Gemini 3",
+    "subtitle": "Gemini AI 資訊社群平台",
+    "description": "教育資源 • 開發者教學 • 社群支援",
+    "badge": "2025年11月18日發布",
+    "placeholder": "向 Gemini 3 提問...",
+    "continuePlaceholder": "繼續對話...",
+    "viewCapabilities": "查看能力",
+    "featuresTitle": "Gemini 3 資訊和資源",
+    "featuresSubtitle": "了解 Google 的 Gemini AI 模型能力",
+    "capabilitiesTitle": "Gemini 3 和 Gemini 3.0 效能",
+    "capabilitiesSubtitle": "Gemini 3 在所有 AI 基準測試中樹立新標準",
+    "aboutTitle": "關於 Gemini 3 平台",
+    "aboutDescription": "社群驅動的平台，提供對 Google 最先進 AI 模型的存取。基於 Gemini 2.5 Pro 建構，在推理、多模態理解和智慧體工作流程方面進行了革命性升級。",
+    "aboutNotice": "重要提示：Gemini3.us 是一個獨立的愛好者社群和開發者平台。我們與 Google LLC 沒有關聯、未獲其認可，也非官方連接。我們提供對 Google 官方 Gemini API 服務的付費存取，以支援我們的基礎設施和營運。",
+    "ctaTitle": "開始使用 Gemini 3",
+    "ctaDescription": "存取官方 Gemini 3.0 資源和社群支援",
+    "startConversation": "開始與 Gemini 3 對話",
+    "loadingChatInterface": "載入聊天介面...",
+    "stats": {
+      "lmArenaElo": "LMArena Elo",
+      "tokenContext": "Token 上下文",
+      "sweBench": "SWE-bench",
+      "gpqaDiamond": "GPQA Diamond"
+    },
+    "features": {
+      "reasoning": {
+        "title": "Gemini 3 博士級推理",
+        "description": "Gemini 3.0 達到 91.9% GPQA Diamond • 37.5% 人類終極考試 • 深度思考模式"
+      },
+      "context": {
+        "title": "Gemini 3.0 上下文視窗",
+        "description": "Gemini 3 提供 100萬 token 上下文，可處理整個程式碼庫和大量文件"
+      },
+      "coding": {
+        "title": "Gemini 3 智慧體程式設計",
+        "description": "Gemini 3.0 得分 76.2% SWE-bench • 1487 Elo WebDev • 35% 準確率提升"
+      },
+      "multimodal": {
+        "title": "Gemini 3.0 多模態",
+        "description": "Gemini 3 達到 81% MMMU-Pro • 87.6% Video-MMMU • 無縫多模態融合"
+      },
+      "leader": {
+        "title": "Gemini 3 LMArena 領先者",
+        "description": "Gemini 3.0 以 1501 Elo 分數領先 • 23.4% MathArena Apex • 最先進水準"
+      },
+      "safety": {
+        "title": "Gemini 3.0 安全性",
+        "description": "Gemini 3 提供 72.1% SimpleQA • 前沿安全框架 • 業界領先"
+      }
+    },
+    "capabilities": {
+      "reasoning": {
+        "title": "Gemini 3 推理",
+        "metrics": {
+          "humanityExam": { "label": "人類終極考試", "desc": "Gemini 3 博士級" },
+          "gpqaDiamond": { "label": "GPQA Diamond", "desc": "Gemini 3.0 科學" },
+          "mathArena": { "label": "MathArena Apex", "desc": "Gemini 3 數學 SOTA" },
+          "arcAgi": { "label": "ARC-AGI-2", "desc": "Gemini 3.0 深度思考" }
+        }
+      },
+      "coding": {
+        "title": "Gemini 3.0 程式設計",
+        "metrics": {
+          "sweBench": { "label": "SWE-bench 驗證", "desc": "Gemini 3 工程" },
+          "webDev": { "label": "WebDev Arena", "desc": "Gemini 3.0 Elo" },
+          "terminal": { "label": "Terminal-Bench 2.0", "desc": "Gemini 3 CLI" },
+          "accuracy": { "label": "準確率提升", "desc": "Gemini 3.0 提升" }
+        }
+      },
+      "multimodal": {
+        "title": "Gemini 3 多模態",
+        "metrics": {
+          "mmmuPro": { "label": "MMMU-Pro", "desc": "Gemini 3.0 理解" },
+          "videoMmmu": { "label": "Video-MMMU", "desc": "Gemini 3 影片" },
+          "contextWindow": { "label": "上下文視窗", "desc": "Gemini 3.0 tokens" },
+          "documentProcessing": { "label": "文件處理", "desc": "Gemini 3 文件" }
+        }
+      },
+      "safety": {
+        "title": "Gemini 3.0 安全性",
+        "metrics": {
+          "simpleQA": { "label": "SimpleQA 驗證", "desc": "Gemini 3 準確率" },
+          "safetyFramework": { "label": "安全框架", "desc": "Gemini 3.0 認證" },
+          "errorReduction": { "label": "錯誤減少", "desc": "Gemini 3 工具" },
+          "promptInjection": { "label": "提示注入", "desc": "Gemini 3.0 風險" }
+        }
+      }
+    }
+  },
+  "footer": {
+    "brandDescription": "透過我們的社群平台存取 Google 最先進的 AI 模型。",
+    "officialGoogle": "Google 官方",
+    "legal": "法律",
+    "community": "Gemini 3 社群",
+    "communityDescription": "獨立社群平台。與 Google LLC 無關聯。提供對官方 Gemini API 服務的付費存取。",
+    "copyright": "© 2025 Gemini3.us。保留所有權利。",
+    "poweredBy": "由 Google Gemini API 提供支援"
+  },
+  "chat": {
+    "copied": "已複製",
+    "copyFailed": "複製失敗",
+    "typeMessage": "輸入您的訊息...",
+    "startConversation": "開始與 Gemini 3 對話"
+  },
+  "seo": {
+    "title": "Gemini 3 | Google 最新 AI 模型",
+    "description": "Gemini 3 資訊和資源社群平台。了解 Google 的 Gemini AI 模型。專注於 Gemini 生態的技術社群與資源中心。",
+    "keywords": "gemini 3, gemini 3.0, google gemini, ai 社群, 資源, 教學"
+  }
+}
+

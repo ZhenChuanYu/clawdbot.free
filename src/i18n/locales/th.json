@@ -1,0 +1,127 @@
+{
+  "common": {
+    "home": "หน้าแรก",
+    "features": "คุณสมบัติ",
+    "capabilities": "ความสามารถ",
+    "getStarted": "เริ่มต้น",
+    "privacy": "ความเป็นส่วนตัว",
+    "terms": "เงื่อนไข",
+    "loading": "กำลังโหลด...",
+    "error": "ข้อผิดพลาด",
+    "back": "กลับ",
+    "copy": "คัดลอก",
+    "regenerate": "สร้างใหม่",
+    "thinking": "กำลังคิด...",
+    "backToHome": "กลับไปหน้าแรก"
+  },
+  "home": {
+    "title": "Gemini 3",
+    "subtitle": "แพลตฟอร์มชุมชนสำหรับข้อมูล Gemini AI",
+    "description": "ทรัพยากรทางการศึกษา • บทช่วยสอนสำหรับนักพัฒนา • การสนับสนุนชุมชน",
+    "badge": "เผยแพร่เมื่อ 18 พฤศจิกายน 2025",
+    "placeholder": "ถาม Gemini 3 อะไรก็ได้...",
+    "continuePlaceholder": "ดำเนินการสนทนาต่อ...",
+    "viewCapabilities": "ดูความสามารถ",
+    "featuresTitle": "ข้อมูลและทรัพยากร Gemini 3",
+    "featuresSubtitle": "เรียนรู้เกี่ยวกับความสามารถของโมเดล AI Gemini ของ Google",
+    "capabilitiesTitle": "ประสิทธิภาพของ Gemini 3 และ Gemini 3.0",
+    "capabilitiesSubtitle": "Gemini 3 กำหนดมาตรฐานใหม่ในทุกเกณฑ์มาตรฐาน AI",
+    "aboutTitle": "เกี่ยวกับแพลตฟอร์ม Gemini 3",
+    "aboutDescription": "แพลตฟอร์มที่ขับเคลื่อนโดยชุมชนให้การเข้าถึงโมเดล AI ที่ล้ำสมัยที่สุดของ Google สร้างบน Gemini 2.5 Pro พร้อมการอัปเกรดที่ปฏิวัติวงการในการให้เหตุผล การทำความเข้าใจหลายรูปแบบ และเวิร์กโฟลว์ของเอเจนต์",
+    "aboutNotice": "ประกาศสำคัญ: Gemini3.us เป็นชุมชนอิสระของผู้ที่ชื่นชอบและแพลตฟอร์มสำหรับนักพัฒนา เราไม่เกี่ยวข้อง ไม่ได้รับการรับรอง หรือเชื่อมต่ออย่างเป็นทางการกับ Google LLC เราให้การเข้าถึงแบบเสียค่าบริการไปยังบริการ API Gemini อย่างเป็นทางการของ Google เพื่อสนับสนุนโครงสร้างพื้นฐานและการดำเนินงานของเรา",
+    "ctaTitle": "เริ่มต้นด้วย Gemini 3",
+    "ctaDescription": "เข้าถึงทรัพยากร Gemini 3.0 อย่างเป็นทางการและการสนับสนุนชุมชน",
+    "startConversation": "เริ่มการสนทนากับ Gemini 3",
+    "loadingChatInterface": "กำลังโหลดอินเทอร์เฟซแชท...",
+    "stats": {
+      "lmArenaElo": "LMArena Elo",
+      "tokenContext": "บริบทโทเค็น",
+      "sweBench": "SWE-bench",
+      "gpqaDiamond": "GPQA Diamond"
+    },
+    "features": {
+      "reasoning": {
+        "title": "การให้เหตุผลระดับปริญญาเอกของ Gemini 3",
+        "description": "Gemini 3.0 บรรลุ 91.9% GPQA Diamond • 37.5% การสอบครั้งสุดท้ายของมนุษยชาติ • โหมด Deep Think"
+      },
+      "context": {
+        "title": "หน้าต่างบริบท Gemini 3.0",
+        "description": "Gemini 3 เสนอบริบทโทเค็น 1M เพื่อประมวลผลโค้ดเบสทั้งหมดและเอกสารขนาดใหญ่"
+      },
+      "coding": {
+        "title": "การเข้ารหัสเอเจนต์ของ Gemini 3",
+        "description": "Gemini 3.0 ได้คะแนน 76.2% SWE-bench • 1487 Elo WebDev • การปรับปรุงความแม่นยำ 35%"
+      },
+      "multimodal": {
+        "title": "หลายรูปแบบ Gemini 3.0",
+        "description": "Gemini 3 บรรลุ 81% MMMU-Pro • 87.6% Video-MMMU • การรวมหลายรูปแบบที่ราบรื่น"
+      },
+      "leader": {
+        "title": "ผู้นำ LMArena ของ Gemini 3",
+        "description": "Gemini 3.0 นำด้วยคะแนน Elo 1501 • 23.4% MathArena Apex • ล้ำสมัย"
+      },
+      "safety": {
+        "title": "ความปลอดภัย Gemini 3.0",
+        "description": "Gemini 3 ให้ 72.1% SimpleQA • กรอบความปลอดภัย Frontier • นำอุตสาหกรรม"
+      }
+    },
+    "capabilities": {
+      "reasoning": {
+        "title": "การให้เหตุผล Gemini 3",
+        "metrics": {
+          "humanityExam": { "label": "การสอบครั้งสุดท้ายของมนุษยชาติ", "desc": "ระดับปริญญาเอก Gemini 3" },
+          "gpqaDiamond": { "label": "GPQA Diamond", "desc": "วิทยาศาสตร์ Gemini 3.0" },
+          "mathArena": { "label": "MathArena Apex", "desc": "คณิตศาสตร์ SOTA Gemini 3" },
+          "arcAgi": { "label": "ARC-AGI-2", "desc": "Deep Think Gemini 3.0" }
+        }
+      },
+      "coding": {
+        "title": "การเข้ารหัส Gemini 3.0",
+        "metrics": {
+          "sweBench": { "label": "SWE-bench ตรวจสอบแล้ว", "desc": "วิศวกรรม Gemini 3" },
+          "webDev": { "label": "WebDev Arena", "desc": "Elo Gemini 3.0" },
+          "terminal": { "label": "Terminal-Bench 2.0", "desc": "CLI Gemini 3" },
+          "accuracy": { "label": "การปรับปรุงความแม่นยำ", "desc": "เพิ่มพลัง Gemini 3.0" }
+        }
+      },
+      "multimodal": {
+        "title": "หลายรูปแบบ Gemini 3",
+        "metrics": {
+          "mmmuPro": { "label": "MMMU-Pro", "desc": "ความเข้าใจ Gemini 3.0" },
+          "videoMmmu": { "label": "Video-MMMU", "desc": "วิดีโอ Gemini 3" },
+          "contextWindow": { "label": "หน้าต่างบริบท", "desc": "โทเค็น Gemini 3.0" },
+          "documentProcessing": { "label": "การประมวลผลเอกสาร", "desc": "เอกสาร Gemini 3" }
+        }
+      },
+      "safety": {
+        "title": "ความปลอดภัย Gemini 3.0",
+        "metrics": {
+          "simpleQA": { "label": "SimpleQA ตรวจสอบแล้ว", "desc": "ความแม่นยำ Gemini 3" },
+          "safetyFramework": { "label": "กรอบความปลอดภัย", "desc": "รับรอง Gemini 3.0" },
+          "errorReduction": { "label": "การลดข้อผิดพลาด", "desc": "เครื่องมือ Gemini 3" },
+          "promptInjection": { "label": "การฉีดคำสั่ง", "desc": "ความเสี่ยง Gemini 3.0" }
+        }
+      }
+    }
+  },
+  "footer": {
+    "brandDescription": "เข้าถึงโมเดล AI ที่ล้ำสมัยที่สุดของ Google ผ่านแพลตฟอร์มชุมชนของเรา",
+    "officialGoogle": "Google อย่างเป็นทางการ",
+    "legal": "กฎหมาย",
+    "community": "ชุมชน Gemini 3",
+    "communityDescription": "แพลตฟอร์มชุมชนอิสระ ไม่เกี่ยวข้องกับ Google LLC ให้การเข้าถึงแบบเสียค่าบริการไปยังบริการ API Gemini อย่างเป็นทางการ",
+    "copyright": "© 2025 Gemini3.us สงวนลิขสิทธิ์",
+    "poweredBy": "ขับเคลื่อนโดย Google Gemini API"
+  },
+  "chat": {
+    "copied": "คัดลอกแล้ว",
+    "copyFailed": "คัดลอกล้มเหลว",
+    "typeMessage": "พิมพ์ข้อความของคุณ...",
+    "startConversation": "เริ่มการสนทนากับ Gemini 3"
+  },
+  "seo": {
+    "title": "Gemini 3 | โมเดล AI ล่าสุดของ Google",
+    "description": "แพลตฟอร์มชุมชนสำหรับข้อมูลและทรัพยากร Gemini 3 เรียนรู้เกี่ยวกับโมเดล AI Gemini ของ Google ชุมชนทางเทคนิคและศูนย์ทรัพยากรที่มุ่งเน้นระบบนิเวศ Gemini",
+    "keywords": "gemini 3, gemini 3.0, google gemini, ชุมชน ai, ทรัพยากร, บทช่วยสอน"
+  }
+}

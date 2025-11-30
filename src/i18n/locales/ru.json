@@ -1,0 +1,128 @@
+{
+  "common": {
+    "home": "Главная",
+    "features": "Возможности",
+    "capabilities": "Способности",
+    "getStarted": "Начать",
+    "privacy": "Конфиденциальность",
+    "terms": "Условия",
+    "loading": "Загрузка...",
+    "error": "Ошибка",
+    "back": "Назад",
+    "copy": "Копировать",
+    "regenerate": "Регенерировать",
+    "thinking": "Думаю...",
+    "backToHome": "Вернуться на главную"
+  },
+  "home": {
+    "title": "Gemini 3",
+    "subtitle": "Сообщество платформы информации об Gemini AI",
+    "description": "Образовательные ресурсы • Учебники для разработчиков • Поддержка сообщества",
+    "badge": "Выпущено 18 ноября 2025",
+    "placeholder": "Спросите Gemini 3 что угодно...",
+    "continuePlaceholder": "Продолжить разговор...",
+    "viewCapabilities": "Посмотреть способности",
+    "featuresTitle": "Информация и ресурсы Gemini 3",
+    "featuresSubtitle": "Узнайте о возможностях модели ИИ Gemini от Google",
+    "capabilitiesTitle": "Производительность Gemini 3 и Gemini 3.0",
+    "capabilitiesSubtitle": "Gemini 3 устанавливает новые стандарты во всех тестах ИИ",
+    "aboutTitle": "О платформе Gemini 3",
+    "aboutDescription": "Сообщество платформы, предоставляющей доступ к самой передовой модели ИИ Google. Построена на Gemini 2.5 Pro с революционными обновлениями в рассуждениях, многомодальном понимании и рабочих процессах агентов.",
+    "aboutNotice": "Важное уведомление: Gemini3.us - это независимое сообщество энтузиастов и платформа разработчиков. Мы не связаны, не одобрены и не официально связаны с Google LLC. Мы предоставляем платный доступ к официальным сервисам API Gemini от Google для поддержки нашей инфраструктуры и операций.",
+    "ctaTitle": "Начните с Gemini 3",
+    "ctaDescription": "Доступ к официальным ресурсам Gemini 3.0 и поддержке сообщества",
+    "startConversation": "Начать разговор с Gemini 3",
+    "loadingChatInterface": "Загрузка интерфейса чата...",
+    "stats": {
+      "lmArenaElo": "LMArena Elo",
+      "tokenContext": "Контекст токена",
+      "sweBench": "SWE-bench",
+      "gpqaDiamond": "GPQA Diamond"
+    },
+    "features": {
+      "reasoning": {
+        "title": "Рассуждения уровня PhD Gemini 3",
+        "description": "Gemini 3.0 достигает 91,9% GPQA Diamond • 37,5% Последний экзамен человечества • Режим Deep Think"
+      },
+      "context": {
+        "title": "Окно контекста Gemini 3.0",
+        "description": "Gemini 3 предлагает контекст 1M токенов для обработки целых кодовых баз и массивных документов"
+      },
+      "coding": {
+        "title": "Агентное кодирование Gemini 3",
+        "description": "Gemini 3.0 набирает 76,2% SWE-bench • 1487 Elo WebDev • Улучшение точности на 35%"
+      },
+      "multimodal": {
+        "title": "Многомодальный Gemini 3.0",
+        "description": "Gemini 3 достигает 81% MMMU-Pro • 87,6% Video-MMMU • Бесшовное многомодальное слияние"
+      },
+      "leader": {
+        "title": "Лидер LMArena Gemini 3",
+        "description": "Gemini 3.0 лидирует с оценкой 1501 Elo • 23,4% MathArena Apex • Состояние искусства"
+      },
+      "safety": {
+        "title": "Безопасность Gemini 3.0",
+        "description": "Gemini 3 обеспечивает 72,1% SimpleQA • Framework безопасности границы • Лидерство в отрасли"
+      }
+    },
+    "capabilities": {
+      "reasoning": {
+        "title": "Рассуждения Gemini 3",
+        "metrics": {
+          "humanityExam": { "label": "Последний экзамен человечества", "desc": "Уровень PhD Gemini 3" },
+          "gpqaDiamond": { "label": "GPQA Diamond", "desc": "Наука Gemini 3.0" },
+          "mathArena": { "label": "MathArena Apex", "desc": "Математика SOTA Gemini 3" },
+          "arcAgi": { "label": "ARC-AGI-2", "desc": "Deep Think Gemini 3.0" }
+        }
+      },
+      "coding": {
+        "title": "Кодирование Gemini 3.0",
+        "metrics": {
+          "sweBench": { "label": "SWE-bench Verified", "desc": "Инженерия Gemini 3" },
+          "webDev": { "label": "WebDev Arena", "desc": "Elo Gemini 3.0" },
+          "terminal": { "label": "Terminal-Bench 2.0", "desc": "CLI Gemini 3" },
+          "accuracy": { "label": "Улучшение точности", "desc": "Усиление Gemini 3.0" }
+        }
+      },
+      "multimodal": {
+        "title": "Многомодальный Gemini 3",
+        "metrics": {
+          "mmmuPro": { "label": "MMMU-Pro", "desc": "Понимание Gemini 3.0" },
+          "videoMmmu": { "label": "Video-MMMU", "desc": "Видео Gemini 3" },
+          "contextWindow": { "label": "Окно контекста", "desc": "Токены Gemini 3.0" },
+          "documentProcessing": { "label": "Обработка документов", "desc": "Документы Gemini 3" }
+        }
+      },
+      "safety": {
+        "title": "Безопасность Gemini 3.0",
+        "metrics": {
+          "simpleQA": { "label": "SimpleQA Verified", "desc": "Точность Gemini 3" },
+          "safetyFramework": { "label": "Framework безопасности", "desc": "Сертифицировано Gemini 3.0" },
+          "errorReduction": { "label": "Снижение ошибок", "desc": "Инструменты Gemini 3" },
+          "promptInjection": { "label": "Инъекция промпта", "desc": "Риск Gemini 3.0" }
+        }
+      }
+    }
+  },
+  "footer": {
+    "brandDescription": "Доступ к самой передовой модели ИИ Google через нашу платформу сообщества.",
+    "officialGoogle": "Официальный Google",
+    "legal": "Юридическая информация",
+    "community": "Сообщество Gemini 3",
+    "communityDescription": "Независимая платформа сообщества. Не связана с Google LLC. Предоставляет платный доступ к официальным сервисам API Gemini.",
+    "copyright": "© 2025 Gemini3.us. Все права защищены.",
+    "poweredBy": "Работает на API Google Gemini"
+  },
+  "chat": {
+    "copied": "Скопировано",
+    "copyFailed": "Не удалось скопировать",
+    "typeMessage": "Введите ваше сообщение...",
+    "startConversation": "Начать разговор с Gemini 3"
+  },
+  "seo": {
+    "title": "Gemini 3 | Последняя модель ИИ от Google",
+    "description": "Сообщество платформы информации и ресурсов Gemini 3. Узнайте о модели ИИ Gemini от Google. Техническое сообщество и ресурсный центр, ориентированный на экосистему Gemini.",
+    "keywords": "gemini 3, gemini 3.0, google gemini, сообщество ai, ресурсы, учебники"
+  }
+}
+

@@ -1,0 +1,128 @@
+{
+  "common": {
+    "home": "Hjem",
+    "features": "Funksjoner",
+    "capabilities": "Muligheter",
+    "getStarted": "Kom i gang",
+    "privacy": "Personvern",
+    "terms": "Vilkår",
+    "loading": "Laster...",
+    "error": "Feil",
+    "back": "Tilbake",
+    "copy": "Kopier",
+    "regenerate": "Gjenerer",
+    "thinking": "Tenker...",
+    "backToHome": "Tilbake til hjem"
+  },
+  "home": {
+    "title": "Gemini 3",
+    "subtitle": "Fellesskapsplattform for Gemini AI-informasjon",
+    "description": "Utdanningsressurser • Utviklerveiledninger • Fellesskapsstøtte",
+    "badge": "Lansert 18. november 2025",
+    "placeholder": "Spør Gemini 3 hva som helst...",
+    "continuePlaceholder": "Fortsett samtalen...",
+    "viewCapabilities": "Se Muligheter",
+    "featuresTitle": "Gemini 3 Informasjon og Ressurser",
+    "featuresSubtitle": "Lær om Google's Gemini AI-modells muligheter",
+    "capabilitiesTitle": "Gemini 3 og Gemini 3.0 Ytelse",
+    "capabilitiesSubtitle": "Gemini 3 setter nye standarder på tvers av alle AI-benchmarks",
+    "aboutTitle": "Om Gemini 3-plattformen",
+    "aboutDescription": "Fellesskapsdrevet plattform som gir tilgang til Google's mest avanserte AI-modell. Bygget på Gemini 2.5 Pro med revolusjonære oppgraderinger innen resonnement, multimodal forståelse og agentiske arbeidsflyter.",
+    "aboutNotice": "Viktig Kunngjøring: Gemini3.us er en uavhengig entusiastfellesskap og utviklerplattform. Vi er ikke tilknyttet, godkjent eller offisielt koblet til Google LLC. Vi gir betalt tilgang til Google's offisielle Gemini API-tjenester for å støtte vår infrastruktur og drift.",
+    "ctaTitle": "Kom i gang med Gemini 3",
+    "ctaDescription": "Få tilgang til offisielle Gemini 3.0-ressurser og fellesskapsstøtte",
+    "startConversation": "Start en samtale med Gemini 3",
+    "loadingChatInterface": "Laster chatgrensesnitt...",
+    "stats": {
+      "lmArenaElo": "LMArena Elo",
+      "tokenContext": "Tokenkontekst",
+      "sweBench": "SWE-bench",
+      "gpqaDiamond": "GPQA Diamond"
+    },
+    "features": {
+      "reasoning": {
+        "title": "Gemini 3 Doktorgradsnivå Resonnement",
+        "description": "Gemini 3.0 oppnår 91,9% GPQA Diamond • 37,5% Menneskehetens Siste Eksamen • Deep Think-modus"
+      },
+      "context": {
+        "title": "Gemini 3.0 Kontekstvindu",
+        "description": "Gemini 3 tilbyr 1M tokenkontekst for å behandle hele kodebaser og massive dokumenter"
+      },
+      "coding": {
+        "title": "Gemini 3 Agentisk Koding",
+        "description": "Gemini 3.0 scorer 76,2% SWE-bench • 1487 Elo WebDev • 35% nøyaktighetsforbedring"
+      },
+      "multimodal": {
+        "title": "Gemini 3.0 Multimodal",
+        "description": "Gemini 3 oppnår 81% MMMU-Pro • 87,6% Video-MMMU • Sømløs multimodal fusjon"
+      },
+      "leader": {
+        "title": "Gemini 3 LMArena Leder",
+        "description": "Gemini 3.0 leder med Elo-poeng 1501 • 23,4% MathArena Apex • State-of-the-art"
+      },
+      "safety": {
+        "title": "Gemini 3.0 Sikkerhet",
+        "description": "Gemini 3 gir 72,1% SimpleQA • Frontier Sikkerhetsrammeverk • Industriledende"
+      }
+    },
+    "capabilities": {
+      "reasoning": {
+        "title": "Gemini 3 Resonnement",
+        "metrics": {
+          "humanityExam": { "label": "Menneskehetens Siste Eksamen", "desc": "Gemini 3 doktorgradsnivå" },
+          "gpqaDiamond": { "label": "GPQA Diamond", "desc": "Gemini 3.0 vitenskap" },
+          "mathArena": { "label": "MathArena Apex", "desc": "Gemini 3 matematikk SOTA" },
+          "arcAgi": { "label": "ARC-AGI-2", "desc": "Gemini 3.0 Deep Think" }
+        }
+      },
+      "coding": {
+        "title": "Gemini 3.0 Koding",
+        "metrics": {
+          "sweBench": { "label": "SWE-bench Verifisert", "desc": "Gemini 3 ingeniørfag" },
+          "webDev": { "label": "WebDev Arena", "desc": "Gemini 3.0 Elo" },
+          "terminal": { "label": "Terminal-Bench 2.0", "desc": "Gemini 3 CLI" },
+          "accuracy": { "label": "Nøyaktighetsforbedring", "desc": "Gemini 3.0 boost" }
+        }
+      },
+      "multimodal": {
+        "title": "Gemini 3 Multimodal",
+        "metrics": {
+          "mmmuPro": { "label": "MMMU-Pro", "desc": "Gemini 3.0 forståelse" },
+          "videoMmmu": { "label": "Video-MMMU", "desc": "Gemini 3 video" },
+          "contextWindow": { "label": "Kontekstvindu", "desc": "Gemini 3.0 tokens" },
+          "documentProcessing": { "label": "Dokumentbehandling", "desc": "Gemini 3 dokumenter" }
+        }
+      },
+      "safety": {
+        "title": "Gemini 3.0 Sikkerhet",
+        "metrics": {
+          "simpleQA": { "label": "SimpleQA Verifisert", "desc": "Gemini 3 nøyaktighet" },
+          "safetyFramework": { "label": "Sikkerhetsrammeverk", "desc": "Gemini 3.0 sertifisert" },
+          "errorReduction": { "label": "Feilreduksjon", "desc": "Gemini 3 verktøy" },
+          "promptInjection": { "label": "Prompt Injeksjon", "desc": "Gemini 3.0 risiko" }
+        }
+      }
+    }
+  },
+  "footer": {
+    "brandDescription": "Få tilgang til Google's mest avanserte AI-modell gjennom vår fellesskapsplattform.",
+    "officialGoogle": "Offisiell Google",
+    "legal": "Juridisk",
+    "community": "Gemini 3 Fellesskap",
+    "communityDescription": "Uavhengig fellesskapsplattform. Ikke tilknyttet Google LLC. Gir betalt tilgang til offisielle Gemini API-tjenester.",
+    "copyright": "© 2025 Gemini3.us. Alle rettigheter reservert.",
+    "poweredBy": "Drevet av Google Gemini API"
+  },
+  "chat": {
+    "copied": "Kopiert",
+    "copyFailed": "Kopiering mislyktes",
+    "typeMessage": "Skriv meldingen din...",
+    "startConversation": "Start en samtale med Gemini 3"
+  },
+  "seo": {
+    "title": "Gemini 3 | Google's Siste AI-modell",
+    "description": "Fellesskapsplattform for Gemini 3-informasjon og ressurser. Lær om Google's Gemini AI-modell. Teknisk fellesskap og ressursenter fokusert på Gemini-økosystemet.",
+    "keywords": "gemini 3, gemini 3.0, google gemini, ai fellesskap, ressurser, veiledninger"
+  }
+}
+

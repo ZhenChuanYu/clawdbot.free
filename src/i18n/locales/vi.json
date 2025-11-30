@@ -1,0 +1,127 @@
+{
+  "common": {
+    "home": "Trang chủ",
+    "features": "Tính năng",
+    "capabilities": "Khả năng",
+    "getStarted": "Bắt đầu",
+    "privacy": "Quyền riêng tư",
+    "terms": "Điều khoản",
+    "loading": "Đang tải...",
+    "error": "Lỗi",
+    "back": "Quay lại",
+    "copy": "Sao chép",
+    "regenerate": "Tạo lại",
+    "thinking": "Đang suy nghĩ...",
+    "backToHome": "Về trang chủ"
+  },
+  "home": {
+    "title": "Gemini 3",
+    "subtitle": "Nền tảng cộng đồng thông tin về Gemini AI",
+    "description": "Tài nguyên giáo dục • Hướng dẫn cho nhà phát triển • Hỗ trợ cộng đồng",
+    "badge": "Phát hành ngày 18 tháng 11 năm 2025",
+    "placeholder": "Hỏi Gemini 3 bất cứ điều gì...",
+    "continuePlaceholder": "Tiếp tục cuộc trò chuyện...",
+    "viewCapabilities": "Xem Khả năng",
+    "featuresTitle": "Thông tin và Tài nguyên Gemini 3",
+    "featuresSubtitle": "Tìm hiểu về khả năng của mô hình AI Gemini của Google",
+    "capabilitiesTitle": "Hiệu suất Gemini 3 và Gemini 3.0",
+    "capabilitiesSubtitle": "Gemini 3 thiết lập tiêu chuẩn mới trên tất cả các điểm chuẩn AI",
+    "aboutTitle": "Về Nền tảng Gemini 3",
+    "aboutDescription": "Nền tảng do cộng đồng điều hành cung cấp quyền truy cập vào mô hình AI tiên tiến nhất của Google. Được xây dựng trên Gemini 2.5 Pro với các nâng cấp mang tính cách mạng trong lý luận, hiểu đa phương thức và quy trình làm việc của tác nhân.",
+    "aboutNotice": "Thông báo Quan trọng: Gemini3.us là một cộng đồng độc lập của những người đam mê và nền tảng dành cho nhà phát triển. Chúng tôi không liên kết, được chứng thực hoặc kết nối chính thức với Google LLC. Chúng tôi cung cấp quyền truy cập có trả phí vào các dịch vụ API Gemini chính thức của Google để hỗ trợ cơ sở hạ tầng và hoạt động của chúng tôi.",
+    "ctaTitle": "Bắt đầu với Gemini 3",
+    "ctaDescription": "Truy cập tài nguyên Gemini 3.0 chính thức và hỗ trợ cộng đồng",
+    "startConversation": "Bắt đầu cuộc trò chuyện với Gemini 3",
+    "loadingChatInterface": "Đang tải giao diện trò chuyện...",
+    "stats": {
+      "lmArenaElo": "LMArena Elo",
+      "tokenContext": "Ngữ cảnh Token",
+      "sweBench": "SWE-bench",
+      "gpqaDiamond": "GPQA Diamond"
+    },
+    "features": {
+      "reasoning": {
+        "title": "Lý luận Cấp Tiến sĩ của Gemini 3",
+        "description": "Gemini 3.0 đạt 91.9% GPQA Diamond • 37.5% Kỳ thi Cuối cùng của Nhân loại • Chế độ Deep Think"
+      },
+      "context": {
+        "title": "Cửa sổ Ngữ cảnh Gemini 3.0",
+        "description": "Gemini 3 cung cấp ngữ cảnh 1M token để xử lý toàn bộ codebase và tài liệu khổng lồ"
+      },
+      "coding": {
+        "title": "Mã hóa Tác nhân Gemini 3",
+        "description": "Gemini 3.0 đạt điểm 76.2% SWE-bench • 1487 Elo WebDev • Cải thiện độ chính xác 35%"
+      },
+      "multimodal": {
+        "title": "Đa phương thức Gemini 3.0",
+        "description": "Gemini 3 đạt 81% MMMU-Pro • 87.6% Video-MMMU • Hợp nhất đa phương thức liền mạch"
+      },
+      "leader": {
+        "title": "Lãnh đạo LMArena Gemini 3",
+        "description": "Gemini 3.0 dẫn đầu với điểm Elo 1501 • 23.4% MathArena Apex • Tiên tiến nhất"
+      },
+      "safety": {
+        "title": "An toàn Gemini 3.0",
+        "description": "Gemini 3 cung cấp 72.1% SimpleQA • Khung An toàn Biên giới • Dẫn đầu ngành"
+      }
+    },
+    "capabilities": {
+      "reasoning": {
+        "title": "Lý luận Gemini 3",
+        "metrics": {
+          "humanityExam": { "label": "Kỳ thi Cuối cùng của Nhân loại", "desc": "Cấp tiến sĩ Gemini 3" },
+          "gpqaDiamond": { "label": "GPQA Diamond", "desc": "Khoa học Gemini 3.0" },
+          "mathArena": { "label": "MathArena Apex", "desc": "Toán học SOTA Gemini 3" },
+          "arcAgi": { "label": "ARC-AGI-2", "desc": "Deep Think Gemini 3.0" }
+        }
+      },
+      "coding": {
+        "title": "Mã hóa Gemini 3.0",
+        "metrics": {
+          "sweBench": { "label": "SWE-bench Đã xác minh", "desc": "Kỹ thuật Gemini 3" },
+          "webDev": { "label": "WebDev Arena", "desc": "Elo Gemini 3.0" },
+          "terminal": { "label": "Terminal-Bench 2.0", "desc": "CLI Gemini 3" },
+          "accuracy": { "label": "Cải thiện Độ chính xác", "desc": "Tăng cường Gemini 3.0" }
+        }
+      },
+      "multimodal": {
+        "title": "Đa phương thức Gemini 3",
+        "metrics": {
+          "mmmuPro": { "label": "MMMU-Pro", "desc": "Hiểu Gemini 3.0" },
+          "videoMmmu": { "label": "Video-MMMU", "desc": "Video Gemini 3" },
+          "contextWindow": { "label": "Cửa sổ Ngữ cảnh", "desc": "Token Gemini 3.0" },
+          "documentProcessing": { "label": "Xử lý Tài liệu", "desc": "Tài liệu Gemini 3" }
+        }
+      },
+      "safety": {
+        "title": "An toàn Gemini 3.0",
+        "metrics": {
+          "simpleQA": { "label": "SimpleQA Đã xác minh", "desc": "Độ chính xác Gemini 3" },
+          "safetyFramework": { "label": "Khung An toàn", "desc": "Được chứng nhận Gemini 3.0" },
+          "errorReduction": { "label": "Giảm Lỗi", "desc": "Công cụ Gemini 3" },
+          "promptInjection": { "label": "Tiêm Lời nhắc", "desc": "Rủi ro Gemini 3.0" }
+        }
+      }
+    }
+  },
+  "footer": {
+    "brandDescription": "Truy cập mô hình AI tiên tiến nhất của Google thông qua nền tảng cộng đồng của chúng tôi.",
+    "officialGoogle": "Google Chính thức",
+    "legal": "Pháp lý",
+    "community": "Cộng đồng Gemini 3",
+    "communityDescription": "Nền tảng cộng đồng độc lập. Không liên kết với Google LLC. Cung cấp quyền truy cập có trả phí vào các dịch vụ API Gemini chính thức.",
+    "copyright": "© 2025 Gemini3.us. Bảo lưu mọi quyền.",
+    "poweredBy": "Được hỗ trợ bởi Google Gemini API"
+  },
+  "chat": {
+    "copied": "Đã sao chép",
+    "copyFailed": "Sao chép thất bại",
+    "typeMessage": "Nhập tin nhắn của bạn...",
+    "startConversation": "Bắt đầu cuộc trò chuyện với Gemini 3"
+  },
+  "seo": {
+    "title": "Gemini 3 | Mô hình AI Mới Nhất của Google",
+    "description": "Nền tảng cộng đồng thông tin và tài nguyên Gemini 3. Tìm hiểu về mô hình AI Gemini của Google. Cộng đồng kỹ thuật và trung tâm tài nguyên tập trung vào hệ sinh thái Gemini.",
+    "keywords": "gemini 3, gemini 3.0, google gemini, cộng đồng ai, tài nguyên, hướng dẫn"
+  }
+}

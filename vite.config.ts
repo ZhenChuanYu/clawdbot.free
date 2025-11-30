@@ -30,7 +30,23 @@ export default defineConfig({
         ja: path.resolve(__dirname, 'index-ja.html'),
         ko: path.resolve(__dirname, 'index-ko.html'),
         fr: path.resolve(__dirname, 'index-fr.html'),
-        de: path.resolve(__dirname, 'index-de.html')
+        de: path.resolve(__dirname, 'index-de.html'),
+        pt: path.resolve(__dirname, 'index-pt.html'),
+        ru: path.resolve(__dirname, 'index-ru.html'),
+        it: path.resolve(__dirname, 'index-it.html'),
+        ar: path.resolve(__dirname, 'index-ar.html'),
+        hi: path.resolve(__dirname, 'index-hi.html'),
+        tr: path.resolve(__dirname, 'index-tr.html'),
+        vi: path.resolve(__dirname, 'index-vi.html'),
+        th: path.resolve(__dirname, 'index-th.html'),
+        id: path.resolve(__dirname, 'index-id.html'),
+        nl: path.resolve(__dirname, 'index-nl.html'),
+        pl: path.resolve(__dirname, 'index-pl.html'),
+        sv: path.resolve(__dirname, 'index-sv.html'),
+        no: path.resolve(__dirname, 'index-no.html'),
+        da: path.resolve(__dirname, 'index-da.html'),
+        fi: path.resolve(__dirname, 'index-fi.html'),
+        'zh-tw': path.resolve(__dirname, 'index-zh-tw.html')
       },
       output: {
         manualChunks: {
