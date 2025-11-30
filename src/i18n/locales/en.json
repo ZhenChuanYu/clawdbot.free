@@ -1,0 +1,128 @@
+{
+  "common": {
+    "home": "Home",
+    "features": "Features",
+    "capabilities": "Capabilities",
+    "getStarted": "Get Started",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "loading": "Loading...",
+    "error": "Error",
+    "back": "Back",
+    "copy": "Copy",
+    "regenerate": "Regenerate",
+    "thinking": "Thinking...",
+    "backToHome": "Back to Home"
+  },
+  "home": {
+    "title": "Gemini 3",
+    "subtitle": "Community platform for Gemini AI information",
+    "description": "Educational resources • Developer tutorials • Community support",
+    "badge": "Released November 18, 2025",
+    "placeholder": "Ask Gemini 3 anything...",
+    "continuePlaceholder": "Continue the conversation...",
+    "viewCapabilities": "View Capabilities",
+    "featuresTitle": "Gemini 3 Information and Resources",
+    "featuresSubtitle": "Learn about Google's Gemini AI model capabilities",
+    "capabilitiesTitle": "Gemini 3 and Gemini 3.0 Performance",
+    "capabilitiesSubtitle": "Gemini 3 sets new standards across all AI benchmarks",
+    "aboutTitle": "About Gemini 3 Platform",
+    "aboutDescription": "Community-driven platform providing access to Google's most advanced AI model. Built on Gemini 2.5 Pro with revolutionary upgrades in reasoning, multimodal understanding, and agentic workflows.",
+    "aboutNotice": "Important Notice: Gemini3.us is an independent enthusiast community and developer platform. We are not affiliated with, endorsed by, or officially connected to Google LLC. We provide paid access to Google's official Gemini API services to support our infrastructure and operations.",
+    "ctaTitle": "Get Started with Gemini 3",
+    "ctaDescription": "Access official Gemini 3.0 resources and community support",
+    "startConversation": "Start a conversation with Gemini 3",
+    "loadingChatInterface": "Loading chat interface...",
+    "stats": {
+      "lmArenaElo": "LMArena Elo",
+      "tokenContext": "Token Context",
+      "sweBench": "SWE-bench",
+      "gpqaDiamond": "GPQA Diamond"
+    },
+    "features": {
+      "reasoning": {
+        "title": "Gemini 3 PhD-Level Reasoning",
+        "description": "Gemini 3.0 achieves 91.9% GPQA Diamond • 37.5% Humanity's Last Exam • Deep Think mode"
+      },
+      "context": {
+        "title": "Gemini 3.0 Context Window",
+        "description": "Gemini 3 offers 1M token context to process entire codebases and massive documents"
+      },
+      "coding": {
+        "title": "Gemini 3 Agentic Coding",
+        "description": "Gemini 3.0 scores 76.2% SWE-bench • 1487 Elo WebDev • 35% accuracy improvement"
+      },
+      "multimodal": {
+        "title": "Gemini 3.0 Multimodal",
+        "description": "Gemini 3 achieves 81% MMMU-Pro • 87.6% Video-MMMU • Seamless multimodal fusion"
+      },
+      "leader": {
+        "title": "Gemini 3 LMArena Leader",
+        "description": "Gemini 3.0 leads with 1501 Elo score • 23.4% MathArena Apex • State-of-the-art"
+      },
+      "safety": {
+        "title": "Gemini 3.0 Safety",
+        "description": "Gemini 3 provides 72.1% SimpleQA • Frontier Safety Framework • Industry-leading"
+      }
+    },
+    "capabilities": {
+      "reasoning": {
+        "title": "Gemini 3 Reasoning",
+        "metrics": {
+          "humanityExam": { "label": "Humanity's Last Exam", "desc": "Gemini 3 PhD-level" },
+          "gpqaDiamond": { "label": "GPQA Diamond", "desc": "Gemini 3.0 science" },
+          "mathArena": { "label": "MathArena Apex", "desc": "Gemini 3 math SOTA" },
+          "arcAgi": { "label": "ARC-AGI-2", "desc": "Gemini 3.0 Deep Think" }
+        }
+      },
+      "coding": {
+        "title": "Gemini 3.0 Coding",
+        "metrics": {
+          "sweBench": { "label": "SWE-bench Verified", "desc": "Gemini 3 engineering" },
+          "webDev": { "label": "WebDev Arena", "desc": "Gemini 3.0 Elo" },
+          "terminal": { "label": "Terminal-Bench 2.0", "desc": "Gemini 3 CLI" },
+          "accuracy": { "label": "Accuracy Improvement", "desc": "Gemini 3.0 boost" }
+        }
+      },
+      "multimodal": {
+        "title": "Gemini 3 Multimodal",
+        "metrics": {
+          "mmmuPro": { "label": "MMMU-Pro", "desc": "Gemini 3.0 understanding" },
+          "videoMmmu": { "label": "Video-MMMU", "desc": "Gemini 3 video" },
+          "contextWindow": { "label": "Context Window", "desc": "Gemini 3.0 tokens" },
+          "documentProcessing": { "label": "Document Processing", "desc": "Gemini 3 docs" }
+        }
+      },
+      "safety": {
+        "title": "Gemini 3.0 Safety",
+        "metrics": {
+          "simpleQA": { "label": "SimpleQA Verified", "desc": "Gemini 3 accuracy" },
+          "safetyFramework": { "label": "Safety Framework", "desc": "Gemini 3.0 certified" },
+          "errorReduction": { "label": "Error Reduction", "desc": "Gemini 3 tools" },
+          "promptInjection": { "label": "Prompt Injection", "desc": "Gemini 3.0 risk" }
+        }
+      }
+    }
+  },
+  "footer": {
+    "brandDescription": "Access Google's most advanced AI model through our community platform.",
+    "officialGoogle": "Official Google",
+    "legal": "Legal",
+    "community": "Gemini 3 Community",
+    "communityDescription": "Independent community platform. Not affiliated with Google LLC. Provides paid access to official Gemini API services.",
+    "copyright": "© 2025 Gemini3.us. All rights reserved.",
+    "poweredBy": "Powered by Google Gemini API"
+  },
+  "chat": {
+    "copied": "Copied",
+    "copyFailed": "Copy failed",
+    "typeMessage": "Type your message...",
+    "startConversation": "Start a conversation with Gemini 3"
+  },
+  "seo": {
+    "title": "Gemini 3 | Google's Latest AI Model",
+    "description": "Community platform for Gemini 3 information and resources. Learn about Google's Gemini AI model. Independent platform, not affiliated with Google.",
+    "keywords": "gemini 3, gemini 3.0, google gemini, ai community, resources, tutorials"
+  }
+}
+

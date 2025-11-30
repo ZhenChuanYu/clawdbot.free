@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect, useMemo, useImperativeHandle, forwardRef, useCallback } from 'react'
+import { useTranslation } from 'react-i18next'
 import { ChatMessage } from './ChatMessage'
 import { ChatInput } from './ChatInput'
 import type { ChatMessage as ChatMessageType, AIMessage, StreamingState } from '../../types/chat'
@@ -19,6 +20,7 @@ export const ChatContainer = forwardRef<ChatContainerRef, ChatContainerProps>(({
   initialMessage,
   showInput = true
 }, ref) => {
+  const { t } = useTranslation()
   const [messages, setMessages] = useState<ChatMessageType[]>([])
   const [displayList, setDisplayList] = useState<ChatMessageType[]>([])
   const [loading, setLoading] = useState(false)
@@ -304,7 +306,7 @@ export const ChatContainer = forwardRef<ChatContainerRef, ChatContainerProps>(({
       <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-4">
         {displayList.length === 0 ? (
           <div className="text-center text-gray-500 mt-8">
-            Start a conversation with Gemini 3
+            {t('chat.startConversation')}
           </div>
         ) : (
           displayList.map((message) => (
@@ -325,7 +327,7 @@ export const ChatContainer = forwardRef<ChatContainerRef, ChatContainerProps>(({
           disabled={loading}
           loading={streamingState.isStreaming}
           onStopGeneration={handleStopGeneration}
-          placeholder="Type your message..."
+          placeholder={t('chat.typeMessage')}
         />
       )}
     </div>

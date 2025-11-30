@@ -1,6 +1,7 @@
 import { useState, lazy, Suspense, useRef, useEffect, forwardRef } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowRight, Sparkles, Brain, Code, Zap, Shield, Globe, MessageSquare, Target, Laptop, Palette, Send, X } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 import type { ChatContainerRef } from '../components/chat/ChatContainer'
 
 // 延迟加载 ChatContainer
@@ -14,6 +15,7 @@ const ChatContainerWrapper = forwardRef<ChatContainerRef, { initialMessage?: str
 ChatContainerWrapper.displayName = 'ChatContainerWrapper'
 
 export default function HomePage() {
+  const { t } = useTranslation()
   const [hasStartedChat, setHasStartedChat] = useState(false)
   const [initialMessage, setInitialMessage] = useState('')
   const [inputValue, setInputValue] = useState('')
@@ -105,20 +107,20 @@ export default function HomePage() {
               {/* Badge */}
               <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-gray-900 text-white text-xs font-medium rounded-full mb-8">
                 <Sparkles className="w-3 h-3" />
-                <span>Released November 18, 2025</span>
+                <span>{t('home.badge')}</span>
               </div>
 
               {/* Main Headline - H1 (Only One) */}
               <h1 className="text-6xl md:text-8xl font-bold text-gray-900 mb-6 tracking-tight leading-none">
-                Gemini 3
+                {t('home.title')}
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-600 mb-4 font-light max-w-3xl mx-auto">
-                Community platform for Gemini AI information
+                {t('home.subtitle')}
               </p>
 
               <p className="text-base md:text-lg text-gray-500 mb-12 font-light max-w-2xl mx-auto leading-relaxed">
-                Educational resources • Developer tutorials • Community support
+                {t('home.description')}
               </p>
             </motion.div>
           </div>
@@ -132,7 +134,7 @@ export default function HomePage() {
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
                   onKeyDown={handleKeyDown}
-                  placeholder="Ask Gemini 3 anything..."
+                  placeholder={t('home.placeholder')}
                   className="flex-1 bg-transparent text-gray-900 placeholder-gray-500 focus:outline-none text-lg py-2"
                 />
                 {/* 发送按钮 - 圆形设计 */}
@@ -204,24 +206,24 @@ export default function HomePage() {
                   onClick={handleOpenChat}
                   className="group inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white text-sm font-medium rounded-lg hover:bg-gray-800 transition-all"
                 >
-                  Get Started
+                  {t('common.getStarted')}
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
                 <a
                   href="#capabilities"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-white text-gray-900 text-sm font-medium rounded-lg border border-gray-200 hover:border-gray-300 transition-all"
                 >
-                  View Capabilities
+                  {t('home.viewCapabilities')}
                 </a>
               </div>
 
               {/* Stats */}
               <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
                 {[
-                  { value: '1501', label: 'LMArena Elo' },
-                  { value: '1M', label: 'Token Context' },
-                  { value: '76.2%', label: 'SWE-bench' },
-                  { value: '91.9%', label: 'GPQA Diamond' },
+                  { value: '1501', label: t('home.stats.lmArenaElo') },
+                  { value: '1M', label: t('home.stats.tokenContext') },
+                  { value: '76.2%', label: t('home.stats.sweBench') },
+                  { value: '91.9%', label: t('home.stats.gpqaDiamond') },
                 ].map((stat, i) => (
                   <motion.div
                     key={i}
@@ -250,10 +252,10 @@ export default function HomePage() {
               className="text-center mb-20"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Gemini 3 Information and Resources
+                {t('home.featuresTitle')}
               </h2>
               <p className="text-lg text-gray-600 font-light">
-                Learn about Google's Gemini AI model capabilities
+                {t('home.featuresSubtitle')}
               </p>
             </motion.div>
 
@@ -261,38 +263,38 @@ export default function HomePage() {
               {[
                 {
                   icon: Brain,
-                  title: 'Gemini 3 PhD-Level Reasoning',
-                  description: 'Gemini 3.0 achieves 91.9% GPQA Diamond • 37.5% Humanity\'s Last Exam • Deep Think mode',
+                  title: t('home.features.reasoning.title'),
+                  description: t('home.features.reasoning.description'),
                   gradient: 'from-blue-500 to-cyan-500',
                 },
                 {
                   icon: MessageSquare,
-                  title: 'Gemini 3.0 Context Window',
-                  description: 'Gemini 3 offers 1M token context to process entire codebases and massive documents',
+                  title: t('home.features.context.title'),
+                  description: t('home.features.context.description'),
                   gradient: 'from-cyan-500 to-blue-500',
                 },
                 {
                   icon: Code,
-                  title: 'Gemini 3 Agentic Coding',
-                  description: 'Gemini 3.0 scores 76.2% SWE-bench • 1487 Elo WebDev • 35% accuracy improvement',
+                  title: t('home.features.coding.title'),
+                  description: t('home.features.coding.description'),
                   gradient: 'from-purple-500 to-pink-500',
                 },
                 {
                   icon: Globe,
-                  title: 'Gemini 3.0 Multimodal',
-                  description: 'Gemini 3 achieves 81% MMMU-Pro • 87.6% Video-MMMU • Seamless multimodal fusion',
+                  title: t('home.features.multimodal.title'),
+                  description: t('home.features.multimodal.description'),
                   gradient: 'from-pink-500 to-rose-500',
                 },
                 {
                   icon: Zap,
-                  title: 'Gemini 3 LMArena Leader',
-                  description: 'Gemini 3.0 leads with 1501 Elo score • 23.4% MathArena Apex • State-of-the-art',
+                  title: t('home.features.leader.title'),
+                  description: t('home.features.leader.description'),
                   gradient: 'from-orange-500 to-yellow-500',
                 },
                 {
                   icon: Shield,
-                  title: 'Gemini 3.0 Safety',
-                  description: 'Gemini 3 provides 72.1% SimpleQA • Frontier Safety Framework • Industry-leading',
+                  title: t('home.features.safety.title'),
+                  description: t('home.features.safety.description'),
                   gradient: 'from-green-500 to-emerald-500',
                 },
               ].map((feature, i) => (
@@ -326,53 +328,53 @@ export default function HomePage() {
               className="text-center mb-20"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Gemini 3 and Gemini 3.0 Performance
+                {t('home.capabilitiesTitle')}
               </h2>
               <p className="text-lg text-gray-600 font-light">
-                Gemini 3 sets new standards across all AI benchmarks
+                {t('home.capabilitiesSubtitle')}
               </p>
             </motion.div>
 
             <div className="grid md:grid-cols-2 gap-8">
               {[
                 {
-                  title: 'Gemini 3 Reasoning',
+                  title: t('home.capabilities.reasoning.title'),
                   icon: Target,
                   metrics: [
-                    { label: 'Humanity\'s Last Exam', value: '37.5%', desc: 'Gemini 3 PhD-level' },
-                    { label: 'GPQA Diamond', value: '91.9%', desc: 'Gemini 3.0 science' },
-                    { label: 'MathArena Apex', value: '23.4%', desc: 'Gemini 3 math SOTA' },
-                    { label: 'ARC-AGI-2', value: '45.1%', desc: 'Gemini 3.0 Deep Think' },
+                    { label: t('home.capabilities.reasoning.metrics.humanityExam.label'), value: '37.5%', desc: t('home.capabilities.reasoning.metrics.humanityExam.desc') },
+                    { label: t('home.capabilities.reasoning.metrics.gpqaDiamond.label'), value: '91.9%', desc: t('home.capabilities.reasoning.metrics.gpqaDiamond.desc') },
+                    { label: t('home.capabilities.reasoning.metrics.mathArena.label'), value: '23.4%', desc: t('home.capabilities.reasoning.metrics.mathArena.desc') },
+                    { label: t('home.capabilities.reasoning.metrics.arcAgi.label'), value: '45.1%', desc: t('home.capabilities.reasoning.metrics.arcAgi.desc') },
                   ],
                 },
                 {
-                  title: 'Gemini 3.0 Coding',
+                  title: t('home.capabilities.coding.title'),
                   icon: Laptop,
                   metrics: [
-                    { label: 'SWE-bench Verified', value: '76.2%', desc: 'Gemini 3 engineering' },
-                    { label: 'WebDev Arena', value: '1487', desc: 'Gemini 3.0 Elo' },
-                    { label: 'Terminal-Bench 2.0', value: '54.2%', desc: 'Gemini 3 CLI' },
-                    { label: 'Accuracy Improvement', value: '+35%', desc: 'Gemini 3.0 boost' },
+                    { label: t('home.capabilities.coding.metrics.sweBench.label'), value: '76.2%', desc: t('home.capabilities.coding.metrics.sweBench.desc') },
+                    { label: t('home.capabilities.coding.metrics.webDev.label'), value: '1487', desc: t('home.capabilities.coding.metrics.webDev.desc') },
+                    { label: t('home.capabilities.coding.metrics.terminal.label'), value: '54.2%', desc: t('home.capabilities.coding.metrics.terminal.desc') },
+                    { label: t('home.capabilities.coding.metrics.accuracy.label'), value: '+35%', desc: t('home.capabilities.coding.metrics.accuracy.desc') },
                   ],
                 },
                 {
-                  title: 'Gemini 3 Multimodal',
+                  title: t('home.capabilities.multimodal.title'),
                   icon: Palette,
                   metrics: [
-                    { label: 'MMMU-Pro', value: '81%', desc: 'Gemini 3.0 understanding' },
-                    { label: 'Video-MMMU', value: '87.6%', desc: 'Gemini 3 video' },
-                    { label: 'Context Window', value: '1M', desc: 'Gemini 3.0 tokens' },
-                    { label: 'Document Processing', value: '+50%', desc: 'Gemini 3 docs' },
+                    { label: t('home.capabilities.multimodal.metrics.mmmuPro.label'), value: '81%', desc: t('home.capabilities.multimodal.metrics.mmmuPro.desc') },
+                    { label: t('home.capabilities.multimodal.metrics.videoMmmu.label'), value: '87.6%', desc: t('home.capabilities.multimodal.metrics.videoMmmu.desc') },
+                    { label: t('home.capabilities.multimodal.metrics.contextWindow.label'), value: '1M', desc: t('home.capabilities.multimodal.metrics.contextWindow.desc') },
+                    { label: t('home.capabilities.multimodal.metrics.documentProcessing.label'), value: '+50%', desc: t('home.capabilities.multimodal.metrics.documentProcessing.desc') },
                   ],
                 },
                 {
-                  title: 'Gemini 3.0 Safety',
+                  title: t('home.capabilities.safety.title'),
                   icon: Shield,
                   metrics: [
-                    { label: 'SimpleQA Verified', value: '72.1%', desc: 'Gemini 3 accuracy' },
-                    { label: 'Safety Framework', value: '✓', desc: 'Gemini 3.0 certified' },
-                    { label: 'Error Reduction', value: '-30%', desc: 'Gemini 3 tools' },
-                    { label: 'Prompt Injection', value: 'Low', desc: 'Gemini 3.0 risk' },
+                    { label: t('home.capabilities.safety.metrics.simpleQA.label'), value: '72.1%', desc: t('home.capabilities.safety.metrics.simpleQA.desc') },
+                    { label: t('home.capabilities.safety.metrics.safetyFramework.label'), value: '✓', desc: t('home.capabilities.safety.metrics.safetyFramework.desc') },
+                    { label: t('home.capabilities.safety.metrics.errorReduction.label'), value: '-30%', desc: t('home.capabilities.safety.metrics.errorReduction.desc') },
+                    { label: t('home.capabilities.safety.metrics.promptInjection.label'), value: 'Low', desc: t('home.capabilities.safety.metrics.promptInjection.desc') },
                   ],
                 },
               ].map((category, i) => (
@@ -418,20 +420,15 @@ export default function HomePage() {
               className="text-center"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                About Gemini 3 Platform
+                {t('home.aboutTitle')}
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                Community-driven platform providing access to Google's most advanced AI model. 
-                Built on Gemini 2.5 Pro with revolutionary upgrades in reasoning, multimodal understanding, 
-                and agentic workflows.
+                {t('home.aboutDescription')}
               </p>
               <div className="inline-flex items-start gap-3 p-6 bg-gray-50 rounded-xl text-left max-w-2xl">
                 <div className="flex-shrink-0 w-1 h-full bg-gray-300 rounded-full"></div>
                 <p className="text-sm text-gray-600 leading-relaxed">
-                  <strong className="text-gray-900">Important Notice:</strong> Gemini3.us is an independent 
-                  enthusiast community and developer platform. We are not affiliated with, endorsed by, 
-                  or officially connected to Google LLC. We provide paid access to Google's official 
-                  Gemini API services to support our infrastructure and operations.
+                  {t('home.aboutNotice')}
                 </p>
               </div>
             </motion.div>
@@ -452,8 +449,8 @@ export default function HomePage() {
                 <button
                   onClick={handleBackToHome}
                   className="absolute top-4 left-4 z-50 p-2 rounded-lg bg-white hover:bg-gray-100 transition-colors text-gray-600 hover:text-gray-900 shadow-md border border-gray-200 hover:border-gray-300"
-                  title="Back to Home"
-                  aria-label="Back to Home"
+                  title={t('common.backToHome')}
+                  aria-label={t('common.backToHome')}
                 >
                   <X className="w-5 h-5" />
                 </button>
@@ -462,7 +459,7 @@ export default function HomePage() {
                     <div className="h-full flex items-center justify-center">
                       <div className="text-center">
                         <div className="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-                        <p className="text-gray-500 text-sm">Loading chat interface...</p>
+                        <p className="text-gray-500 text-sm">{t('home.loadingChatInterface')}</p>
                       </div>
                     </div>
                   }
@@ -484,7 +481,7 @@ export default function HomePage() {
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
                   onKeyDown={handleKeyDown}
-                  placeholder="Continue the conversation..."
+                  placeholder={t('home.continuePlaceholder')}
                   className="flex-1 bg-transparent text-gray-900 placeholder-gray-500 focus:outline-none text-base py-2"
                 />
                 {/* 发送按钮 - 圆形设计 */}
@@ -554,16 +551,16 @@ export default function HomePage() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Get Started with Gemini 3
+                {t('home.ctaTitle')}
               </h2>
               <p className="text-lg text-gray-400 mb-10 font-light">
-                Access official Gemini 3.0 resources and community support
+                {t('home.ctaDescription')}
               </p>
               <button 
                 onClick={handleOpenChat}
                 className="group inline-flex items-center gap-2 px-8 py-4 bg-white text-gray-900 text-base font-medium rounded-lg hover:bg-gray-100 transition-all"
               >
-                Get Started
+                {t('common.getStarted')}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
             </motion.div>

@@ -1,4 +1,5 @@
 import React, { memo } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Card } from '../ui/Card'
 import { Toast, useToast } from '../ui/Toast'
 import { Copy, RotateCcw } from 'lucide-react'
@@ -276,6 +277,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = memo(({
   onRegenerate,
   onOpenImageViewer
 }) => {
+  const { t } = useTranslation()
   const { toast, showToast, hideToast } = useToast()
   const isUser = message.type === 'user'
   const isAI = message.type === 'ai'
@@ -283,14 +285,14 @@ export const ChatMessage: React.FC<ChatMessageProps> = memo(({
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(message.content)
-      showToast('Copied')
+      showToast(t('chat.copied'))
 
       if (onCopy) {
         onCopy(message.content)
       }
     } catch (error) {
       console.error('Copy failed:', error)
-      showToast('Copy failed❌')
+      showToast(t('chat.copyFailed'))
     }
   }
 

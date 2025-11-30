@@ -1,0 +1,127 @@
+{
+  "common": {
+    "home": "ホーム",
+    "features": "機能",
+    "capabilities": "能力",
+    "getStarted": "始める",
+    "privacy": "プライバシー",
+    "terms": "利用規約",
+    "loading": "読み込み中...",
+    "error": "エラー",
+    "back": "戻る",
+    "copy": "コピー",
+    "regenerate": "再生成",
+    "thinking": "考え中...",
+    "backToHome": "ホームに戻る"
+  },
+  "home": {
+    "title": "Gemini 3",
+    "subtitle": "Gemini AI情報のコミュニティプラットフォーム",
+    "description": "教育リソース • 開発者チュートリアル • コミュニティサポート",
+    "badge": "2025年11月18日リリース",
+    "placeholder": "Gemini 3に何でも聞いてください...",
+    "continuePlaceholder": "会話を続ける...",
+    "viewCapabilities": "能力を表示",
+    "featuresTitle": "Gemini 3情報とリソース",
+    "featuresSubtitle": "GoogleのGemini AIモデルの機能について学ぶ",
+    "capabilitiesTitle": "Gemini 3とGemini 3.0のパフォーマンス",
+    "capabilitiesSubtitle": "Gemini 3はすべてのAIベンチマークで新しい基準を設定",
+    "aboutTitle": "Gemini 3プラットフォームについて",
+    "aboutDescription": "Googleの最も先進的なAIモデルへのアクセスを提供するコミュニティ主導のプラットフォーム。Gemini 2.5 Proを基盤とし、推論、マルチモーダル理解、エージェントワークフローにおいて革命的なアップグレードを実装。",
+    "aboutNotice": "重要な注意事項：Gemini3.usは独立した愛好家コミュニティおよび開発者プラットフォームです。Google LLCとは提携、承認、または公式に接続されていません。インフラストラクチャと運用をサポートするため、Googleの公式Gemini APIサービスへの有料アクセスを提供しています。",
+    "ctaTitle": "Gemini 3を始める",
+    "ctaDescription": "公式Gemini 3.0リソースとコミュニティサポートにアクセス",
+    "startConversation": "Gemini 3との会話を開始",
+    "loadingChatInterface": "チャットインターフェースを読み込み中...",
+    "stats": {
+      "lmArenaElo": "LMArena Elo",
+      "tokenContext": "トークンコンテキスト",
+      "sweBench": "SWE-bench",
+      "gpqaDiamond": "GPQA Diamond"
+    },
+    "features": {
+      "reasoning": {
+        "title": "Gemini 3博士レベルの推論",
+        "description": "Gemini 3.0は91.9% GPQA Diamond達成 • 37.5% 人類最後の試験 • Deep Thinkモード"
+      },
+      "context": {
+        "title": "Gemini 3.0コンテキストウィンドウ",
+        "description": "Gemini 3は100万トークンのコンテキストを提供し、コードベース全体と大量のドキュメントを処理可能"
+      },
+      "coding": {
+        "title": "Gemini 3エージェントコーディング",
+        "description": "Gemini 3.0は76.2% SWE-benchスコア • 1487 Elo WebDev • 35%精度向上"
+      },
+      "multimodal": {
+        "title": "Gemini 3.0マルチモーダル",
+        "description": "Gemini 3は81% MMMU-Pro達成 • 87.6% Video-MMMU • シームレスなマルチモーダル融合"
+      },
+      "leader": {
+        "title": "Gemini 3 LMArenaリーダー",
+        "description": "Gemini 3.0は1501 Eloスコアでリード • 23.4% MathArena Apex • 最先端"
+      },
+      "safety": {
+        "title": "Gemini 3.0セキュリティ",
+        "description": "Gemini 3は72.1% SimpleQA提供 • フロンティアセキュリティフレームワーク • 業界リーダー"
+      }
+    },
+    "capabilities": {
+      "reasoning": {
+        "title": "Gemini 3推論",
+        "metrics": {
+          "humanityExam": { "label": "人類最後の試験", "desc": "Gemini 3博士レベル" },
+          "gpqaDiamond": { "label": "GPQA Diamond", "desc": "Gemini 3.0科学" },
+          "mathArena": { "label": "MathArena Apex", "desc": "Gemini 3数学SOTA" },
+          "arcAgi": { "label": "ARC-AGI-2", "desc": "Gemini 3.0 Deep Think" }
+        }
+      },
+      "coding": {
+        "title": "Gemini 3.0コーディング",
+        "metrics": {
+          "sweBench": { "label": "SWE-bench検証", "desc": "Gemini 3エンジニアリング" },
+          "webDev": { "label": "WebDev Arena", "desc": "Gemini 3.0 Elo" },
+          "terminal": { "label": "Terminal-Bench 2.0", "desc": "Gemini 3 CLI" },
+          "accuracy": { "label": "精度向上", "desc": "Gemini 3.0ブースト" }
+        }
+      },
+      "multimodal": {
+        "title": "Gemini 3マルチモーダル",
+        "metrics": {
+          "mmmuPro": { "label": "MMMU-Pro", "desc": "Gemini 3.0理解" },
+          "videoMmmu": { "label": "Video-MMMU", "desc": "Gemini 3動画" },
+          "contextWindow": { "label": "コンテキストウィンドウ", "desc": "Gemini 3.0トークン" },
+          "documentProcessing": { "label": "ドキュメント処理", "desc": "Gemini 3ドキュメント" }
+        }
+      },
+      "safety": {
+        "title": "Gemini 3.0セキュリティ",
+        "metrics": {
+          "simpleQA": { "label": "SimpleQA検証", "desc": "Gemini 3精度" },
+          "safetyFramework": { "label": "セキュリティフレームワーク", "desc": "Gemini 3.0認定" },
+          "errorReduction": { "label": "エラー削減", "desc": "Gemini 3ツール" },
+          "promptInjection": { "label": "プロンプトインジェクション", "desc": "Gemini 3.0リスク" }
+        }
+      }
+    }
+  },
+  "footer": {
+    "brandDescription": "コミュニティプラットフォームを通じてGoogleの最も先進的なAIモデルにアクセス。",
+    "officialGoogle": "Google公式",
+    "legal": "法的",
+    "community": "Gemini 3コミュニティ",
+    "communityDescription": "独立したコミュニティプラットフォーム。Google LLCとは提携していません。公式Gemini APIサービスへの有料アクセスを提供。",
+    "copyright": "© 2025 Gemini3.us。全著作権所有。",
+    "poweredBy": "Google Gemini API提供"
+  },
+  "chat": {
+    "copied": "コピーしました",
+    "copyFailed": "コピーに失敗しました",
+    "typeMessage": "メッセージを入力...",
+    "startConversation": "Gemini 3との会話を開始"
+  },
+  "seo": {
+    "title": "Gemini 3 | Googleの最新AIモデル",
+    "description": "Gemini 3情報とリソースのコミュニティプラットフォーム。GoogleのGemini AIモデルについて学ぶ。独立したプラットフォーム、Googleとは無関係。",
+    "keywords": "gemini 3, gemini 3.0, google gemini, aiコミュニティ, リソース, チュートリアル"
+  }
+}

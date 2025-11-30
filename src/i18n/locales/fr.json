@@ -1,0 +1,127 @@
+{
+  "common": {
+    "home": "Accueil",
+    "features": "Fonctionnalités",
+    "capabilities": "Capacités",
+    "getStarted": "Commencer",
+    "privacy": "Confidentialité",
+    "terms": "Conditions",
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "back": "Retour",
+    "copy": "Copier",
+    "regenerate": "Régénérer",
+    "thinking": "Réflexion...",
+    "backToHome": "Retour à l'accueil"
+  },
+  "home": {
+    "title": "Gemini 3",
+    "subtitle": "Plateforme communautaire d'information sur Gemini AI",
+    "description": "Ressources éducatives • Tutoriels développeurs • Support communautaire",
+    "badge": "Sorti le 18 novembre 2025",
+    "placeholder": "Demandez n'importe quoi à Gemini 3...",
+    "continuePlaceholder": "Continuer la conversation...",
+    "viewCapabilities": "Voir les capacités",
+    "featuresTitle": "Informations et ressources Gemini 3",
+    "featuresSubtitle": "Découvrez les capacités du modèle d'IA Gemini de Google",
+    "capabilitiesTitle": "Performances de Gemini 3 et Gemini 3.0",
+    "capabilitiesSubtitle": "Gemini 3 établit de nouvelles normes dans tous les benchmarks d'IA",
+    "aboutTitle": "À propos de la plateforme Gemini 3",
+    "aboutDescription": "Plateforme communautaire offrant l'accès au modèle d'IA le plus avancé de Google. Construite sur Gemini 2.5 Pro avec des améliorations révolutionnaires en raisonnement, compréhension multimodale et flux de travail d'agents.",
+    "aboutNotice": "Avis important : Gemini3.us est une plateforme communautaire et développeur indépendante. Nous ne sommes pas affiliés, approuvés ou officiellement connectés à Google LLC. Nous fournissons un accès payant aux services API officiels Gemini de Google pour soutenir notre infrastructure et nos opérations.",
+    "ctaTitle": "Commencer avec Gemini 3",
+    "ctaDescription": "Accédez aux ressources officielles Gemini 3.0 et au support communautaire",
+    "startConversation": "Démarrer une conversation avec Gemini 3",
+    "loadingChatInterface": "Chargement de l'interface de chat...",
+    "stats": {
+      "lmArenaElo": "LMArena Elo",
+      "tokenContext": "Contexte de Tokens",
+      "sweBench": "SWE-bench",
+      "gpqaDiamond": "GPQA Diamond"
+    },
+    "features": {
+      "reasoning": {
+        "title": "Raisonnement de niveau doctoral de Gemini 3",
+        "description": "Gemini 3.0 atteint 91.9% GPQA Diamond • 37.5% Examen Final de l'Humanité • Mode Deep Think"
+      },
+      "context": {
+        "title": "Fenêtre de contexte de Gemini 3.0",
+        "description": "Gemini 3 offre 1M de tokens de contexte pour traiter des bases de code entières et des documents massifs"
+      },
+      "coding": {
+        "title": "Codage agentique de Gemini 3",
+        "description": "Gemini 3.0 obtient 76.2% SWE-bench • 1487 Elo WebDev • 35% d'amélioration de précision"
+      },
+      "multimodal": {
+        "title": "Multimodal de Gemini 3.0",
+        "description": "Gemini 3 atteint 81% MMMU-Pro • 87.6% Video-MMMU • Fusion multimodale transparente"
+      },
+      "leader": {
+        "title": "Leader de Gemini 3 LMArena",
+        "description": "Gemini 3.0 mène avec un score Elo de 1501 • 23.4% MathArena Apex • État de l'art"
+      },
+      "safety": {
+        "title": "Sécurité de Gemini 3.0",
+        "description": "Gemini 3 fournit 72.1% SimpleQA • Cadre de sécurité frontière • Leader de l'industrie"
+      }
+    },
+    "capabilities": {
+      "reasoning": {
+        "title": "Raisonnement de Gemini 3",
+        "metrics": {
+          "humanityExam": { "label": "Examen Final de l'Humanité", "desc": "Niveau doctoral de Gemini 3" },
+          "gpqaDiamond": { "label": "GPQA Diamond", "desc": "Science de Gemini 3.0" },
+          "mathArena": { "label": "MathArena Apex", "desc": "Mathématiques SOTA de Gemini 3" },
+          "arcAgi": { "label": "ARC-AGI-2", "desc": "Deep Think de Gemini 3.0" }
+        }
+      },
+      "coding": {
+        "title": "Codage de Gemini 3.0",
+        "metrics": {
+          "sweBench": { "label": "SWE-bench Vérifié", "desc": "Ingénierie de Gemini 3" },
+          "webDev": { "label": "WebDev Arena", "desc": "Elo de Gemini 3.0" },
+          "terminal": { "label": "Terminal-Bench 2.0", "desc": "CLI de Gemini 3" },
+          "accuracy": { "label": "Amélioration de Précision", "desc": "Boost de Gemini 3.0" }
+        }
+      },
+      "multimodal": {
+        "title": "Multimodal de Gemini 3",
+        "metrics": {
+          "mmmuPro": { "label": "MMMU-Pro", "desc": "Compréhension de Gemini 3.0" },
+          "videoMmmu": { "label": "Video-MMMU", "desc": "Vidéo de Gemini 3" },
+          "contextWindow": { "label": "Fenêtre de Contexte", "desc": "Tokens de Gemini 3.0" },
+          "documentProcessing": { "label": "Traitement de Documents", "desc": "Documents de Gemini 3" }
+        }
+      },
+      "safety": {
+        "title": "Sécurité de Gemini 3.0",
+        "metrics": {
+          "simpleQA": { "label": "SimpleQA Vérifié", "desc": "Précision de Gemini 3" },
+          "safetyFramework": { "label": "Cadre de Sécurité", "desc": "Certifié Gemini 3.0" },
+          "errorReduction": { "label": "Réduction d'Erreurs", "desc": "Outils de Gemini 3" },
+          "promptInjection": { "label": "Injection de Prompt", "desc": "Risque de Gemini 3.0" }
+        }
+      }
+    }
+  },
+  "footer": {
+    "brandDescription": "Accédez au modèle d'IA le plus avancé de Google via notre plateforme communautaire.",
+    "officialGoogle": "Google Officiel",
+    "legal": "Légal",
+    "community": "Communauté Gemini 3",
+    "communityDescription": "Plateforme communautaire indépendante. Non affiliée à Google LLC. Fournit un accès payant aux services API officiels de Gemini.",
+    "copyright": "© 2025 Gemini3.us. Tous droits réservés.",
+    "poweredBy": "Propulsé par Google Gemini API"
+  },
+  "chat": {
+    "copied": "Copié",
+    "copyFailed": "Échec de la copie",
+    "typeMessage": "Tapez votre message...",
+    "startConversation": "Démarrer une conversation avec Gemini 3"
+  },
+  "seo": {
+    "title": "Gemini 3 | Le dernier modèle d'IA de Google",
+    "description": "Plateforme communautaire d'information et de ressources Gemini 3. Découvrez le modèle d'IA Gemini de Google. Plateforme indépendante, non affiliée à Google.",
+    "keywords": "gemini 3, gemini 3.0, google gemini, communauté ai, ressources, tutoriels"
+  }
+}

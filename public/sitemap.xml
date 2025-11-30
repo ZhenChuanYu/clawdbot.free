@@ -1,21 +1,220 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- English (default) -->
   <url>
     <loc>https://gemini3.us/</loc>
     <lastmod>2025-11-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gemini3.us/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gemini3.us/zh/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://gemini3.us/es/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://gemini3.us/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://gemini3.us/ko/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://gemini3.us/fr/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://gemini3.us/de/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gemini3.us/" />
   </url>
   <url>
     <loc>https://gemini3.us/privacy-policy</loc>
     <lastmod>2025-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gemini3.us/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gemini3.us/zh/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://gemini3.us/es/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://gemini3.us/ja/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://gemini3.us/ko/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://gemini3.us/fr/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://gemini3.us/de/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gemini3.us/privacy-policy" />
   </url>
   <url>
     <loc>https://gemini3.us/terms-of-service</loc>
     <lastmod>2025-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gemini3.us/terms-of-service" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gemini3.us/zh/terms-of-service" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://gemini3.us/es/terms-of-service" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://gemini3.us/ja/terms-of-service" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://gemini3.us/ko/terms-of-service" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://gemini3.us/fr/terms-of-service" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://gemini3.us/de/terms-of-service" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gemini3.us/terms-of-service" />
+  </url>
+  
+  <!-- Chinese -->
+  <url>
+    <loc>https://gemini3.us/zh/</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gemini3.us/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gemini3.us/zh/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gemini3.us/" />
+  </url>
+  <url>
+    <loc>https://gemini3.us/zh/privacy-policy</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gemini3.us/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gemini3.us/zh/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gemini3.us/privacy-policy" />
+  </url>
+  <url>
+    <loc>https://gemini3.us/zh/terms-of-service</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gemini3.us/terms-of-service" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gemini3.us/zh/terms-of-service" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gemini3.us/terms-of-service" />
+  </url>
+  
+  <!-- Spanish -->
+  <url>
+    <loc>https://gemini3.us/es/</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gemini3.us/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://gemini3.us/es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gemini3.us/" />
+  </url>
+  <url>
+    <loc>https://gemini3.us/es/privacy-policy</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gemini3.us/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://gemini3.us/es/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gemini3.us/privacy-policy" />
+  </url>
+  <url>
+    <loc>https://gemini3.us/es/terms-of-service</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gemini3.us/terms-of-service" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://gemini3.us/es/terms-of-service" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gemini3.us/terms-of-service" />
+  </url>
+  
+  <!-- Japanese -->
+  <url>
+    <loc>https://gemini3.us/ja/</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gemini3.us/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://gemini3.us/ja/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gemini3.us/" />
+  </url>
+  <url>
+    <loc>https://gemini3.us/ja/privacy-policy</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gemini3.us/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://gemini3.us/ja/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gemini3.us/privacy-policy" />
+  </url>
+  <url>
+    <loc>https://gemini3.us/ja/terms-of-service</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gemini3.us/terms-of-service" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://gemini3.us/ja/terms-of-service" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gemini3.us/terms-of-service" />
+  </url>
+  
+  <!-- Korean -->
+  <url>
+    <loc>https://gemini3.us/ko/</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gemini3.us/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://gemini3.us/ko/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gemini3.us/" />
+  </url>
+  <url>
+    <loc>https://gemini3.us/ko/privacy-policy</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gemini3.us/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://gemini3.us/ko/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gemini3.us/privacy-policy" />
+  </url>
+  <url>
+    <loc>https://gemini3.us/ko/terms-of-service</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gemini3.us/terms-of-service" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://gemini3.us/ko/terms-of-service" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gemini3.us/terms-of-service" />
+  </url>
+  
+  <!-- French -->
+  <url>
+    <loc>https://gemini3.us/fr/</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gemini3.us/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://gemini3.us/fr/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gemini3.us/" />
+  </url>
+  <url>
+    <loc>https://gemini3.us/fr/privacy-policy</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gemini3.us/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://gemini3.us/fr/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gemini3.us/privacy-policy" />
+  </url>
+  <url>
+    <loc>https://gemini3.us/fr/terms-of-service</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gemini3.us/terms-of-service" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://gemini3.us/fr/terms-of-service" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gemini3.us/terms-of-service" />
+  </url>
+  
+  <!-- German -->
+  <url>
+    <loc>https://gemini3.us/de/</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gemini3.us/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://gemini3.us/de/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gemini3.us/" />
+  </url>
+  <url>
+    <loc>https://gemini3.us/de/privacy-policy</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gemini3.us/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://gemini3.us/de/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gemini3.us/privacy-policy" />
+  </url>
+  <url>
+    <loc>https://gemini3.us/de/terms-of-service</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gemini3.us/terms-of-service" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://gemini3.us/de/terms-of-service" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gemini3.us/terms-of-service" />
   </url>
 </urlset>

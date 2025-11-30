@@ -1,6 +1,11 @@
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import { useLocalizedPath } from '../utils/routes'
 
 export default function Footer() {
+  const { t } = useTranslation()
+  const { getLocalizedPath } = useLocalizedPath()
+
   return (
     <footer className="border-t border-gray-100 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
@@ -18,53 +23,52 @@ export default function Footer() {
               <span className="text-base font-semibold text-gray-900">Gemini3</span>
             </div>
             <p className="text-sm text-gray-500 leading-relaxed max-w-xs">
-              Access Google's most advanced AI model through our community platform.
+              {t('footer.brandDescription')}
             </p>
           </div>
 
           {/* Links */}
           <div className="md:col-span-2">
-            <h3 className="text-sm font-semibold text-gray-900 mb-4">Official Google</h3>
+            <h3 className="text-sm font-semibold text-gray-900 mb-4">{t('footer.officialGoogle')}</h3>
             <ul className="space-y-3 text-sm">
               <li>
                 <a href="#features" className="text-gray-600 hover:text-gray-900 transition-colors" title="View Gemini 3 Features">
-                  Features
+                  {t('common.features')}
                 </a>
               </li>
               <li>
                 <a href="#capabilities" className="text-gray-600 hover:text-gray-900 transition-colors" title="Gemini 3.0 Capabilities">
-                  Capabilities
+                  {t('common.capabilities')}
                 </a>
               </li>
               <li>
                 <a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-colors" title="Get Started with Gemini">
-                  Get Started
+                  {t('common.getStarted')}
                 </a>
               </li>
             </ul>
           </div>
 
           <div className="md:col-span-2">
-            <h3 className="text-sm font-semibold text-gray-900 mb-4">Legal</h3>
+            <h3 className="text-sm font-semibold text-gray-900 mb-4">{t('footer.legal')}</h3>
             <ul className="space-y-3 text-sm">
               <li>
-                <Link to="/privacy-policy" className="text-gray-600 hover:text-gray-900 transition-colors" title="Privacy Policy">
-                  Privacy
+                <Link to={getLocalizedPath('/privacy-policy')} className="text-gray-600 hover:text-gray-900 transition-colors" title="Privacy Policy">
+                  {t('common.privacy')}
                 </Link>
               </li>
               <li>
-                <Link to="/terms-of-service" className="text-gray-600 hover:text-gray-900 transition-colors" title="Terms of Service">
-                  Terms
+                <Link to={getLocalizedPath('/terms-of-service')} className="text-gray-600 hover:text-gray-900 transition-colors" title="Terms of Service">
+                  {t('common.terms')}
                 </Link>
               </li>
             </ul>
           </div>
 
           <div className="md:col-span-4">
-            <h3 className="text-sm font-semibold text-gray-900 mb-4">Gemini 3 Community</h3>
+            <h3 className="text-sm font-semibold text-gray-900 mb-4">{t('footer.community')}</h3>
             <p className="text-xs text-gray-500 leading-relaxed">
-              Independent community platform. Not affiliated with Google LLC.
-              Provides paid access to official Gemini API services.
+              {t('footer.communityDescription')}
             </p>
           </div>
         </div>
@@ -73,10 +77,10 @@ export default function Footer() {
         <div className="pt-8 border-t border-gray-100">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-xs text-gray-500">
-              © 2025 Gemini3.us. All rights reserved.
+              {t('footer.copyright')}
             </p>
             <p className="text-xs text-gray-400">
-              Powered by Google Gemini API
+              {t('footer.poweredBy')}
             </p>
           </div>
         </div>
