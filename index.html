@@ -9,6 +9,10 @@
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Preconnect to Google Fonts for faster font loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
   <script type="text/javascript">
     (function (c, l, a, r, i, t, y) {
       c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
@@ -109,6 +113,17 @@
 
 <body>
   <div id="root"></div>
+  <noscript>
+    <div style="padding: 2rem; text-align: center; font-family: system-ui, -apple-system, sans-serif;">
+      <h1 style="font-size: 1.5rem; margin-bottom: 1rem;">JavaScript Required</h1>
+      <p style="color: #666; margin-bottom: 1rem;">
+        This website requires JavaScript to function properly. Please enable JavaScript in your browser settings.
+      </p>
+      <p style="color: #999; font-size: 0.875rem;">
+        Gemini 3 | Google's Latest AI Model - Community platform for Gemini AI information and resources.
+      </p>
+    </div>
+  </noscript>
   <script type="module" src="/src/main.tsx"></script>
 </body>
 
