@@ -1,14 +1,33 @@
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import LanguageRoute from './components/LanguageRoute'
+import SEOHead from './components/SEOHead'
 import HomePage from './pages/HomePage'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import TermsOfService from './pages/TermsOfService'
 
 function App() {
   const location = useLocation()
+  const { i18n } = useTranslation()
+
+  // 根据路径判断语言并切换
+  useEffect(() => {
+    const pathLang = location.pathname.split('/')[1]
+    const supportedLangs = ['zh', 'es', 'ja', 'ko', 'fr', 'de']
+    
+    if (supportedLangs.includes(pathLang)) {
+      if (i18n.language !== pathLang) {
+        i18n.changeLanguage(pathLang)
+      }
+    } else {
+      // 默认英文
+      if (i18n.language !== 'en') {
+        i18n.changeLanguage('en')
+      }
+    }
+  }, [location.pathname, i18n])
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -16,18 +35,19 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEOHead />
       <Header />
       <main>
         <Routes>
-          {/* Routes with language prefix */}
-          <Route path="/:lang" element={<LanguageRoute><HomePage /></LanguageRoute>} />
-          <Route path="/:lang/privacy-policy" element={<LanguageRoute><PrivacyPolicy /></LanguageRoute>} />
-          <Route path="/:lang/terms-of-service" element={<LanguageRoute><TermsOfService /></LanguageRoute>} />
+          {/* Default English routes */}
+          <Route path="/" element={<HomePage />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
           
-          {/* Default routes (will redirect to language-prefixed routes) */}
-          <Route path="/" element={<LanguageRoute><HomePage /></LanguageRoute>} />
-          <Route path="/privacy-policy" element={<LanguageRoute><PrivacyPolicy /></LanguageRoute>} />
-          <Route path="/terms-of-service" element={<LanguageRoute><TermsOfService /></LanguageRoute>} />
+          {/* Language-prefixed routes */}
+          <Route path="/:lang" element={<HomePage />} />
+          <Route path="/:lang/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/:lang/terms-of-service" element={<TermsOfService />} />
         </Routes>
       </main>
       <Footer />

@@ -21,6 +21,24 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: false,
-    minify: 'esbuild' // 使用 esbuild，Vite 内置，无需额外安装
+    minify: 'esbuild',
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'index.html'),
+        zh: path.resolve(__dirname, 'index-zh.html'),
+        es: path.resolve(__dirname, 'index-es.html'),
+        ja: path.resolve(__dirname, 'index-ja.html'),
+        ko: path.resolve(__dirname, 'index-ko.html'),
+        fr: path.resolve(__dirname, 'index-fr.html'),
+        de: path.resolve(__dirname, 'index-de.html')
+      },
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+          'i18n-vendor': ['i18next', 'react-i18next', 'i18next-browser-languagedetector'],
+          'ui-vendor': ['framer-motion', 'lucide-react']
+        }
+      }
+    }
   }
 })
