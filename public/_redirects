@@ -1,91 +1,24 @@
-# 多语言路由规则 - 按优先级从高到低
-# 中文（简体）
+# SPA 客户端路由配置（极简版）
 /zh/*  /zh/index.html  200
-/zh    /zh/index.html  200
-
-# 中文（繁体）
 /zh-tw/*  /zh-tw/index.html  200
-/zh-tw    /zh-tw/index.html  200
-
-# 西班牙语
 /es/*  /es/index.html  200
-/es    /es/index.html  200
-
-# 日语
 /ja/*  /ja/index.html  200
-/ja    /ja/index.html  200
-
-# 韩语
 /ko/*  /ko/index.html  200
-/ko    /ko/index.html  200
-
-# 法语
 /fr/*  /fr/index.html  200
-/fr    /fr/index.html  200
-
-# 德语
 /de/*  /de/index.html  200
-/de    /de/index.html  200
-
-# 葡萄牙语
 /pt/*  /pt/index.html  200
-/pt    /pt/index.html  200
-
-# 俄语
 /ru/*  /ru/index.html  200
-/ru    /ru/index.html  200
-
-# 意大利语
 /it/*  /it/index.html  200
-/it    /it/index.html  200
-
-# 阿拉伯语
 /ar/*  /ar/index.html  200
-/ar    /ar/index.html  200
-
-# 印地语
 /hi/*  /hi/index.html  200
-/hi    /hi/index.html  200
-
-# 土耳其语
 /tr/*  /tr/index.html  200
-/tr    /tr/index.html  200
-
-# 越南语
 /vi/*  /vi/index.html  200
-/vi    /vi/index.html  200
-
-# 泰语
 /th/*  /th/index.html  200
-/th    /th/index.html  200
-
-# 印尼语
 /id/*  /id/index.html  200
-/id    /id/index.html  200
-
-# 荷兰语
 /nl/*  /nl/index.html  200
-/nl    /nl/index.html  200
-
-# 波兰语
 /pl/*  /pl/index.html  200
-/pl    /pl/index.html  200
-
-# 瑞典语
 /sv/*  /sv/index.html  200
-/sv    /sv/index.html  200
-
-# 挪威语
 /no/*  /no/index.html  200
-/no    /no/index.html  200
-
-# 丹麦语
 /da/*  /da/index.html  200
-/da    /da/index.html  200
-
-# 芬兰语
 /fi/*  /fi/index.html  200
-/fi    /fi/index.html  200
-
-# 默认英语路由（必须放在最后）
-/*    /index.html   200
+/*  /index.html  200
