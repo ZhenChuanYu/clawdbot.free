@@ -128,6 +128,24 @@ export default function HomePage() {
           {/* 输入框区域 - 初始状态在 Hero 区域 */}
           {!hasStartedChat && (
             <div className="relative w-full max-w-3xl mx-auto px-6 lg:px-8 mb-8">
+              {/* NanoBanana4K 入口 */}
+              <div className="flex justify-center mb-6">
+                <a
+                  href="https://nanobanana4k.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 text-gray-900 hover:opacity-80"
+                >
+                  <img 
+                    src="/nanobanana-256.webp" 
+                    alt="NanoBanana4K" 
+                    width="32"
+                    height="32"
+                    className="w-8 h-8 rounded-lg"
+                  />
+                  <span className="text-lg font-semibold">NanoBanana4K</span>
+                </a>
+              </div>
               <div className="flex gap-4 items-center bg-white rounded-2xl shadow-lg border border-gray-200 p-6 focus-within:border-gray-400 focus-within:shadow-xl transition-all">
                 <input
                   type="text"

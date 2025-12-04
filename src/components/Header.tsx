@@ -98,6 +98,22 @@ export default function Header() {
             >
               {t('common.capabilities')}
             </a>
+            <a
+              href="https://nanobanana4k.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-all flex items-center gap-1"
+              title="NanoBanana4K"
+            >
+              <img 
+                src="/nanobanana-256.webp" 
+                alt="NanoBanana4K" 
+                width="20"
+                height="20"
+                className="w-5 h-5 rounded object-cover"
+              />
+              NanoBanana4K
+            </a>
           </nav>
 
           {/* CTA and Language Switcher */}
