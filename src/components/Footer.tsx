@@ -46,6 +46,11 @@ export default function Footer() {
                   {t('common.getStarted')}
                 </a>
               </li>
+              <li>
+                <a href="https://nanobanana4k.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-colors" title="NanoBanana4K.com">
+                  NanoBanana4K.com
+                </a>
+              </li>
             </ul>
           </div>
 
