@@ -144,7 +144,7 @@ export default function HomePage() {
                     className="w-7 h-7 rounded-lg"
                   />
                   <div className="flex flex-col gap-0.5 text-left leading-tight">
-                    <div className="font-semibold">Sora2 · Veo 3.1 · NanoBanana4K</div>
+                    <div className="font-semibold text-lg sm:text-xl">Sora2 · Veo 3.1 · NanoBanana4K</div>
                   </div>
                 </a>
               </div>
