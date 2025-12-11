@@ -102,7 +102,8 @@
           "promptInjection": { "label": "Prompt Injection", "desc": "Gemini 3.0 risk" }
         }
       }
-    }
+    },
+    "sideTip": "Community-tuned free edition using Gemini and Claude high-tier models with Agent collaboration. Intelligence is already high-end. Currently free to use, but the free period may end at any time."
   },
   "footer": {
     "brandDescription": "Access Google's most advanced AI model through our community platform.",

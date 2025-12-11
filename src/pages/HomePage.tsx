@@ -507,7 +507,7 @@ export default function HomePage() {
           <div className="hidden lg:block fixed top-24 right-6 z-50 max-w-sm">
             <div className="relative flex items-start gap-2 rounded-lg bg-gray-900 text-white/90 text-xs leading-relaxed px-3 py-2 shadow-lg shadow-gray-900/20 border border-white/10 text-left break-words">
               <span className="pr-6">
-                社区优化的免费版本，使用 Gemini 与 Claude 高阶模型与 Agent 协作处理消息，智能效果已是高阶水平。当前可免费使用，但免费期可能随时结束。
+                  {t('home.sideTip')}
               </span>
               <button
                 onClick={() => setShowSideTip(false)}

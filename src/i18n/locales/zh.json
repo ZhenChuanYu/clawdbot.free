@@ -102,7 +102,8 @@
           "promptInjection": { "label": "提示注入", "desc": "Gemini 3.0 风险" }
         }
       }
-    }
+    },
+    "sideTip": "社区优化的免费版本，使用 Gemini 与 Claude 高阶模型与 Agent 协作处理消息，智能效果已是高阶水平。当前可免费使用，但免费期可能随时结束。"
   },
   "footer": {
     "brandDescription": "通过我们的社区平台访问 Google 最先进的 AI 模型。",
