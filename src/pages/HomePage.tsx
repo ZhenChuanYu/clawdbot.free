@@ -20,6 +20,7 @@ export default function HomePage() {
   const [initialMessage, setInitialMessage] = useState('')
   const [inputValue, setInputValue] = useState('')
   const [pendingMessage, setPendingMessage] = useState<string | null>(null)
+  const [showSideTip, setShowSideTip] = useState(true)
   const chatContainerRef = useRef<ChatContainerRef>(null)
   // 记录 body 原始 overflow，聊天开启时禁用页面滚动
   useEffect(() => {
@@ -499,6 +500,25 @@ export default function HomePage() {
               </motion.div>
             </div>
           </section>
+        )}
+
+        {/* 右侧提醒文案（不占用弹窗空间，仅桌面显示） */}
+        {hasStartedChat && showSideTip && (
+          <div className="hidden lg:block fixed top-24 right-6 z-50 max-w-sm">
+            <div className="relative flex items-start gap-2 rounded-lg bg-gray-900 text-white/90 text-xs leading-relaxed px-3 py-2 shadow-lg shadow-gray-900/20 border border-white/10 text-left break-words">
+              <span className="pr-6">
+                社区优化的免费版本，使用 Gemini 与 Claude 高阶模型与 Agent 协作处理消息，智能效果已是高阶水平。当前可免费使用，但免费期可能随时结束。
+              </span>
+              <button
+                onClick={() => setShowSideTip(false)}
+                className="absolute top-1 right-1 h-6 w-6 flex items-center justify-center rounded-full bg-white/15 hover:bg-white/25 text-white/80 hover:text-white transition"
+                aria-label="关闭提示"
+                title="关闭提示"
+              >
+                <X className="w-3.5 h-3.5" />
+              </button>
+            </div>
+          </div>
         )}
 
         {/* 悬浮输入框 - 固定在底部 */}
