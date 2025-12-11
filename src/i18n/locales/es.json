@@ -102,7 +102,8 @@
           "promptInjection": { "label": "Inyección de Prompt", "desc": "Riesgo de Gemini 3.0" }
         }
       }
-    }
+    },
+    "sideTip": "Edición gratuita optimizada por la comunidad que usa modelos de alto nivel de Gemini y Claude con colaboración de Agentes. La inteligencia ya es de nivel avanzado. Actualmente es gratis, pero el periodo gratuito puede terminar en cualquier momento."
   },
   "footer": {
     "brandDescription": "Accede al modelo de IA más avanzado de Google a través de nuestra plataforma comunitaria.",

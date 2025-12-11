@@ -102,7 +102,8 @@
           "promptInjection": { "label": "Prompt Injicering", "desc": "Gemini 3.0 risiko" }
         }
       }
-    }
+    },
+    "sideTip": "Community-tunet gratis udgave, der bruger Gemini- og Claude-high-end-modeller sammen med Agent-samarbejde. Intelligensen er allerede på højt niveau. Gratis lige nu, men den gratis periode kan slutte når som helst."
   },
   "footer": {
     "brandDescription": "Få adgang til Google's mest avancerede AI-model gennem vores fællesskabsplatform.",

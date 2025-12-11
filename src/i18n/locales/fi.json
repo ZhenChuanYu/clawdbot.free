@@ -102,7 +102,8 @@
           "promptInjection": { "label": "Kehotteen Injektio", "desc": "Gemini 3.0 riski" }
         }
       }
-    }
+    },
+    "sideTip": "Yhteisön virittämä ilmainen versio, joka käyttää Gemini- ja Claude-huipputason malleja Agent-yhteistyön kanssa. Älykkyys on jo huipputasoa. Nyt ilmainen, mutta ilmainen jakso voi päättyä milloin tahansa."
   },
   "footer": {
     "brandDescription": "Pääsy Google'n kehittyneimpään AI -malliin yhteisöalustamme kautta.",
