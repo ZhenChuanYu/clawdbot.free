@@ -281,6 +281,12 @@ export const ChatMessage: React.FC<ChatMessageProps> = memo(({
   const { toast, showToast, hideToast } = useToast()
   const isUser = message.type === 'user'
   const isAI = message.type === 'ai'
+  // 流式阶段仅做纯文本渲染，避免 Markdown 结构逐步成形导致布局抖动
+  const shouldRenderPlainStreaming =
+    isAI &&
+    message.streaming &&
+    !message.thinkingContent &&
+    !message.answerContent
 
   const handleCopy = async () => {
     try {
@@ -390,6 +396,11 @@ export const ChatMessage: React.FC<ChatMessageProps> = memo(({
                       <div className="answer-section">
                         {parseMarkdown(message.answerContent, onOpenImageViewer)}
                         {message.streaming && <span className="streaming-cursor"></span>}
+                      </div>
+                    ) : shouldRenderPlainStreaming ? (
+                      <div className="whitespace-pre-wrap break-words leading-relaxed font-[system-ui]">
+                        {message.displayContent || message.content}
+                        <span className="streaming-cursor"></span>
                       </div>
                     ) : !message.thinkingContent ? (
                       <>

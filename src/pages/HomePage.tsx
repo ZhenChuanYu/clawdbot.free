@@ -21,6 +21,18 @@ export default function HomePage() {
   const [inputValue, setInputValue] = useState('')
   const [pendingMessage, setPendingMessage] = useState<string | null>(null)
   const chatContainerRef = useRef<ChatContainerRef>(null)
+  // 记录 body 原始 overflow，聊天开启时禁用页面滚动
+  useEffect(() => {
+    const originalOverflow = document.body.style.overflow
+    if (hasStartedChat) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = originalOverflow
+    }
+    return () => {
+      document.body.style.overflow = originalOverflow
+    }
+  }, [hasStartedChat])
 
   // 监听全局事件，打开聊天窗口
   useEffect(() => {

@@ -32,6 +32,7 @@ export const ChatContainer = forwardRef<ChatContainerRef, ChatContainerProps>(({
   })
   const abortControllerRef = useRef<AbortController | null>(null)
   const messagesRef = useRef<ChatMessageType[]>([]) // 用于在异步操作中获取最新的消息列表
+  const streamingUpdateTimer = useRef<number | null>(null) // 节流流式更新，减少频繁渲染抖动
 
   // 创建 AI 客户端
   const aiClient = useMemo(() => {
@@ -67,8 +68,8 @@ export const ChatContainer = forwardRef<ChatContainerRef, ChatContainerProps>(({
       setMessages([userMessage])
       setDisplayList([userMessage])
 
-      // 自动开始 AI 响应
-      startAIStream(initialMessage)
+      // 自动开始 AI 响应（显式传入最新的对话，避免首条消息时 history 为空）
+      startAIStream(initialMessage, [userMessage])
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [initialMessage, aiClient])
@@ -94,7 +95,8 @@ export const ChatContainer = forwardRef<ChatContainerRef, ChatContainerProps>(({
   }
 
   // 开始 AI 流式响应
-  const startAIStream = async (userMessage: string) => {
+  // overrideMessages: 在首条消息或重新生成时传入准确的对话历史，避免依赖异步的 messagesRef 更新导致空历史
+  const startAIStream = async (userMessage: string, overrideMessages?: ChatMessageType[]) => {
     if (!aiClient) {
       console.error('[ChatContainer] AI client not initialized')
       return
@@ -136,7 +138,7 @@ export const ChatContainer = forwardRef<ChatContainerRef, ChatContainerProps>(({
     // 等待状态更新完成
     setTimeout(() => {
       // 使用 ref 获取最新的消息列表（已经通过 useEffect 同步更新）
-      const currentMessages = messagesRef.current
+      const currentMessages = overrideMessages ?? messagesRef.current
       
       // 构建对话历史（过滤掉空的 AI 消息占位符）
       const aiMessages: AIMessage[] = currentMessages
@@ -156,6 +158,20 @@ export const ChatContainer = forwardRef<ChatContainerRef, ChatContainerProps>(({
       console.log('[ChatContainer] AI messages:', aiMessages)
       
       let accumulatedBuffer = ''
+      const flushStreamingUpdate = () => {
+        // 仅在存在新内容时更新 UI，减少 re-render 频率
+        setDisplayList(prevList => prevList.map(msg => {
+          if (msg.id === aiMessageId) {
+            return {
+              ...msg,
+              content: accumulatedBuffer,
+              loading: false,
+              streaming: true
+            }
+          }
+          return msg
+        }))
+      }
       
       if (!aiClient) {
         console.error('[ChatContainer] AI client is null in setTimeout')
@@ -169,19 +185,13 @@ export const ChatContainer = forwardRef<ChatContainerRef, ChatContainerProps>(({
         (content: string) => {
           accumulatedBuffer += content
 
-          // 只更新 displayList，减少状态更新次数
-          // streamingState.streamBuffer 主要用于调试，在流式更新时不需要实时更新
-          setDisplayList(prevList => prevList.map(msg => {
-            if (msg.id === aiMessageId) {
-              return {
-                ...msg,
-                content: accumulatedBuffer,
-                loading: false,
-                streaming: true
-              }
-            }
-            return msg
-          }))
+          // 节流渲染，降低抖动
+          if (streamingUpdateTimer.current === null) {
+            streamingUpdateTimer.current = window.setTimeout(() => {
+              flushStreamingUpdate()
+              streamingUpdateTimer.current = null
+            }, 50) // 每 50ms 刷新一次
+          }
         },
         // onError 回调
         (error: string) => {
@@ -209,6 +219,12 @@ export const ChatContainer = forwardRef<ChatContainerRef, ChatContainerProps>(({
         },
         controller.signal
       ).then(() => {
+        // 补一次最终刷新，确保尾段显示
+        if (streamingUpdateTimer.current !== null) {
+          clearTimeout(streamingUpdateTimer.current)
+          streamingUpdateTimer.current = null
+        }
+        flushStreamingUpdate()
         // 流式完成 - React 18 会自动批处理这些更新
         const finalMessage = {
           content: accumulatedBuffer,
@@ -264,11 +280,13 @@ export const ChatContainer = forwardRef<ChatContainerRef, ChatContainerProps>(({
       timestamp: new Date()
     }
 
+    const conversationForAI = [...messagesRef.current, userMessage]
+
     setMessages(prev => [...prev, userMessage])
     setDisplayList(prev => [...prev, userMessage])
 
-    // 开始 AI 响应
-    startAIStream(message)
+    // 开始 AI 响应（传入最新对话，避免首条消息时 history 为空）
+    startAIStream(message, conversationForAI)
   }
 
   // 暴露方法给父组件
@@ -294,8 +312,8 @@ export const ChatContainer = forwardRef<ChatContainerRef, ChatContainerProps>(({
         setMessages(newMessages)
         setDisplayList(newMessages)
 
-        // 重新发送用户消息
-        startAIStream(userMessage.content)
+        // 重新发送用户消息（使用最新对话）
+        startAIStream(userMessage.content, newMessages)
       }
     }
   }, [])
