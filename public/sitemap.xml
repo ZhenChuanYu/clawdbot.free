@@ -2,196 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- English (default) -->
   <url>
-    <loc>https://gemini3.us/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://grok.api/</loc>
+    <lastmod>2025-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://gemini3.us/privacy-policy</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://grok.api/privacy-policy</loc>
+    <lastmod>2025-12-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://gemini3.us/terms-of-service</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://grok.api/terms-of-service</loc>
+    <lastmod>2025-12-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
-  <!-- Chinese -->
+  <!-- Simplified Chinese -->
   <url>
-    <loc>https://gemini3.us/zh</loc>
-    <lastmod>2025-01-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <!-- Spanish -->
-  <url>
-    <loc>https://gemini3.us/es</loc>
-    <lastmod>2025-01-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <!-- Japanese -->
-  <url>
-    <loc>https://gemini3.us/ja</loc>
-    <lastmod>2025-01-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <!-- Korean -->
-  <url>
-    <loc>https://gemini3.us/ko</loc>
-    <lastmod>2025-01-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <!-- French -->
-  <url>
-    <loc>https://gemini3.us/fr</loc>
-    <lastmod>2025-01-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <!-- German -->
-  <url>
-    <loc>https://gemini3.us/de</loc>
-    <lastmod>2025-01-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <!-- Portuguese -->
-  <url>
-    <loc>https://gemini3.us/pt</loc>
-    <lastmod>2025-01-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <!-- Russian -->
-  <url>
-    <loc>https://gemini3.us/ru</loc>
-    <lastmod>2025-01-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <!-- Italian -->
-  <url>
-    <loc>https://gemini3.us/it</loc>
-    <lastmod>2025-01-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <!-- Arabic -->
-  <url>
-    <loc>https://gemini3.us/ar</loc>
-    <lastmod>2025-01-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <!-- Hindi -->
-  <url>
-    <loc>https://gemini3.us/hi</loc>
-    <lastmod>2025-01-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <!-- Turkish -->
-  <url>
-    <loc>https://gemini3.us/tr</loc>
-    <lastmod>2025-01-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <!-- Vietnamese -->
-  <url>
-    <loc>https://gemini3.us/vi</loc>
-    <lastmod>2025-01-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <!-- Thai -->
-  <url>
-    <loc>https://gemini3.us/th</loc>
-    <lastmod>2025-01-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <!-- Indonesian -->
-  <url>
-    <loc>https://gemini3.us/id</loc>
-    <lastmod>2025-01-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <!-- Dutch -->
-  <url>
-    <loc>https://gemini3.us/nl</loc>
-    <lastmod>2025-01-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <!-- Polish -->
-  <url>
-    <loc>https://gemini3.us/pl</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://grok.api/zh</loc>
+    <lastmod>2025-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <!-- Traditional Chinese -->
   <url>
-    <loc>https://gemini3.us/zh-tw</loc>
-    <lastmod>2025-01-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <!-- Swedish -->
-  <url>
-    <loc>https://gemini3.us/sv</loc>
-    <lastmod>2025-01-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <!-- Norwegian -->
-  <url>
-    <loc>https://gemini3.us/no</loc>
-    <lastmod>2025-01-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <!-- Danish -->
-  <url>
-    <loc>https://gemini3.us/da</loc>
-    <lastmod>2025-01-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <!-- Finnish -->
-  <url>
-    <loc>https://gemini3.us/fi</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://grok.api/zh-tw</loc>
+    <lastmod>2025-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>

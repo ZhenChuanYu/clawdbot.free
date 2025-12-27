@@ -1,128 +1,90 @@
 {
-  "common": {
-    "home": "首頁",
-    "features": "功能",
-    "capabilities": "能力",
-    "getStarted": "開始使用",
-    "privacy": "隱私",
-    "terms": "條款",
-    "loading": "載入中...",
-    "error": "錯誤",
-    "back": "返回",
-    "copy": "複製",
-    "regenerate": "重新產生",
-    "thinking": "思考中...",
-    "backToHome": "返回首頁"
-  },
-  "home": {
-    "title": "Gemini 3",
-    "subtitle": "Gemini AI 資訊社群平台",
-    "description": "教育資源 • 開發者教學 • 社群支援",
-    "badge": "2025年11月18日發布",
-    "placeholder": "向 Gemini 3 提問...",
-    "continuePlaceholder": "繼續對話...",
-    "viewCapabilities": "查看能力",
-    "featuresTitle": "Gemini 3 資訊和資源",
-    "featuresSubtitle": "了解 Google 的 Gemini AI 模型能力",
-    "capabilitiesTitle": "Gemini 3 和 Gemini 3.0 效能",
-    "capabilitiesSubtitle": "Gemini 3 在所有 AI 基準測試中樹立新標準",
-    "aboutTitle": "關於 Gemini 3 平台",
-    "aboutDescription": "社群驅動的平台，提供對 Google 最先進 AI 模型的存取。基於 Gemini 2.5 Pro 建構，在推理、多模態理解和智慧體工作流程方面進行了革命性升級。",
-    "aboutNotice": "重要提示：Gemini3.us 是一個獨立的愛好者社群和開發者平台。我們與 Google LLC 沒有關聯、未獲其認可，也非官方連接。我們提供對 Google 官方 Gemini API 服務的付費存取，以支援我們的基礎設施和營運。",
-    "ctaTitle": "開始使用 Gemini 3",
-    "ctaDescription": "存取官方 Gemini 3.0 資源和社群支援",
-    "startConversation": "開始與 Gemini 3 對話",
-    "loadingChatInterface": "載入聊天介面...",
-    "stats": {
-      "lmArenaElo": "LMArena Elo",
-      "tokenContext": "Token 上下文",
-      "sweBench": "SWE-bench",
-      "gpqaDiamond": "GPQA Diamond"
-    },
-    "features": {
-      "reasoning": {
-        "title": "Gemini 3 博士級推理",
-        "description": "Gemini 3.0 達到 91.9% GPQA Diamond • 37.5% 人類終極考試 • 深度思考模式"
-      },
-      "context": {
-        "title": "Gemini 3.0 上下文視窗",
-        "description": "Gemini 3 提供 100萬 token 上下文，可處理整個程式碼庫和大量文件"
-      },
-      "coding": {
-        "title": "Gemini 3 智慧體程式設計",
-        "description": "Gemini 3.0 得分 76.2% SWE-bench • 1487 Elo WebDev • 35% 準確率提升"
-      },
-      "multimodal": {
-        "title": "Gemini 3.0 多模態",
-        "description": "Gemini 3 達到 81% MMMU-Pro • 87.6% Video-MMMU • 無縫多模態融合"
-      },
-      "leader": {
-        "title": "Gemini 3 LMArena 領先者",
-        "description": "Gemini 3.0 以 1501 Elo 分數領先 • 23.4% MathArena Apex • 最先進水準"
-      },
-      "safety": {
-        "title": "Gemini 3.0 安全性",
-        "description": "Gemini 3 提供 72.1% SimpleQA • 前沿安全框架 • 業界領先"
-      }
-    },
-    "capabilities": {
-      "reasoning": {
-        "title": "Gemini 3 推理",
-        "metrics": {
-          "humanityExam": { "label": "人類終極考試", "desc": "Gemini 3 博士級" },
-          "gpqaDiamond": { "label": "GPQA Diamond", "desc": "Gemini 3.0 科學" },
-          "mathArena": { "label": "MathArena Apex", "desc": "Gemini 3 數學 SOTA" },
-          "arcAgi": { "label": "ARC-AGI-2", "desc": "Gemini 3.0 深度思考" }
-        }
-      },
-      "coding": {
-        "title": "Gemini 3.0 程式設計",
-        "metrics": {
-          "sweBench": { "label": "SWE-bench 驗證", "desc": "Gemini 3 工程" },
-          "webDev": { "label": "WebDev Arena", "desc": "Gemini 3.0 Elo" },
-          "terminal": { "label": "Terminal-Bench 2.0", "desc": "Gemini 3 CLI" },
-          "accuracy": { "label": "準確率提升", "desc": "Gemini 3.0 提升" }
-        }
-      },
-      "multimodal": {
-        "title": "Gemini 3 多模態",
-        "metrics": {
-          "mmmuPro": { "label": "MMMU-Pro", "desc": "Gemini 3.0 理解" },
-          "videoMmmu": { "label": "Video-MMMU", "desc": "Gemini 3 影片" },
-          "contextWindow": { "label": "上下文視窗", "desc": "Gemini 3.0 tokens" },
-          "documentProcessing": { "label": "文件處理", "desc": "Gemini 3 文件" }
-        }
-      },
-      "safety": {
-        "title": "Gemini 3.0 安全性",
-        "metrics": {
-          "simpleQA": { "label": "SimpleQA 驗證", "desc": "Gemini 3 準確率" },
-          "safetyFramework": { "label": "安全框架", "desc": "Gemini 3.0 認證" },
-          "errorReduction": { "label": "錯誤減少", "desc": "Gemini 3 工具" },
-          "promptInjection": { "label": "提示注入", "desc": "Gemini 3.0 風險" }
-        }
-      }
-    }
-  },
-  "footer": {
-    "brandDescription": "透過我們的社群平台存取 Google 最先進的 AI 模型。",
-    "officialGoogle": "Google 官方",
-    "legal": "法律",
-    "community": "Gemini 3 社群",
-    "communityDescription": "獨立社群平台。與 Google LLC 無關聯。提供對官方 Gemini API 服務的付費存取。",
-    "copyright": "© 2025 Gemini3.us。保留所有權利。",
-    "poweredBy": "由 Google Gemini API 提供支援"
-  },
-  "chat": {
-    "copied": "已複製",
-    "copyFailed": "複製失敗",
-    "typeMessage": "輸入您的訊息...",
-    "startConversation": "開始與 Gemini 3 對話"
-  },
-  "seo": {
-    "title": "Gemini 3 Flash & Pro | Google 最新 AI 模型",
-    "description": "Gemini 3 資訊和資源社群平台。了解 Google 的 Gemini AI 模型。專注於 Gemini 生態的技術社群與資源中心。",
-    "keywords": "gemini 3, gemini 3.0, google gemini, ai 社群, 資源, 教學"
-  }
+  "common_home": "首頁",
+  "common_features": "功能",
+  "common_pricing": "定價",
+  "common_faq": "常見問題",
+  "common_product": "產品",
+  "common_legal": "法律",
+  "common_about": "關於 Grok API",
+  "common_aboutDesc": "Grok API 提供對 xAI Grok 4.1 模型的存取。具備頂級推理、情感智慧和創意寫作能力。我們為開發者和企業提供靈活的定價方案。",
+  "common_copyright": "© 2025 Grok API. 版權所有。",
+  "common_poweredBy": "由 xAI Grok 4.1 驅動",
+  "common_howToUse": "使用方法",
+  "common_getStarted": "開始使用",
+  "common_privacy": "隱私",
+  "common_terms": "條款",
+  "grok_badge": "Grok 4.1 於2025年11月17日發布",
+  "grok_title": "Grok API",
+  "grok_subtitle": "具備情感智慧和創意能力的先進AI",
+  "grok_description": "存取 xAI 最強大的 AI 模型 • 頂級推理能力 • 卓越創意寫作",
+  "grok_viewPricing": "查看定價",
+  "grok_stats_lmArenaElo": "LMArena Elo 分數",
+  "grok_stats_creativeWriting": "創意寫作 Elo",
+  "grok_stats_hallucinationRate": "幻覺率",
+  "grok_stats_reasoning": "推理排名",
+  "grok_whyChoose_smallTitle": "為什麼選擇 GROK API",
+  "grok_whyChoose_mainTitle": "先進的 AI 能力",
+  "grok_whyChoose_subtitle": "體驗下一代人工智慧",
+  "grok_features_emotionalIntelligence_title": "情感智慧",
+  "grok_features_emotionalIntelligence_description": "在 EQ-Bench3 測試中表現優異，具備卓越的情感理解和共情能力",
+  "grok_features_reasoning_title": "卓越推理",
+  "grok_features_reasoning_description": "在 LMArena 排名第一，思考模式下 Elo 分數達 1483，領先所有 AI 模型",
+  "grok_features_creativeWriting_title": "創意寫作卓越",
+  "grok_features_creativeWriting_description": "創意寫作 Elo 分數 1722，比上一代高出 600 分",
+  "grok_features_factualAccuracy_title": "事實準確性",
+  "grok_features_factualAccuracy_description": "幻覺率從 12.09% 降至 4.22%，可靠性提升近 3 倍",
+  "grok_features_realTimeData_title": "即時資料存取",
+  "grok_features_realTimeData_description": "與 X 平台整合，提供最新資訊和即時事件分析",
+  "grok_features_developerFriendly_title": "開發者友善的 API",
+  "grok_features_developerFriendly_description": "簡單的 REST API，配有完整文件和程式碼範例，可快速整合",
+  "grok_pricing_smallTitle": "GROK API 定價",
+  "grok_pricing_mainTitle": "靈活的定價方案",
+  "grok_pricing_subtitle": "選擇適合您需求的方案",
+  "grok_pricing_popular": "最受歡迎",
+  "grok_pricing_getStarted": "開始使用",
+  "grok_pricing_monthly_label": "月度訂閱",
+  "grok_pricing_monthly_price": "$49",
+  "grok_pricing_monthly_description": "適合個人和小型專案",
+  "grok_pricing_monthly_features_requests": "每月 100,000 次 API 請求",
+  "grok_pricing_monthly_features_models": "存取所有 Grok 模型",
+  "grok_pricing_monthly_features_support": "郵件支援",
+  "grok_pricing_monthly_features_updates": "定期模型更新",
+  "grok_pricing_yearly_label": "年度訂閱",
+  "grok_pricing_yearly_price": "$490",
+  "grok_pricing_yearly_description": "為認真的開發者提供最佳價值",
+  "grok_pricing_yearly_features_requests": "每年 1,500,000 次 API 請求",
+  "grok_pricing_yearly_features_models": "存取所有 Grok 模型",
+  "grok_pricing_yearly_features_priority": "優先支援",
+  "grok_pricing_yearly_features_updates": "搶先體驗新功能",
+  "grok_pricing_yearly_features_discount": "比月度訂閱節省 $98",
+  "grok_pricing_oneTime_label": "一次性付費",
+  "grok_pricing_oneTime_price": "$99",
+  "grok_pricing_oneTime_description": "一次付費，隨時使用",
+  "grok_pricing_oneTime_features_credits": "50,000 API 積分",
+  "grok_pricing_oneTime_features_validity": "積分永不過期",
+  "grok_pricing_oneTime_features_models": "存取所有模型",
+  "grok_pricing_oneTime_features_rollover": "未使用積分可結轉",
+  "grok_howToUse_smallTitle": "如何使用 GROK API",
+  "grok_howToUse_mainTitle": "3 個簡單步驟快速開始",
+  "grok_howToUse_steps_signup_title": "註冊並取得 API 金鑰",
+  "grok_howToUse_steps_signup_description": "建立您的帳戶並立即取得 API 金鑰。測試無需信用卡。",
+  "grok_howToUse_steps_integrate_title": "整合到您的應用程式",
+  "grok_howToUse_steps_integrate_description": "使用我們簡單的 REST API 或 SDK，幾分鐘內將 Grok 整合到您的應用程式中。",
+  "grok_howToUse_steps_deploy_title": "部署並擴展",
+  "grok_howToUse_steps_deploy_description": "啟動您的 AI 功能，隨著使用量增長輕鬆擴展。",
+  "grok_faq_smallTitle": "GROK API 常見問題",
+  "grok_faq_mainTitle": "關於 Grok API 的常見問題",
+  "grok_faq_questions_what_question": "什麼是 Grok API？",
+  "grok_faq_questions_what_answer": "Grok API 提供對 xAI 的 Grok 4.1 AI 模型的程式化存取，具備頂級情感智慧、創意寫作和推理能力。專為希望將先進 AI 整合到應用程式中的開發者設計。",
+  "grok_faq_questions_difference_question": "Grok 與其他 AI 模型有什麼不同？",
+  "grok_faq_questions_difference_answer": "Grok 4.1 在 LMArena 推理排名第一(1483 Elo)，在創意寫作中表現卓越(1722 Elo)，幻覺率顯著降低(4.22%)。它與 X 平台整合以取得即時資料，並提供卓越的情感智慧。",
+  "grok_faq_questions_useCases_question": "Grok API 的常見使用場景有哪些？",
+  "grok_faq_questions_useCases_answer": "Grok API 適用於聊天機器人、內容創作、創意寫作輔助、情感分析、客戶服務自動化、研究工具，以及任何需要先進推理和共情能力的應用程式。",
+  "grok_faq_questions_apiKey_question": "如何取得 API 金鑰？",
+  "grok_faq_questions_apiKey_answer": "只需點選開始使用建立帳戶。您的 API 金鑰將立即產生，您可以立即開始進行 API 呼叫。免費套餐包含測試積分。",
+  "grok_faq_questions_support_question": "提供哪些類型的支援？",
+  "grok_faq_questions_support_answer": "我們為所有使用者提供郵件支援，為年度訂閱使用者提供優先支援，還有完整的文件、程式碼範例和活躍的開發者社群。",
+  "grok_cta_title": "立即開始使用 Grok API",
+  "grok_cta_description": "加入數千名開發者，用先進AI建構未來"
 }
 

@@ -1,7 +1,7 @@
 {
-  "name": "gemini3-website",
+  "name": "grok-api-website",
   "version": "1.0.0",
-  "description": "Gemini3.us - AI enthusiast community website",
+  "description": "Grok API - xAI Grok API access platform",
   "private": true,
   "type": "module",
   "scripts": {

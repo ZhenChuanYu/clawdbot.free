@@ -10,16 +10,16 @@ export default function PrivacyPolicy() {
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">Privacy Policy</h1>
-          <p className="text-gray-500 mb-12">Last updated: November 19, 2025</p>
+          <p className="text-gray-500 mb-12">Last updated: December 28, 2025</p>
 
           <div className="prose prose-lg max-w-none">
             <section className="mb-12">
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Introduction</h2>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Welcome to Gemini3.us ("we," "our," or "us"). We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our platform.
+                Welcome to Grok API ("we," "our," or "us"). We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our platform.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                Gemini3.us is an independent community platform that provides access to Google's Gemini API services. We are not affiliated with Google LLC.
+                Grok API is a developer platform that provides access to xAI's Grok 4.1 AI model services. We are not affiliated with xAI.
               </p>
             </section>
 
@@ -58,7 +58,7 @@ export default function PrivacyPolicy() {
               </p>
               <ul className="list-disc pl-6 text-gray-700 space-y-2">
                 <li>To provide and maintain our services</li>
-                <li>To process your API requests through Google's Gemini API</li>
+                <li>To process your API requests through xAI's Grok API</li>
                 <li>To manage your account and provide customer support</li>
                 <li>To process payments and prevent fraud</li>
                 <li>To send you technical notices and updates</li>
@@ -73,7 +73,7 @@ export default function PrivacyPolicy() {
                 We may share your information in the following circumstances:
               </p>
               <ul className="list-disc pl-6 text-gray-700 space-y-2">
-                <li><strong>With Google:</strong> Your API requests are processed through Google's Gemini API, subject to Google's privacy policies</li>
+                <li><strong>With xAI:</strong> Your API requests are processed through xAI's Grok API, subject to xAI's privacy policies</li>
                 <li><strong>Service Providers:</strong> We may share information with third-party service providers who assist in operating our platform</li>
                 <li><strong>Legal Requirements:</strong> We may disclose information if required by law or to protect our rights</li>
                 <li><strong>Business Transfers:</strong> In the event of a merger or acquisition, your information may be transferred</li>
@@ -136,14 +136,14 @@ export default function PrivacyPolicy() {
                 If you have any questions about this Privacy Policy or our data practices, please contact us at:
               </p>
               <div className="bg-gray-50 p-6 rounded-lg">
-                <p className="text-gray-700">Email: privacy@gemini3.us</p>
-                <p className="text-gray-700 mt-2">Website: https://gemini3.us</p>
+                <p className="text-gray-700">Email: support@grok.api</p>
+                <p className="text-gray-700 mt-2">Website: https://grok.api</p>
               </div>
             </section>
 
             <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded">
               <p className="text-sm text-gray-700">
-                <strong>Disclaimer:</strong> Gemini3.us is an independent enthusiast community and developer platform. We are not affiliated with, endorsed by, or officially connected to Google LLC. We provide paid access to Google's official Gemini API services.
+                <strong>Disclaimer:</strong> Grok API is an independent developer platform. We are not affiliated with, endorsed by, or officially connected to xAI. We provide access to xAI's official Grok API services.
               </p>
             </div>
           </div>

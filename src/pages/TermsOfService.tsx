@@ -10,26 +10,26 @@ export default function TermsOfService() {
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">Terms of Service</h1>
-          <p className="text-gray-500 mb-12">Last updated: November 19, 2025</p>
+          <p className="text-gray-500 mb-12">Last updated: December 28, 2025</p>
 
           <div className="prose prose-lg max-w-none">
             <section className="mb-12">
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Acceptance of Terms</h2>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Welcome to Gemini3.us. By accessing or using our platform, you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use our services.
+                Welcome to Grok API. By accessing or using our platform, you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use our services.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                Gemini3.us is an independent community platform that provides access to Google's Gemini API services. We are not affiliated with, endorsed by, or officially connected to Google LLC.
+                Grok API is a developer platform that provides access to xAI's Grok 4.1 AI model services. We are not affiliated with, endorsed by, or officially connected to xAI.
               </p>
             </section>
 
             <section className="mb-12">
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">2. Description of Service</h2>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Gemini3.us provides a platform that enables users to access Google's Gemini 3 AI model through official API services. Our services include:
+                Grok API provides a platform that enables users to access xAI's Grok 4.1 AI model through official API services. Our services include:
               </p>
               <ul className="list-disc pl-6 text-gray-700 space-y-2">
-                <li>API access to Google's Gemini 3 model</li>
+                <li>API access to xAI's Grok 4.1 model</li>
                 <li>Developer tools and documentation</li>
                 <li>Community support and resources</li>
                 <li>Usage monitoring and analytics</li>
@@ -76,11 +76,11 @@ export default function TermsOfService() {
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">5. API Usage and Limitations</h2>
               <h3 className="text-xl font-semibold text-gray-800 mb-3">5.1 API Access</h3>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Your use of the Gemini API through our platform is subject to:
+                Your use of the Grok API through our platform is subject to:
               </p>
               <ul className="list-disc pl-6 text-gray-700 space-y-2 mb-4">
                 <li>Rate limits and usage quotas based on your subscription plan</li>
-                <li>Google's API terms and conditions</li>
+                <li>xAI's API terms and conditions</li>
                 <li>Our fair use policy</li>
               </ul>
 
@@ -112,7 +112,7 @@ export default function TermsOfService() {
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">7. Intellectual Property</h2>
               <h3 className="text-xl font-semibold text-gray-800 mb-3">7.1 Our Rights</h3>
               <p className="text-gray-700 leading-relaxed mb-4">
-                All content, features, and functionality of our platform are owned by Gemini3.us and are protected by intellectual property laws.
+                All content, features, and functionality of our platform are owned by Grok API and are protected by intellectual property laws.
               </p>
 
               <h3 className="text-xl font-semibold text-gray-800 mb-3">7.2 Your Content</h3>
@@ -124,15 +124,15 @@ export default function TermsOfService() {
             <section className="mb-12">
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">8. Third-Party Services</h2>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Our platform integrates with Google's Gemini API. Your use of the API is subject to:
+                Our platform integrates with xAI's Grok API. Your use of the API is subject to:
               </p>
               <ul className="list-disc pl-6 text-gray-700 space-y-2">
-                <li>Google's Terms of Service</li>
-                <li>Google's Privacy Policy</li>
-                <li>Google's API usage policies</li>
+                <li>xAI's Terms of Service</li>
+                <li>xAI's Privacy Policy</li>
+                <li>xAI's API usage policies</li>
               </ul>
               <p className="text-gray-700 leading-relaxed mt-4">
-                We are not responsible for Google's services or any changes to their API.
+                We are not responsible for xAI's services or any changes to their API.
               </p>
             </section>
 
@@ -146,14 +146,14 @@ export default function TermsOfService() {
             <section className="mb-12">
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">10. Limitation of Liability</h2>
               <p className="text-gray-700 leading-relaxed">
-                TO THE MAXIMUM EXTENT PERMITTED BY LAW, GEMINI3.US SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING FROM YOUR USE OF OUR SERVICES.
+                TO THE MAXIMUM EXTENT PERMITTED BY LAW, GROK API SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING FROM YOUR USE OF OUR SERVICES.
               </p>
             </section>
 
             <section className="mb-12">
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">11. Indemnification</h2>
               <p className="text-gray-700 leading-relaxed">
-                You agree to indemnify and hold harmless Gemini3.us from any claims, damages, or expenses arising from your use of our services or violation of these Terms.
+                You agree to indemnify and hold harmless Grok API from any claims, damages, or expenses arising from your use of our services or violation of these Terms.
               </p>
             </section>
 
@@ -190,14 +190,14 @@ export default function TermsOfService() {
                 If you have any questions about these Terms, please contact us:
               </p>
               <div className="bg-gray-50 p-6 rounded-lg">
-                <p className="text-gray-700">Email: support@gemini3.us</p>
-                <p className="text-gray-700 mt-2">Website: https://gemini3.us</p>
+                <p className="text-gray-700">Email: support@grok.api</p>
+                <p className="text-gray-700 mt-2">Website: https://grok.api</p>
               </div>
             </section>
 
             <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded">
               <p className="text-sm text-gray-700">
-                <strong>Important Notice:</strong> Gemini3.us is an independent enthusiast community and developer platform. We are not affiliated with, endorsed by, or officially connected to Google LLC. We provide paid access to Google's official Gemini API services to support our infrastructure and operational costs.
+                <strong>Important Notice:</strong> Grok API is an independent developer platform. We are not affiliated with, endorsed by, or officially connected to xAI. We provide access to xAI's official Grok API services to support our infrastructure and operational costs.
               </p>
             </div>
           </div>

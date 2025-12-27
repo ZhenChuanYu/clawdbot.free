@@ -2,12 +2,47 @@
 2、Description标签，最多160
 3、Keywords标签，最多100个字符
 4、There should only be one H1 tag per page.
-5、image需要包含英文alt text
+5、image需要包含英文alt text，注意：不能多语言化，只能英文
 6、关键词密度不合适，需要做的关键词密度在 3-4%
 7、页面的标题结构，应该是 H1 、 H2 、 H3 这样排列下来，就跟树状一样，一个页面只能有一个 H1
 8、不用H4，只用H1 H2 H3，关键词应该藏在H1 H2 H3中
-8、所有链接标签 需要有对应的title
-9、订阅做成（月、年订阅）+一次性付费，这样我测试转化是最好的
+8、所有链接标签 需要有对应的title，纯英文即可，不要多语言化
 10、谷歌seo喜欢真实非夸张的描述文本，务必注意
+11、【Canonical】标签，需要有对应的链接，每个关键页面都要有
+12、每个页面都要有hreflang，而不止首页有hrelang
 
-11、要注意，谷歌search console，URL inspection，Live test时，有网页代码，但screenshot截图内容是空的，这种情况是因为js有问题，需要排查并注意
+9、订阅做成（月、年订阅）+一次性付费，这样我测试转化是最好的
+10、BingBot很弱，页面越简单，越静态，越容易被Bing收录
+11、若页面有视频，为页面视频做 SEO 适配：在页面添加 VideoObject 结构化数据（JSON-LD，包含 name、description、thumbnailUrl、contentUrl、embedUrl、duration、uploadDate、publisher），创建独立的视频观看页面（如 /video/[id]），在视频所在位置添加隐藏链接（sr-only）指向该观看页，并在 robots meta 中设置 maxVideoPreview: -1。
+
+
+
+页面内容结构：
+1、
+小标题：H2-Why Choose Sora2
+大标题：H2-Advanced Content Creation
+
+2、
+小标题：H2-How to Use Sora2
+大标题：H2-Get Started in 3 Simple Steps
+
+3、
+小标题：H2-Sora2 FAQ
+大标题：H2-Common Questions About Sora2
+
+
+4、
+大标题：H2-Start Creating with Sora2
+
+小标题在大标题的上方，小标题字号很小，而且是带颜色的文字
+
+
+【生成Description】
+1、请拓展description，增加吸引人的描述
+2、每种语言的descrition控制在170字符内，尽量不要超过170字符
+
+【生成Title】
+1、需要包含关键词，热词
+2、包含一点吸引人的描述
+3、每种语言的Title控制在60字符内，尽量不要超过60字符
+

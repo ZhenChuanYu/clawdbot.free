@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- English (Default) -->
+  <url>
+    <loc>https://grok.api/</loc>
+    <lastmod>2025-12-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://grok.api/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://grok.api/zh/" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://grok.api/zh-tw/" />
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://grok.api/zh-tw/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grok.api/" />
+  </url>
+
+  <!-- Simplified Chinese -->
+  <url>
+    <loc>https://grok.api/zh/</loc>
+    <lastmod>2025-12-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://grok.api/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://grok.api/zh/" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://grok.api/zh-tw/" />
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://grok.api/zh-tw/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grok.api/" />
+  </url>
+
+  <!-- Traditional Chinese (Taiwan & Hong Kong) -->
+  <url>
+    <loc>https://grok.api/zh-tw/</loc>
+    <lastmod>2025-12-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://grok.api/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://grok.api/zh/" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://grok.api/zh-tw/" />
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://grok.api/zh-tw/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grok.api/" />
+  </url>
+
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://grok.api/privacy-policy</loc>
+    <lastmod>2025-12-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Terms of Service -->
+  <url>
+    <loc>https://grok.api/terms-of-service</loc>
+    <lastmod>2025-12-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>

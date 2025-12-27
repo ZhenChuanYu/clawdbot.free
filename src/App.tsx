@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import SEOHead from './components/SEOHead'
-import HomePage from './pages/HomePage'
+import GrokHomePage from './pages/GrokHomePage'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import TermsOfService from './pages/TermsOfService'
 
@@ -15,17 +15,11 @@ function App() {
   // 根据路径判断语言并切换
   useEffect(() => {
     const pathLang = location.pathname.split('/')[1]
-    const supportedLangs = ['zh', 'zh-tw', 'es', 'ja', 'ko', 'fr', 'de', 'pt', 'ru', 'it', 'ar', 'hi', 'tr', 'vi', 'th', 'id', 'nl', 'pl', 'sv', 'no', 'da', 'fi']
-    
-    // 路径语言代码到 i18n 语言代码的映射
-    const langMap: Record<string, string> = {
-      'zh-tw': 'zh-TW'
-    }
+    const supportedLangs = ['zh']
     
     if (supportedLangs.includes(pathLang)) {
-      const i18nLang = langMap[pathLang] || pathLang
-      if (i18n.language !== i18nLang) {
-        i18n.changeLanguage(i18nLang)
+      if (i18n.language !== pathLang) {
+        i18n.changeLanguage(pathLang)
       }
     } else {
       // 默认英文
@@ -46,12 +40,12 @@ function App() {
       <main>
         <Routes>
           {/* Default English routes */}
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<GrokHomePage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           
           {/* Language-prefixed routes */}
-          <Route path="/:lang" element={<HomePage />} />
+          <Route path="/:lang" element={<GrokHomePage />} />
           <Route path="/:lang/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/:lang/terms-of-service" element={<TermsOfService />} />
         </Routes>

@@ -237,7 +237,7 @@ export default function HomePage() {
                   onClick={handleOpenChat}
                   className="group inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white text-sm font-medium rounded-lg hover:bg-gray-800 transition-all"
                 >
-                  {t('common.getStarted')}
+                  {t('common_getStarted')}
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
                 <a
@@ -480,8 +480,8 @@ export default function HomePage() {
                 <button
                   onClick={handleBackToHome}
                   className="absolute top-4 left-4 z-50 p-2 rounded-lg bg-white hover:bg-gray-100 transition-colors text-gray-600 hover:text-gray-900 shadow-md border border-gray-200 hover:border-gray-300"
-                  title={t('common.backToHome')}
-                  aria-label={t('common.backToHome')}
+                  title={t('common_backToHome')}
+                  aria-label={t('common_backToHome')}
                 >
                   <X className="w-5 h-5" />
                 </button>
@@ -610,7 +610,7 @@ export default function HomePage() {
                 onClick={handleOpenChat}
                 className="group inline-flex items-center gap-2 px-8 py-4 bg-white text-gray-900 text-base font-medium rounded-lg hover:bg-gray-100 transition-all"
               >
-                {t('common.getStarted')}
+                {t('common_getStarted')}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
             </motion.div>

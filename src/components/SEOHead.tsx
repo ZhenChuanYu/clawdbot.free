@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { useLocation } from 'react-router-dom'
 import { SUPPORTED_LANGUAGES } from '../i18n/config'
 
-const BASE_URL = 'https://gemini3.us'
+const BASE_URL = 'https://grok.api'
 
 export default function SEOHead() {
   const { i18n, t } = useTranslation()
@@ -14,21 +14,17 @@ export default function SEOHead() {
     document.documentElement.lang = i18n.language
 
     // Get current path without language prefix
-    const pathWithoutLang = location.pathname.replace(/^\/[a-z]{2}(-[a-z]{2})?(\/|$)/, '/')
+    const pathWithoutLang = location.pathname.replace(/^\/(zh|zh-tw)(\/|$)/, '/')
     const currentPath = pathWithoutLang === '/' ? '' : pathWithoutLang
 
-    // Map i18n language codes to URL path codes
-    const pathLangMap: Record<string, string> = {
-      'zh-TW': 'zh-tw'
-    }
-    const pathLang = pathLangMap[i18n.language] || i18n.language
+    const pathLang = i18n.language
 
     // Update page title
-    const title = t('seo.title')
+    const title = t('seo_title')
     document.title = title
 
     // Update meta description
-    const description = t('seo.description')
+    const description = t('seo_description')
     let metaDescription = document.querySelector('meta[name="description"]')
     if (!metaDescription) {
       metaDescription = document.createElement('meta')
@@ -38,7 +34,7 @@ export default function SEOHead() {
     metaDescription.setAttribute('content', description)
 
     // Update meta keywords
-    const keywords = t('seo.keywords')
+    const keywords = t('seo_keywords')
     let metaKeywords = document.querySelector('meta[name="keywords"]')
     if (!metaKeywords) {
       metaKeywords = document.createElement('meta')
@@ -87,17 +83,25 @@ export default function SEOHead() {
 
     // Add hreflang tags for all supported languages
     SUPPORTED_LANGUAGES.forEach((lang) => {
-      const langPathCode = pathLangMap[lang.code] || lang.code
       const langPath = lang.code === 'en'
         ? `${BASE_URL}${currentPath}`
-        : `${BASE_URL}/${langPathCode}${currentPath}`
+        : `${BASE_URL}/${lang.code}${currentPath}`
 
       const hreflang = document.createElement('link')
       hreflang.setAttribute('rel', 'alternate')
-      hreflang.setAttribute('hreflang', lang.code)
+      // Use zh-CN for simplified Chinese, zh-TW for traditional
+      const hreflangCode = lang.code === 'zh' ? 'zh-CN' : lang.code
+      hreflang.setAttribute('hreflang', hreflangCode)
       hreflang.setAttribute('href', langPath)
       document.head.appendChild(hreflang)
     })
+    
+    // Add zh-HK pointing to zh-TW
+    const hkHreflang = document.createElement('link')
+    hkHreflang.setAttribute('rel', 'alternate')
+    hkHreflang.setAttribute('hreflang', 'zh-HK')
+    hkHreflang.setAttribute('href', `${BASE_URL}/zh-tw${currentPath}`)
+    document.head.appendChild(hkHreflang)
 
     // Add x-default hreflang (points to English version)
     const defaultHreflang = document.createElement('link')

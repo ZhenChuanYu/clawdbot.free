@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gemini3.us/sitemap.xml
+Sitemap: https://grok.api/sitemap.xml

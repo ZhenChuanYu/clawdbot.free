@@ -1,51 +1,11 @@
-# SPA 客户端路由配置（极简版）
+# SPA 客户端路由配置
 # 不带斜杠的语言路径 - 直接返回 200（满足 Bing 要求）
 /zh    /zh/index.html  200
 /zh-tw /zh-tw/index.html  200
-/es    /es/index.html  200
-/ja    /ja/index.html  200
-/ko    /ko/index.html  200
-/fr    /fr/index.html  200
-/de    /de/index.html  200
-/pt    /pt/index.html  200
-/ru    /ru/index.html  200
-/it    /it/index.html  200
-/ar    /ar/index.html  200
-/hi    /hi/index.html  200
-/tr    /tr/index.html  200
-/vi    /vi/index.html  200
-/th    /th/index.html  200
-/id    /id/index.html  200
-/nl    /nl/index.html  200
-/pl    /pl/index.html  200
-/sv    /sv/index.html  200
-/no    /no/index.html  200
-/da    /da/index.html  200
-/fi    /fi/index.html  200
 
 # 带斜杠的语言路径和子路径 - SPA 路由支持
 /zh/*  /zh/index.html  200
 /zh-tw/*  /zh-tw/index.html  200
-/es/*  /es/index.html  200
-/ja/*  /ja/index.html  200
-/ko/*  /ko/index.html  200
-/fr/*  /fr/index.html  200
-/de/*  /de/index.html  200
-/pt/*  /pt/index.html  200
-/ru/*  /ru/index.html  200
-/it/*  /it/index.html  200
-/ar/*  /ar/index.html  200
-/hi/*  /hi/index.html  200
-/tr/*  /tr/index.html  200
-/vi/*  /vi/index.html  200
-/th/*  /th/index.html  200
-/id/*  /id/index.html  200
-/nl/*  /nl/index.html  200
-/pl/*  /pl/index.html  200
-/sv/*  /sv/index.html  200
-/no/*  /no/index.html  200
-/da/*  /da/index.html  200
-/fi/*  /fi/index.html  200
 
-# 默认路由
+# 默认路由（英文）
 /*  /index.html  200
