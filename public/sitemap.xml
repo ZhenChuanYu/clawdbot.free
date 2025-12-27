@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- English (default) -->
   <url>
-    <loc>https://grok.api/</loc>
+    <loc>https://grokapi.org/</loc>
     <lastmod>2025-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://grok.api/privacy-policy</loc>
+    <loc>https://grokapi.org/privacy-policy</loc>
     <lastmod>2025-12-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://grok.api/terms-of-service</loc>
+    <loc>https://grokapi.org/terms-of-service</loc>
     <lastmod>2025-12-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -22,7 +22,7 @@
   
   <!-- Simplified Chinese -->
   <url>
-    <loc>https://grok.api/zh</loc>
+    <loc>https://grokapi.org/zh</loc>
     <lastmod>2025-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -30,7 +30,7 @@
   
   <!-- Traditional Chinese -->
   <url>
-    <loc>https://grok.api/zh-tw</loc>
+    <loc>https://grokapi.org/zh-tw</loc>
     <lastmod>2025-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>

@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { useLocation } from 'react-router-dom'
 import { SUPPORTED_LANGUAGES } from '../i18n/config'
 
-const BASE_URL = 'https://grok.api'
+const BASE_URL = 'https://grokapi.org'
 
 export default function SEOHead() {
   const { i18n, t } = useTranslation()

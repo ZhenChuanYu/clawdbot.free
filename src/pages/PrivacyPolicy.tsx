@@ -136,8 +136,8 @@ export default function PrivacyPolicy() {
                 If you have any questions about this Privacy Policy or our data practices, please contact us at:
               </p>
               <div className="bg-gray-50 p-6 rounded-lg">
-                <p className="text-gray-700">Email: support@grok.api</p>
-                <p className="text-gray-700 mt-2">Website: https://grok.api</p>
+                <p className="text-gray-700">Email: support@grokapi.org</p>
+                <p className="text-gray-700 mt-2">Website: https://grokapi.org</p>
               </div>
             </section>
 
