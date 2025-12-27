@@ -69,6 +69,31 @@ export default function Footer() {
               {t('common_aboutDesc')}
             </p>
           </div>
+
+          {/* Partner Links */}
+          <div className="md:col-span-12">
+            <h3 className="text-sm font-semibold text-gray-900 mb-4">Partner Sites</h3>
+            <div className="flex flex-wrap gap-6 text-sm">
+              <a 
+                href="https://gemini3.us" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-gray-900 transition-colors"
+                title="Gemini 3 Pro"
+              >
+                gemini3.us
+              </a>
+              <a 
+                href="https://nanobanana4k.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-gray-900 transition-colors"
+                title="Nano Banana Pro"
+              >
+                nanobanana4k.com
+              </a>
+            </div>
+          </div>
         </div>
 
         {/* Bottom */}
