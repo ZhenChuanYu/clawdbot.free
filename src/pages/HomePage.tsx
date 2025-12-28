@@ -132,7 +132,7 @@ export default function HomePage() {
                 {t('home.subtitle')}
               </p>
 
-              <p className="text-base md:text-lg text-gray-500 mb-12 font-light max-w-2xl mx-auto leading-relaxed">
+              <p className="text-base md:text-lg text-gray-700 mb-12 font-light max-w-2xl mx-auto leading-relaxed">
                 {t('home.description')}
               </p>
             </motion.div>
@@ -155,6 +155,8 @@ export default function HomePage() {
                     width="32"
                     height="32"
                     className="w-8 h-8 rounded-lg"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <span className="text-lg font-semibold">NanoBanana4K</span>
                 </a>
@@ -210,7 +212,7 @@ export default function HomePage() {
                       <Send className={`w-5 h-5 transition-colors duration-200 ${
                         inputValue.trim()
                           ? 'text-white'
-                          : 'text-gray-500'
+                          : 'text-gray-600'
                       }`} />
                     </div>
 
@@ -264,7 +266,7 @@ export default function HomePage() {
                     className="text-center"
                   >
                     <div className="text-2xl md:text-3xl font-bold text-gray-900 mb-1">{stat.value}</div>
-                    <div className="text-xs text-gray-500 font-medium">{stat.label}</div>
+                    <div className="text-xs text-gray-600 font-medium">{stat.label}</div>
                   </motion.div>
                 ))}
               </div>
@@ -428,7 +430,7 @@ export default function HomePage() {
                       <div key={j} className="flex items-start justify-between gap-4 pb-4 border-b border-gray-100 last:border-0 last:pb-0">
                         <div className="flex-1">
                           <div className="text-sm font-medium text-gray-900">{metric.label}</div>
-                          <div className="text-xs text-gray-500 mt-0.5">{metric.desc}</div>
+                          <div className="text-xs text-gray-600 mt-0.5">{metric.desc}</div>
                         </div>
                         <div className="text-lg font-bold text-gray-900">{metric.value}</div>
                       </div>
@@ -490,7 +492,7 @@ export default function HomePage() {
                     <div className="h-full flex items-center justify-center">
                       <div className="text-center">
                         <div className="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-                        <p className="text-gray-500 text-sm">{t('home.loadingChatInterface')}</p>
+                        <p className="text-gray-600 text-sm">{t('home.loadingChatInterface')}</p>
                       </div>
                     </div>
                   }
@@ -576,7 +578,7 @@ export default function HomePage() {
                       <Send className={`w-5 h-5 transition-colors duration-200 ${
                         inputValue.trim()
                           ? 'text-white'
-                          : 'text-gray-500'
+                          : 'text-gray-600'
                       }`} />
                     </div>
 
@@ -603,7 +605,7 @@ export default function HomePage() {
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 {t('home.ctaTitle')}
               </h2>
-              <p className="text-lg text-gray-400 mb-10 font-light">
+              <p className="text-lg text-gray-300 mb-10 font-light">
                 {t('home.ctaDescription')}
               </p>
               <button 

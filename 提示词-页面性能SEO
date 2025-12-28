@@ -1,0 +1,42 @@
+【分析页面性能】
+https://pagespeed.web.dev/
+提示词：请使用devtools MCP，访问pagespeed.web.dev，分析nanobanana4k.com首页的Lighthouse性能
+
+
+【安装devtools mcp】
+自动安装方法：给Codex授予Full Access权限，告诉Codex 
+"根据官方文档进行 https://github.com/ChromeDevTools/chrome-devtools-mcp 帮我安装devtools mcp ”
+
+【使用devtools MCP分析Lighthouse性能】
+3. 本地运行网站，通知Codex，使用devtools MCP帮我们分析Lighthouse性能
+使用devtools mcp验证pagespeed lighthouse性能，结合代码，找出优化点
+
+
+【Devtools MCP的优势】
+由于它直接基于 Chrome DevTools Protocol，下面这些事情，只有Devtools MCP能做得最好。
+监听 Network：请求/响应头、body、status、时序、重定向链路
+
+监听 Console：console.log, error, warn，甚至 stack
+
+DOM/JS 调试：执行任意 JS、取 window 变量、performance metrics
+
+能看到更丰富的浏览器内部信息（network、console、runtime、性能）
+
+排查线上某个页面偶发性 500 / CORS / CSP 问题
+
+看某些国家/网络下页面到底请求了什么、哪个资源慢
+
+更细粒度的控制
+
+逆向分析
+
+分析第三方页面的：
+
+追踪脚本
+
+AB 实验的触发逻辑
+
+指标（首屏时间、资源体积）
+
+比如：“用 Devtools MCP 打开 raphael.app，检查首页加载有哪些 404/500 请求，并给我优化建议。”
+
