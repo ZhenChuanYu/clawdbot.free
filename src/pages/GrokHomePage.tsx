@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ArrowRight, Sparkles, Brain, Code, Zap, Shield, Heart, MessageSquare, Target, TrendingUp, Check } from 'lucide-react'
+import { Sparkles, Brain, Code, Zap, Shield, Heart, MessageSquare, Target, TrendingUp } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 
 function GrokHomePage() {
