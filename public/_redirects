@@ -1,3 +1,7 @@
+# 统一域名：www 重定向到非 www（SEO 最佳实践）
+# 注意：Cloudflare Pages 需要在域名设置中配置，这里作为备用
+# https://www.grokapi.org/*  https://grokapi.org/:splat  301
+
 # SPA 客户端路由配置
 # 不带斜杠的语言路径 - 直接返回 200（满足 Bing 要求）
 /zh    /zh/index.html  200

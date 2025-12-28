@@ -9,7 +9,9 @@
     "build": "tsc && vite build && node scripts/post-build.cjs",
     "preview": "vite preview",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "convert:webp": "node scripts/convert-to-webp.js"
+    "convert:webp": "node scripts/convert-to-webp.js",
+    "indexnow:submit-all": "node indexnow/scripts/submit-all.js",
+    "indexnow:submit-new": "node indexnow/scripts/submit-new.js"
   },
   "dependencies": {
     "clsx": "^2.0.0",
@@ -20,7 +22,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-i18next": "^13.5.0",
-    "react-router-dom": "^6.8.0"
+    "react-router-dom": "^6.8.0",
+    "xml2js": "^0.6.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

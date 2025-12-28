@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { useLocation } from 'react-router-dom'
 import { SUPPORTED_LANGUAGES } from '../i18n/config'
 
+// 统一使用非 www 版本作为规范 URL
 const BASE_URL = 'https://grokapi.org'
 
 export default function SEOHead() {
@@ -43,10 +44,12 @@ export default function SEOHead() {
     }
     metaKeywords.setAttribute('content', keywords)
 
-    // Update canonical URL
-    const canonicalUrl = i18n.language === 'en'
-      ? `${BASE_URL}${currentPath}`
-      : `${BASE_URL}/${pathLang}${currentPath}`
+    // Update canonical URL (统一使用非 www 版本，确保一致性)
+    // 如果当前访问的是 www 版本，Canonical 应该指向非 www 版本
+    const canonicalPath = i18n.language === 'en'
+      ? `${currentPath}`
+      : `/${pathLang}${currentPath}`
+    const canonicalUrl = `${BASE_URL}${canonicalPath === '/' ? '' : canonicalPath}`
     
     let canonical = document.querySelector('link[rel="canonical"]')
     if (!canonical) {
