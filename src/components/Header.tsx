@@ -66,12 +66,12 @@ export default function Header() {
               {t('common_features')}
             </a>
             <a
-              href="#pricing"
-              onClick={(e) => handleSectionClick(e, 'pricing')}
+              href="#resources"
+              onClick={(e) => handleSectionClick(e, 'resources')}
               className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-all"
-              title="Grok API Pricing"
+              title="Grok API Resources"
             >
-              {t('common_pricing')}
+              Resources
             </a>
             <a
               href="#faq"
@@ -83,18 +83,9 @@ export default function Header() {
             </a>
           </nav>
 
-          {/* CTA and Language Switcher */}
+          {/* Language Switcher */}
           <div className="flex items-center gap-3">
             <LanguageSwitcher />
-            <a
-              href="https://aiberm.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-5 py-2 bg-gray-900 text-white text-sm font-medium rounded-lg hover:bg-gray-800 transition-all duration-200"
-              title="Get Started with Grok API"
-            >
-              {t('common_getStarted')}
-            </a>
           </div>
         </div>
       </div>

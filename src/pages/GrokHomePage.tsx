@@ -31,32 +31,14 @@ function GrokHomePage() {
               {t('grok_subtitle')}
             </p>
 
-            <p className="text-base md:text-lg text-gray-500 mb-12 font-light max-w-2xl mx-auto leading-relaxed">
+            <p className="text-base md:text-lg text-gray-500 mb-8 font-light max-w-2xl mx-auto leading-relaxed">
               {t('grok_description')}
             </p>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a 
-                href="https://aiberm.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group px-8 py-4 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-all duration-200 font-medium flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-                aria-label="Get Started with Grok API"
-                title="Get Started with Grok API"
-              >
-                {t('common_getStarted')}
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
-              <a 
-                href="#pricing" 
-                className="px-8 py-4 border-2 border-gray-900 text-gray-900 rounded-full hover:bg-gray-900 hover:text-white transition-all duration-200 font-medium"
-                aria-label="View Grok API Pricing"
-                title="View Grok API Pricing"
-              >
-                {t('grok_viewPricing')}
-              </a>
-            </div>
+            {/* Disclaimer */}
+            <p className="text-sm text-gray-600 mb-12 font-normal max-w-2xl mx-auto leading-relaxed">
+              {t('grok_disclaimer')}
+            </p>
 
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
@@ -167,8 +149,8 @@ function GrokHomePage() {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section id="pricing" className="py-20 bg-gradient-to-b from-gray-50 to-white">
+      {/* Resources Section */}
+      <section id="resources" className="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -179,19 +161,19 @@ function GrokHomePage() {
           >
             {/* Small title */}
             <div className="text-sm font-semibold text-blue-600 mb-3 uppercase tracking-wide">
-              {t('grok_pricing_smallTitle')}
+              {t('grok_resources_smallTitle')}
             </div>
             {/* Main H2 title */}
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              {t('grok_pricing_mainTitle')}
+              {t('grok_resources_mainTitle')}
             </h2>
             <p className="text-lg text-gray-600 font-light">
-              {t('grok_pricing_subtitle')}
+              {t('grok_resources_subtitle')}
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Monthly Plan */}
+            {/* Official Resources */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -199,81 +181,47 @@ function GrokHomePage() {
               transition={{ duration: 0.6 }}
               className="p-8 bg-white border border-gray-200 rounded-2xl hover:shadow-lg transition-all"
             >
-              <div className="text-sm font-semibold text-gray-500 mb-2">{t('grok_pricing_monthly_label')}</div>
-              <div className="text-4xl font-bold text-gray-900 mb-4">
-                {t('grok_pricing_monthly_price')}
-                <span className="text-lg font-normal text-gray-500">/mo</span>
-              </div>
-              <p className="text-sm text-gray-600 mb-6">{t('grok_pricing_monthly_description')}</p>
-              <ul className="space-y-3 mb-8">
-                {[
-                  t('grok_pricing_monthly_features_requests'),
-                  t('grok_pricing_monthly_features_models'),
-                  t('grok_pricing_monthly_features_support'),
-                  t('grok_pricing_monthly_features_updates'),
-                ].map((feature, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
-                    <Check className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                {t('grok_resources_official_title')}
+              </h3>
+              <p className="text-sm text-gray-600 mb-6">{t('grok_resources_official_description')}</p>
               <a 
-                href="https://aiberm.com"
+                href="https://x.ai"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full px-6 py-3 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-all font-medium text-center"
-                aria-label="Get Started with Monthly Plan"
-                title="Get Started with Monthly Plan"
+                className="w-full px-6 py-3 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-all font-medium text-center inline-block"
+                aria-label="Visit xAI Official Site"
+                title="Visit xAI Official Site"
               >
-                {t('grok_pricing_getStarted')}
+                {t('grok_resources_official_link')}
               </a>
             </motion.div>
 
-            {/* Yearly Plan (Popular) */}
+            {/* Documentation */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="relative p-8 bg-gradient-to-br from-gray-900 to-gray-800 text-white rounded-2xl hover:shadow-2xl transition-all transform scale-105"
+              className="p-8 bg-white border border-gray-200 rounded-2xl hover:shadow-lg transition-all"
             >
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">
-                {t('grok_pricing_popular')}
-              </div>
-              <div className="text-sm font-semibold text-gray-300 mb-2">{t('grok_pricing_yearly_label')}</div>
-              <div className="text-4xl font-bold mb-4">
-                {t('grok_pricing_yearly_price')}
-                <span className="text-lg font-normal text-gray-300">/yr</span>
-              </div>
-              <p className="text-sm text-gray-300 mb-6">{t('grok_pricing_yearly_description')}</p>
-              <ul className="space-y-3 mb-8">
-                {[
-                  t('grok_pricing_yearly_features_requests'),
-                  t('grok_pricing_yearly_features_models'),
-                  t('grok_pricing_yearly_features_priority'),
-                  t('grok_pricing_yearly_features_updates'),
-                  t('grok_pricing_yearly_features_discount'),
-                ].map((feature, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm text-gray-200">
-                    <Check className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                {t('grok_resources_docs_title')}
+              </h3>
+              <p className="text-sm text-gray-600 mb-6">{t('grok_resources_docs_description')}</p>
               <a 
-                href="https://aiberm.com"
+                href="https://x.ai"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full px-6 py-3 bg-white text-gray-900 rounded-full hover:bg-gray-100 transition-all font-medium text-center"
-                aria-label="Get Started with Yearly Plan"
-                title="Get Started with Yearly Plan"
+                className="w-full px-6 py-3 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-all font-medium text-center inline-block"
+                aria-label="View Documentation"
+                title="View Documentation"
               >
-                {t('grok_pricing_getStarted')}
+                {t('grok_resources_docs_link')}
               </a>
             </motion.div>
 
-            {/* One-time Payment */}
+            {/* Community Tutorials */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -281,33 +229,19 @@ function GrokHomePage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="p-8 bg-white border border-gray-200 rounded-2xl hover:shadow-lg transition-all"
             >
-              <div className="text-sm font-semibold text-gray-500 mb-2">{t('grok_pricing_oneTime_label')}</div>
-              <div className="text-4xl font-bold text-gray-900 mb-4">
-                {t('grok_pricing_oneTime_price')}
-              </div>
-              <p className="text-sm text-gray-600 mb-6">{t('grok_pricing_oneTime_description')}</p>
-              <ul className="space-y-3 mb-8">
-                {[
-                  t('grok_pricing_oneTime_features_credits'),
-                  t('grok_pricing_oneTime_features_validity'),
-                  t('grok_pricing_oneTime_features_models'),
-                  t('grok_pricing_oneTime_features_rollover'),
-                ].map((feature, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
-                    <Check className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                {t('grok_resources_tutorials_title')}
+              </h3>
+              <p className="text-sm text-gray-600 mb-6">{t('grok_resources_tutorials_description')}</p>
               <a 
-                href="https://aiberm.com"
+                href="https://x.ai"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full px-6 py-3 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-all font-medium text-center"
-                aria-label="Get Started with One-time Payment"
-                title="Get Started with One-time Payment"
+                className="w-full px-6 py-3 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-all font-medium text-center inline-block"
+                aria-label="Browse Tutorials"
+                title="Browse Tutorials"
               >
-                {t('grok_pricing_getStarted')}
+                {t('grok_resources_tutorials_link')}
               </a>
             </motion.div>
           </div>
@@ -464,14 +398,14 @@ function GrokHomePage() {
               {t('grok_cta_description')}
             </p>
             <a 
-              href="https://aiberm.com"
+              href="https://x.ai"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-white text-gray-900 rounded-full hover:bg-gray-100 transition-all duration-200 font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 inline-block"
-              aria-label="Start Using Grok API"
-              title="Start Using Grok API"
+              aria-label="Visit xAI Official Website"
+              title="Visit xAI Official Website"
             >
-              {t('common_getStarted')}
+              Visit xAI Official Site
             </a>
           </motion.div>
         </div>

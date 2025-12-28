@@ -30,8 +30,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#pricing" className="text-gray-600 hover:text-gray-900 transition-colors" title="Grok API Pricing">
-                  {t('common_pricing')}
+                <a href="#resources" className="text-gray-600 hover:text-gray-900 transition-colors" title="Grok API Resources">
+                  Resources
                 </a>
               </li>
               <li>
@@ -94,6 +94,13 @@ export default function Footer() {
               </a>
             </div>
           </div>
+        </div>
+
+        {/* Disclaimer */}
+        <div className="pt-8 border-t border-gray-100 mb-6">
+          <p className="text-xs text-gray-600 text-center max-w-3xl mx-auto leading-relaxed">
+            {t('grok_disclaimer')}
+          </p>
         </div>
 
         {/* Bottom */}
