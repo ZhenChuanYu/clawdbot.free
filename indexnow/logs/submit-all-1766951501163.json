@@ -1,0 +1,30 @@
+{
+  "timestamp": "2025-12-28T19:51:41.162Z",
+  "type": "submit-all",
+  "totalUrls": 5,
+  "urls": [
+    "https://grokapi.org/",
+    "https://grokapi.org/privacy-policy",
+    "https://grokapi.org/terms-of-service",
+    "https://grokapi.org/zh",
+    "https://grokapi.org/zh-tw"
+  ],
+  "results": [
+    {
+      "searchEngine": "Bing",
+      "batch": 1,
+      "success": true,
+      "status": 202,
+      "statusText": "Accepted",
+      "responseBody": ""
+    },
+    {
+      "searchEngine": "Yandex",
+      "batch": 1,
+      "success": true,
+      "status": 202,
+      "statusText": "Accepted",
+      "responseBody": "{\n  \"success\":true\n}"
+    }
+  ]
+}

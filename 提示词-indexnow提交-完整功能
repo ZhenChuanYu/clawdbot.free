@@ -8,6 +8,7 @@ openssl rand -hex 16 生成 16 字节随机数，输出为 32 个十六进制字
 符合 IndexNow 要求（8-128 个十六进制字符）
 
 2、创建 提交全部页面脚本
+请使用devtools MCP，访问indexnow.org，查看相关文档，确认如何提交全部页面
 在indexnow目录下创建脚本目录和日志目录
 根据indexnow.org的文档，创建提交全部页面脚本
 把提交成功的页面保存到日志目录下

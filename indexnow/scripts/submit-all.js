@@ -49,58 +49,84 @@ async function parseSitemap(sitemapPath) {
 
 /**
  * 提交 URL 列表到 IndexNow
+ * 使用统一 API (api.indexnow.org) 和核心提交逻辑（与 submit-indexnow.ts 保持一致）
  */
-async function submitToIndexNow(urls, searchEngine) {
-  const payload = {
-    host: config.host,
-    key: config.key,
-    keyLocation: config.keyLocation,
-    urlList: urls
-  };
+async function submitUrls(urls) {
+  if (urls.length === 0) {
+    return { 
+      success: false, 
+      statusCode: 400, 
+      message: 'No URLs to submit' 
+    };
+  }
 
   try {
-    const response = await fetch(searchEngine.url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json; charset=utf-8'
-      },
-      body: JSON.stringify(payload)
-    });
+    // 从第一个 URL 提取 host（与 submit-indexnow.ts 保持一致）
+    const firstUrl = new URL(urls[0]);
+    const host = firstUrl.hostname;
 
-    const status = response.status;
-    const statusText = response.statusText;
-    let responseBody = '';
-    
-    try {
-      responseBody = await response.text();
-    } catch (e) {
-      // 忽略响应体解析错误
+    // 验证所有 URL 的 host 是否一致（与 submit-indexnow.ts 保持一致）
+    for (const urlStr of urls) {
+      const url = new URL(urlStr);
+      if (url.hostname !== host) {
+        return { 
+          success: false, 
+          statusCode: 422, 
+          message: `Host mismatch: ${url.hostname} !== ${host}` 
+        };
+      }
     }
 
+    // 使用统一 API，不包含 keyLocation（与 submit-indexnow.ts 保持一致）
+    const INDEXNOW_ENDPOINT = 'https://api.indexnow.org/indexnow';
+    
+    const response = await fetch(INDEXNOW_ENDPOINT, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json; charset=utf-8',
+      },
+      body: JSON.stringify({ host, key: config.key, urlList: urls }),
+    });
+
+    const statusCode = response.status;
+    const success = statusCode === 200 || statusCode === 202;
+
     return {
-      success: status === 200 || status === 202,
-      status,
-      statusText,
-      responseBody
+      success,
+      statusCode,
+      message: success ? 'Submitted successfully' : `Failed with status ${statusCode}`,
     };
   } catch (error) {
     return {
       success: false,
-      error: error.message
+      statusCode: undefined,
+      message: error instanceof Error ? error.message : 'Unknown error',
     };
   }
 }
 
 /**
- * 保存提交日志
+ * 保存提交日志（与 submit-indexnow.ts 格式保持一致）
  */
 function saveLog(urls, results) {
   const timestamp = new Date().toISOString();
+  
+  // 统一日志格式，与 submit-indexnow.ts 保持一致
   const logEntry = {
     timestamp,
     type: 'submit-all',
     totalUrls: urls.length,
     urls: urls,
+    result: results.length > 0 ? {
+      success: results[0].success,
+      statusCode: results[0].statusCode,
+      message: results[0].message,
+    } : {
+      success: false,
+      statusCode: undefined,
+      message: 'No results'
+    },
+    // 保留详细结果用于调试
     results: results
   };
 
@@ -152,34 +178,34 @@ async function main() {
 
   const allResults = [];
 
-  // 提交到每个搜索引擎
-  for (const searchEngine of config.searchEngines) {
-    console.log(`\n🔍 提交到 ${searchEngine.name} (${searchEngine.url})...`);
+  // 使用统一 API 提交（一次提交通知所有支持的搜索引擎）
+  console.log(`\n🔍 提交到 IndexNow 统一 API (https://api.indexnow.org/indexnow)...`);
+  console.log(`   这将通知所有支持的搜索引擎（Bing、Yandex 等）\n`);
+  
+  for (let i = 0; i < batches.length; i++) {
+    const batch = batches[i];
+    console.log(`   批次 ${i + 1}/${batches.length}: ${batch.length} 个 URL`);
     
-    for (let i = 0; i < batches.length; i++) {
-      const batch = batches[i];
-      console.log(`   批次 ${i + 1}/${batches.length}: ${batch.length} 个 URL`);
-      
-      const result = await submitToIndexNow(batch, searchEngine);
-      allResults.push({
-        searchEngine: searchEngine.name,
-        batch: i + 1,
-        ...result
-      });
+    const result = await submitUrls(batch);
+    allResults.push({
+      batch: i + 1,
+      ...result
+    });
 
-      if (result.success) {
-        console.log(`   ✅ 成功: ${result.status} ${result.statusText}`);
-      } else {
-        console.log(`   ❌ 失败: ${result.status || 'Error'} ${result.statusText || result.error}`);
-        if (result.responseBody) {
-          console.log(`   响应: ${result.responseBody}`);
-        }
+    if (result.success) {
+      console.log(`   ✅ 成功: ${result.statusCode} ${result.message}`);
+      if (result.statusCode === 200) {
+        console.log(`   ✨ 状态码 200 - 提交已立即处理`);
+      } else if (result.statusCode === 202) {
+        console.log(`   ⏳ 状态码 202 - 提交已接收，key 验证待处理`);
       }
+    } else {
+      console.log(`   ❌ 失败: ${result.statusCode || 'Error'} ${result.message}`);
+    }
 
-      // 避免请求过快，稍作延迟
-      if (i < batches.length - 1) {
-        await new Promise(resolve => setTimeout(resolve, 500));
-      }
+    // 避免请求过快，稍作延迟
+    if (i < batches.length - 1) {
+      await new Promise(resolve => setTimeout(resolve, 500));
     }
   }
 

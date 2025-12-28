@@ -1,0 +1,21 @@
+{
+  "timestamp": "2025-12-28T20:15:08.799Z",
+  "type": "submit-all",
+  "totalUrls": 5,
+  "urls": [
+    "https://grokapi.org/",
+    "https://grokapi.org/privacy-policy",
+    "https://grokapi.org/terms-of-service",
+    "https://grokapi.org/zh",
+    "https://grokapi.org/zh-tw"
+  ],
+  "results": [
+    {
+      "batch": 1,
+      "success": true,
+      "status": 200,
+      "statusText": "OK",
+      "responseBody": ""
+    }
+  ]
+}
