@@ -1,6 +1,11 @@
 
 1、创建key文件
 请使用devtools MCP，访问indexnow.org，根据要求创建key文件
+使用以下命令生成：
+openssl rand -hex 16
+说明：
+openssl rand -hex 16 生成 16 字节随机数，输出为 32 个十六进制字符
+符合 IndexNow 要求（8-128 个十六进制字符）
 
 2、创建 提交全部页面脚本
 在indexnow目录下创建脚本目录和日志目录
