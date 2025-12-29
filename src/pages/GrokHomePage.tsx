@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Sparkles, Brain, Code, Zap, Shield, Heart, MessageSquare, Target, TrendingUp } from 'lucide-react'
+import { Sparkles, Brain, Code, Zap, Shield, Heart, MessageSquare, Target, TrendingUp, Info, Table, Layers, Cloud, CheckCircle2, AlertCircle } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 
 function GrokHomePage() {
@@ -64,8 +64,69 @@ function GrokHomePage() {
         </div>
       </section>
 
+      {/* What is Grok API Section */}
+      <section id="what-is" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <div className="text-sm font-semibold text-blue-600 mb-3 uppercase tracking-wide">
+              {t('grok_whatIs_smallTitle')}
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              {t('grok_whatIs_mainTitle')}
+            </h2>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="max-w-4xl mx-auto"
+          >
+            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+              {t('grok_whatIs_description')}
+            </p>
+
+            <div className="bg-gray-50 rounded-2xl p-8 mb-8">
+              <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                <Info className="w-6 h-6 text-blue-600" />
+                {t('grok_whatIs_keyPoints')}
+              </h3>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700">{t('grok_whatIs_keyPoint1')}</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700">{t('grok_whatIs_keyPoint2')}</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700">{t('grok_whatIs_keyPoint3')}</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700">{t('grok_whatIs_keyPoint4')}</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700">{t('grok_whatIs_keyPoint5')}</span>
+                </li>
+              </ul>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Features Section */}
-      <section id="features" className="py-20 bg-white">
+      <section id="features" className="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -146,6 +207,297 @@ function GrokHomePage() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Comparison Section */}
+      <section id="comparison" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <div className="text-sm font-semibold text-blue-600 mb-3 uppercase tracking-wide">
+              {t('grok_comparison_smallTitle')}
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              {t('grok_comparison_mainTitle')}
+            </h2>
+            <p className="text-lg text-gray-600 font-light">
+              {t('grok_comparison_subtitle')}
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="overflow-x-auto"
+          >
+            <div className="inline-block min-w-full align-middle">
+              <table className="min-w-full divide-y divide-gray-200 bg-white rounded-2xl shadow-lg overflow-hidden">
+                <thead className="bg-gray-50">
+                  <tr>
+                    <th className="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">{t('grok_comparison_table_product')}</th>
+                    <th className="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">{t('grok_comparison_table_xaiApi')}</th>
+                    <th className="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">{t('grok_comparison_table_grokCom')}</th>
+                    <th className="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">{t('grok_comparison_table_mobile')}</th>
+                    <th className="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">{t('grok_comparison_table_grokX')}</th>
+                  </tr>
+                </thead>
+                <tbody className="bg-white divide-y divide-gray-200">
+                  <tr>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{t('grok_comparison_table_accessible')}</td>
+                    <td className="px-6 py-4 text-sm text-gray-700">{t('grok_comparison_table_accessible_xai')}</td>
+                    <td className="px-6 py-4 text-sm text-gray-700">{t('grok_comparison_table_accessible_grokCom')}</td>
+                    <td className="px-6 py-4 text-sm text-gray-700">{t('grok_comparison_table_accessible_mobile')}</td>
+                    <td className="px-6 py-4 text-sm text-gray-700">{t('grok_comparison_table_accessible_grokX')}</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{t('grok_comparison_table_billing')}</td>
+                    <td className="px-6 py-4 text-sm text-gray-700">{t('grok_comparison_table_billing_xai')}</td>
+                    <td className="px-6 py-4 text-sm text-gray-700">{t('grok_comparison_table_billing_grokCom')}</td>
+                    <td className="px-6 py-4 text-sm text-gray-700">{t('grok_comparison_table_billing_mobile')}</td>
+                    <td className="px-6 py-4 text-sm text-gray-700">{t('grok_comparison_table_billing_grokX')}</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{t('grok_comparison_table_programming')}</td>
+                    <td className="px-6 py-4 text-sm text-gray-700">{t('grok_comparison_table_programming_xai')}</td>
+                    <td className="px-6 py-4 text-sm text-gray-700">{t('grok_comparison_table_programming_grokCom')}</td>
+                    <td className="px-6 py-4 text-sm text-gray-700">{t('grok_comparison_table_programming_mobile')}</td>
+                    <td className="px-6 py-4 text-sm text-gray-700">{t('grok_comparison_table_programming_grokX')}</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{t('grok_comparison_table_description')}</td>
+                    <td className="px-6 py-4 text-sm text-gray-700">{t('grok_comparison_table_description_xai')}</td>
+                    <td className="px-6 py-4 text-sm text-gray-700">{t('grok_comparison_table_description_grokCom')}</td>
+                    <td className="px-6 py-4 text-sm text-gray-700">{t('grok_comparison_table_description_mobile')}</td>
+                    <td className="px-6 py-4 text-sm text-gray-700">{t('grok_comparison_table_description_grokX')}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Models Section */}
+      <section id="models" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <div className="text-sm font-semibold text-blue-600 mb-3 uppercase tracking-wide">
+              {t('grok_models_smallTitle')}
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              {t('grok_models_mainTitle')}
+            </h2>
+            <p className="text-lg text-gray-600 font-light">
+              {t('grok_models_subtitle')}
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="overflow-x-auto mb-12"
+          >
+            <div className="inline-block min-w-full align-middle">
+              <table className="min-w-full divide-y divide-gray-200 bg-white rounded-2xl shadow-lg overflow-hidden">
+                <thead className="bg-gray-50">
+                  <tr>
+                    <th className="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">{t('grok_models_table_model')}</th>
+                    <th className="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">{t('grok_models_table_bestFor')}</th>
+                    <th className="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">{t('grok_models_table_speed')}</th>
+                    <th className="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">{t('grok_models_table_cost')}</th>
+                    <th className="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">{t('grok_models_table_context')}</th>
+                    <th className="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">{t('grok_models_table_knowledge')}</th>
+                  </tr>
+                </thead>
+                <tbody className="bg-white divide-y divide-gray-200">
+                  <tr>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900">{t('grok_models_grok41')}</td>
+                    <td className="px-6 py-4 text-sm text-gray-700">{t('grok_models_grok41_bestFor')}</td>
+                    <td className="px-6 py-4 text-sm text-gray-700">{t('grok_models_grok41_speed')}</td>
+                    <td className="px-6 py-4 text-sm text-gray-700">{t('grok_models_grok41_cost')}</td>
+                    <td className="px-6 py-4 text-sm text-gray-700">{t('grok_models_grok41_context')}</td>
+                    <td className="px-6 py-4 text-sm text-gray-700">{t('grok_models_grok41_knowledge')}</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900">{t('grok_models_grok41fast')}</td>
+                    <td className="px-6 py-4 text-sm text-gray-700">{t('grok_models_grok41fast_bestFor')}</td>
+                    <td className="px-6 py-4 text-sm text-gray-700">{t('grok_models_grok41fast_speed')}</td>
+                    <td className="px-6 py-4 text-sm text-gray-700">{t('grok_models_grok41fast_cost')}</td>
+                    <td className="px-6 py-4 text-sm text-gray-700">{t('grok_models_grok41fast_context')}</td>
+                    <td className="px-6 py-4 text-sm text-gray-700">{t('grok_models_grok41fast_knowledge')}</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900">{t('grok_models_grok41thinking')}</td>
+                    <td className="px-6 py-4 text-sm text-gray-700">{t('grok_models_grok41thinking_bestFor')}</td>
+                    <td className="px-6 py-4 text-sm text-gray-700">{t('grok_models_grok41thinking_speed')}</td>
+                    <td className="px-6 py-4 text-sm text-gray-700">{t('grok_models_grok41thinking_cost')}</td>
+                    <td className="px-6 py-4 text-sm text-gray-700">{t('grok_models_grok41thinking_context')}</td>
+                    <td className="px-6 py-4 text-sm text-gray-700">{t('grok_models_grok41thinking_knowledge')}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-blue-50 rounded-2xl p-8 max-w-4xl mx-auto"
+          >
+            <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+              <Target className="w-6 h-6 text-blue-600" />
+              {t('grok_models_selection_title')}
+            </h3>
+            <ul className="space-y-3 text-gray-700">
+              <li className="flex items-start gap-3">
+                <span className="text-blue-600 font-semibold">•</span>
+                <span>{t('grok_models_selection_mvp')}</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-blue-600 font-semibold">•</span>
+                <span>{t('grok_models_selection_chat')}</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-blue-600 font-semibold">•</span>
+                <span>{t('grok_models_selection_coding')}</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-blue-600 font-semibold">•</span>
+                <span>{t('grok_models_selection_latency')}</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-blue-600 font-semibold">•</span>
+                <span>{t('grok_models_selection_vision')}</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-blue-600 font-semibold">•</span>
+                <span>{t('grok_models_selection_creative')}</span>
+              </li>
+            </ul>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Platforms Section */}
+      <section id="platforms" className="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <div className="text-sm font-semibold text-blue-600 mb-3 uppercase tracking-wide">
+              {t('grok_platforms_smallTitle')}
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              {t('grok_platforms_mainTitle')}
+            </h2>
+            <p className="text-lg text-gray-600 font-light">
+              {t('grok_platforms_subtitle')}
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {[
+              {
+                title: t('grok_platforms_xai_title'),
+                description: t('grok_platforms_xai_description'),
+                link: 'https://console.x.ai',
+                linkText: t('grok_platforms_xai_link'),
+                gradient: 'from-gray-900 to-gray-800',
+              },
+              {
+                title: t('grok_platforms_azure_title'),
+                description: t('grok_platforms_azure_description'),
+                link: 'https://azure.microsoft.com/',
+                linkText: t('grok_platforms_azure_link'),
+                gradient: 'from-blue-600 to-blue-700',
+              },
+              {
+                title: t('grok_platforms_github_title'),
+                description: t('grok_platforms_github_description'),
+                link: 'https://github.com/models',
+                linkText: t('grok_platforms_github_link'),
+                gradient: 'from-gray-800 to-gray-900',
+              },
+              {
+                title: t('grok_platforms_oracle_title'),
+                description: t('grok_platforms_oracle_description'),
+                link: 'https://www.oracle.com/cloud/',
+                linkText: t('grok_platforms_oracle_link'),
+                gradient: 'from-red-600 to-red-700',
+              },
+              {
+                title: t('grok_platforms_aws_title'),
+                description: t('grok_platforms_aws_description'),
+                link: 'https://aws.amazon.com/bedrock/',
+                linkText: t('grok_platforms_aws_link'),
+                gradient: 'from-orange-500 to-orange-600',
+              },
+            ].map((platform, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                className="p-6 bg-white border border-gray-200 rounded-2xl hover:shadow-lg transition-all"
+              >
+                <h3 className="text-lg font-bold text-gray-900 mb-3">
+                  {platform.title}
+                </h3>
+                <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+                  {platform.description}
+                </p>
+                <a
+                  href={platform.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r ${platform.gradient} text-white rounded-lg hover:opacity-90 transition-all text-sm font-medium`}
+                >
+                  {platform.linkText}
+                  <span>→</span>
+                </a>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="bg-yellow-50 border border-yellow-200 rounded-2xl p-6 max-w-4xl mx-auto"
+          >
+            <div className="flex items-start gap-3">
+              <AlertCircle className="w-6 h-6 text-yellow-600 flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="text-sm text-yellow-900 font-medium leading-relaxed">
+                  {t('grok_platforms_pricing_note')}
+                </p>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 

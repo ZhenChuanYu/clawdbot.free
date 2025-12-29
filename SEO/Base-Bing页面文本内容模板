@@ -1,0 +1,281 @@
+好，下面我直接给你一套**「Bing 前排页面通用模板」**。
+这是 **按 Bing 实际排序偏好逆向拆出来的**，不是 SEO 教科书模板，而是**能被 Bing 当“知识源”用的页面结构**。
+
+我会分 4 层讲：
+
+1️⃣ 页面总体原则
+2️⃣ HTML 结构模板（可直接照抄）
+3️⃣ 内容写作公式（怎么写才像前排）
+4️⃣ 常见错误（很多站死在这里）
+
+---
+
+# 一、Bing 前排页面的 3 个硬性原则
+
+### ✅ 原则 1：**首屏必须有“完整语义文本”**
+
+* 不依赖 JS
+* 不折叠
+* 不点按钮
+* 页面一加载就能看到
+
+👉 **首屏 200–400 字是决定性因素**
+
+---
+
+### ✅ 原则 2：**一个页面 = 一个问题**
+
+Bing 不喜欢“综合介绍页”。
+
+好页面是：
+
+> What is Gemini API?
+> How does Gemini API pricing work?
+
+而不是：
+
+> Gemini API 官方介绍（什么都有一点）
+
+---
+
+### ✅ 原则 3：**像文档，不像广告**
+
+* 不强 CTA
+* 不满屏按钮
+* 不先讲产品优势
+
+👉 先解释问题，再给解决方案
+
+---
+
+# 二、Bing 前排页面 HTML 模板（核心）
+
+下面这个结构，你可以直接当 **“Bing 标准答案页”** 用。
+
+---
+
+## 1️⃣ `<head>`（不要花哨）
+
+```html
+<title>What Is Gemini API? A Complete Guide for Developers</title>
+
+<meta name="description"
+      content="Gemini API is Google's AI interface for text, image, and multimodal generation. This guide explains what Gemini API is, how it works, and when to use it.">
+
+<link rel="canonical" href="https://example.com/what-is-gemini-api">
+```
+
+**注意：**
+
+* title = 问题 + 总结答案
+* description = 可直接当搜索结果摘要
+
+---
+
+## 2️⃣ `<body>` 顶部（决定排名）
+
+```html
+<main>
+  <h1>What Is Gemini API?</h1>
+
+  <p>
+    Gemini API is Google's official application programming interface that allows
+    developers to integrate Gemini AI models into their applications.
+    It supports text generation, image understanding, and multimodal reasoning.
+  </p>
+
+  <p>
+    Developers commonly use Gemini API to build AI chatbots, content generation tools,
+    and automation workflows. This page explains how Gemini API works,
+    its core features, and typical use cases.
+  </p>
+```
+
+📌 **重点**
+
+* 第一段：一句话定义（Bing 超爱）
+* 第二段：使用场景总结
+* 完全不提你的网站、不提产品
+
+---
+
+## 3️⃣ 目录（强烈建议）
+
+```html
+<nav>
+  <h2>Table of Contents</h2>
+  <ul>
+    <li><a href="#how-it-works">How Gemini API Works</a></li>
+    <li><a href="#features">Key Features</a></li>
+    <li><a href="#use-cases">Common Use Cases</a></li>
+    <li><a href="#comparison">Gemini API vs Other AI APIs</a></li>
+  </ul>
+</nav>
+```
+
+👉 这是 **Bing 判断“这是文档”的重要信号**
+
+---
+
+## 4️⃣ 正文结构（核心内容区）
+
+### 🔹 How it works
+
+```html
+<section id="how-it-works">
+  <h2>How Gemini API Works</h2>
+
+  <p>
+    Gemini API processes user input by sending requests to Google's AI models.
+    The models analyze text, images, or mixed inputs and return structured responses
+    such as generated text or classifications.
+  </p>
+</section>
+```
+
+---
+
+### 🔹 Features（用列表）
+
+```html
+<section id="features">
+  <h2>Key Features of Gemini API</h2>
+
+  <ul>
+    <li>Text and multimodal generation</li>
+    <li>Image understanding and reasoning</li>
+    <li>Scalable API access for applications</li>
+    <li>Integration with Google AI ecosystem</li>
+  </ul>
+</section>
+```
+
+---
+
+### 🔹 Use cases（极重要）
+
+```html
+<section id="use-cases">
+  <h2>Common Use Cases</h2>
+
+  <p>Developers use Gemini API in several scenarios:</p>
+
+  <ul>
+    <li>Building AI chatbots for customer support</li>
+    <li>Automating content creation</li>
+    <li>Generating summaries from documents</li>
+    <li>Analyzing images with contextual understanding</li>
+  </ul>
+</section>
+```
+
+👉 **Use cases 是 Bing 语义权重非常高的一块**
+
+---
+
+### 🔹 对比页（非常容易进前 5）
+
+```html
+<section id="comparison">
+  <h2>Gemini API vs Other AI APIs</h2>
+
+  <p>
+    Compared with other AI APIs, Gemini API focuses on deep multimodal reasoning.
+    Developers may choose different APIs depending on cost, performance, and features.
+  </p>
+</section>
+```
+
+---
+
+## 5️⃣ FAQ（Bing 的“加速器”）
+
+```html
+<section>
+  <h2>Frequently Asked Questions</h2>
+
+  <h3>Is Gemini API free?</h3>
+  <p>
+    Gemini API availability and pricing depend on Google's official plans.
+    Developers should review current documentation for details.
+  </p>
+
+  <h3>Who should use Gemini API?</h3>
+  <p>
+    Gemini API is suitable for developers building AI-powered applications
+    that require text, image, or multimodal processing.
+  </p>
+</section>
+```
+
+👉 FAQ = Bing 的 **AI 引用候选区**
+
+---
+
+## 6️⃣ `<noscript>`（你之前问的关键）
+
+```html
+<noscript>
+  <h2>Gemini API Overview</h2>
+  <p>
+    Gemini API is a developer interface for accessing Google's AI models.
+    It enables text and multimodal generation for applications and services.
+  </p>
+</noscript>
+```
+
+📌 原则：
+
+* 是正文摘要
+* 不是重复全文
+* 不要堆关键词
+
+---
+
+# 三、内容写作公式（照这个写就行）
+
+### 🔑 每一节都遵守：
+
+```
+一句定义
+↓
+一句解释
+↓
+一句用途
+```
+
+### 🔑 每 300–400 字：
+
+* 至少 1 次完整关键词
+* 2–3 次语义变体
+
+---
+
+# 四、90% 网站在 Bing 翻车的原因
+
+❌ 首页就是 hero banner
+❌ 首屏只有 slogan
+❌ 文本靠 JS 渲染
+❌ 一个页面想排 5 个关键词
+❌ 太像产品官网
+
+---
+
+# 五、你现在可以直接用的行动清单
+
+如果你现在做的是 **API 介绍 / 中转 / 导航站**，我建议你：
+
+* 不动首页
+* **专门建 5–10 个这种“答案页”**
+* 每个页面只服务一个搜索意图
+* 首页只做内链入口
+
+---
+
+如果你愿意，下一步我可以直接帮你：
+
+* 🔥 **给你生成 1 个完整可上线的 Bing 前排页面（成品）**
+* 🔍 **按你现有域名，告诉你最适合打的 10 个 Bing 关键词**
+* 🧠 **做一套“AI 可引用型内容模板”，给其他 AI 用**
+
+你选一个，我直接继续拆到“能上线”的程度。
