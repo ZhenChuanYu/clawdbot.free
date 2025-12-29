@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Sparkles, Brain, Code, Zap, Shield, Heart, MessageSquare, Target, TrendingUp, Info, Table, Layers, Cloud, CheckCircle2, AlertCircle } from 'lucide-react'
+import { Sparkles, Brain, Code, Zap, Shield, Heart, MessageSquare, Target, TrendingUp, Info, CheckCircle2, AlertCircle } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 
 function GrokHomePage() {

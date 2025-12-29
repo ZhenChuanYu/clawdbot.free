@@ -5,11 +5,24 @@ import App from './App'
 import './i18n/config'
 import './index.css'
 
-// 立即渲染应用（React 18 的 createRoot 已经是异步的，不会阻塞）
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>,
-)
+const container = document.getElementById('root')!
+
+// react-snap 需要使用 hydrate 来接管预渲染的 HTML
+if (container.hasChildNodes()) {
+  ReactDOM.hydrateRoot(
+    container,
+    <React.StrictMode>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </React.StrictMode>
+  )
+} else {
+  ReactDOM.createRoot(container).render(
+    <React.StrictMode>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </React.StrictMode>
+  )
+}
