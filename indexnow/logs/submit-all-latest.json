@@ -1,13 +1,13 @@
 {
-  "timestamp": "2025-12-29T08:18:38.185Z",
+  "timestamp": "2025-12-29T19:55:16.971Z",
   "type": "submit-all",
   "totalUrls": 5,
   "urls": [
     "https://grokapi.org/",
-    "https://grokapi.org/privacy-policy",
-    "https://grokapi.org/terms-of-service",
-    "https://grokapi.org/zh",
-    "https://grokapi.org/zh-tw"
+    "https://grokapi.org/privacy-policy/",
+    "https://grokapi.org/terms-of-service/",
+    "https://grokapi.org/zh/",
+    "https://grokapi.org/zh-tw/"
   ],
   "result": {
     "success": true,
