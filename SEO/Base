@@ -14,7 +14,7 @@
 9、订阅做成（月、年订阅）+一次性付费，这样我测试转化是最好的
 10、BingBot很弱，页面越简单，越静态，越容易被Bing收录
 11、若页面有视频，为页面视频做 SEO 适配：在页面添加 VideoObject 结构化数据（JSON-LD，包含 name、description、thumbnailUrl、contentUrl、embedUrl、duration、uploadDate、publisher），创建独立的视频观看页面（如 /video/[id]），在视频所在位置添加隐藏链接（sr-only）指向该观看页，并在 robots meta 中设置 maxVideoPreview: -1。
-
+12、BingBot不会执行js，因此要配置noscript代码，否则Bing会认为页面缺少h1内容和其他内容
 
 
 页面内容结构：
