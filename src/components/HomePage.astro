@@ -1,0 +1,341 @@
+---
+import { t, type Locale } from '../i18n/translations';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+const stats = [
+  { value: '1483', labelKey: 'grok_stats_lmArenaElo' },
+  { value: '1722', labelKey: 'grok_stats_creativeWriting' },
+  { value: '4.22%', labelKey: 'grok_stats_hallucinationRate' },
+  { value: 'Top 1', labelKey: 'grok_stats_reasoning' },
+];
+
+const features = [
+  { iconPath: 'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z', titleKey: 'grok_features_emotionalIntelligence_title', descKey: 'grok_features_emotionalIntelligence_description', gradient: 'from-pink-500 to-rose-500' },
+  { iconPath: 'M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z', titleKey: 'grok_features_reasoning_title', descKey: 'grok_features_reasoning_description', gradient: 'from-blue-500 to-cyan-500' },
+  { iconPath: 'M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z', titleKey: 'grok_features_creativeWriting_title', descKey: 'grok_features_creativeWriting_description', gradient: 'from-purple-500 to-pink-500' },
+  { iconPath: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z', titleKey: 'grok_features_factualAccuracy_title', descKey: 'grok_features_factualAccuracy_description', gradient: 'from-green-500 to-emerald-500' },
+  { iconPath: 'M13 10V3L4 14h7v7l9-11h-7z', titleKey: 'grok_features_realTimeData_title', descKey: 'grok_features_realTimeData_description', gradient: 'from-orange-500 to-yellow-500' },
+  { iconPath: 'M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4', titleKey: 'grok_features_developerFriendly_title', descKey: 'grok_features_developerFriendly_description', gradient: 'from-cyan-500 to-blue-500' },
+];
+
+const platforms = [
+  { titleKey: 'grok_platforms_xai_title', descKey: 'grok_platforms_xai_description', link: 'https://console.x.ai', linkKey: 'grok_platforms_xai_link', gradient: 'from-gray-900 to-gray-800' },
+  { titleKey: 'grok_platforms_azure_title', descKey: 'grok_platforms_azure_description', link: 'https://azure.microsoft.com/', linkKey: 'grok_platforms_azure_link', gradient: 'from-blue-600 to-blue-700' },
+  { titleKey: 'grok_platforms_github_title', descKey: 'grok_platforms_github_description', link: 'https://github.com/models', linkKey: 'grok_platforms_github_link', gradient: 'from-gray-800 to-gray-900' },
+  { titleKey: 'grok_platforms_oracle_title', descKey: 'grok_platforms_oracle_description', link: 'https://www.oracle.com/cloud/', linkKey: 'grok_platforms_oracle_link', gradient: 'from-red-600 to-red-700' },
+  { titleKey: 'grok_platforms_aws_title', descKey: 'grok_platforms_aws_description', link: 'https://aws.amazon.com/bedrock/', linkKey: 'grok_platforms_aws_link', gradient: 'from-orange-500 to-orange-600' },
+];
+
+const faqItems = [
+  { qKey: 'grok_faq_questions_what_question', aKey: 'grok_faq_questions_what_answer' },
+  { qKey: 'grok_faq_questions_difference_question', aKey: 'grok_faq_questions_difference_answer' },
+  { qKey: 'grok_faq_questions_useCases_question', aKey: 'grok_faq_questions_useCases_answer' },
+  { qKey: 'grok_faq_questions_apiKey_question', aKey: 'grok_faq_questions_apiKey_answer' },
+  { qKey: 'grok_faq_questions_support_question', aKey: 'grok_faq_questions_support_answer' },
+];
+---
+
+<div class="relative">
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden bg-gradient-to-b from-white via-gray-50 to-white">
+    <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-32 text-center">
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-gray-900 text-white text-xs font-medium rounded-full mb-8">
+        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+        </svg>
+        <span>{t(locale, 'grok_badge')}</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="text-6xl md:text-8xl font-bold text-gray-900 mb-6 tracking-tight leading-none">
+        {t(locale, 'grok_title')}
+      </h1>
+      
+      <p class="text-xl md:text-2xl text-gray-600 mb-4 font-light max-w-3xl mx-auto">
+        {t(locale, 'grok_subtitle')}
+      </p>
+
+      <p class="text-base md:text-lg text-gray-500 mb-8 font-light max-w-2xl mx-auto leading-relaxed">
+        {t(locale, 'grok_description')}
+      </p>
+
+      <!-- Disclaimer -->
+      <p class="text-sm text-gray-600 mb-12 font-normal max-w-2xl mx-auto leading-relaxed">
+        {t(locale, 'grok_disclaimer')}
+      </p>
+
+      <!-- Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
+        {stats.map((stat) => (
+          <div class="text-center">
+            <div class="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
+            <div class="text-sm text-gray-600 font-light">{t(locale, stat.labelKey)}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- What is Grok API Section -->
+  <section id="what-is" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <div class="text-sm font-semibold text-blue-600 mb-3 uppercase tracking-wide">
+          {t(locale, 'grok_whatIs_smallTitle')}
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          {t(locale, 'grok_whatIs_mainTitle')}
+        </h2>
+      </div>
+
+      <div class="max-w-4xl mx-auto">
+        <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+          {t(locale, 'grok_whatIs_description')}
+        </p>
+
+        <div class="bg-gray-50 rounded-2xl p-8 mb-8">
+          <h3 class="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            {t(locale, 'grok_whatIs_keyPoints')}
+          </h3>
+          <ul class="space-y-4">
+            {[1, 2, 3, 4, 5].map((i) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span class="text-gray-700">{t(locale, `grok_whatIs_keyPoint${i}`)}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <div class="text-sm font-semibold text-blue-600 mb-3 uppercase tracking-wide">
+          {t(locale, 'grok_whyChoose_smallTitle')}
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          {t(locale, 'grok_whyChoose_mainTitle')}
+        </h2>
+        <p class="text-lg text-gray-600 font-light">
+          {t(locale, 'grok_whyChoose_subtitle')}
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {features.map((feature) => (
+          <div class="group p-8 bg-gray-50 rounded-2xl hover:shadow-xl transition-all duration-300">
+            <div class={`inline-flex p-3 bg-gradient-to-br ${feature.gradient} rounded-xl mb-4 text-white`}>
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={feature.iconPath}></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">
+              {t(locale, feature.titleKey)}
+            </h3>
+            <p class="text-gray-600 font-light leading-relaxed">
+              {t(locale, feature.descKey)}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Platforms Section -->
+  <section id="platforms" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <div class="text-sm font-semibold text-blue-600 mb-3 uppercase tracking-wide">
+          {t(locale, 'grok_platforms_smallTitle')}
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          {t(locale, 'grok_platforms_mainTitle')}
+        </h2>
+        <p class="text-lg text-gray-600 font-light">
+          {t(locale, 'grok_platforms_subtitle')}
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        {platforms.map((platform) => (
+          <div class="p-6 bg-white border border-gray-200 rounded-2xl hover:shadow-lg transition-all">
+            <h3 class="text-lg font-bold text-gray-900 mb-3">
+              {t(locale, platform.titleKey)}
+            </h3>
+            <p class="text-sm text-gray-600 mb-4 leading-relaxed">
+              {t(locale, platform.descKey)}
+            </p>
+            <a
+              href={platform.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              class={`inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r ${platform.gradient} text-white rounded-lg hover:opacity-90 transition-all text-sm font-medium`}
+            >
+              {t(locale, platform.linkKey)}
+              <span>→</span>
+            </a>
+          </div>
+        ))}
+      </div>
+
+      <div class="bg-yellow-50 border border-yellow-200 rounded-2xl p-6 max-w-4xl mx-auto">
+        <div class="flex items-start gap-3">
+          <svg class="w-6 h-6 text-yellow-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+          </svg>
+          <p class="text-sm text-yellow-900 font-medium leading-relaxed">
+            {t(locale, 'grok_platforms_pricing_note')}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources Section -->
+  <section id="resources" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <div class="text-sm font-semibold text-blue-600 mb-3 uppercase tracking-wide">
+          {t(locale, 'grok_resources_smallTitle')}
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          {t(locale, 'grok_resources_mainTitle')}
+        </h2>
+        <p class="text-lg text-gray-600 font-light">
+          {t(locale, 'grok_resources_subtitle')}
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-8 bg-white border border-gray-200 rounded-2xl hover:shadow-lg transition-all">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">
+            {t(locale, 'grok_resources_official_title')}
+          </h3>
+          <p class="text-sm text-gray-600 mb-6">{t(locale, 'grok_resources_official_description')}</p>
+          <a 
+            href="https://x.ai"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full px-6 py-3 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-all font-medium text-center inline-block"
+          >
+            {t(locale, 'grok_resources_official_link')}
+          </a>
+        </div>
+
+        <div class="p-8 bg-white border border-gray-200 rounded-2xl hover:shadow-lg transition-all">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">
+            {t(locale, 'grok_resources_docs_title')}
+          </h3>
+          <p class="text-sm text-gray-600 mb-6">{t(locale, 'grok_resources_docs_description')}</p>
+          <a 
+            href="https://x.ai"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full px-6 py-3 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-all font-medium text-center inline-block"
+          >
+            {t(locale, 'grok_resources_docs_link')}
+          </a>
+        </div>
+
+        <div class="p-8 bg-white border border-gray-200 rounded-2xl hover:shadow-lg transition-all">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">
+            {t(locale, 'grok_resources_tutorials_title')}
+          </h3>
+          <p class="text-sm text-gray-600 mb-6">{t(locale, 'grok_resources_tutorials_description')}</p>
+          <a 
+            href="https://x.ai"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full px-6 py-3 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-all font-medium text-center inline-block"
+          >
+            {t(locale, 'grok_resources_tutorials_link')}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How to Use Section -->
+  <section id="how-to-use" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <div class="text-sm font-semibold text-blue-600 mb-3 uppercase tracking-wide">
+          {t(locale, 'grok_howToUse_smallTitle')}
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          {t(locale, 'grok_howToUse_mainTitle')}
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div class="text-center p-6">
+          <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-blue-600 font-bold text-lg">1</span>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-3">{t(locale, 'grok_howToUse_steps_signup_title')}</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">{t(locale, 'grok_howToUse_steps_signup_description')}</p>
+        </div>
+        <div class="text-center p-6">
+          <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-blue-600 font-bold text-lg">2</span>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-3">{t(locale, 'grok_howToUse_steps_integrate_title')}</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">{t(locale, 'grok_howToUse_steps_integrate_description')}</p>
+        </div>
+        <div class="text-center p-6">
+          <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-blue-600 font-bold text-lg">3</span>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-3">{t(locale, 'grok_howToUse_steps_deploy_title')}</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">{t(locale, 'grok_howToUse_steps_deploy_description')}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <div class="text-sm font-semibold text-blue-600 mb-3 uppercase tracking-wide">
+          {t(locale, 'grok_faq_smallTitle')}
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          {t(locale, 'grok_faq_mainTitle')}
+        </h2>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-4">
+        {faqItems.map((item) => (
+          <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+            <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50 transition-colors">
+              <h3 class="text-lg font-semibold text-gray-900 pr-4">{t(locale, item.qKey)}</h3>
+              <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </summary>
+            <div class="px-6 pb-6">
+              <p class="text-gray-600 leading-relaxed">{t(locale, item.aKey)}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+</div>

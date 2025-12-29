@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import PrivacyPolicy from '../../components/PrivacyPolicy.astro';
+
+const locale = 'zh';
+---
+
+<BaseLayout 
+  title="隐私政策 - Grok API"
+  description="Grok API 平台隐私政策"
+  keywords="隐私政策, grok api, 数据保护"
+  locale={locale}
+  path="/privacy-policy"
+>
+  <Header locale={locale} />
+  <main class="pt-16">
+    <PrivacyPolicy locale={locale} />
+  </main>
+  <Footer locale={locale} />
+</BaseLayout>

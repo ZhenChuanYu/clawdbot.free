@@ -1,0 +1,99 @@
+---
+import { t, type Locale } from '../i18n/translations';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+function getLocalizedPath(path: string, locale: Locale) {
+  if (locale === 'en') return path;
+  return `/${locale}${path}`;
+}
+---
+
+<footer class="border-t border-gray-100 bg-white">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+    <div class="grid md:grid-cols-12 gap-12 mb-12">
+      <!-- Brand -->
+      <div class="md:col-span-4">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-base font-semibold text-gray-900">Grok API</span>
+        </div>
+        <p class="text-sm text-gray-500 leading-relaxed max-w-xs">
+          {t(locale, 'grok_subtitle')}
+        </p>
+      </div>
+
+      <!-- Links -->
+      <div class="md:col-span-2">
+        <h3 class="text-sm font-semibold text-gray-900 mb-4">{t(locale, 'common_product')}</h3>
+        <ul class="space-y-3 text-sm">
+          <li>
+            <a href="#features" class="text-gray-600 hover:text-gray-900 transition-colors" title="View Grok API Features">
+              {t(locale, 'common_features')}
+            </a>
+          </li>
+          <li>
+            <a href="#resources" class="text-gray-600 hover:text-gray-900 transition-colors" title="Grok API Resources">
+              Resources
+            </a>
+          </li>
+          <li>
+            <a href="#how-to-use" class="text-gray-600 hover:text-gray-900 transition-colors" title="How to Use Grok API">
+              {t(locale, 'common_howToUse')}
+            </a>
+          </li>
+          <li>
+            <a href="#faq" class="text-gray-600 hover:text-gray-900 transition-colors" title="Grok API FAQ">
+              {t(locale, 'common_faq')}
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-2">
+        <h3 class="text-sm font-semibold text-gray-900 mb-4">{t(locale, 'common_legal')}</h3>
+        <ul class="space-y-3 text-sm">
+          <li>
+            <a href={getLocalizedPath('/privacy-policy', locale)} class="text-gray-600 hover:text-gray-900 transition-colors" title="Privacy Policy">
+              {t(locale, 'common_privacy')}
+            </a>
+          </li>
+          <li>
+            <a href={getLocalizedPath('/terms-of-service', locale)} class="text-gray-600 hover:text-gray-900 transition-colors" title="Terms of Service">
+              {t(locale, 'common_terms')}
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-4">
+        <h3 class="text-sm font-semibold text-gray-900 mb-4">{t(locale, 'common_about')}</h3>
+        <p class="text-xs text-gray-500 leading-relaxed">
+          {t(locale, 'common_aboutDesc')}
+        </p>
+      </div>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="pt-8 border-t border-gray-100 mb-6">
+      <p class="text-xs text-gray-600 text-center max-w-3xl mx-auto leading-relaxed">
+        {t(locale, 'grok_disclaimer')}
+      </p>
+    </div>
+
+    <!-- Bottom -->
+    <div class="pt-8 border-t border-gray-100">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-xs text-gray-500">
+          {t(locale, 'common_copyright')}
+        </p>
+        <p class="text-xs text-gray-400">
+          {t(locale, 'common_poweredBy')}
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
