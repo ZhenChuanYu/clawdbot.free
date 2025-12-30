@@ -78,6 +78,50 @@ const canonicalUrl = canonicalOverride || getCanonicalUrl(locale, path);
   <link rel="alternate" hreflang="zh-TW" href={`${BASE_URL}/zh-tw${path === '' ? '/' : (path.endsWith('/') ? path : `${path}/`)}`}>
   <link rel="alternate" hreflang="zh-HK" href={`${BASE_URL}/zh-tw${path === '' ? '/' : (path.endsWith('/') ? path : `${path}/`)}`}>
   <link rel="alternate" hreflang="x-default" href={`${BASE_URL}${path === '' ? '/' : (path.endsWith('/') ? path : `${path}/`)}`}>
+  
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@id": `${BASE_URL}/#website`,
+        "@type": "WebSite",
+        "inLanguage": locale === 'zh-tw' ? 'zh-TW' : (locale === 'zh' ? 'zh-CN' : 'en-US'),
+        "name": "Grok API",
+        "url": BASE_URL,
+        "description": description,
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": `${BASE_URL}/?q={search_term_string}`
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@id": `${canonicalUrl}#webpage`,
+        "@type": "WebPage",
+        "name": title,
+        "url": canonicalUrl,
+        "description": description,
+        "isPartOf": {
+          "@id": `${BASE_URL}/#website`
+        },
+        "about": {
+          "@type": "SoftwareApplication",
+          "name": "Grok API",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Any",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        }
+      }
+    ]
+  })} />
 </head>
 <body class="min-h-screen bg-white">
   <slot />

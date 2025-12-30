@@ -36,6 +36,11 @@ function getLocalizedPath(path: string, locale: Locale) {
             </a>
           </li>
           <li>
+            <a href={getLocalizedPath('/grok-api-free', locale)} class="text-gray-600 hover:text-gray-900 transition-colors" title="Low-Cost Grok API Platforms">
+              {t(locale, 'common_lowCostPlatforms')}
+            </a>
+          </li>
+          <li>
             <a href="#resources" class="text-gray-600 hover:text-gray-900 transition-colors" title="Grok API Resources">
               Resources
             </a>
@@ -86,12 +91,9 @@ function getLocalizedPath(path: string, locale: Locale) {
 
     <!-- Bottom -->
     <div class="pt-8 border-t border-gray-100">
-      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="flex flex-col md:flex-row justify-center items-center gap-4">
         <p class="text-xs text-gray-500">
           {t(locale, 'common_copyright')}
-        </p>
-        <p class="text-xs text-gray-500">
-          {t(locale, 'common_poweredBy')}
         </p>
       </div>
     </div>
