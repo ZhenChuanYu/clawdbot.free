@@ -2,6 +2,12 @@
 # 注意：Cloudflare Pages 需要在域名设置中配置，这里作为备用
 # https://www.grokapi.org/*  https://grokapi.org/:splat  301
 
+# URL规范化：不带斜杠的路径重定向到带斜杠（301永久重定向）
+# 这确保所有URL格式统一，避免重复内容问题
+/grok-api-free  /grok-api-free/  301
+/zh/grok-api-free  /zh/grok-api-free/  301
+/zh-tw/grok-api-free  /zh-tw/grok-api-free/  301
+
 # SPA 客户端路由配置
 # 不带斜杠的语言路径 - 直接返回 200（满足 Bing 要求）
 /zh    /zh/index.html  200

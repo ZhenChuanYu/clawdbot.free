@@ -22,6 +22,15 @@ function getCanonicalUrl(locale: Locale, path: string) {
   return `${BASE_URL}/${locale}${basePath}`;
 }
 
+function getHreflangPath(path: string, targetLocale: Locale) {
+  // Path should not include locale prefix (it's handled by BaseLayout)
+  const normalizedPath = path === '' ? '/' : (path.endsWith('/') ? path : `${path}/`);
+  if (targetLocale === 'en') {
+    return normalizedPath;
+  }
+  return `/${targetLocale}${normalizedPath}`;
+}
+
 const canonicalUrl = canonicalOverride || getCanonicalUrl(locale, path);
 ---
 
@@ -73,11 +82,11 @@ const canonicalUrl = canonicalOverride || getCanonicalUrl(locale, path);
   <meta property="twitter:image" content={`${BASE_URL}/og-image.png`}>
   
   <!-- Hreflang tags -->
-  <link rel="alternate" hreflang="en" href={`${BASE_URL}${path === '' ? '/' : (path.endsWith('/') ? path : `${path}/`)}`}>
-  <link rel="alternate" hreflang="zh-CN" href={`${BASE_URL}/zh${path === '' ? '/' : (path.endsWith('/') ? path : `${path}/`)}`}>
-  <link rel="alternate" hreflang="zh-TW" href={`${BASE_URL}/zh-tw${path === '' ? '/' : (path.endsWith('/') ? path : `${path}/`)}`}>
-  <link rel="alternate" hreflang="zh-HK" href={`${BASE_URL}/zh-tw${path === '' ? '/' : (path.endsWith('/') ? path : `${path}/`)}`}>
-  <link rel="alternate" hreflang="x-default" href={`${BASE_URL}${path === '' ? '/' : (path.endsWith('/') ? path : `${path}/`)}`}>
+  <link rel="alternate" hreflang="en" href={`${BASE_URL}${getHreflangPath(path, 'en')}`}>
+  <link rel="alternate" hreflang="zh-CN" href={`${BASE_URL}${getHreflangPath(path, 'zh')}`}>
+  <link rel="alternate" hreflang="zh-TW" href={`${BASE_URL}${getHreflangPath(path, 'zh-tw')}`}>
+  <link rel="alternate" hreflang="zh-HK" href={`${BASE_URL}${getHreflangPath(path, 'zh-tw')}`}>
+  <link rel="alternate" hreflang="x-default" href={`${BASE_URL}${getHreflangPath(path, 'en')}`}>
   
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json" set:html={JSON.stringify({

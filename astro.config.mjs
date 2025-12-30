@@ -4,6 +4,7 @@ import react from '@astrojs/react';
 
 export default defineConfig({
   output: 'static',
+  trailingSlash: 'always',
   integrations: [
     tailwind(),
     react(),
