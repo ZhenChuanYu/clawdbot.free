@@ -58,8 +58,12 @@ const homePath = getLocalizedPath('/', locale);
       <!-- Language Switcher -->
       <div class="flex items-center gap-3">
         <div class="relative">
+          <label for="lang-switcher" class="sr-only">
+            {t(locale, 'common_languageSwitcher')}
+          </label>
           <select 
             id="lang-switcher"
+            aria-label={t(locale, 'common_languageSwitcher')}
             class="appearance-none bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-sm text-gray-700 cursor-pointer hover:bg-gray-100 transition-colors pr-8"
           >
             <option value="en" selected={locale === 'en'}>English</option>
