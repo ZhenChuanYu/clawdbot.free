@@ -74,7 +74,23 @@ function getLocalizedPath(path: string, locale: Locale) {
         </ul>
       </div>
 
-      <div class="md:col-span-4">
+      <div class="md:col-span-2">
+        <h3 class="text-sm font-semibold text-gray-900 mb-4">More Tools</h3>
+        <ul class="space-y-3 text-sm">
+          <li>
+            <a href="https://pomeli.me" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-900 transition-colors" title="Pomeli">
+              Pomeli
+            </a>
+          </li>
+          <li>
+            <a href="https://ai-video.video" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-900 transition-colors" title="AI Video">
+              AI Video
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-2">
         <h3 class="text-sm font-semibold text-gray-900 mb-4">{t(locale, 'common_about')}</h3>
         <p class="text-xs text-gray-600 leading-relaxed">
           {t(locale, 'common_aboutDesc')}
