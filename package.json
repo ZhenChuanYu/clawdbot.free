@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "node scripts/generate-og-image.js && astro build",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
     "generate:og": "node scripts/generate-og-image.js"
