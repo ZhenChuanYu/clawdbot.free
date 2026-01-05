@@ -1,0 +1,46 @@
+第一步：
+你需要做：访问https://clarity.microsoft.com/projects创建项目，获取clarity id
+ai需要做：修改clarity id为 xxxxx
+
+第二步：
+你需要做：描述网站功能，请到 "网站功能描述.txt"文件完善网站的功能描述
+AI需要做：阅读 网站功能描述.txt ，执行整站修改，删除当前首页内容，重构新首页，始终保持简约回复
+
+第三步：
+你需要：pnpm dev 访问 localhost:4321 检查页面内容是否与代码对应
+你需要：检查title和description有没有seo优势，是否中性
+AI需要做：检查一遍，检查header和footer，检查多语言功能是否完善，检查两个协议内容是否修改等,更新联系方式 邮件地址改为support@{对应域名}
+AI需要做：检查Heder导航 需不需要补充或优化
+
+第四步：
+你需要做：联网确认是否需要补充更多内容
+你需要做：确认页面内容已完善
+AI需要做：检查页面的seo问题
+
+第五步：
+AI需要做：检查 robots.txt和sitemap.xml，注意：隐私政策和服务条款只需要保留英文版
+
+第五步：
+你需要做：访问github.com 创建新仓库，仓库名保持与域名一致
+AI需要做：git切断当前分支与远程分支的链接，与新的git仓库链接，git push到新仓库
+你需要做：访问cloudflare.com 创建page部署git仓库，构建命令是pnpm build，目录是/dist
+你需要做：为page添加域名 @和www
+
+第六步：
+你需要做：访问https://search.google.com/ 添加域名，注意：public/google38886640ffb5f5fa.html是通用的谷歌验证html，无需再次添加，直接验证域名即可
+
+第七步：
+你需要做：访问https://realfavicongenerator.net/ 制作favicon，并把素材解压放到public目录中，替换旧的重名文件
+
+第八步：
+AI需要做：阅读首页，了解我们的服务，然后更改隐私政策和服务条款页面
+AI需要做：全局检查 还有哪些地方的品牌名和域名没有改为正确的名字，尤其注意隐私政策页面和服务条款页面
+AI需要做：检查 indexnow/config.json - 域名和key位置，package.json - 项目名称和描述,public/_redirects - 域名重定向注释
+
+第九步：
+AI需要做：请阅读 提示词-indexnow-生成key的方法 文件中的内容，并制作key文件，修改indexnow/config.json文件中的key配置
+
+第10步：
+AI需要做：提交所有页面到indexnow，脚本在indexnow目录下，提交前先检查域名和页面地址是否与当前项目匹配，并保持使用 /结果到url
+你需要做：访问https://search.google.com/ 提交首页url以及多语言版的URL
+
