@@ -8,8 +8,10 @@ interface Props {
 const { locale } = Astro.props;
 
 function getLocalizedPath(path: string, locale: Locale) {
-  if (locale === 'en') return path;
-  return `/${locale}${path === '/' ? '' : path}`;
+  const normalizedPath = path === '/' ? '/' : (path.endsWith('/') ? path : `${path}/`);
+  if (locale === 'en') return normalizedPath;
+  const pathWithoutSlash = normalizedPath === '/' ? '' : normalizedPath;
+  return `/${locale}${pathWithoutSlash}`;
 }
 
 const homePath = getLocalizedPath('/', locale);
@@ -51,7 +53,7 @@ const homePath = getLocalizedPath('/', locale);
           class="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-all"
           title="Grok API Resources"
         >
-          Resources
+          {t(locale, 'common_resources')}
         </a>
         <a
           href="#faq"
@@ -76,6 +78,14 @@ const homePath = getLocalizedPath('/', locale);
             <option value="en" selected={locale === 'en'}>English</option>
             <option value="zh" selected={locale === 'zh'}>中文</option>
             <option value="zh-tw" selected={locale === 'zh-tw'}>繁體中文</option>
+            <option value="ja" selected={locale === 'ja'}>日本語</option>
+            <option value="hi" selected={locale === 'hi'}>हिन्दी</option>
+            <option value="es" selected={locale === 'es'}>Español</option>
+            <option value="pt" selected={locale === 'pt'}>Português</option>
+            <option value="ru" selected={locale === 'ru'}>Русский</option>
+            <option value="de" selected={locale === 'de'}>Deutsch</option>
+            <option value="fr" selected={locale === 'fr'}>Français</option>
+            <option value="ko" selected={locale === 'ko'}>한국어</option>
           </select>
           <svg class="absolute right-2 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -95,7 +105,7 @@ const homePath = getLocalizedPath('/', locale);
       const currentPath = window.location.pathname;
       
       // Remove current locale prefix
-      let basePath = currentPath.replace(/^\/(zh-tw|zh)(\/|$)/, '/');
+      let basePath = currentPath.replace(/^\/(zh-tw|zh|ja|hi|es|pt|ru|de|fr|ko)(\/|$)/, '/');
       if (basePath === '') basePath = '/';
       
       // Add new locale prefix

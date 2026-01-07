@@ -9,8 +9,10 @@ interface Props {
 const { locale } = Astro.props;
 
 function getLocalizedPath(path: string, locale: Locale) {
-  if (locale === 'en') return path;
-  return `/${locale}${path === '/' ? '' : path}`;
+  const normalizedPath = path === '/' ? '/' : (path.endsWith('/') ? path : `${path}/`);
+  if (locale === 'en') return normalizedPath;
+  const pathWithoutSlash = normalizedPath === '/' ? '' : normalizedPath;
+  return `/${locale}${pathWithoutSlash}`;
 }
 
 const homePath = getLocalizedPath('/', locale);

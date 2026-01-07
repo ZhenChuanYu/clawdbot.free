@@ -8,8 +8,9 @@ interface Props {
 const { locale } = Astro.props;
 
 function getLocalizedPath(path: string, locale: Locale) {
-  if (locale === 'en') return path;
-  return `/${locale}${path}`;
+  const normalizedPath = path.endsWith('/') ? path : `${path}/`;
+  if (locale === 'en') return normalizedPath;
+  return `/${locale}${normalizedPath}`;
 }
 ---
 
@@ -42,7 +43,7 @@ function getLocalizedPath(path: string, locale: Locale) {
           </li>
           <li>
             <a href="#resources" class="text-gray-600 hover:text-gray-900 transition-colors" title="Grok API Resources">
-              Resources
+              {t(locale, 'common_resources')}
             </a>
           </li>
           <li>
