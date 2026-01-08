@@ -104,7 +104,7 @@ const faqItems = [
   <!-- Hero Section - Enhanced -->
   <section class="relative overflow-hidden bg-gradient-to-b from-white via-gray-50 to-white">
     <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-32">
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 md:pt-12 pb-16 md:pb-32">
       <!-- Release Date Banner -->
       <div class="text-center mb-8">
         <p class="text-sm text-gray-600 font-medium">
@@ -140,7 +140,7 @@ const faqItems = [
         </p>
 
         <!-- CTA Buttons -->
-        <div class="flex items-center justify-center gap-4 mb-12">
+        <div class="flex flex-wrap items-center justify-center gap-4 mb-12">
           <a
             href="https://console.x.ai"
             target="_blank"
@@ -148,6 +148,17 @@ const faqItems = [
             class="group inline-flex items-center gap-2 px-8 py-4 bg-gray-900 text-white text-base font-medium rounded-lg hover:bg-gray-800 transition-all shadow-lg hover:shadow-xl"
           >
             {t(locale, 'common_getStarted')}
+            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
+          </a>
+          <a
+            href="https://aiberm.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 text-white text-base font-bold rounded-lg hover:from-red-700 hover:to-orange-700 transition-all shadow-lg hover:shadow-xl hover:scale-105"
+          >
+            <span>{t(locale, 'common_70offButton')}</span>
             <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
             </svg>
