@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-12-31T00:06:49.532Z",
+  "timestamp": "2026-01-10T19:13:54.077Z",
   "type": "submit-all",
-  "totalUrls": 8,
+  "totalUrls": 16,
   "urls": [
     "https://grokapi.org/",
     "https://grokapi.org/privacy-policy/",
@@ -10,7 +10,15 @@
     "https://grokapi.org/zh/",
     "https://grokapi.org/zh/grok-api-free/",
     "https://grokapi.org/zh-tw/",
-    "https://grokapi.org/zh-tw/grok-api-free/"
+    "https://grokapi.org/zh-tw/grok-api-free/",
+    "https://grokapi.org/de/",
+    "https://grokapi.org/es/",
+    "https://grokapi.org/fr/",
+    "https://grokapi.org/hi/",
+    "https://grokapi.org/ja/",
+    "https://grokapi.org/ko/",
+    "https://grokapi.org/pt/",
+    "https://grokapi.org/ru/"
   ],
   "result": {
     "success": true,
