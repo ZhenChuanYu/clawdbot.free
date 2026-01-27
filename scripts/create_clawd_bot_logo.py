@@ -19,21 +19,23 @@ client = OpenAI(api_key=api_key, base_url=base_url)
 def generate_logo(output_path="public/logo-original.png"):
     """生成 Clawd Bot logo"""
     
-    # Logo 设计提示词：极简风格、扁平化、AI 助手主题
-    prompt = """Design a minimalist, flat-style square logo for "Clawd Bot" - a personal AI assistant.
+    # Logo 设计提示词：极简风格、扁平化、龙虾主题
+    prompt = """Design a minimalist, flat-style square logo featuring a stylized LOBSTER for "Clawd Bot" brand.
 
 Requirements:
-- Extremely simple and clean design
+- Extremely simple and clean lobster silhouette design
 - Flat design style, no gradients or 3D effects
-- Use a stylized robot head or chat bubble icon
-- Primary color: bright coral red (#FF4D4D) on dark background (#050810)
-- The icon should be centered and fill about 70% of the canvas
-- No text, just the icon/symbol
+- Use a cute, friendly, cartoon-style lobster icon
+- Primary color: bright coral red (#FF4D4D) on dark navy background (#050810)
+- The lobster icon should be centered and fill about 65% of the canvas
+- No text, just the lobster icon/symbol
 - Should work well at small sizes (16x16 favicon)
 - Modern, tech-forward aesthetic
-- Sharp, geometric shapes
+- The lobster should look friendly and approachable, not realistic
+- Simple geometric shapes, minimal details
+- Similar style to emoji 🦞 but more stylized and logo-friendly
 
-Style reference: Similar to Discord, Slack, or Telegram app icons - simple, recognizable, bold."""
+Style reference: Think of app icons like Discord mascot or Twitter bird - simple, bold, instantly recognizable silhouette."""
 
     print("正在生成 Clawd Bot logo...")
     print(f"API: {base_url}")
