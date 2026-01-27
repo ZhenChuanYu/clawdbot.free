@@ -389,7 +389,7 @@ const t = content[locale as keyof typeof content] || content.en;
       
       <!-- Link Columns -->
       <div class="clawd-footer-links">
-        <h4 class="clawd-footer-links-title">{t.links.product.title}</h4>
+        <span class="clawd-footer-links-title">{t.links.product.title}</span>
         <ul>
           {t.links.product.items.map(item => (
             <li>
@@ -400,7 +400,7 @@ const t = content[locale as keyof typeof content] || content.en;
       </div>
       
       <div class="clawd-footer-links">
-        <h4 class="clawd-footer-links-title">{t.links.resources.title}</h4>
+        <span class="clawd-footer-links-title">{t.links.resources.title}</span>
         <ul>
           {t.links.resources.items.map(item => (
             <li>
@@ -411,7 +411,7 @@ const t = content[locale as keyof typeof content] || content.en;
       </div>
       
       <div class="clawd-footer-links">
-        <h4 class="clawd-footer-links-title">{t.links.community.title}</h4>
+        <span class="clawd-footer-links-title">{t.links.community.title}</span>
         <ul>
           {t.links.community.items.map(item => (
             <li>

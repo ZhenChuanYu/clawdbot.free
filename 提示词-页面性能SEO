@@ -12,6 +12,7 @@ https://pagespeed.web.dev/
 使用devtools mcp验证pagespeed lighthouse性能，结合代码，找出优化点
 
 
+
 【Devtools MCP的优势】
 由于它直接基于 Chrome DevTools Protocol，下面这些事情，只有Devtools MCP能做得最好。
 监听 Network：请求/响应头、body、status、时序、重定向链路
