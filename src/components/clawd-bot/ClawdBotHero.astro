@@ -14,17 +14,17 @@ const content = {
     badge: 'Open Source Personal AI',
     title: 'Clawd Bot',
     subtitle: 'THE AI THAT ACTUALLY DOES THINGS.',
-    description: 'Clawd Bot is your personal AI assistant that runs on your machine. Clawd Bot clears your inbox, sends emails, manages your calendar, checks you in for flights. With Clawd Bot, all from WhatsApp, Telegram, or any chat app you already use. Experience the power of Clawd Bot today.',
-    ctaPrimary: 'Get Started with Clawd Bot',
-    ctaSecondary: 'View Clawd Bot Documentation',
+    description: 'Your personal AI assistant that runs locally on your machine. It clears your inbox, sends emails, manages your calendar, and checks you in for flights—all from WhatsApp, Telegram, or any chat app you already use.',
+    ctaPrimary: 'Get Started',
+    ctaSecondary: 'View Documentation',
   },
   zh: {
     badge: '开源个人 AI',
     title: 'Clawd Bot',
     subtitle: '真正能做事的 AI 助手',
-    description: 'Clawd Bot 是运行在您本地机器上的个人 AI 助手。Clawd Bot 可以清理收件箱、发送邮件、管理日历、航班值机。通过 WhatsApp、Telegram 或任何您常用的聊天应用即可控制 Clawd Bot。立即体验 Clawd Bot 的强大功能。',
-    ctaPrimary: '立即开始使用 Clawd Bot',
-    ctaSecondary: '查看 Clawd Bot 文档',
+    description: '运行在本地的个人 AI 助手，可以清理收件箱、发送邮件、管理日历、航班值机。通过 WhatsApp、Telegram 或任何常用聊天应用即可控制。',
+    ctaPrimary: '立即开始',
+    ctaSecondary: '查看文档',
   },
   ja: {
     badge: 'オープンソース パーソナルAI',
@@ -113,13 +113,13 @@ const t = content[locale as keyof typeof content] || content.en;
       
       <!-- CTA Buttons -->
       <div class="clawd-hero-cta">
-        <a href="#quick-start" class="clawd-btn clawd-btn-primary" title="Get started with Clawd Bot - Download Clawd Bot">
+        <a href="#quick-start" class="clawd-btn clawd-btn-primary" title="Get started">
           {t.ctaPrimary}
           <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
             <path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="2" fill="none"/>
           </svg>
         </a>
-        <a href="https://docs.clawd.bot" target="_blank" rel="noopener noreferrer" class="clawd-btn clawd-btn-secondary" title="Read Clawd Bot documentation - Clawd Bot guide">
+        <a href="https://docs.clawd.bot" target="_blank" rel="noopener noreferrer" class="clawd-btn clawd-btn-secondary" title="View documentation">
           {t.ctaSecondary}
         </a>
       </div>
