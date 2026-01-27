@@ -1,0 +1,301 @@
+---
+/**
+ * Clawd Bot 导航头部组件
+ */
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+
+const navLinks = [
+  { href: '#features', label: 'Features', title: 'Clawd Bot Features' },
+  { href: '#use-cases', label: 'Use Cases', title: 'Clawd Bot Use Cases' },
+  { href: '#integrations', label: 'Integrations', title: 'Clawd Bot Integrations' },
+  { href: '#quick-start', label: 'Quick Start', title: 'Get Started with Clawd Bot' },
+  { href: '#faq', label: 'FAQ', title: 'Frequently Asked Questions' },
+];
+
+const languages = [
+  { code: 'en', label: 'EN', path: '/' },
+  { code: 'zh', label: '中文', path: '/zh/' },
+  { code: 'ja', label: '日本語', path: '/ja/' },
+  { code: 'ko', label: '한국어', path: '/ko/' },
+  { code: 'es', label: 'ES', path: '/es/' },
+  { code: 'de', label: 'DE', path: '/de/' },
+];
+---
+
+<header class="clawd-header">
+  <div class="clawd-container">
+    <nav class="clawd-nav">
+      <!-- Logo -->
+      <a href="/" class="clawd-logo" title="Clawd Bot Home - Personal AI Assistant">
+        <span class="clawd-logo-icon">🦞</span>
+        <span class="clawd-logo-text">Clawd Bot</span>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <div class="clawd-nav-links">
+        {navLinks.map(link => (
+          <a href={link.href} class="clawd-nav-link" title={`${link.title} - Clawd Bot`}>
+            {link.label}
+          </a>
+        ))}
+      </div>
+      
+      <!-- Right Section -->
+      <div class="clawd-nav-right">
+        <!-- Language Selector -->
+        <div class="clawd-lang-selector">
+          <button class="clawd-lang-btn" aria-label="Select language">
+            {languages.find(l => l.code === locale)?.label || 'EN'}
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+              <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            </svg>
+          </button>
+          <div class="clawd-lang-dropdown">
+            {languages.map(lang => (
+              <a 
+                href={lang.path} 
+                class={`clawd-lang-option ${lang.code === locale ? 'active' : ''}`}
+                title={`Switch to ${lang.label}`}
+              >
+                {lang.label}
+              </a>
+            ))}
+          </div>
+        </div>
+        
+        <!-- GitHub Link -->
+        <a 
+          href="https://github.com/clawdbot/clawdbot" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="clawd-github-link"
+          title="View Clawd Bot on GitHub - Clawd Bot Open Source"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+        </a>
+        
+        <!-- Mobile Menu Button -->
+        <button class="clawd-menu-btn" aria-label="Toggle menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+  
+  <!-- Mobile Menu -->
+  <div class="clawd-mobile-menu">
+    <div class="clawd-mobile-links">
+      {navLinks.map(link => (
+        <a href={link.href} class="clawd-mobile-link" title={link.title}>
+          {link.label}
+        </a>
+      ))}
+    </div>
+  </div>
+</header>
+
+<style>
+  .clawd-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(5, 8, 16, 0.9);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  
+  .clawd-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+  
+  .clawd-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--text-primary);
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+  
+  .clawd-logo-icon {
+    font-size: 1.5rem;
+  }
+  
+  .clawd-logo:hover .clawd-logo-text {
+    color: var(--coral-bright);
+  }
+  
+  .clawd-nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .clawd-nav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: color var(--transition-fast);
+  }
+  
+  .clawd-nav-link:hover {
+    color: var(--coral-bright);
+  }
+  
+  .clawd-nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .clawd-lang-selector {
+    position: relative;
+  }
+  
+  .clawd-lang-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+  }
+  
+  .clawd-lang-btn:hover {
+    border-color: var(--coral-bright);
+    color: var(--text-primary);
+  }
+  
+  .clawd-lang-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 0.5rem;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 0.5rem;
+    min-width: 100px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all var(--transition-fast);
+  }
+  
+  .clawd-lang-selector:hover .clawd-lang-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  .clawd-lang-option {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.875rem;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+  }
+  
+  .clawd-lang-option:hover,
+  .clawd-lang-option.active {
+    background: var(--bg-surface);
+    color: var(--coral-bright);
+  }
+  
+  .clawd-github-link {
+    display: flex;
+    align-items: center;
+    color: var(--text-secondary);
+    transition: color var(--transition-fast);
+  }
+  
+  .clawd-github-link:hover {
+    color: var(--text-primary);
+  }
+  
+  .clawd-menu-btn {
+    display: none;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+  }
+  
+  .clawd-mobile-menu {
+    display: none;
+    padding: 1rem;
+    background: var(--bg-surface);
+    border-top: 1px solid var(--border-subtle);
+  }
+  
+  .clawd-mobile-link {
+    display: block;
+    padding: 0.75rem 0;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  
+  .clawd-mobile-link:hover {
+    color: var(--coral-bright);
+  }
+  
+  @media (max-width: 768px) {
+    .clawd-nav-links {
+      display: none;
+    }
+    
+    .clawd-menu-btn {
+      display: flex;
+    }
+    
+    .clawd-mobile-menu.active {
+      display: block;
+    }
+  }
+</style>
+
+<script>
+  // Mobile menu toggle
+  const menuBtn = document.querySelector('.clawd-menu-btn');
+  const mobileMenu = document.querySelector('.clawd-mobile-menu');
+  
+  menuBtn?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('active');
+  });
+  
+  // Close mobile menu on link click
+  const mobileLinks = document.querySelectorAll('.clawd-mobile-link');
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu?.classList.remove('active');
+    });
+  });
+</script>
+

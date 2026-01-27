@@ -1,0 +1,356 @@
+---
+/**
+ * Clawd Bot 集成展示组件
+ */
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+
+const content = {
+  en: {
+    sectionPrefix: '03',
+    sectionTitle: 'Clawd Bot Works With Everything',
+    subtitle: 'Connect Clawd Bot with 50+ services and platforms',
+    categories: [
+      {
+        title: 'Chat Platforms',
+        items: ['WhatsApp', 'Telegram', 'Discord', 'Slack', 'Signal', 'iMessage']
+      },
+      {
+        title: 'AI Models',
+        items: ['Claude', 'GPT-4', 'Gemini', 'Llama', 'Mistral', 'Local LLMs']
+      },
+      {
+        title: 'Productivity',
+        items: ['Gmail', 'Outlook', 'Calendar', 'Notion', 'Todoist', 'Trello']
+      },
+      {
+        title: 'Smart Home',
+        items: ['HomeKit', 'Google Home', 'Alexa', 'SmartThings', 'IFTTT', 'Shortcuts']
+      }
+    ]
+  },
+  zh: {
+    sectionPrefix: '03',
+    sectionTitle: '广泛集成',
+    subtitle: '连接 50+ 服务和平台',
+    categories: [
+      {
+        title: '聊天平台',
+        items: ['WhatsApp', 'Telegram', 'Discord', 'Slack', 'Signal', 'iMessage']
+      },
+      {
+        title: 'AI 模型',
+        items: ['Claude', 'GPT-4', 'Gemini', 'Llama', 'Mistral', '本地 LLM']
+      },
+      {
+        title: '生产力工具',
+        items: ['Gmail', 'Outlook', 'Calendar', 'Notion', 'Todoist', 'Trello']
+      },
+      {
+        title: '智能家居',
+        items: ['HomeKit', 'Google Home', 'Alexa', 'SmartThings', 'IFTTT', 'Shortcuts']
+      }
+    ]
+  },
+  ja: {
+    sectionPrefix: '03',
+    sectionTitle: 'あらゆるものと連携',
+    subtitle: '50以上のサービスとプラットフォームに接続',
+    categories: [
+      {
+        title: 'チャットプラットフォーム',
+        items: ['WhatsApp', 'Telegram', 'Discord', 'Slack', 'Signal', 'iMessage']
+      },
+      {
+        title: 'AIモデル',
+        items: ['Claude', 'GPT-4', 'Gemini', 'Llama', 'Mistral', 'ローカルLLM']
+      },
+      {
+        title: '生産性ツール',
+        items: ['Gmail', 'Outlook', 'Calendar', 'Notion', 'Todoist', 'Trello']
+      },
+      {
+        title: 'スマートホーム',
+        items: ['HomeKit', 'Google Home', 'Alexa', 'SmartThings', 'IFTTT', 'Shortcuts']
+      }
+    ]
+  },
+  ko: {
+    sectionPrefix: '03',
+    sectionTitle: '모든 것과 연동',
+    subtitle: '50개 이상의 서비스 및 플랫폼과 연결',
+    categories: [
+      {
+        title: '채팅 플랫폼',
+        items: ['WhatsApp', 'Telegram', 'Discord', 'Slack', 'Signal', 'iMessage']
+      },
+      {
+        title: 'AI 모델',
+        items: ['Claude', 'GPT-4', 'Gemini', 'Llama', 'Mistral', '로컬 LLM']
+      },
+      {
+        title: '생산성 도구',
+        items: ['Gmail', 'Outlook', 'Calendar', 'Notion', 'Todoist', 'Trello']
+      },
+      {
+        title: '스마트 홈',
+        items: ['HomeKit', 'Google Home', 'Alexa', 'SmartThings', 'IFTTT', 'Shortcuts']
+      }
+    ]
+  },
+  es: {
+    sectionPrefix: '03',
+    sectionTitle: 'Funciona Con Todo',
+    subtitle: 'Conecta con más de 50 servicios y plataformas',
+    categories: [
+      {
+        title: 'Plataformas de Chat',
+        items: ['WhatsApp', 'Telegram', 'Discord', 'Slack', 'Signal', 'iMessage']
+      },
+      {
+        title: 'Modelos de IA',
+        items: ['Claude', 'GPT-4', 'Gemini', 'Llama', 'Mistral', 'LLMs Locales']
+      },
+      {
+        title: 'Productividad',
+        items: ['Gmail', 'Outlook', 'Calendar', 'Notion', 'Todoist', 'Trello']
+      },
+      {
+        title: 'Hogar Inteligente',
+        items: ['HomeKit', 'Google Home', 'Alexa', 'SmartThings', 'IFTTT', 'Shortcuts']
+      }
+    ]
+  },
+  de: {
+    sectionPrefix: '03',
+    sectionTitle: 'Funktioniert Mit Allem',
+    subtitle: 'Verbindet sich mit über 50 Diensten und Plattformen',
+    categories: [
+      {
+        title: 'Chat-Plattformen',
+        items: ['WhatsApp', 'Telegram', 'Discord', 'Slack', 'Signal', 'iMessage']
+      },
+      {
+        title: 'KI-Modelle',
+        items: ['Claude', 'GPT-4', 'Gemini', 'Llama', 'Mistral', 'Lokale LLMs']
+      },
+      {
+        title: 'Produktivität',
+        items: ['Gmail', 'Outlook', 'Calendar', 'Notion', 'Todoist', 'Trello']
+      },
+      {
+        title: 'Smart Home',
+        items: ['HomeKit', 'Google Home', 'Alexa', 'SmartThings', 'IFTTT', 'Shortcuts']
+      }
+    ]
+  },
+  fr: {
+    sectionPrefix: '03',
+    sectionTitle: 'Fonctionne Avec Tout',
+    subtitle: 'Connectez plus de 50 services et plateformes',
+    categories: [
+      {
+        title: 'Plateformes de Chat',
+        items: ['WhatsApp', 'Telegram', 'Discord', 'Slack', 'Signal', 'iMessage']
+      },
+      {
+        title: 'Modèles IA',
+        items: ['Claude', 'GPT-4', 'Gemini', 'Llama', 'Mistral', 'LLMs Locaux']
+      },
+      {
+        title: 'Productivité',
+        items: ['Gmail', 'Outlook', 'Calendar', 'Notion', 'Todoist', 'Trello']
+      },
+      {
+        title: 'Maison Connectée',
+        items: ['HomeKit', 'Google Home', 'Alexa', 'SmartThings', 'IFTTT', 'Shortcuts']
+      }
+    ]
+  },
+  pt: {
+    sectionPrefix: '03',
+    sectionTitle: 'Funciona Com Tudo',
+    subtitle: 'Conecte-se com mais de 50 serviços e plataformas',
+    categories: [
+      {
+        title: 'Plataformas de Chat',
+        items: ['WhatsApp', 'Telegram', 'Discord', 'Slack', 'Signal', 'iMessage']
+      },
+      {
+        title: 'Modelos de IA',
+        items: ['Claude', 'GPT-4', 'Gemini', 'Llama', 'Mistral', 'LLMs Locais']
+      },
+      {
+        title: 'Produtividade',
+        items: ['Gmail', 'Outlook', 'Calendar', 'Notion', 'Todoist', 'Trello']
+      },
+      {
+        title: 'Casa Inteligente',
+        items: ['HomeKit', 'Google Home', 'Alexa', 'SmartThings', 'IFTTT', 'Shortcuts']
+      }
+    ]
+  },
+  ru: {
+    sectionPrefix: '03',
+    sectionTitle: 'Работает Со Всем',
+    subtitle: 'Подключение к 50+ сервисам и платформам',
+    categories: [
+      {
+        title: 'Чат-платформы',
+        items: ['WhatsApp', 'Telegram', 'Discord', 'Slack', 'Signal', 'iMessage']
+      },
+      {
+        title: 'Модели ИИ',
+        items: ['Claude', 'GPT-4', 'Gemini', 'Llama', 'Mistral', 'Локальные LLM']
+      },
+      {
+        title: 'Продуктивность',
+        items: ['Gmail', 'Outlook', 'Calendar', 'Notion', 'Todoist', 'Trello']
+      },
+      {
+        title: 'Умный дом',
+        items: ['HomeKit', 'Google Home', 'Alexa', 'SmartThings', 'IFTTT', 'Shortcuts']
+      }
+    ]
+  }
+};
+
+const t = content[locale as keyof typeof content] || content.en;
+---
+
+<section class="clawd-integrations" id="integrations">
+  <div class="clawd-container">
+    <!-- Section Header -->
+    <div class="clawd-section-header">
+      <span class="clawd-section-prefix">{t.sectionPrefix}</span>
+      <h2 class="clawd-heading-2">{t.sectionTitle}</h2>
+    </div>
+    <p class="clawd-section-subtitle">{t.subtitle}</p>
+    
+    <!-- Categories Grid -->
+    <div class="clawd-integrations-grid">
+      {t.categories.map((category, catIndex) => (
+        <div class="clawd-integration-category" style={`animation-delay: ${catIndex * 0.1}s`}>
+          <h3 class="clawd-integration-title">{category.title}</h3>
+          <div class="clawd-integration-items">
+            {category.items.map((item) => (
+              <span class="clawd-integration-item">{item}</span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+    
+    <!-- See More -->
+    <div class="clawd-integrations-more">
+      <a href="https://docs.clawd.bot/integrations" target="_blank" rel="noopener noreferrer" class="clawd-btn clawd-btn-outline" title="View all Clawd Bot integrations">
+        View All Clawd Bot Integrations
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+          <path d="M5 3l5 5-5 5" stroke="currentColor" stroke-width="2" fill="none"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .clawd-integrations {
+    padding: 6rem 0;
+    background: linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-deep) 100%);
+  }
+  
+  .clawd-section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .clawd-section-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+    margin-bottom: 3rem;
+  }
+  
+  .clawd-integrations-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  
+  .clawd-integration-category {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xl);
+    padding: 1.5rem;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .clawd-integration-title {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--coral-bright);
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  
+  .clawd-integration-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .clawd-integration-item {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 0.375rem 0.75rem;
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+    transition: all var(--transition-fast);
+  }
+  
+  .clawd-integration-item:hover {
+    border-color: var(--cyan-bright);
+    color: var(--cyan-bright);
+  }
+  
+  .clawd-integrations-more {
+    text-align: center;
+  }
+  
+  @media (max-width: 1024px) {
+    .clawd-integrations-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .clawd-integrations {
+      padding: 4rem 0;
+    }
+    
+    .clawd-integrations-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+

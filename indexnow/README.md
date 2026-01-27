@@ -75,7 +75,7 @@ node indexnow/scripts/submit-new.js
   "timestamp": "2025-01-01T00:00:00.000Z",
   "type": "submit-all",
   "totalUrls": 5,
-  "urls": ["https://grokapi.org/", ...],
+  "urls": ["https://clawd-bot.com/", ...],
   "results": [
     {
       "searchEngine": "Bing",
@@ -96,15 +96,15 @@ node indexnow/scripts/submit-new.js
   "type": "submit-new",
   "newUrlsCount": 2,
   "totalUrlsCount": 5,
-  "newUrls": ["https://grokapi.org/new-page"],
-  "allUrls": ["https://grokapi.org/", ...],
+  "newUrls": ["https://clawd-bot.com/new-page"],
+  "allUrls": ["https://clawd-bot.com/", ...],
   "results": [...]
 }
 ```
 
 ## 注意事项
 
-1. **Key 文件**: 确保 key 文件已部署到网站根目录，可通过 `https://grokapi.org/{key}.txt` 访问
+1. **Key 文件**: 确保 key 文件已部署到网站根目录，可通过 `https://clawd-bot.com/{key}.txt` 访问
 2. **批量限制**: 每次最多提交 10,000 个 URL
 3. **请求频率**: 脚本会在批次之间添加 500ms 延迟，避免请求过快
 4. **日志记录**: 所有提交都会记录时间戳，方便追踪和调试

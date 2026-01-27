@@ -1,10 +1,10 @@
-我们的网站域名是grokapi.org
-我们的品牌是Grok api
-我们提供的服务是介绍grok api的价格
-你需要联网搜索grok4.1的特点，并展示对应的使用场景
+我们的网站域名是clawd-bot.com
+我们的品牌是Clawd Bot
+我们提供的服务是Clawd Bot的介绍和使用教程
+你需要联网搜索Clawd Bot的特点，并展示对应的使用场景
 
 你需要重新制作一个首页，而非使用现在的首页，
-你只能参考现在首页的UI，包括字体 颜色 字号 UI风格等
-你需要参考 SEO/Base文件中的内容，完成seo优化
+你只能参考clawd-bot-ui-style.md中的UI风格，完成页面整体的UI设计
+你需要参考 gemini3.us/gemini-3 页面的SEO策略完成页面整体的seo优化
 你还需要补充其他seo相关的东西
 请先规划接下来要做的事情

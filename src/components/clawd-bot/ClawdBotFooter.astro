@@ -1,0 +1,601 @@
+---
+/**
+ * Clawd Bot 页脚组件
+ */
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+
+const content = {
+  en: {
+    brand: 'Clawd Bot',
+    tagline: 'The AI that actually does things.',
+    links: {
+      product: {
+        title: 'Product',
+        items: [
+          { label: 'Features', href: '#features' },
+          { label: 'Use Cases', href: '#use-cases' },
+          { label: 'Integrations', href: '#integrations' },
+          { label: 'Pricing', href: 'https://clawd.bot/pricing' }
+        ]
+      },
+      resources: {
+        title: 'Resources',
+        items: [
+          { label: 'Documentation', href: 'https://docs.clawd.bot' },
+          { label: 'API Reference', href: 'https://docs.clawd.bot/api' },
+          { label: 'Skills', href: 'https://clawd.bot/skills' },
+          { label: 'Blog', href: 'https://clawd.bot/blog' }
+        ]
+      },
+      community: {
+        title: 'Community',
+        items: [
+          { label: 'GitHub', href: 'https://github.com/clawdbot/clawdbot' },
+          { label: 'Discord', href: 'https://discord.gg/u4WYaNs5bC' },
+          { label: 'Twitter', href: 'https://twitter.com/clawdbot' },
+          { label: 'Reddit', href: 'https://reddit.com/r/clawdbot' }
+        ]
+      }
+    },
+    copyright: '© 2025 Clawd Bot. All rights reserved.',
+    legal: [
+      { label: 'Privacy Policy', href: '/privacy' },
+      { label: 'Terms of Service', href: '/terms' }
+    ]
+  },
+  zh: {
+    brand: 'Clawd Bot',
+    tagline: '真正能做事的 AI。',
+    links: {
+      product: {
+        title: '产品',
+        items: [
+          { label: '功能特性', href: '#features' },
+          { label: '使用场景', href: '#use-cases' },
+          { label: '集成', href: '#integrations' },
+          { label: '定价', href: 'https://clawd.bot/pricing' }
+        ]
+      },
+      resources: {
+        title: '资源',
+        items: [
+          { label: '文档', href: 'https://docs.clawd.bot' },
+          { label: 'API 参考', href: 'https://docs.clawd.bot/api' },
+          { label: '技能', href: 'https://clawd.bot/skills' },
+          { label: '博客', href: 'https://clawd.bot/blog' }
+        ]
+      },
+      community: {
+        title: '社区',
+        items: [
+          { label: 'GitHub', href: 'https://github.com/clawdbot/clawdbot' },
+          { label: 'Discord', href: 'https://discord.gg/u4WYaNs5bC' },
+          { label: 'Twitter', href: 'https://twitter.com/clawdbot' },
+          { label: 'Reddit', href: 'https://reddit.com/r/clawdbot' }
+        ]
+      }
+    },
+    copyright: '© 2025 Clawd Bot. 保留所有权利。',
+    legal: [
+      { label: '隐私政策', href: '/privacy' },
+      { label: '服务条款', href: '/terms' }
+    ]
+  },
+  ja: {
+    brand: 'Clawd Bot',
+    tagline: '実際に仕事をするAI。',
+    links: {
+      product: {
+        title: '製品',
+        items: [
+          { label: '機能', href: '#features' },
+          { label: 'ユースケース', href: '#use-cases' },
+          { label: '連携', href: '#integrations' },
+          { label: '料金', href: 'https://clawd.bot/pricing' }
+        ]
+      },
+      resources: {
+        title: 'リソース',
+        items: [
+          { label: 'ドキュメント', href: 'https://docs.clawd.bot' },
+          { label: 'APIリファレンス', href: 'https://docs.clawd.bot/api' },
+          { label: 'スキル', href: 'https://clawd.bot/skills' },
+          { label: 'ブログ', href: 'https://clawd.bot/blog' }
+        ]
+      },
+      community: {
+        title: 'コミュニティ',
+        items: [
+          { label: 'GitHub', href: 'https://github.com/clawdbot/clawdbot' },
+          { label: 'Discord', href: 'https://discord.gg/u4WYaNs5bC' },
+          { label: 'Twitter', href: 'https://twitter.com/clawdbot' },
+          { label: 'Reddit', href: 'https://reddit.com/r/clawdbot' }
+        ]
+      }
+    },
+    copyright: '© 2025 Clawd Bot. 全著作権所有。',
+    legal: [
+      { label: 'プライバシーポリシー', href: '/privacy' },
+      { label: '利用規約', href: '/terms' }
+    ]
+  },
+  ko: {
+    brand: 'Clawd Bot',
+    tagline: '실제로 일을 하는 AI.',
+    links: {
+      product: {
+        title: '제품',
+        items: [
+          { label: '기능', href: '#features' },
+          { label: '사용 사례', href: '#use-cases' },
+          { label: '연동', href: '#integrations' },
+          { label: '가격', href: 'https://clawd.bot/pricing' }
+        ]
+      },
+      resources: {
+        title: '리소스',
+        items: [
+          { label: '문서', href: 'https://docs.clawd.bot' },
+          { label: 'API 레퍼런스', href: 'https://docs.clawd.bot/api' },
+          { label: '스킬', href: 'https://clawd.bot/skills' },
+          { label: '블로그', href: 'https://clawd.bot/blog' }
+        ]
+      },
+      community: {
+        title: '커뮤니티',
+        items: [
+          { label: 'GitHub', href: 'https://github.com/clawdbot/clawdbot' },
+          { label: 'Discord', href: 'https://discord.gg/u4WYaNs5bC' },
+          { label: 'Twitter', href: 'https://twitter.com/clawdbot' },
+          { label: 'Reddit', href: 'https://reddit.com/r/clawdbot' }
+        ]
+      }
+    },
+    copyright: '© 2025 Clawd Bot. 모든 권리 보유.',
+    legal: [
+      { label: '개인정보 처리방침', href: '/privacy' },
+      { label: '이용약관', href: '/terms' }
+    ]
+  },
+  es: {
+    brand: 'Clawd Bot',
+    tagline: 'La IA que realmente hace cosas.',
+    links: {
+      product: {
+        title: 'Producto',
+        items: [
+          { label: 'Características', href: '#features' },
+          { label: 'Casos de Uso', href: '#use-cases' },
+          { label: 'Integraciones', href: '#integrations' },
+          { label: 'Precios', href: 'https://clawd.bot/pricing' }
+        ]
+      },
+      resources: {
+        title: 'Recursos',
+        items: [
+          { label: 'Documentación', href: 'https://docs.clawd.bot' },
+          { label: 'Referencia API', href: 'https://docs.clawd.bot/api' },
+          { label: 'Skills', href: 'https://clawd.bot/skills' },
+          { label: 'Blog', href: 'https://clawd.bot/blog' }
+        ]
+      },
+      community: {
+        title: 'Comunidad',
+        items: [
+          { label: 'GitHub', href: 'https://github.com/clawdbot/clawdbot' },
+          { label: 'Discord', href: 'https://discord.gg/u4WYaNs5bC' },
+          { label: 'Twitter', href: 'https://twitter.com/clawdbot' },
+          { label: 'Reddit', href: 'https://reddit.com/r/clawdbot' }
+        ]
+      }
+    },
+    copyright: '© 2025 Clawd Bot. Todos los derechos reservados.',
+    legal: [
+      { label: 'Política de Privacidad', href: '/privacy' },
+      { label: 'Términos de Servicio', href: '/terms' }
+    ]
+  },
+  de: {
+    brand: 'Clawd Bot',
+    tagline: 'Die KI, die wirklich Dinge tut.',
+    links: {
+      product: {
+        title: 'Produkt',
+        items: [
+          { label: 'Funktionen', href: '#features' },
+          { label: 'Anwendungsfälle', href: '#use-cases' },
+          { label: 'Integrationen', href: '#integrations' },
+          { label: 'Preise', href: 'https://clawd.bot/pricing' }
+        ]
+      },
+      resources: {
+        title: 'Ressourcen',
+        items: [
+          { label: 'Dokumentation', href: 'https://docs.clawd.bot' },
+          { label: 'API-Referenz', href: 'https://docs.clawd.bot/api' },
+          { label: 'Skills', href: 'https://clawd.bot/skills' },
+          { label: 'Blog', href: 'https://clawd.bot/blog' }
+        ]
+      },
+      community: {
+        title: 'Community',
+        items: [
+          { label: 'GitHub', href: 'https://github.com/clawdbot/clawdbot' },
+          { label: 'Discord', href: 'https://discord.gg/u4WYaNs5bC' },
+          { label: 'Twitter', href: 'https://twitter.com/clawdbot' },
+          { label: 'Reddit', href: 'https://reddit.com/r/clawdbot' }
+        ]
+      }
+    },
+    copyright: '© 2025 Clawd Bot. Alle Rechte vorbehalten.',
+    legal: [
+      { label: 'Datenschutzrichtlinie', href: '/privacy' },
+      { label: 'Nutzungsbedingungen', href: '/terms' }
+    ]
+  },
+  fr: {
+    brand: 'Clawd Bot',
+    tagline: "L'IA qui fait vraiment des choses.",
+    links: {
+      product: {
+        title: 'Produit',
+        items: [
+          { label: 'Fonctionnalités', href: '#features' },
+          { label: "Cas d'Usage", href: '#use-cases' },
+          { label: 'Intégrations', href: '#integrations' },
+          { label: 'Tarifs', href: 'https://clawd.bot/pricing' }
+        ]
+      },
+      resources: {
+        title: 'Ressources',
+        items: [
+          { label: 'Documentation', href: 'https://docs.clawd.bot' },
+          { label: 'Référence API', href: 'https://docs.clawd.bot/api' },
+          { label: 'Skills', href: 'https://clawd.bot/skills' },
+          { label: 'Blog', href: 'https://clawd.bot/blog' }
+        ]
+      },
+      community: {
+        title: 'Communauté',
+        items: [
+          { label: 'GitHub', href: 'https://github.com/clawdbot/clawdbot' },
+          { label: 'Discord', href: 'https://discord.gg/u4WYaNs5bC' },
+          { label: 'Twitter', href: 'https://twitter.com/clawdbot' },
+          { label: 'Reddit', href: 'https://reddit.com/r/clawdbot' }
+        ]
+      }
+    },
+    copyright: '© 2025 Clawd Bot. Tous droits réservés.',
+    legal: [
+      { label: 'Politique de Confidentialité', href: '/privacy' },
+      { label: "Conditions d'Utilisation", href: '/terms' }
+    ]
+  },
+  pt: {
+    brand: 'Clawd Bot',
+    tagline: 'A IA que realmente faz coisas.',
+    links: {
+      product: {
+        title: 'Produto',
+        items: [
+          { label: 'Recursos', href: '#features' },
+          { label: 'Casos de Uso', href: '#use-cases' },
+          { label: 'Integrações', href: '#integrations' },
+          { label: 'Preços', href: 'https://clawd.bot/pricing' }
+        ]
+      },
+      resources: {
+        title: 'Recursos',
+        items: [
+          { label: 'Documentação', href: 'https://docs.clawd.bot' },
+          { label: 'Referência da API', href: 'https://docs.clawd.bot/api' },
+          { label: 'Skills', href: 'https://clawd.bot/skills' },
+          { label: 'Blog', href: 'https://clawd.bot/blog' }
+        ]
+      },
+      community: {
+        title: 'Comunidade',
+        items: [
+          { label: 'GitHub', href: 'https://github.com/clawdbot/clawdbot' },
+          { label: 'Discord', href: 'https://discord.gg/u4WYaNs5bC' },
+          { label: 'Twitter', href: 'https://twitter.com/clawdbot' },
+          { label: 'Reddit', href: 'https://reddit.com/r/clawdbot' }
+        ]
+      }
+    },
+    copyright: '© 2025 Clawd Bot. Todos os direitos reservados.',
+    legal: [
+      { label: 'Política de Privacidade', href: '/privacy' },
+      { label: 'Termos de Serviço', href: '/terms' }
+    ]
+  },
+  ru: {
+    brand: 'Clawd Bot',
+    tagline: 'ИИ, который действительно делает вещи.',
+    links: {
+      product: {
+        title: 'Продукт',
+        items: [
+          { label: 'Возможности', href: '#features' },
+          { label: 'Сценарии', href: '#use-cases' },
+          { label: 'Интеграции', href: '#integrations' },
+          { label: 'Цены', href: 'https://clawd.bot/pricing' }
+        ]
+      },
+      resources: {
+        title: 'Ресурсы',
+        items: [
+          { label: 'Документация', href: 'https://docs.clawd.bot' },
+          { label: 'API Справочник', href: 'https://docs.clawd.bot/api' },
+          { label: 'Навыки', href: 'https://clawd.bot/skills' },
+          { label: 'Блог', href: 'https://clawd.bot/blog' }
+        ]
+      },
+      community: {
+        title: 'Сообщество',
+        items: [
+          { label: 'GitHub', href: 'https://github.com/clawdbot/clawdbot' },
+          { label: 'Discord', href: 'https://discord.gg/u4WYaNs5bC' },
+          { label: 'Twitter', href: 'https://twitter.com/clawdbot' },
+          { label: 'Reddit', href: 'https://reddit.com/r/clawdbot' }
+        ]
+      }
+    },
+    copyright: '© 2025 Clawd Bot. Все права защищены.',
+    legal: [
+      { label: 'Политика конфиденциальности', href: '/privacy' },
+      { label: 'Условия использования', href: '/terms' }
+    ]
+  }
+};
+
+const t = content[locale as keyof typeof content] || content.en;
+---
+
+<footer class="clawd-footer">
+  <div class="clawd-container">
+    <div class="clawd-footer-grid">
+      <!-- Brand Column -->
+      <div class="clawd-footer-brand">
+        <a href="/" class="clawd-footer-logo" title="Clawd Bot Home">
+          <span class="clawd-footer-logo-icon">🦞</span>
+          <span class="clawd-footer-logo-text">{t.brand}</span>
+        </a>
+        <p class="clawd-footer-tagline">{t.tagline}</p>
+        
+        <!-- Social Links -->
+        <div class="clawd-footer-social">
+          <a href="https://github.com/clawdbot/clawdbot" target="_blank" rel="noopener noreferrer" title="GitHub" class="clawd-social-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+          </a>
+          <a href="https://discord.gg/u4WYaNs5bC" target="_blank" rel="noopener noreferrer" title="Discord" class="clawd-social-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+            </svg>
+          </a>
+          <a href="https://twitter.com/clawdbot" target="_blank" rel="noopener noreferrer" title="Twitter" class="clawd-social-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Link Columns -->
+      <div class="clawd-footer-links">
+        <h4 class="clawd-footer-links-title">{t.links.product.title}</h4>
+        <ul>
+          {t.links.product.items.map(item => (
+            <li>
+              <a href={item.href} title={item.label}>{item.label}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+      
+      <div class="clawd-footer-links">
+        <h4 class="clawd-footer-links-title">{t.links.resources.title}</h4>
+        <ul>
+          {t.links.resources.items.map(item => (
+            <li>
+              <a href={item.href} target={item.href.startsWith('http') ? '_blank' : undefined} rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined} title={item.label}>{item.label}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+      
+      <div class="clawd-footer-links">
+        <h4 class="clawd-footer-links-title">{t.links.community.title}</h4>
+        <ul>
+          {t.links.community.items.map(item => (
+            <li>
+              <a href={item.href} target="_blank" rel="noopener noreferrer" title={item.label}>{item.label}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Bottom Bar -->
+    <div class="clawd-footer-bottom">
+      <p class="clawd-footer-copyright">{t.copyright}</p>
+      <div class="clawd-footer-legal">
+        {t.legal.map((item, index) => (
+          <>
+            <a href={item.href} title={item.label}>{item.label}</a>
+            {index < t.legal.length - 1 && <span class="clawd-footer-legal-divider">·</span>}
+          </>
+        ))}
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .clawd-footer {
+    padding: 4rem 0 2rem;
+    background: var(--bg-surface);
+    border-top: 1px solid var(--border-subtle);
+  }
+  
+  .clawd-footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+  
+  .clawd-footer-brand {
+    max-width: 280px;
+  }
+  
+  .clawd-footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--text-primary);
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .clawd-footer-logo-icon {
+    font-size: 1.5rem;
+  }
+  
+  .clawd-footer-tagline {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .clawd-footer-social {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .clawd-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    transition: all var(--transition-fast);
+  }
+  
+  .clawd-social-link:hover {
+    border-color: var(--coral-bright);
+    color: var(--coral-bright);
+  }
+  
+  .clawd-footer-links h4 {
+    font-family: var(--font-display);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .clawd-footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .clawd-footer-links li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .clawd-footer-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color var(--transition-fast);
+  }
+  
+  .clawd-footer-links a:hover {
+    color: var(--coral-bright);
+  }
+  
+  .clawd-footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-subtle);
+  }
+  
+  .clawd-footer-copyright {
+    color: var(--text-muted);
+    font-size: 0.8125rem;
+  }
+  
+  .clawd-footer-legal {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .clawd-footer-legal a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.8125rem;
+    transition: color var(--transition-fast);
+  }
+  
+  .clawd-footer-legal a:hover {
+    color: var(--text-secondary);
+  }
+  
+  .clawd-footer-legal-divider {
+    color: var(--text-muted);
+  }
+  
+  @media (max-width: 1024px) {
+    .clawd-footer-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    
+    .clawd-footer-brand {
+      grid-column: span 2;
+      max-width: none;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .clawd-footer {
+      padding: 3rem 0 1.5rem;
+    }
+    
+    .clawd-footer-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    
+    .clawd-footer-brand {
+      grid-column: span 1;
+    }
+    
+    .clawd-footer-bottom {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+  }
+</style>
+

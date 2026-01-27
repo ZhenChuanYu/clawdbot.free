@@ -1,0 +1,375 @@
+---
+/**
+ * Clawd Bot 快速开始组件
+ */
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+
+const content = {
+  en: {
+    sectionPrefix: '04',
+    sectionTitle: 'Quick Start',
+    subtitle: 'Get Clawd Bot up and running in 5 minutes',
+    installTitle: 'Clawd Bot Installation',
+    oneLinerCommand: 'curl -fsSL https://molt.bot/install.sh | bash',
+    oneLinerDescription: 'Works on macOS, Windows & Linux. The one-liner installs Node.js and everything else for you.',
+    installMethods: [
+      { name: 'One-liner', active: true },
+      { name: 'npm', active: false },
+      { name: 'Hackable', active: false },
+      { name: 'macOS', active: false }
+    ],
+    docsLink: 'Read Clawd Bot Documentation',
+    downloadLink: 'Download Clawd Bot Now'
+  },
+  zh: {
+    sectionPrefix: '04',
+    sectionTitle: '快速开始',
+    subtitle: '5 分钟内启动运行',
+    installTitle: '安装方式',
+    oneLinerCommand: 'curl -fsSL https://molt.bot/install.sh | bash',
+    oneLinerDescription: '适用于 macOS、Windows 和 Linux。一行命令会自动安装 Node.js 和其他所有依赖。',
+    installMethods: [
+      { name: '一行命令', active: true },
+      { name: 'npm', active: false },
+      { name: '可定制', active: false },
+      { name: 'macOS', active: false }
+    ],
+    docsLink: '阅读文档',
+    downloadLink: '立即下载'
+  },
+  ja: {
+    sectionPrefix: '04',
+    sectionTitle: 'クイックスタート',
+    subtitle: '5分で起動',
+    installTitle: 'インストール',
+    oneLinerCommand: 'curl -fsSL https://molt.bot/install.sh | bash',
+    oneLinerDescription: 'macOS、Windows、Linux で動作します。一行コマンドで Node.js とその他すべてを自動インストールします。',
+    installMethods: [
+      { name: '一行コマンド', active: true },
+      { name: 'npm', active: false },
+      { name: 'カスタマイズ可能', active: false },
+      { name: 'macOS', active: false }
+    ],
+    docsLink: 'ドキュメントを読む',
+    downloadLink: '今すぐダウンロード'
+  },
+  ko: {
+    sectionPrefix: '04',
+    sectionTitle: '빠른 시작',
+    subtitle: '5분 만에 시작하기',
+    installTitle: '설치',
+    oneLinerCommand: 'curl -fsSL https://molt.bot/install.sh | bash',
+    oneLinerDescription: 'macOS, Windows 및 Linux에서 작동합니다. 한 줄 명령으로 Node.js와 기타 모든 것을 자동 설치합니다.',
+    installMethods: [
+      { name: '한 줄 명령', active: true },
+      { name: 'npm', active: false },
+      { name: '커스터마이징', active: false },
+      { name: 'macOS', active: false }
+    ],
+    docsLink: '문서 보기',
+    downloadLink: '지금 다운로드'
+  },
+  es: {
+    sectionPrefix: '04',
+    sectionTitle: 'Inicio Rápido',
+    subtitle: 'Empieza en 5 minutos',
+    installTitle: 'Instalación',
+    oneLinerCommand: 'curl -fsSL https://molt.bot/install.sh | bash',
+    oneLinerDescription: 'Funciona en macOS, Windows y Linux. El comando de una línea instala Node.js y todo lo demás automáticamente.',
+    installMethods: [
+      { name: 'Una línea', active: true },
+      { name: 'npm', active: false },
+      { name: 'Personalizable', active: false },
+      { name: 'macOS', active: false }
+    ],
+    docsLink: 'Leer la Documentación',
+    downloadLink: 'Descargar Ahora'
+  },
+  de: {
+    sectionPrefix: '04',
+    sectionTitle: 'Schnellstart',
+    subtitle: 'In 5 Minuten startklar',
+    installTitle: 'Installation',
+    oneLinerCommand: 'curl -fsSL https://molt.bot/install.sh | bash',
+    oneLinerDescription: 'Funktioniert auf macOS, Windows und Linux. Die Einzeiler-Installation installiert Node.js und alles andere automatisch.',
+    installMethods: [
+      { name: 'Einzeiler', active: true },
+      { name: 'npm', active: false },
+      { name: 'Anpassbar', active: false },
+      { name: 'macOS', active: false }
+    ],
+    docsLink: 'Dokumentation lesen',
+    downloadLink: 'Jetzt herunterladen'
+  },
+  fr: {
+    sectionPrefix: '04',
+    sectionTitle: 'Démarrage Rapide',
+    subtitle: 'Prêt en 5 minutes',
+    installTitle: 'Installation',
+    oneLinerCommand: 'curl -fsSL https://molt.bot/install.sh | bash',
+    oneLinerDescription: 'Fonctionne sur macOS, Windows et Linux. La commande en une ligne installe Node.js et tout le reste automatiquement.',
+    installMethods: [
+      { name: 'Une ligne', active: true },
+      { name: 'npm', active: false },
+      { name: 'Personnalisable', active: false },
+      { name: 'macOS', active: false }
+    ],
+    docsLink: 'Lire la Documentation',
+    downloadLink: 'Télécharger Maintenant'
+  },
+  pt: {
+    sectionPrefix: '04',
+    sectionTitle: 'Início Rápido',
+    subtitle: 'Comece em 5 minutos',
+    installTitle: 'Instalação',
+    oneLinerCommand: 'curl -fsSL https://molt.bot/install.sh | bash',
+    oneLinerDescription: 'Funciona no macOS, Windows e Linux. O comando de uma linha instala o Node.js e tudo mais automaticamente.',
+    installMethods: [
+      { name: 'Uma linha', active: true },
+      { name: 'npm', active: false },
+      { name: 'Personalizável', active: false },
+      { name: 'macOS', active: false }
+    ],
+    docsLink: 'Ler a Documentação',
+    downloadLink: 'Baixar Agora'
+  },
+  ru: {
+    sectionPrefix: '04',
+    sectionTitle: 'Быстрый старт',
+    subtitle: 'Начните работу за 5 минут',
+    installTitle: 'Установка',
+    oneLinerCommand: 'curl -fsSL https://molt.bot/install.sh | bash',
+    oneLinerDescription: 'Работает на macOS, Windows и Linux. Одна команда автоматически установит Node.js и всё остальное.',
+    installMethods: [
+      { name: 'Одна команда', active: true },
+      { name: 'npm', active: false },
+      { name: 'Настраиваемый', active: false },
+      { name: 'macOS', active: false }
+    ],
+    docsLink: 'Читать документацию',
+    downloadLink: 'Скачать сейчас'
+  }
+};
+
+const t = content[locale as keyof typeof content] || content.en;
+---
+
+<section class="clawd-quick-start" id="quick-start">
+  <div class="clawd-container">
+    <!-- Section Header -->
+    <div class="clawd-section-header">
+      <span class="clawd-section-prefix">{t.sectionPrefix}</span>
+      <h2 class="clawd-heading-2">{t.sectionTitle}</h2>
+    </div>
+    <p class="clawd-section-subtitle">{t.subtitle}</p>
+    
+    <!-- Installation Method Selector -->
+    <div class="clawd-install-methods">
+      {t.installMethods?.map((method) => (
+        <button class={`clawd-method-btn ${method.active ? 'active' : ''}`}>
+          {method.name}
+        </button>
+      ))}
+    </div>
+    
+    <!-- One-liner Installation -->
+    <div class="clawd-install-section">
+      <div class="clawd-install-header">
+        <p class="clawd-install-comment"># {locale === 'zh' ? '适用于所有平台。自动安装所有依赖。不客气。🦞' : locale === 'ja' ? 'どこでも動作。すべてをインストール。どういたしまして。🦞' : locale === 'ko' ? '어디서나 작동합니다. 모든 것을 설치합니다. 천만에요. 🦞' : locale === 'es' ? 'Funciona en todas partes. Instala todo. De nada. 🦞' : locale === 'de' ? 'Funktioniert überall. Installiert alles. Bitte schön. 🦞' : locale === 'fr' ? 'Fonctionne partout. Installe tout. De rien. 🦞' : locale === 'pt' ? 'Funciona em todos os lugares. Instala tudo. De nada. 🦞' : locale === 'ru' ? 'Работает везде. Устанавливает всё. Пожалуйста. 🦞' : "Works everywhere. Installs everything. You're welcome. 🦞"}</p>
+      </div>
+      <div class="clawd-install-code-block">
+        <span class="clawd-prompt">$</span>
+        <code class="clawd-install-command">{t.oneLinerCommand}</code>
+        <button class="clawd-copy-btn" data-command={t.oneLinerCommand} title="Copy to clipboard">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M4 4v-1.5c0-.828.672-1.5 1.5-1.5h6c.828 0 1.5.672 1.5 1.5v8c0 .828-.672 1.5-1.5 1.5h-1.5m-6-8h-1.5c-.828 0-1.5.672-1.5 1.5v8c0 .828.672 1.5 1.5 1.5h6c.828 0 1.5-.672 1.5-1.5v-1.5" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          </svg>
+        </button>
+      </div>
+      <p class="clawd-install-description">{t.oneLinerDescription}</p>
+    </div>
+    
+    <!-- CTAs -->
+    <div class="clawd-quick-start-cta">
+      <a href="https://docs.clawd.bot" target="_blank" rel="noopener noreferrer" class="clawd-btn clawd-btn-secondary" title="Read Clawd Bot full documentation - Clawd Bot guide">
+        {t.docsLink}
+      </a>
+      <a href="https://clawd.bot/download" target="_blank" rel="noopener noreferrer" class="clawd-btn clawd-btn-primary" title="Download Clawd Bot - Get Clawd Bot now">
+        {t.downloadLink}
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+          <path d="M8 1v10M4 7l4 4 4-4M2 14h12" stroke="currentColor" stroke-width="2" fill="none"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .clawd-quick-start {
+    padding: 6rem 0;
+    background: var(--bg-deep);
+  }
+  
+  .clawd-section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .clawd-section-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+    margin-bottom: 3rem;
+  }
+  
+  .clawd-install-methods {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .clawd-method-btn {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+  }
+  
+  .clawd-method-btn:hover {
+    border-color: var(--border-default);
+    color: var(--text-primary);
+  }
+  
+  .clawd-method-btn.active {
+    background: var(--bg-surface);
+    border-color: var(--coral-bright);
+    color: var(--coral-bright);
+  }
+  
+  .clawd-install-section {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xl);
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .clawd-install-header {
+    margin-bottom: 1rem;
+  }
+  
+  .clawd-install-comment {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    color: var(--text-muted);
+  }
+  
+  .clawd-install-code-block {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--bg-deep);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 1rem 1.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  .clawd-prompt {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    user-select: none;
+  }
+  
+  .clawd-install-command {
+    flex: 1;
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    color: var(--cyan-bright);
+    background: none;
+    border: none;
+  }
+  
+  .clawd-install-description {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+  
+  .clawd-copy-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 0.25rem;
+    transition: color var(--transition-fast);
+  }
+  
+  .clawd-copy-btn:hover {
+    color: var(--coral-bright);
+  }
+  
+  .clawd-quick-start-cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  @media (max-width: 640px) {
+    .clawd-quick-start {
+      padding: 4rem 0;
+    }
+    
+    .clawd-install-code-block {
+      flex-wrap: wrap;
+    }
+    
+    .clawd-install-command {
+      word-break: break-all;
+    }
+    
+    .clawd-quick-start-cta {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .clawd-quick-start-cta .clawd-btn {
+      width: 100%;
+      max-width: 280px;
+    }
+  }
+</style>
+
+<script>
+  // Copy to clipboard functionality
+  const copyButtons = document.querySelectorAll('.clawd-copy-btn');
+  
+  copyButtons.forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const command = btn.getAttribute('data-command');
+      if (command) {
+        try {
+          await navigator.clipboard.writeText(command);
+          btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M2 8l4 4 8-8" stroke="var(--cyan-bright)" stroke-width="2" fill="none"/></svg>';
+          setTimeout(() => {
+            btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M4 4v-1.5c0-.828.672-1.5 1.5-1.5h6c.828 0 1.5.672 1.5 1.5v8c0 .828-.672 1.5-1.5 1.5h-1.5m-6-8h-1.5c-.828 0-1.5.672-1.5 1.5v8c0 .828.672 1.5 1.5 1.5h6c.828 0 1.5-.672 1.5-1.5v-1.5" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>';
+          }, 2000);
+        } catch (err) {
+          console.error('Failed to copy:', err);
+        }
+      }
+    });
+  });
+</script>
+

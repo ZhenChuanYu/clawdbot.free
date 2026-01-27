@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://grokapi.org/sitemap.xml
+Sitemap: https://clawd-bot.com/sitemap.xml

@@ -1,23 +1,36 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import HomePage from '../../components/HomePage.astro';
-import { t } from '../../i18n/translations';
+/**
+ * Clawd Bot 首页 (繁體中文 - using zh as fallback)
+ */
+import ClawdBotLayout from '../../layouts/ClawdBotLayout.astro';
+import ClawdBotHeader from '../../components/clawd-bot/ClawdBotHeader.astro';
+import ClawdBotHero from '../../components/clawd-bot/ClawdBotHero.astro';
+import ClawdBotFeatures from '../../components/clawd-bot/ClawdBotFeatures.astro';
+import ClawdBotUseCases from '../../components/clawd-bot/ClawdBotUseCases.astro';
+import ClawdBotIntegrations from '../../components/clawd-bot/ClawdBotIntegrations.astro';
+import ClawdBotQuickStart from '../../components/clawd-bot/ClawdBotQuickStart.astro';
+import ClawdBotFAQ from '../../components/clawd-bot/ClawdBotFAQ.astro';
+import ClawdBotFooter from '../../components/clawd-bot/ClawdBotFooter.astro';
 
-const locale = 'zh-tw';
+const locale = 'zh'; // Using simplified Chinese as fallback
+const title = 'Clawd Bot - 真正能做事的個人 AI 助手';
+const description = 'Clawd Bot 是一款開源的個人 AI 助手，運行在您的本地機器上。通過 WhatsApp、Telegram、Discord 等控制。自動化郵件、日曆、航班值機、智能家居等一切任務。';
 ---
 
-<BaseLayout 
-  title={t(locale, 'seo_title')}
-  description={t(locale, 'seo_description')}
-  keywords={t(locale, 'seo_keywords')}
+<ClawdBotLayout 
+  title={title} 
+  description={description}
   locale={locale}
   path=""
 >
-  <Header locale={locale} />
-  <main class="pt-16">
-    <HomePage locale={locale} />
+  <ClawdBotHeader locale={locale} />
+  <main>
+    <ClawdBotHero locale={locale} />
+    <ClawdBotFeatures locale={locale} />
+    <ClawdBotUseCases locale={locale} />
+    <ClawdBotIntegrations locale={locale} />
+    <ClawdBotQuickStart locale={locale} />
+    <ClawdBotFAQ locale={locale} />
   </main>
-  <Footer locale={locale} />
-</BaseLayout>
+  <ClawdBotFooter locale={locale} />
+</ClawdBotLayout>

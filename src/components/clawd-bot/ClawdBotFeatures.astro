@@ -1,0 +1,463 @@
+---
+/**
+ * Clawd Bot 功能特性展示组件
+ */
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+
+const content = {
+  en: {
+    sectionPrefix: '01',
+    sectionTitle: 'What Clawd Bot Does',
+    subtitle: 'Clawd Bot is your AI assistant that actually gets things done',
+    features: [
+      {
+        icon: '💬',
+        title: 'Multi-Platform Chat',
+        description: 'Control Clawd Bot via WhatsApp, Telegram, Discord, Slack, Signal, or iMessage. Use the apps you already love with Clawd Bot.'
+      },
+      {
+        icon: '🧠',
+        title: 'Persistent Memory',
+        description: 'Clawd Bot remembers your preferences, past conversations, and context. No more repeating yourself with Clawd Bot.'
+      },
+      {
+        icon: '🌐',
+        title: 'Browser Control',
+        description: 'Clawd Bot auto-fills forms, extracts data, navigates websites. Browse the web hands-free with Clawd Bot.'
+      },
+      {
+        icon: '💻',
+        title: 'System Access',
+        description: 'Clawd Bot can read and write files, execute shell commands, interact with your local environment.'
+      },
+      {
+        icon: '🔌',
+        title: 'Skills & Plugins',
+        description: 'Extend Clawd Bot with community skills or build your own. Unlimited customization possibilities for Clawd Bot.'
+      },
+      {
+        icon: '🔒',
+        title: 'Privacy First',
+        description: 'Clawd Bot runs 100% on your machine. Your data never leaves your computer unless you want it to with Clawd Bot.'
+      }
+    ]
+  },
+  zh: {
+    sectionPrefix: '01',
+    sectionTitle: 'Clawd Bot 功能特性',
+    subtitle: 'Clawd Bot 是真正能完成任务的 AI 助手',
+    features: [
+      {
+        icon: '💬',
+        title: '多平台聊天',
+        description: '通过 WhatsApp、Telegram、Discord、Slack、Signal 或 iMessage 控制 Clawd Bot。使用您喜爱的应用与 Clawd Bot 交互。'
+      },
+      {
+        icon: '🧠',
+        title: '持久记忆',
+        description: 'Clawd Bot 记住您的偏好、过往对话和上下文。使用 Clawd Bot 无需重复说明。'
+      },
+      {
+        icon: '🌐',
+        title: '浏览器控制',
+        description: 'Clawd Bot 自动填写表单、提取数据、导航网站。使用 Clawd Bot 解放双手浏览网页。'
+      },
+      {
+        icon: '💻',
+        title: '系统访问',
+        description: 'Clawd Bot 可以读写文件、执行 Shell 命令、与本地环境交互。'
+      },
+      {
+        icon: '🔌',
+        title: '技能与插件',
+        description: '使用社区技能扩展 Clawd Bot 或构建自己的技能。Clawd Bot 提供无限定制可能。'
+      },
+      {
+        icon: '🔒',
+        title: '隐私优先',
+        description: 'Clawd Bot 100% 在您的机器上运行。使用 Clawd Bot，除非您愿意，数据永不离开您的电脑。'
+      }
+    ]
+  },
+  ja: {
+    sectionPrefix: '01',
+    sectionTitle: '機能',
+    subtitle: '実際に仕事を完了するAIアシスタント',
+    features: [
+      {
+        icon: '💬',
+        title: 'マルチプラットフォームチャット',
+        description: 'WhatsApp、Telegram、Discord、Slack、Signal、iMessageで制御。普段使いのアプリで。'
+      },
+      {
+        icon: '🧠',
+        title: '永続メモリ',
+        description: '好み、過去の会話、コンテキストを記憶。同じことを繰り返す必要なし。'
+      },
+      {
+        icon: '🌐',
+        title: 'ブラウザ制御',
+        description: 'フォーム自動入力、データ抽出、ウェブサイト操作。ハンズフリーでブラウジング。'
+      },
+      {
+        icon: '💻',
+        title: 'システムアクセス',
+        description: 'ファイルの読み書き、シェルコマンド実行、ローカル環境との対話。'
+      },
+      {
+        icon: '🔌',
+        title: 'スキル＆プラグイン',
+        description: 'コミュニティスキルで拡張、または独自のスキルを構築。無限のカスタマイズ。'
+      },
+      {
+        icon: '🔒',
+        title: 'プライバシー優先',
+        description: '100%あなたのマシンで動作。望まない限りデータは外部に出ません。'
+      }
+    ]
+  },
+  ko: {
+    sectionPrefix: '01',
+    sectionTitle: '기능',
+    subtitle: '실제로 일을 완료하는 AI 어시스턴트',
+    features: [
+      {
+        icon: '💬',
+        title: '멀티 플랫폼 채팅',
+        description: 'WhatsApp, Telegram, Discord, Slack, Signal, iMessage로 제어. 이미 사용 중인 앱으로.'
+      },
+      {
+        icon: '🧠',
+        title: '영구 메모리',
+        description: '선호도, 과거 대화, 컨텍스트를 기억. 반복 설명 불필요.'
+      },
+      {
+        icon: '🌐',
+        title: '브라우저 제어',
+        description: '폼 자동 입력, 데이터 추출, 웹사이트 탐색. 핸즈프리 브라우징.'
+      },
+      {
+        icon: '💻',
+        title: '시스템 접근',
+        description: '파일 읽기/쓰기, 셸 명령 실행, 로컬 환경과 상호작용.'
+      },
+      {
+        icon: '🔌',
+        title: '스킬 & 플러그인',
+        description: '커뮤니티 스킬로 확장하거나 직접 구축. 무한한 커스터마이징.'
+      },
+      {
+        icon: '🔒',
+        title: '프라이버시 우선',
+        description: '100% 당신의 컴퓨터에서 실행. 원하지 않으면 데이터가 외부로 나가지 않습니다.'
+      }
+    ]
+  },
+  es: {
+    sectionPrefix: '01',
+    sectionTitle: 'Características',
+    subtitle: 'Tu asistente de IA que realmente completa tareas',
+    features: [
+      {
+        icon: '💬',
+        title: 'Chat Multiplataforma',
+        description: 'Controla vía WhatsApp, Telegram, Discord, Slack, Signal o iMessage. Usa las apps que ya amas.'
+      },
+      {
+        icon: '🧠',
+        title: 'Memoria Persistente',
+        description: 'Recuerda tus preferencias, conversaciones pasadas y contexto. Sin repetirte.'
+      },
+      {
+        icon: '🌐',
+        title: 'Control del Navegador',
+        description: 'Auto-rellena formularios, extrae datos, navega sitios web. Navega sin manos.'
+      },
+      {
+        icon: '💻',
+        title: 'Acceso al Sistema',
+        description: 'Lee y escribe archivos, ejecuta comandos shell, interactúa con tu entorno local.'
+      },
+      {
+        icon: '🔌',
+        title: 'Skills y Plugins',
+        description: 'Extiende con skills de la comunidad o crea los tuyos. Posibilidades ilimitadas.'
+      },
+      {
+        icon: '🔒',
+        title: 'Privacidad Primero',
+        description: 'Se ejecuta 100% en tu máquina. Tus datos nunca salen de tu computadora.'
+      }
+    ]
+  },
+  de: {
+    sectionPrefix: '01',
+    sectionTitle: 'Funktionen',
+    subtitle: 'Ihr KI-Assistent, der tatsächlich Aufgaben erledigt',
+    features: [
+      {
+        icon: '💬',
+        title: 'Multi-Plattform Chat',
+        description: 'Steuerung über WhatsApp, Telegram, Discord, Slack, Signal oder iMessage. Nutzen Sie Ihre Lieblings-Apps.'
+      },
+      {
+        icon: '🧠',
+        title: 'Persistenter Speicher',
+        description: 'Merkt sich Ihre Präferenzen, vergangene Gespräche und Kontext. Kein Wiederholen nötig.'
+      },
+      {
+        icon: '🌐',
+        title: 'Browser-Steuerung',
+        description: 'Füllt Formulare aus, extrahiert Daten, navigiert Websites. Freihändiges Surfen.'
+      },
+      {
+        icon: '💻',
+        title: 'Systemzugriff',
+        description: 'Dateien lesen und schreiben, Shell-Befehle ausführen, mit lokaler Umgebung interagieren.'
+      },
+      {
+        icon: '🔌',
+        title: 'Skills & Plugins',
+        description: 'Mit Community-Skills erweitern oder eigene erstellen. Unbegrenzte Anpassungen.'
+      },
+      {
+        icon: '🔒',
+        title: 'Datenschutz zuerst',
+        description: 'Läuft 100% auf Ihrem Rechner. Ihre Daten verlassen nie Ihren Computer.'
+      }
+    ]
+  },
+  fr: {
+    sectionPrefix: '01',
+    sectionTitle: 'Fonctionnalités',
+    subtitle: 'Votre assistant IA qui accomplit vraiment des tâches',
+    features: [
+      {
+        icon: '💬',
+        title: 'Chat Multi-Plateforme',
+        description: 'Contrôlez via WhatsApp, Telegram, Discord, Slack, Signal ou iMessage. Utilisez vos apps préférées.'
+      },
+      {
+        icon: '🧠',
+        title: 'Mémoire Persistante',
+        description: 'Se souvient de vos préférences, conversations passées et contexte. Plus besoin de vous répéter.'
+      },
+      {
+        icon: '🌐',
+        title: 'Contrôle du Navigateur',
+        description: 'Remplit automatiquement les formulaires, extrait les données, navigue sur les sites. Navigation mains libres.'
+      },
+      {
+        icon: '💻',
+        title: 'Accès Système',
+        description: 'Lire et écrire des fichiers, exécuter des commandes shell, interagir avec votre environnement local.'
+      },
+      {
+        icon: '🔌',
+        title: 'Skills & Plugins',
+        description: 'Étendez avec les skills de la communauté ou créez les vôtres. Personnalisation illimitée.'
+      },
+      {
+        icon: '🔒',
+        title: 'Confidentialité Avant Tout',
+        description: "Fonctionne 100% sur votre machine. Vos données ne quittent jamais votre ordinateur."
+      }
+    ]
+  },
+  pt: {
+    sectionPrefix: '01',
+    sectionTitle: 'Recursos',
+    subtitle: 'Seu assistente de IA que realmente completa tarefas',
+    features: [
+      {
+        icon: '💬',
+        title: 'Chat Multi-Plataforma',
+        description: 'Controle via WhatsApp, Telegram, Discord, Slack, Signal ou iMessage. Use os apps que você já ama.'
+      },
+      {
+        icon: '🧠',
+        title: 'Memória Persistente',
+        description: 'Lembra suas preferências, conversas passadas e contexto. Sem precisar repetir.'
+      },
+      {
+        icon: '🌐',
+        title: 'Controle do Navegador',
+        description: 'Preenche formulários automaticamente, extrai dados, navega em sites. Navegue sem as mãos.'
+      },
+      {
+        icon: '💻',
+        title: 'Acesso ao Sistema',
+        description: 'Leia e escreva arquivos, execute comandos shell, interaja com seu ambiente local.'
+      },
+      {
+        icon: '🔌',
+        title: 'Skills & Plugins',
+        description: 'Estenda com skills da comunidade ou crie os seus. Possibilidades ilimitadas.'
+      },
+      {
+        icon: '🔒',
+        title: 'Privacidade em Primeiro',
+        description: 'Roda 100% na sua máquina. Seus dados nunca saem do seu computador.'
+      }
+    ]
+  },
+  ru: {
+    sectionPrefix: '01',
+    sectionTitle: 'Возможности',
+    subtitle: 'Ваш ИИ-ассистент, который действительно выполняет задачи',
+    features: [
+      {
+        icon: '💬',
+        title: 'Мультиплатформенный чат',
+        description: 'Управление через WhatsApp, Telegram, Discord, Slack, Signal или iMessage. Используйте любимые приложения.'
+      },
+      {
+        icon: '🧠',
+        title: 'Постоянная память',
+        description: 'Запоминает ваши предпочтения, прошлые разговоры и контекст. Не нужно повторяться.'
+      },
+      {
+        icon: '🌐',
+        title: 'Управление браузером',
+        description: 'Автозаполнение форм, извлечение данных, навигация по сайтам. Просмотр без рук.'
+      },
+      {
+        icon: '💻',
+        title: 'Доступ к системе',
+        description: 'Чтение и запись файлов, выполнение команд shell, взаимодействие с локальной средой.'
+      },
+      {
+        icon: '🔌',
+        title: 'Навыки и плагины',
+        description: 'Расширяйте навыками сообщества или создавайте свои. Безграничные возможности.'
+      },
+      {
+        icon: '🔒',
+        title: 'Приватность прежде всего',
+        description: 'Работает 100% на вашем компьютере. Ваши данные никогда не покидают его.'
+      }
+    ]
+  }
+};
+
+const t = content[locale as keyof typeof content] || content.en;
+---
+
+<section class="clawd-features" id="features">
+  <div class="clawd-container">
+    <!-- Section Header -->
+    <div class="clawd-section-header">
+      <span class="clawd-section-prefix">{t.sectionPrefix}</span>
+      <h2 class="clawd-heading-2">{t.sectionTitle}</h2>
+    </div>
+    <p class="clawd-section-subtitle">{t.subtitle}</p>
+    
+    <!-- Features Grid -->
+    <div class="clawd-features-grid">
+      {t.features.map((feature, index) => (
+        <div class="clawd-feature-card" style={`animation-delay: ${index * 0.1}s`}>
+          <div class="clawd-feature-icon">{feature.icon}</div>
+          <h3 class="clawd-feature-title">{feature.title}</h3>
+          <p class="clawd-feature-description">{feature.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .clawd-features {
+    padding: 6rem 0;
+    background: linear-gradient(180deg, var(--bg-deep) 0%, var(--bg-surface) 100%);
+  }
+  
+  .clawd-section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .clawd-section-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+    margin-bottom: 3rem;
+  }
+  
+  .clawd-features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .clawd-feature-card {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xl);
+    padding: 2rem;
+    transition: all var(--transition-normal);
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .clawd-feature-card:hover {
+    border-color: var(--border-accent);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 40px rgba(255, 77, 77, 0.1);
+  }
+  
+  .clawd-feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .clawd-feature-title {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .clawd-feature-description {
+    color: var(--text-secondary);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+  }
+  
+  @media (max-width: 1024px) {
+    .clawd-features-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .clawd-features {
+      padding: 4rem 0;
+    }
+    
+    .clawd-features-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .clawd-feature-card {
+      padding: 1.5rem;
+    }
+  }
+</style>
+

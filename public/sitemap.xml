@@ -2,118 +2,88 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- English (default) -->
   <url>
-    <loc>https://grokapi.org/</loc>
-    <lastmod>2025-12-28</lastmod>
+    <loc>https://clawd-bot.com/</loc>
+    <lastmod>2026-01-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://grokapi.org/privacy-policy/</loc>
-    <lastmod>2025-12-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://grokapi.org/terms-of-service/</loc>
-    <lastmod>2025-12-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://grokapi.org/grok-api-free/</loc>
-    <lastmod>2025-12-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
   </url>
   
   <!-- Simplified Chinese -->
   <url>
-    <loc>https://grokapi.org/zh/</loc>
-    <lastmod>2025-12-28</lastmod>
+    <loc>https://clawd-bot.com/zh/</loc>
+    <lastmod>2026-01-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://grokapi.org/zh/grok-api-free/</loc>
-    <lastmod>2025-12-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
   </url>
   
   <!-- Traditional Chinese -->
   <url>
-    <loc>https://grokapi.org/zh-tw/</loc>
-    <lastmod>2025-12-28</lastmod>
+    <loc>https://clawd-bot.com/zh-tw/</loc>
+    <lastmod>2026-01-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://grokapi.org/zh-tw/grok-api-free/</loc>
-    <lastmod>2025-12-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
   </url>
   
   <!-- German -->
   <url>
-    <loc>https://grokapi.org/de/</loc>
-    <lastmod>2025-12-28</lastmod>
+    <loc>https://clawd-bot.com/de/</loc>
+    <lastmod>2026-01-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <!-- Spanish -->
   <url>
-    <loc>https://grokapi.org/es/</loc>
-    <lastmod>2025-12-28</lastmod>
+    <loc>https://clawd-bot.com/es/</loc>
+    <lastmod>2026-01-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <!-- French -->
   <url>
-    <loc>https://grokapi.org/fr/</loc>
-    <lastmod>2025-12-28</lastmod>
+    <loc>https://clawd-bot.com/fr/</loc>
+    <lastmod>2026-01-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <!-- Hindi -->
   <url>
-    <loc>https://grokapi.org/hi/</loc>
-    <lastmod>2025-12-28</lastmod>
+    <loc>https://clawd-bot.com/hi/</loc>
+    <lastmod>2026-01-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <!-- Japanese -->
   <url>
-    <loc>https://grokapi.org/ja/</loc>
-    <lastmod>2025-12-28</lastmod>
+    <loc>https://clawd-bot.com/ja/</loc>
+    <lastmod>2026-01-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <!-- Korean -->
   <url>
-    <loc>https://grokapi.org/ko/</loc>
-    <lastmod>2025-12-28</lastmod>
+    <loc>https://clawd-bot.com/ko/</loc>
+    <lastmod>2026-01-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <!-- Portuguese -->
   <url>
-    <loc>https://grokapi.org/pt/</loc>
-    <lastmod>2025-12-28</lastmod>
+    <loc>https://clawd-bot.com/pt/</loc>
+    <lastmod>2026-01-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <!-- Russian -->
   <url>
-    <loc>https://grokapi.org/ru/</loc>
-    <lastmod>2025-12-28</lastmod>
+    <loc>https://clawd-bot.com/ru/</loc>
+    <lastmod>2026-01-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>

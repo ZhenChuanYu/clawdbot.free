@@ -1,0 +1,470 @@
+---
+/**
+ * Clawd Bot 使用场景组件
+ */
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+
+const content = {
+  en: {
+    sectionPrefix: '02',
+    sectionTitle: 'Clawd Bot Use Cases',
+    subtitle: 'What people are doing with Clawd Bot - Real Clawd Bot examples',
+    useCases: [
+      {
+        title: 'Email Management with Clawd Bot',
+        description: 'Clawd Bot automatically sorts, summarizes, and drafts responses to your emails. With Clawd Bot, never miss an important message.',
+        command: '"Hey Clawd Bot, summarize my unread emails from today"'
+      },
+      {
+        title: 'Calendar & Scheduling with Clawd Bot',
+        description: 'Clawd Bot books meetings, sends invites, handles rescheduling. Clawd Bot is your personal scheduling assistant.',
+        command: '"Clawd Bot, schedule a meeting with John next Tuesday at 2pm"'
+      },
+      {
+        title: 'Flight Check-in with Clawd Bot',
+        description: 'Clawd Bot automatically checks you in for flights 24 hours before departure. Clawd Bot gets you the best seats.',
+        command: '"Clawd Bot, check me in for my flight to London tomorrow"'
+      },
+      {
+        title: 'Research & Summaries with Clawd Bot',
+        description: 'Clawd Bot browses the web, reads articles, and gives you concise summaries. Stay informed effortlessly with Clawd Bot.',
+        command: '"Clawd Bot, research the latest AI developments and summarize for me"'
+      },
+      {
+        title: 'Home Automation with Clawd Bot',
+        description: 'Clawd Bot controls smart home devices, sets routines, monitors your home. All through natural conversation with Clawd Bot.',
+        command: '"Clawd Bot, turn on the living room lights and set temperature to 22°C"'
+      },
+      {
+        title: 'Personal Finance with Clawd Bot',
+        description: 'Clawd Bot tracks expenses, categorizes spending, provides insights. Clawd Bot is your financial co-pilot.',
+        command: '"Clawd Bot, how much did I spend on food this month?"'
+      }
+    ]
+  },
+  zh: {
+    sectionPrefix: '02',
+    sectionTitle: 'Clawd Bot 使用场景',
+    subtitle: '人们如何使用 Clawd Bot - Clawd Bot 真实案例',
+    useCases: [
+      {
+        title: '邮件管理',
+        description: '自动分类、摘要、起草邮件回复。不错过任何重要消息。',
+        command: '"Clawd，帮我总结今天的未读邮件"'
+      },
+      {
+        title: '日历与日程',
+        description: '预约会议、发送邀请、处理改期。您的私人日程助理。',
+        command: '"下周二下午2点和 John 安排一个会议"'
+      },
+      {
+        title: '航班值机',
+        description: '出发前24小时自动值机，为您选择最佳座位。',
+        command: '"帮我办理明天飞伦敦的航班值机"'
+      },
+      {
+        title: '调研与摘要',
+        description: '浏览网页、阅读文章、提供简明摘要。轻松保持信息更新。',
+        command: '"研究一下最新的 AI 发展并为我总结"'
+      },
+      {
+        title: '智能家居',
+        description: '控制智能设备、设置日程、监控家居。通过自然对话完成。',
+        command: '"打开客厅灯并将温度设为22度"'
+      },
+      {
+        title: '个人财务',
+        description: '追踪支出、分类消费、提供洞察。您的财务副驾驶。',
+        command: '"这个月我在餐饮上花了多少钱？"'
+      }
+    ]
+  },
+  ja: {
+    sectionPrefix: '02',
+    sectionTitle: 'ユースケース',
+    subtitle: 'Clawd Botの活用例',
+    useCases: [
+      {
+        title: 'メール管理',
+        description: 'メールの自動分類、要約、返信の下書き。重要なメッセージを見逃しません。',
+        command: '"Clawd、今日の未読メールを要約して"'
+      },
+      {
+        title: 'カレンダー＆スケジューリング',
+        description: '会議の予約、招待状の送信、スケジュール変更。あなた専属のスケジュールアシスタント。',
+        command: '"来週火曜日の午後2時にJohnとの会議を予約して"'
+      },
+      {
+        title: 'フライトチェックイン',
+        description: '出発24時間前に自動でチェックイン。最高の座席を確保。',
+        command: '"明日のロンドン行きのフライトにチェックインして"'
+      },
+      {
+        title: 'リサーチ＆要約',
+        description: 'ウェブを閲覧し、記事を読み、簡潔な要約を提供。楽に情報を把握。',
+        command: '"最新のAI動向を調べて要約して"'
+      },
+      {
+        title: 'ホームオートメーション',
+        description: 'スマートホームデバイスの制御、ルーティンの設定、ホームの監視。自然な会話で。',
+        command: '"リビングのライトをつけて、温度を22度に設定して"'
+      },
+      {
+        title: '個人財務',
+        description: '支出の追跡、分類、インサイトの提供。あなたの財務アシスタント。',
+        command: '"今月の食費はいくら？"'
+      }
+    ]
+  },
+  ko: {
+    sectionPrefix: '02',
+    sectionTitle: '사용 사례',
+    subtitle: '사람들이 Clawd Bot을 사용하는 방법',
+    useCases: [
+      {
+        title: '이메일 관리',
+        description: '이메일 자동 분류, 요약, 답장 작성. 중요한 메시지를 놓치지 않습니다.',
+        command: '"Clawd, 오늘 안 읽은 이메일 요약해줘"'
+      },
+      {
+        title: '캘린더 & 일정',
+        description: '회의 예약, 초대장 발송, 일정 변경 처리. 개인 일정 비서.',
+        command: '"다음 주 화요일 오후 2시에 John과 미팅 잡아줘"'
+      },
+      {
+        title: '항공편 체크인',
+        description: '출발 24시간 전 자동 체크인. 최고의 좌석 확보.',
+        command: '"내일 런던행 비행기 체크인 해줘"'
+      },
+      {
+        title: '리서치 & 요약',
+        description: '웹 검색, 기사 읽기, 간결한 요약 제공. 손쉽게 정보 파악.',
+        command: '"최신 AI 동향 조사해서 요약해줘"'
+      },
+      {
+        title: '홈 자동화',
+        description: '스마트홈 기기 제어, 루틴 설정, 집 모니터링. 자연스러운 대화로.',
+        command: '"거실 조명 켜고 온도 22도로 설정해줘"'
+      },
+      {
+        title: '개인 재무',
+        description: '지출 추적, 분류, 인사이트 제공. 재무 보조 역할.',
+        command: '"이번 달 식비 얼마 썼어?"'
+      }
+    ]
+  },
+  es: {
+    sectionPrefix: '02',
+    sectionTitle: 'Casos de Uso',
+    subtitle: 'Qué hacen las personas con Clawd Bot',
+    useCases: [
+      {
+        title: 'Gestión de Email',
+        description: 'Clasifica, resume y redacta respuestas automáticamente. Nunca pierdas un mensaje importante.',
+        command: '"Clawd, resume mis correos no leídos de hoy"'
+      },
+      {
+        title: 'Calendario y Programación',
+        description: 'Reserva reuniones, envía invitaciones, gestiona reprogramaciones. Tu asistente de agenda personal.',
+        command: '"Programa una reunión con John el próximo martes a las 2pm"'
+      },
+      {
+        title: 'Check-in de Vuelos',
+        description: 'Check-in automático 24 horas antes de la salida. Consigue los mejores asientos.',
+        command: '"Hazme el check-in para mi vuelo a Londres mañana"'
+      },
+      {
+        title: 'Investigación y Resúmenes',
+        description: 'Navega la web, lee artículos y te da resúmenes concisos. Mantente informado sin esfuerzo.',
+        command: '"Investiga los últimos desarrollos en IA y resúmelos para mí"'
+      },
+      {
+        title: 'Automatización del Hogar',
+        description: 'Controla dispositivos inteligentes, configura rutinas, monitorea tu hogar. Todo en conversación natural.',
+        command: '"Enciende las luces del salón y pon la temperatura a 22°C"'
+      },
+      {
+        title: 'Finanzas Personales',
+        description: 'Rastrea gastos, categoriza el gasto, proporciona insights. Tu copiloto financiero.',
+        command: '"¿Cuánto gasté en comida este mes?"'
+      }
+    ]
+  },
+  de: {
+    sectionPrefix: '02',
+    sectionTitle: 'Anwendungsfälle',
+    subtitle: 'Was Menschen mit Clawd Bot machen',
+    useCases: [
+      {
+        title: 'E-Mail-Verwaltung',
+        description: 'Sortiert, fasst zusammen und entwirft Antworten automatisch. Verpassen Sie keine wichtige Nachricht.',
+        command: '"Clawd, fasse meine ungelesenen E-Mails von heute zusammen"'
+      },
+      {
+        title: 'Kalender & Terminplanung',
+        description: 'Bucht Meetings, sendet Einladungen, verwaltet Terminänderungen. Ihr persönlicher Terminassistent.',
+        command: '"Plane ein Meeting mit John nächsten Dienstag um 14 Uhr"'
+      },
+      {
+        title: 'Flug-Check-in',
+        description: 'Automatischer Check-in 24 Stunden vor Abflug. Sichert die besten Plätze.',
+        command: '"Check mich für meinen Flug nach London morgen ein"'
+      },
+      {
+        title: 'Recherche & Zusammenfassungen',
+        description: 'Durchsucht das Web, liest Artikel, liefert prägnante Zusammenfassungen. Bleiben Sie mühelos informiert.',
+        command: '"Recherchiere die neuesten KI-Entwicklungen und fasse für mich zusammen"'
+      },
+      {
+        title: 'Hausautomatisierung',
+        description: 'Steuert Smart-Home-Geräte, erstellt Routinen, überwacht Ihr Zuhause. Alles durch natürliche Konversation.',
+        command: '"Schalte das Wohnzimmerlicht ein und stelle die Temperatur auf 22°C"'
+      },
+      {
+        title: 'Persönliche Finanzen',
+        description: 'Verfolgt Ausgaben, kategorisiert, liefert Einblicke. Ihr Finanz-Copilot.',
+        command: '"Wie viel habe ich diesen Monat für Essen ausgegeben?"'
+      }
+    ]
+  },
+  fr: {
+    sectionPrefix: '02',
+    sectionTitle: "Cas d'Usage",
+    subtitle: 'Ce que les gens font avec Clawd Bot',
+    useCases: [
+      {
+        title: 'Gestion des Emails',
+        description: 'Trie, résume et rédige automatiquement des réponses. Ne manquez jamais un message important.',
+        command: '"Clawd, résume mes emails non lus d\'aujourd\'hui"'
+      },
+      {
+        title: 'Calendrier & Planification',
+        description: 'Réserve des réunions, envoie des invitations, gère les reports. Votre assistant planning personnel.',
+        command: '"Planifie une réunion avec John mardi prochain à 14h"'
+      },
+      {
+        title: 'Enregistrement de Vol',
+        description: "Enregistrement automatique 24 heures avant le départ. Obtient les meilleures places.",
+        command: '"Enregistre-moi pour mon vol vers Londres demain"'
+      },
+      {
+        title: 'Recherche & Résumés',
+        description: 'Parcourt le web, lit des articles, donne des résumés concis. Restez informé sans effort.',
+        command: '"Recherche les derniers développements IA et résume-les pour moi"'
+      },
+      {
+        title: 'Domotique',
+        description: 'Contrôle les appareils connectés, programme des routines, surveille votre maison. Le tout en conversation naturelle.',
+        command: '"Allume les lumières du salon et mets la température à 22°C"'
+      },
+      {
+        title: 'Finances Personnelles',
+        description: 'Suit les dépenses, catégorise, fournit des insights. Votre copilote financier.',
+        command: '"Combien ai-je dépensé en nourriture ce mois-ci ?"'
+      }
+    ]
+  },
+  pt: {
+    sectionPrefix: '02',
+    sectionTitle: 'Casos de Uso',
+    subtitle: 'O que as pessoas fazem com Clawd Bot',
+    useCases: [
+      {
+        title: 'Gestão de Email',
+        description: 'Classifica, resume e redige respostas automaticamente. Nunca perca uma mensagem importante.',
+        command: '"Clawd, resume meus emails não lidos de hoje"'
+      },
+      {
+        title: 'Calendário & Agendamento',
+        description: 'Agenda reuniões, envia convites, gerencia reagendamentos. Seu assistente de agenda pessoal.',
+        command: '"Agende uma reunião com John na próxima terça às 14h"'
+      },
+      {
+        title: 'Check-in de Voo',
+        description: 'Check-in automático 24 horas antes da partida. Garante os melhores assentos.',
+        command: '"Faça meu check-in para o voo de amanhã para Londres"'
+      },
+      {
+        title: 'Pesquisa & Resumos',
+        description: 'Navega na web, lê artigos e fornece resumos concisos. Mantenha-se informado sem esforço.',
+        command: '"Pesquise os últimos desenvolvimentos em IA e resuma para mim"'
+      },
+      {
+        title: 'Automação Residencial',
+        description: 'Controla dispositivos inteligentes, configura rotinas, monitora sua casa. Tudo por conversa natural.',
+        command: '"Ligue as luzes da sala e ajuste a temperatura para 22°C"'
+      },
+      {
+        title: 'Finanças Pessoais',
+        description: 'Rastreia gastos, categoriza, fornece insights. Seu copiloto financeiro.',
+        command: '"Quanto gastei com comida este mês?"'
+      }
+    ]
+  },
+  ru: {
+    sectionPrefix: '02',
+    sectionTitle: 'Сценарии использования',
+    subtitle: 'Что люди делают с Clawd Bot',
+    useCases: [
+      {
+        title: 'Управление почтой',
+        description: 'Автоматическая сортировка, резюме и черновики ответов. Не пропустите важное сообщение.',
+        command: '"Clawd, резюмируй мои непрочитанные письма за сегодня"'
+      },
+      {
+        title: 'Календарь и расписание',
+        description: 'Планирует встречи, отправляет приглашения, управляет переносами. Ваш личный планировщик.',
+        command: '"Запланируй встречу с Джоном на следующий вторник в 14:00"'
+      },
+      {
+        title: 'Регистрация на рейс',
+        description: 'Автоматическая регистрация за 24 часа до вылета. Лучшие места.',
+        command: '"Зарегистрируй меня на завтрашний рейс в Лондон"'
+      },
+      {
+        title: 'Исследования и резюме',
+        description: 'Просматривает веб, читает статьи, дает краткие резюме. Будьте в курсе без усилий.',
+        command: '"Изучи последние разработки в ИИ и резюмируй для меня"'
+      },
+      {
+        title: 'Домашняя автоматизация',
+        description: 'Управление умными устройствами, настройка рутин, мониторинг дома. Всё через естественный диалог.',
+        command: '"Включи свет в гостиной и установи температуру 22°C"'
+      },
+      {
+        title: 'Личные финансы',
+        description: 'Отслеживает расходы, категоризирует, предоставляет аналитику. Ваш финансовый помощник.',
+        command: '"Сколько я потратил на еду в этом месяце?"'
+      }
+    ]
+  }
+};
+
+const t = content[locale as keyof typeof content] || content.en;
+---
+
+<section class="clawd-use-cases" id="use-cases">
+  <div class="clawd-container">
+    <!-- Section Header -->
+    <div class="clawd-section-header">
+      <span class="clawd-section-prefix">{t.sectionPrefix}</span>
+      <h2 class="clawd-heading-2">{t.sectionTitle}</h2>
+    </div>
+    <p class="clawd-section-subtitle">{t.subtitle}</p>
+    
+    <!-- Use Cases Grid -->
+    <div class="clawd-use-cases-grid">
+      {t.useCases.map((useCase, index) => (
+        <div class="clawd-use-case-card" style={`animation-delay: ${index * 0.1}s`}>
+          <h3 class="clawd-use-case-title">{useCase.title}</h3>
+          <p class="clawd-use-case-description">{useCase.description}</p>
+          <div class="clawd-use-case-command">
+            <code>{useCase.command}</code>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .clawd-use-cases {
+    padding: 6rem 0;
+    background: var(--bg-deep);
+  }
+  
+  .clawd-section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .clawd-section-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+    margin-bottom: 3rem;
+  }
+  
+  .clawd-use-cases-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .clawd-use-case-card {
+    background: linear-gradient(135deg, var(--bg-surface) 0%, var(--bg-elevated) 100%);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xl);
+    padding: 1.5rem;
+    transition: all var(--transition-normal);
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .clawd-use-case-card:hover {
+    border-color: var(--border-cyan);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 40px rgba(0, 229, 204, 0.1);
+  }
+  
+  .clawd-use-case-title {
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .clawd-use-case-description {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .clawd-use-case-command {
+    background: var(--bg-deep);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 0.75rem;
+  }
+  
+  .clawd-use-case-command code {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    color: var(--cyan-bright);
+  }
+  
+  @media (max-width: 1024px) {
+    .clawd-use-cases-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .clawd-use-cases {
+      padding: 4rem 0;
+    }
+    
+    .clawd-use-cases-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
