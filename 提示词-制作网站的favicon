@@ -4,3 +4,4 @@
 第二步：根据logo原图，生成所需的favicon格式文件
 
 你可以参考生图脚本scripts/create_gpt_image_1.5.py，来制作你需要的ai生图脚本
+要注意：ico格式图片要包含多个尺寸 而非单一尺寸
