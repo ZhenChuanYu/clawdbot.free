@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-28T02:51:27.316Z",
+  "timestamp": "2026-01-28T03:10:02.461Z",
   "type": "submit-all",
   "totalUrls": 11,
   "urls": [
@@ -17,14 +17,14 @@
   ],
   "result": {
     "success": true,
-    "statusCode": 202,
+    "statusCode": 200,
     "message": "Submitted successfully"
   },
   "results": [
     {
       "batch": 1,
       "success": true,
-      "statusCode": 202,
+      "statusCode": 200,
       "message": "Submitted successfully"
     }
   ]

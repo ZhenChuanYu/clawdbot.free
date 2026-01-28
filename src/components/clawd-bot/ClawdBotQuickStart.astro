@@ -152,6 +152,38 @@ const content = {
     ],
     docsLink: 'Читать документацию',
     downloadLink: 'Скачать сейчас'
+  },
+  'zh-tw': {
+    sectionPrefix: '04',
+    sectionTitle: '快速開始',
+    subtitle: '5 分鐘內啟動 Clawd Bot',
+    installTitle: '安裝',
+    oneLinerCommand: 'curl -fsSL https://molt.bot/install.sh | bash',
+    oneLinerDescription: '適用於 macOS、Windows 和 Linux。一行命令會自動安裝 Node.js 和其他所有依賴。',
+    installMethods: [
+      { name: '一行命令', active: true },
+      { name: 'npm', active: false },
+      { name: '可自定義', active: false },
+      { name: 'macOS', active: false }
+    ],
+    docsLink: '閱讀文檔',
+    downloadLink: '立即下載'
+  },
+  hi: {
+    sectionPrefix: '04',
+    sectionTitle: 'त्वरित शुरुआत',
+    subtitle: '5 मिनट में Clawd Bot चलाएं',
+    installTitle: 'स्थापना',
+    oneLinerCommand: 'curl -fsSL https://molt.bot/install.sh | bash',
+    oneLinerDescription: 'macOS, Windows और Linux पर काम करता है। एक-लाइनर Node.js और बाकी सब कुछ आपके लिए स्थापित करता है।',
+    installMethods: [
+      { name: 'एक-लाइनर', active: true },
+      { name: 'npm', active: false },
+      { name: 'अनुकूलन योग्य', active: false },
+      { name: 'macOS', active: false }
+    ],
+    docsLink: 'दस्तावेज़ पढ़ें',
+    downloadLink: 'अभी डाउनलोड करें'
   }
 };
 
@@ -179,7 +211,7 @@ const t = content[locale as keyof typeof content] || content.en;
     <!-- One-liner Installation -->
     <div class="clawd-install-section">
       <div class="clawd-install-header">
-        <p class="clawd-install-comment"># {locale === 'zh' ? '适用于所有平台。自动安装所有依赖。不客气。🦞' : locale === 'ja' ? 'どこでも動作。すべてをインストール。どういたしまして。🦞' : locale === 'ko' ? '어디서나 작동합니다. 모든 것을 설치합니다. 천만에요. 🦞' : locale === 'es' ? 'Funciona en todas partes. Instala todo. De nada. 🦞' : locale === 'de' ? 'Funktioniert überall. Installiert alles. Bitte schön. 🦞' : locale === 'fr' ? 'Fonctionne partout. Installe tout. De rien. 🦞' : locale === 'pt' ? 'Funciona em todos os lugares. Instala tudo. De nada. 🦞' : locale === 'ru' ? 'Работает везде. Устанавливает всё. Пожалуйста. 🦞' : "Works everywhere. Installs everything. You're welcome. 🦞"}</p>
+        <p class="clawd-install-comment"># {locale === 'zh' ? '适用于所有平台。自动安装所有依赖。不客气。🦞' : locale === 'zh-tw' ? '適用於所有平台。自動安裝所有依賴。不客氣。🦞' : locale === 'ja' ? 'どこでも動作。すべてをインストール。どういたしまして。🦞' : locale === 'ko' ? '어디서나 작동합니다. 모든 것을 설치합니다. 천만에요. 🦞' : locale === 'es' ? 'Funciona en todas partes. Instala todo. De nada. 🦞' : locale === 'de' ? 'Funktioniert überall. Installiert alles. Bitte schön. 🦞' : locale === 'fr' ? 'Fonctionne partout. Installe tout. De rien. 🦞' : locale === 'pt' ? 'Funciona em todos os lugares. Instala tudo. De nada. 🦞' : locale === 'ru' ? 'Работает везде. Устанавливает всё. Пожалуйста. 🦞' : locale === 'hi' ? 'हर जगह काम करता है। सब कुछ स्थापित करता है। आपका स्वागत है। 🦞' : "Works everywhere. Installs everything. You're welcome. 🦞"}</p>
       </div>
       <div class="clawd-install-code-block">
         <span class="clawd-prompt">$</span>
