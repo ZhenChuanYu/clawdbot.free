@@ -25,8 +25,9 @@
 - 影响 Lighthouse 控制台诊断分数
 
 **修复方案**：
-- ✅ 已将 `typeof global!=="undefined"?global:this` 改为 `typeof window!=="undefined"?window:this`
-- 确保在浏览器环境中正确使用 `window` 对象
+- ✅ 已将 `typeof global!=="undefined"?global:this` 改为直接使用 `this`
+- 在浏览器全局作用域中，`this` 就是 `window` 对象，更简洁且性能更好
+- 避免了类型检查的开销，提升性能
 
 ### 1. **外部字体资源阻塞渲染**
 **问题描述**：
