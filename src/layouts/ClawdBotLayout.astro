@@ -190,7 +190,7 @@ function getHreflangPath(pagePath: string, lang: string): string {
   </script>
   
   <!-- Async CSS loader script -->
-  <script>
+  <script is:inline>
     /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
     (function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}
     var loadCSS=function(href,before,media){var doc=w.document;var ss=doc.createElement("link");var ref;if(before){ref=before}else{var refs=(doc.body||doc.getElementsByTagName("head")[0]).childNodes;ref=refs[refs.length-1];}
@@ -198,7 +198,7 @@ function getHreflangPath(pagePath: string, lang: string): string {
     function ready(cb){if(doc.body){return cb()}setTimeout(function(){ready(cb)})}
     ready(function(){ref.parentNode.insertBefore(ss,before?ref:ref.nextSibling)});var onloadcssdefined=function(cb){var resolvedHref=ss.href;var i=sheets.length;while(i--){if(sheets[i].href===resolvedHref){return cb()}}
     setTimeout(function(){onloadcssdefined(cb)})};ss.onloadcssdefined=onloadcssdefined;onloadcssdefined(function(){if(ss.media!=="all"){ss.media=media||"all"}});return ss};
-    w.loadCSS=loadCSS})(this);
+    w.loadCSS=loadCSS})(window);
   </script>
   
   <style is:global>
