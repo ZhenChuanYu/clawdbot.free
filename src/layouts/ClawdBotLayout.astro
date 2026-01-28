@@ -21,7 +21,6 @@ const {
 } = Astro.props;
 
 const BASE_URL = 'https://clawd-bot.com';
-const canonicalUrl = path ? `${BASE_URL}/${path.replace(/^\//, '')}` : BASE_URL;
 
 // 多语言路径处理
 function getHreflangPath(pagePath: string, lang: string): string {
@@ -30,6 +29,12 @@ function getHreflangPath(pagePath: string, lang: string): string {
   }
   return `/${lang}${pagePath ? `/${pagePath}` : ''}`;
 }
+
+// 生成 canonical URL - 考虑语言路径
+// 如果 path 为空，根据 locale 生成正确的首页 URL
+const canonicalUrl = path 
+  ? `${BASE_URL}/${path.replace(/^\//, '')}` 
+  : `${BASE_URL}${getHreflangPath('', locale)}`;
 ---
 
 <!DOCTYPE html>

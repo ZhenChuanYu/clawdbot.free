@@ -1,35 +1,30 @@
 {
-  "timestamp": "2026-01-10T19:13:54.077Z",
+  "timestamp": "2026-01-28T02:51:27.316Z",
   "type": "submit-all",
-  "totalUrls": 16,
+  "totalUrls": 11,
   "urls": [
-    "https://grokapi.org/",
-    "https://grokapi.org/privacy-policy/",
-    "https://grokapi.org/terms-of-service/",
-    "https://grokapi.org/grok-api-free/",
-    "https://grokapi.org/zh/",
-    "https://grokapi.org/zh/grok-api-free/",
-    "https://grokapi.org/zh-tw/",
-    "https://grokapi.org/zh-tw/grok-api-free/",
-    "https://grokapi.org/de/",
-    "https://grokapi.org/es/",
-    "https://grokapi.org/fr/",
-    "https://grokapi.org/hi/",
-    "https://grokapi.org/ja/",
-    "https://grokapi.org/ko/",
-    "https://grokapi.org/pt/",
-    "https://grokapi.org/ru/"
+    "https://clawd-bot.com/",
+    "https://clawd-bot.com/zh/",
+    "https://clawd-bot.com/zh-tw/",
+    "https://clawd-bot.com/de/",
+    "https://clawd-bot.com/es/",
+    "https://clawd-bot.com/fr/",
+    "https://clawd-bot.com/hi/",
+    "https://clawd-bot.com/ja/",
+    "https://clawd-bot.com/ko/",
+    "https://clawd-bot.com/pt/",
+    "https://clawd-bot.com/ru/"
   ],
   "result": {
     "success": true,
-    "statusCode": 200,
+    "statusCode": 202,
     "message": "Submitted successfully"
   },
   "results": [
     {
       "batch": 1,
       "success": true,
-      "statusCode": 200,
+      "statusCode": 202,
       "message": "Submitted successfully"
     }
   ]
