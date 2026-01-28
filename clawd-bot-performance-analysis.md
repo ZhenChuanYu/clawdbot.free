@@ -13,6 +13,21 @@
 
 ## 🔴 主要性能问题
 
+### 0. **JavaScript 错误 - loadCSS 未定义** ⚠️ 已修复
+**问题描述**：
+- 控制台错误：`TypeError: Cannot read properties of undefined (reading 'loadCSS')`
+- 位置：`https://clawd-bot.com:22:136`
+- 原因：loadCSS 脚本在浏览器环境中使用了 `typeof global!=="undefined"?global:this`，但压缩后变成了 `typeof global<"u"?global:void 0`，导致在浏览器中 `global` 是 `undefined`，最终 `o` 变成了 `undefined`
+
+**影响**：
+- 控制台错误，影响调试体验
+- 可能导致 CSS 异步加载功能失效
+- 影响 Lighthouse 控制台诊断分数
+
+**修复方案**：
+- ✅ 已将 `typeof global!=="undefined"?global:this` 改为 `typeof window!=="undefined"?window:this`
+- 确保在浏览器环境中正确使用 `window` 对象
+
 ### 1. **外部字体资源阻塞渲染**
 **问题描述**：
 - 使用了 Google Fonts (Inter 字体，9 个权重：300-900)
