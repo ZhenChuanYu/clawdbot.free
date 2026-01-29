@@ -1,0 +1,54 @@
+---
+/**
+ * 首页：What's so special about Clawd Bot?
+ * 使用项目 i18n：clawdbot-home-translations
+ */
+interface Props { locale: string; }
+const { locale } = Astro.props;
+import { tClawdbotHome, type ClawdbotHomeLocale } from '../../../i18n/clawdbot-home-translations';
+
+const t = (key: string) => tClawdbotHome(locale as ClawdbotHomeLocale, key);
+const items = [
+  { titleKey: 'home_whyspecial_item1_title', descKey: 'home_whyspecial_item1_desc' },
+  { titleKey: 'home_whyspecial_item2_title', descKey: 'home_whyspecial_item2_desc' },
+  { titleKey: 'home_whyspecial_item3_title', descKey: 'home_whyspecial_item3_desc' },
+  { titleKey: 'home_whyspecial_item4_title', descKey: 'home_whyspecial_item4_desc' },
+];
+---
+
+<section class="home-section home-whyspecial" id="why-special">
+  <div class="clawd-container">
+    <h2 class="home-section-title">
+      <span class="clawd-section-prefix">{t('home_section_prefix')}</span>
+      {t('home_whyspecial_title')}
+    </h2>
+    <div class="home-cards">
+      {items.map((item) => (
+        <div class="clawd-card home-card">
+          <h3 class="home-card-title">{t(item.titleKey)}</h3>
+          <p class="home-card-desc">{t(item.descKey)}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .home-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-lg);
+  }
+  .home-card-title {
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--coral-bright);
+    margin-bottom: var(--space-sm);
+  }
+  .home-card-desc {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+</style>

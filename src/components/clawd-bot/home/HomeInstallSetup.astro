@@ -1,0 +1,66 @@
+---
+/**
+ * 首页：Clawdbot install & setup
+ * 使用项目 i18n：clawdbot-home-translations
+ */
+interface Props { locale: string; }
+const { locale } = Astro.props;
+import { tClawdbotHome, type ClawdbotHomeLocale } from '../../../i18n/clawdbot-home-translations';
+
+const t = (key: string) => tClawdbotHome(locale as ClawdbotHomeLocale, key);
+const DOCS = 'https://docs.clawd.bot';
+const DOCS_GETTING_STARTED = `${DOCS}/getting-started`;
+const DOCS_WIZARD = `${DOCS}/wizard`;
+const DOCS_SETUP = `${DOCS}/setup`;
+const DOCS_INSTALL = `${DOCS}/install`;
+---
+
+<section class="home-section home-install" id="install-setup">
+  <div class="clawd-container">
+    <h2 class="home-section-title">
+      <span class="clawd-section-prefix">{t('home_section_prefix')}</span>
+      {t('home_install_title')}
+    </h2>
+    <p class="home-install-label">{t('home_install_oneLiner')}</p>
+    <div class="clawd-code-block home-install-code">
+      <code>{t('home_install_command')}</code>
+    </div>
+    <p class="home-install-steps">{t('home_install_steps')}</p>
+    <div class="home-install-links">
+      <a href={DOCS_GETTING_STARTED} target="_blank" rel="noopener noreferrer">{t('home_install_linkGettingStarted')}</a>
+      <a href={DOCS_WIZARD} target="_blank" rel="noopener noreferrer">{t('home_install_linkWizard')}</a>
+      <a href={DOCS_SETUP} target="_blank" rel="noopener noreferrer">{t('home_install_linkSetup')}</a>
+      <a href={DOCS_INSTALL} target="_blank" rel="noopener noreferrer">{t('home_install_linkInstall')}</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .home-install-label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: var(--space-sm);
+  }
+  .home-install-code {
+    margin-bottom: var(--space-lg);
+    max-width: 520px;
+  }
+  .home-install-code code { color: var(--cyan-bright); }
+  .home-install-steps {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--space-lg);
+  }
+  .home-install-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+  .home-install-links a {
+    color: var(--coral-bright);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .home-install-links a:hover { text-decoration: underline; }
+</style>

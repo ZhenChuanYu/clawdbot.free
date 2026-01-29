@@ -1,0 +1,54 @@
+---
+/**
+ * 首页：Clawdbot app 形态（CLI、Web、伴侣应用）
+ * 使用项目 i18n：clawdbot-home-translations
+ */
+interface Props { locale: string; }
+const { locale } = Astro.props;
+import { tClawdbotHome, type ClawdbotHomeLocale } from '../../../i18n/clawdbot-home-translations';
+
+const t = (key: string) => tClawdbotHome(locale as ClawdbotHomeLocale, key);
+---
+
+<section class="home-section home-app" id="app">
+  <div class="clawd-container">
+    <h2 class="home-section-title">
+      <span class="clawd-section-prefix">{t('home_section_prefix')}</span>
+      {t('home_app_title')}
+    </h2>
+    <div class="home-app-grid">
+      <div class="clawd-card home-app-card">
+        <h3 class="home-app-card-title">{t('home_app_cli')}</h3>
+        <p class="home-app-card-desc">{t('home_app_cliDesc')}</p>
+      </div>
+      <div class="clawd-card home-app-card">
+        <h3 class="home-app-card-title">{t('home_app_web')}</h3>
+        <p class="home-app-card-desc">{t('home_app_webDesc')}</p>
+      </div>
+      <div class="clawd-card home-app-card">
+        <h3 class="home-app-card-title">{t('home_app_companion')}</h3>
+        <p class="home-app-card-desc">{t('home_app_companionDesc')}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .home-app-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-lg);
+  }
+  .home-app-card-title {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--cyan-bright);
+    margin-bottom: var(--space-sm);
+  }
+  .home-app-card-desc {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+</style>

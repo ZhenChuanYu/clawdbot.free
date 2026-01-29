@@ -1,0 +1,35 @@
+---
+/**
+ * 首页：What is Clawd Bot?
+ * 使用项目 i18n：clawdbot-home-translations
+ */
+interface Props { locale: string; }
+const { locale } = Astro.props;
+import { tClawdbotHome, type ClawdbotHomeLocale } from '../../../i18n/clawdbot-home-translations';
+
+const t = (key: string) => tClawdbotHome(locale as ClawdbotHomeLocale, key);
+---
+
+<section class="home-section home-whatis" id="what-is">
+  <div class="clawd-container">
+    <h2 class="home-section-title">
+      <span class="clawd-section-prefix">{t('home_section_prefix')}</span>
+      {t('home_whatis_title')}
+    </h2>
+    <div class="home-whatis-body">
+      <p class="home-whatis-def">{t('home_whatis_definition')}</p>
+      <p class="home-whatis-diff">{t('home_whatis_diff')}</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .home-whatis-body { max-width: 680px; }
+  .home-whatis-def, .home-whatis-diff {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: var(--space-md);
+  }
+  .home-whatis-diff { color: var(--text-muted); }
+</style>

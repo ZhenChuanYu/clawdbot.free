@@ -1,0 +1,107 @@
+---
+/**
+ * 首页 Hero：Clawd Bot 品牌 + 一句话 + CTA（文档、安装）
+ * 使用项目 i18n：src/i18n/clawdbot-home-translations.ts + locales/clawdbot-home/*.json
+ */
+interface Props { locale: string; }
+const { locale } = Astro.props;
+import { tClawdbotHome, type ClawdbotHomeLocale } from '../../../i18n/clawdbot-home-translations';
+
+const t = (key: string) => tClawdbotHome(locale as ClawdbotHomeLocale, key);
+const DOCS_URL = 'https://docs.clawd.bot';
+---
+
+<section class="home-hero" id="hero">
+  <div class="home-hero-bg"></div>
+  <div class="clawd-container">
+    <div class="home-hero-content">
+      <div class="home-hero-badge">
+        <span aria-hidden="true">🦞</span>
+        <span>{t('home_hero_badge')}</span>
+      </div>
+      <h1 class="home-hero-title">{t('home_hero_title')}</h1>
+      <p class="home-hero-subtitle">{t('home_hero_subtitle')}</p>
+      <p class="home-hero-description">{t('home_hero_description')}</p>
+      <div class="home-hero-cta">
+        <a href={DOCS_URL} target="_blank" rel="noopener noreferrer" class="clawd-btn clawd-btn-primary">
+          {t('home_hero_ctaDocs')}
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+        </a>
+        <a href="#install-setup" class="clawd-btn clawd-btn-secondary">{t('home_hero_ctaInstall')}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .home-hero {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 6rem 0 4rem;
+    overflow: hidden;
+  }
+  .home-hero-bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at top center, rgba(255, 77, 77, 0.12) 0%, transparent 50%),
+                radial-gradient(ellipse at bottom right, rgba(0, 229, 204, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .home-hero-content {
+    position: relative;
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .home-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-accent);
+    border-radius: var(--radius-full);
+    color: var(--coral-bright);
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+  .home-hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 10vw, 5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
+  }
+  .home-hero-subtitle {
+    font-family: var(--font-display);
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    font-weight: 500;
+    color: var(--coral-bright);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 1.25rem;
+  }
+  .home-hero-description {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+  .home-hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .home-hero-cta .clawd-btn { min-width: 160px; }
+  @media (max-width: 640px) {
+    .home-hero { padding: 5rem 0 3rem; }
+    .home-hero-cta { flex-direction: column; align-items: center; }
+    .home-hero-cta .clawd-btn { width: 100%; max-width: 280px; }
+  }
+</style>
