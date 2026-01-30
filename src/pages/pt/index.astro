@@ -6,12 +6,7 @@ import ClawdBotLayout from '../../layouts/ClawdBotLayout.astro';
 import ClawdBotHeader from '../../components/clawd-bot/ClawdBotHeader.astro';
 import ClawdBotFooter from '../../components/clawd-bot/ClawdBotFooter.astro';
 import HomeHero from '../../components/clawd-bot/home/HomeHero.astro';
-import HomeWhatIs from '../../components/clawd-bot/home/HomeWhatIs.astro';
-import HomeWhySpecial from '../../components/clawd-bot/home/HomeWhySpecial.astro';
-import HomeFreeSafe from '../../components/clawd-bot/home/HomeFreeSafe.astro';
-import HomeInstallSetup from '../../components/clawd-bot/home/HomeInstallSetup.astro';
-import HomeDocs from '../../components/clawd-bot/home/HomeDocs.astro';
-import HomeApp from '../../components/clawd-bot/home/HomeApp.astro';
+import HomeArticle from '../../components/clawd-bot/home/HomeArticle.astro';
 
 const locale = 'pt';
 const title = 'Clawd Bot - Assistente de IA Pessoal Que Realmente Faz Coisas';
@@ -27,12 +22,7 @@ const description = 'Clawd Bot é um assistente de IA pessoal open source que ro
   <ClawdBotHeader locale={locale} />
   <main>
     <HomeHero locale={locale} />
-    <HomeWhatIs locale={locale} />
-    <HomeWhySpecial locale={locale} />
-    <HomeFreeSafe locale={locale} />
-    <HomeInstallSetup locale={locale} />
-    <HomeDocs locale={locale} />
-    <HomeApp locale={locale} />
+    <HomeArticle locale={locale} />
   </main>
   <ClawdBotFooter locale={locale} />
 </ClawdBotLayout>

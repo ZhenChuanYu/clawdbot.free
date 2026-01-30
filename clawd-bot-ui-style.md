@@ -58,33 +58,32 @@
    - 副标题 "THE AI THAT ACTUALLY DOES THINGS."
    - 描述文本
 
-2. **用户评价区域**: "⟩ What People Say"
+2. **用户评价区域**: "What People Say"
    - 展示 Twitter/X 用户评价卡片
    - 每个卡片包含用户头像、评价内容、用户名
 
-3. **快速开始区域**: "⟩ Quick Start"
+3. **快速开始区域**: "Quick Start"
    - 安装代码块展示
    - 支持多种安装方式切换（One-liner, npm, Hackable, macOS）
 
-4. **功能特性区域**: "⟩ What It Does"
+4. **功能特性区域**: "What It Does"
    - 卡片式布局展示功能点
    - 每个功能包含图标、标题、描述
 
-5. **集成展示区域**: "⟩ Works With Everything"
+5. **集成展示区域**: "Works With Everything"
    - 展示支持的聊天应用和工具图标
    - 包括 WhatsApp, Telegram, Discord, Slack, Signal, iMessage 等
 
-6. **媒体报道区域**: "⟩ Featured In"
+6. **媒体报道区域**: "Featured In"
    - 展示媒体报道卡片
 
 7. **导航链接区域**:
    - Discord, Documentation, GitHub, ClawdHub 链接
 
-8. **订阅区域**: "⟩ Stay in the Loop"
+8. **订阅区域**: "Stay in the Loop"
    - 邮件订阅表单
 
 ### 视觉元素
-- **特殊符号**: 使用 `⟩` 作为章节标题前缀
 - **按钮样式**: 圆角按钮，使用品牌色
 - **卡片设计**: 深色背景，微妙边框，圆角
 - **代码块**: 深色背景，等宽字体，复制按钮

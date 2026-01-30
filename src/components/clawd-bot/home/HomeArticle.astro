@@ -1,0 +1,117 @@
+---
+/**
+ * 首页单页长文（Bing 友好）：唯一 H1 + 多 H2 + 纯段落，无卡片/大 CTA
+ * 方案二：首页改为「单页长文」形态
+ */
+interface Props { locale: string; }
+const { locale } = Astro.props;
+import { tClawdbotHome, type ClawdbotHomeLocale } from '../../../i18n/clawdbot-home-translations';
+
+const t = (key: string) => tClawdbotHome(locale as ClawdbotHomeLocale, key);
+const DOCS = 'https://docs.clawd.bot';
+const DOCS_GETTING_STARTED = `${DOCS}/getting-started`;
+const DOCS_WIZARD = `${DOCS}/wizard`;
+const DOCS_SETUP = `${DOCS}/setup`;
+const DOCS_INSTALL = `${DOCS}/install`;
+const DOCS_SECURITY = `${DOCS}/security`;
+---
+
+<article class="home-article" id="main-content">
+  <div class="clawd-container">
+    <h2 id="what-is">{t('home_whatis_title')}</h2>
+    <p>{t('home_whatis_definition')}</p>
+    <p>{t('home_whatis_diff')}</p>
+
+    <h2 id="whats-special">{t('home_whyspecial_title')}</h2>
+    <ul>
+      <li><strong>{t('home_whyspecial_item1_title')}</strong> — {t('home_whyspecial_item1_desc')}</li>
+      <li><strong>{t('home_whyspecial_item2_title')}</strong> — {t('home_whyspecial_item2_desc')}</li>
+      <li><strong>{t('home_whyspecial_item3_title')}</strong> — {t('home_whyspecial_item3_desc')}</li>
+      <li><strong>{t('home_whyspecial_item4_title')}</strong> — {t('home_whyspecial_item4_desc')}</li>
+    </ul>
+
+    <h2 id="free">{t('home_freesafe_freeTitle')}</h2>
+    <p>{t('home_freesafe_freeBody')}</p>
+    <p>{t('home_freesafe_freeNote')}</p>
+
+    <h2 id="safe">{t('home_freesafe_safeTitle')}</h2>
+    <p>{t('home_freesafe_safeBody')} <a href={DOCS_SECURITY} target="_blank" rel="noopener noreferrer" title="Clawd Bot Security documentation">{t('home_freesafe_docsSecurity')}</a>.</p>
+
+    <h2 id="install-setup">{t('home_install_title')}</h2>
+    <p>{t('home_install_oneLiner')}: <code class="home-article-code">{t('home_install_command')}</code></p>
+    <p>{t('home_install_steps')}</p>
+    <p>
+      <a href={DOCS_GETTING_STARTED} target="_blank" rel="noopener noreferrer" title="Clawd Bot Getting started">{t('home_install_linkGettingStarted')}</a>,
+      <a href={DOCS_WIZARD} target="_blank" rel="noopener noreferrer" title="Clawd Bot Wizard">{t('home_install_linkWizard')}</a>,
+      <a href={DOCS_SETUP} target="_blank" rel="noopener noreferrer" title="Clawd Bot Setup">{t('home_install_linkSetup')}</a>,
+      <a href={DOCS_INSTALL} target="_blank" rel="noopener noreferrer" title="Clawd Bot Install and update">{t('home_install_linkInstall')}</a>.
+    </p>
+
+    <h2 id="docs">{t('home_docs_title')}</h2>
+    <p>{t('home_docs_description')}</p>
+    <p><a href={DOCS} target="_blank" rel="noopener noreferrer" title="Clawd Bot Documentation">{t('home_docs_cta')}</a></p>
+
+    <h2 id="app">{t('home_app_title')}</h2>
+    <p><strong>{t('home_app_cli')}</strong> — {t('home_app_cliDesc')}</p>
+    <p><strong>{t('home_app_web')}</strong> — {t('home_app_webDesc')}</p>
+    <p><strong>{t('home_app_companion')}</strong> — {t('home_app_companionDesc')}</p>
+  </div>
+</article>
+
+<style>
+  .home-article {
+    padding: var(--space-2xl) 0;
+  }
+  .home-article .clawd-container {
+    max-width: 720px;
+  }
+  .home-article-h1 {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.25;
+    margin-bottom: var(--space-lg);
+  }
+  .home-article-lead {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: var(--space-2xl);
+  }
+  .home-article h2 {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-top: var(--space-2xl);
+    margin-bottom: var(--space-md);
+  }
+  .home-article h2:first-of-type { margin-top: 0; }
+  .home-article p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: var(--space-md);
+  }
+  .home-article ul {
+    margin-bottom: var(--space-lg);
+    padding-left: 1.5rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+  .home-article ul li { margin-bottom: var(--space-sm); }
+  .home-article-code {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    background: var(--bg-elevated);
+    padding: 0.2em 0.5em;
+    border-radius: var(--radius-sm);
+    color: var(--cyan-bright);
+  }
+  .home-article a {
+    color: var(--coral-bright);
+    text-decoration: none;
+  }
+  .home-article a:hover { text-decoration: underline; }
+</style>

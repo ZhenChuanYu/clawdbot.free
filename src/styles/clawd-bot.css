@@ -124,13 +124,6 @@
   line-height: 1.3;
 }
 
-/* 章节标题前缀 */
-.clawd-section-prefix {
-  color: var(--coral-bright);
-  font-family: var(--font-mono);
-  margin-right: var(--space-sm);
-}
-
 /* 按钮样式 */
 .clawd-btn {
   display: inline-flex;

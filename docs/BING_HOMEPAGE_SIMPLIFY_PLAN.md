@@ -61,6 +61,19 @@
 
 ---
 
+## 已实施：方案二（2025-01）
+
+首页已改为单页长文形态：
+
+- 新建 `HomeArticle.astro`：唯一 H1（home_article_h1）+ 多 H2（What is / What's special / Free / Safe / Install / Docs / App）+ 纯段落与列表，无卡片、无大 CTA。
+- 所有语言首页（index.astro 及 de/es/fr/hi/ja/ko/pt/ru/zh/zh-tw）仅挂载 Header + HomeArticle + Footer。
+- 各 locale 的 `home_article_h1` 已加入 11 种语言。
+- Layout 内 noscript 已增强为与文章语义一致的 H1/H2/段落/链接摘要，供 Bing 无 JS 抓取。
+
+旧组件（HomeHero、HomeWhatIs、HomeWhySpecial、HomeFreeSafe、HomeInstallSetup、HomeDocs、HomeApp）仍保留于仓库，未删除，可按需复用或移除。
+
+---
+
 ## 建议优先级
 
 | 优先级 | 动作 |

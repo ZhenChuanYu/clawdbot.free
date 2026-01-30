@@ -255,14 +255,18 @@ const canonicalUrl = path
   </style>
 </head>
 <body>
-  <!-- noscript 内容用于 BingBot -->
+  <!-- noscript 内容用于 BingBot：与首页文章语义一致 -->
   <noscript>
-    <div style="padding: 2rem; text-align: center;">
-      <h1>Clawd Bot - Personal AI Assistant</h1>
-      <p>Clawd Bot is a personal AI assistant that runs on your machine. Control it via WhatsApp, Telegram, Discord, Slack, Signal, or iMessage.</p>
-      <p>Features: Persistent Memory, Browser Control, System Access, Skills & Plugins</p>
-      <p>Visit our website with JavaScript enabled for the full experience.</p>
-    </div>
+    <section style="padding: 2rem 1.5rem; max-width: 720px; margin: 0 auto;">
+      <h1>Clawd Bot: Personal AI Assistant That Actually Does Things</h1>
+      <p>Clawd Bot is an open-source personal AI assistant that runs locally. Control it via WhatsApp, Telegram, Discord and more. It automates email, calendar, flight check-in, browsing, and real tasks—not just chat.</p>
+      <h2>What is Clawd Bot?</h2>
+      <p>Clawd Bot is a self-hosted, locally-running AI assistant that can perform real tasks—emails, calendar, flight check-in, browsing, and more—not just give advice. Unlike typical chatbots, it actually executes actions on your behalf.</p>
+      <h2>Is Clawd Bot free? Is it safe?</h2>
+      <p>Yes. Clawd Bot is open source (MIT) and self-hosted for free. Note: the software is free, but you still pay for hardware and API tokens when using cloud models. Your data stays on your machine. See <a href="https://docs.clawd.bot/security">Security</a> in our docs.</p>
+      <h2>Clawdbot install and docs</h2>
+      <p>One-line install: npm install -g moltbot@latest. Full documentation: <a href="https://docs.clawd.bot">docs.clawd.bot</a> — Getting started, Wizard, Setup, Install &amp; update.</p>
+    </section>
   </noscript>
   
   <slot />
