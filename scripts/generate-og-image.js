@@ -30,13 +30,13 @@ async function generateOGImage() {
     
     console.log('✓ 使用 logo: 512.png');
 
-    // 创建背景（渐变效果用纯色代替）
+    // 创建背景（Clawd Bot 深色主题 #050810）
     const background = await sharp({
       create: {
         width: OG_WIDTH,
         height: OG_HEIGHT,
         channels: 4,
-        background: { r: 255, g: 255, b: 255, alpha: 1 } // 白色背景
+        background: { r: 5, g: 8, b: 16, alpha: 1 }
       }
     })
     .png()
@@ -44,27 +44,27 @@ async function generateOGImage() {
 
     // 读取并调整 logo 大小
     const logo = await sharp(logoPath)
-      .resize(200, 200, { fit: 'contain' })
+      .resize(220, 220, { fit: 'contain' })
       .toBuffer();
 
-    // 创建文字 SVG
+    // 创建文字 SVG（Clawd Bot 品牌：珊瑚红标题 + 浅灰副标题）
     const titleSvg = `
       <svg width="${OG_WIDTH}" height="${OG_HEIGHT}">
         <style>
           .title { 
-            fill: #111827; 
-            font-size: 80px; 
+            fill: #ff4d4d; 
+            font-size: 88px; 
             font-weight: bold; 
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
           }
           .subtitle { 
-            fill: #6B7280; 
-            font-size: 36px; 
+            fill: #8892b0; 
+            font-size: 38px; 
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
           }
         </style>
-        <text x="600" y="450" text-anchor="middle" class="title">Grok API</text>
-        <text x="600" y="510" text-anchor="middle" class="subtitle">xAI Grok API Resources</text>
+        <text x="600" y="440" text-anchor="middle" class="title">Clawd Bot</text>
+        <text x="600" y="505" text-anchor="middle" class="subtitle">The AI that actually does things.</text>
       </svg>
     `;
 
@@ -73,8 +73,8 @@ async function generateOGImage() {
       .composite([
         {
           input: logo,
-          top: 150,
-          left: Math.floor((OG_WIDTH - 200) / 2)
+          top: 130,
+          left: Math.floor((OG_WIDTH - 220) / 2)
         },
         {
           input: Buffer.from(titleSvg),

@@ -33,8 +33,8 @@ PNG_SIZES = {
     "logo.png": 512,  # 用于 JSON-LD schema
 }
 
-# ICO 文件包含的尺寸
-ICO_SIZES = [16, 32, 48]
+# ICO 文件包含的尺寸（多尺寸以满足各环境，非单一尺寸）
+ICO_SIZES = [16, 24, 32, 48, 64]
 
 
 def resize_image(img, size):
@@ -108,7 +108,7 @@ def main():
     # 检查输入文件
     if not os.path.exists(INPUT_FILE):
         print(f"\n✗ 错误: 找不到输入文件 {INPUT_FILE}")
-        print("请先运行 create_clawd_bot_logo.py 生成 logo 原图")
+        print("请先运行 create_clawdbot_favicon_logo.py 或 create_clawd_bot_logo.py 生成 logo 原图")
         return False
     
     # 加载原图
