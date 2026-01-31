@@ -9,20 +9,26 @@ import { tClawdbotHome, type ClawdbotHomeLocale } from '../../../i18n/clawdbot-h
 
 const t = (key: string) => tClawdbotHome(locale as ClawdbotHomeLocale, key);
 const DOCS = 'https://docs.clawd.bot';
-const DOCS_GETTING_STARTED = `${DOCS}/getting-started`;
-const DOCS_WIZARD = `${DOCS}/wizard`;
-const DOCS_SETUP = `${DOCS}/setup`;
+const DOCS_GETTING_STARTED = `${DOCS}/start/getting-started`;
+const DOCS_WIZARD = `${DOCS}/start/wizard`;
+const DOCS_SETUP = `${DOCS}/start/setup`;
 const DOCS_INSTALL = `${DOCS}/install`;
 ---
 
 <section class="home-section home-install" id="install-setup">
   <div class="clawd-container">
     <h2 class="home-section-title">{t('home_install_title')}</h2>
+    <p class="home-install-prereq">{t('home_install_prereq')}</p>
     <p class="home-install-label">{t('home_install_oneLiner')}</p>
     <div class="clawd-code-block home-install-code">
       <code>{t('home_install_command')}</code>
     </div>
-    <p class="home-install-steps">{t('home_install_steps')}</p>
+    <div class="home-install-steps">
+      <p class="home-install-step"><strong>1.</strong> <span class="step-title">{t('home_install_step1_title')}</span> — {t('home_install_step1_desc')}</p>
+      <p class="home-install-step"><strong>2.</strong> <span class="step-title">{t('home_install_step2_title')}</span> — <code>openclaw onboard --install-daemon</code> {t('home_install_step2_desc')}</p>
+      <p class="home-install-step"><strong>3.</strong> <span class="step-title">{t('home_install_step3_title')}</span> — <code>openclaw channels</code> {t('home_install_step3_desc')}</p>
+      <p class="home-install-step"><strong>4.</strong> <span class="step-title">{t('home_install_step4_title')}</span> — {t('home_install_step4_desc')}</p>
+    </div>
     <div class="home-install-links">
       <a href={DOCS_GETTING_STARTED} target="_blank" rel="noopener noreferrer">{t('home_install_linkGettingStarted')}</a>
       <a href={DOCS_WIZARD} target="_blank" rel="noopener noreferrer">{t('home_install_linkWizard')}</a>
@@ -33,6 +39,15 @@ const DOCS_INSTALL = `${DOCS}/install`;
 </section>
 
 <style>
+  .home-install-prereq {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: var(--space-md);
+    padding: var(--space-sm) var(--space-md);
+    background: rgba(255,255,255,0.03);
+    border-radius: 6px;
+    display: inline-block;
+  }
   .home-install-label {
     font-size: 0.9rem;
     color: var(--text-muted);
@@ -44,10 +59,29 @@ const DOCS_INSTALL = `${DOCS}/install`;
   }
   .home-install-code code { color: var(--cyan-bright); }
   .home-install-steps {
+    margin-bottom: var(--space-lg);
+  }
+  .home-install-step {
     font-size: 1rem;
     color: var(--text-secondary);
     line-height: 1.6;
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-sm);
+    padding-left: 0.5rem;
+  }
+  .home-install-step strong {
+    color: var(--coral-bright);
+    margin-right: 0.25rem;
+  }
+  .home-install-step .step-title {
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+  .home-install-step code {
+    background: rgba(0,0,0,0.3);
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: var(--cyan-bright);
   }
   .home-install-links {
     display: flex;

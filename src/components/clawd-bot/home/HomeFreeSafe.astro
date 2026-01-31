@@ -21,6 +21,7 @@ const DOCS_SECURITY = 'https://docs.clawd.bot/security';
       <div class="clawd-card home-freesafe-card">
         <h2 class="home-section-title home-freesafe-title">{t('home_freesafe_safeTitle')}</h2>
         <p class="home-freesafe-p">{t('home_freesafe_safeBody')}</p>
+        <p class="home-freesafe-p home-freesafe-note">{t('home_freesafe_safeNote')}</p>
         <a href={DOCS_SECURITY} target="_blank" rel="noopener noreferrer" class="home-freesafe-link">{t('home_freesafe_docsSecurity')} →</a>
       </div>
     </div>
@@ -46,4 +47,9 @@ const DOCS_SECURITY = 'https://docs.clawd.bot/security';
     text-decoration: none;
   }
   .home-freesafe-link:hover { text-decoration: underline; }
+  .home-freesafe-note {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: var(--space-md);
+  }
 </style>

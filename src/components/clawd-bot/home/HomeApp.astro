@@ -13,6 +13,7 @@ const t = (key: string) => tClawdbotHome(locale as ClawdbotHomeLocale, key);
 <section class="home-section home-app" id="app">
   <div class="clawd-container">
     <h2 class="home-section-title">{t('home_app_title')}</h2>
+    <p class="home-app-intro">{t('home_app_intro')}</p>
     <div class="home-app-grid">
       <div class="clawd-card home-app-card">
         <h3 class="home-app-card-title">{t('home_app_cli')}</h3>
@@ -23,6 +24,10 @@ const t = (key: string) => tClawdbotHome(locale as ClawdbotHomeLocale, key);
         <p class="home-app-card-desc">{t('home_app_webDesc')}</p>
       </div>
       <div class="clawd-card home-app-card">
+        <h3 class="home-app-card-title">{t('home_app_tui')}</h3>
+        <p class="home-app-card-desc">{t('home_app_tuiDesc')}</p>
+      </div>
+      <div class="clawd-card home-app-card">
         <h3 class="home-app-card-title">{t('home_app_companion')}</h3>
         <p class="home-app-card-desc">{t('home_app_companionDesc')}</p>
       </div>
@@ -31,6 +36,12 @@ const t = (key: string) => tClawdbotHome(locale as ClawdbotHomeLocale, key);
 </section>
 
 <style>
+  .home-app-intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-lg);
+    line-height: 1.6;
+  }
   .home-app-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));

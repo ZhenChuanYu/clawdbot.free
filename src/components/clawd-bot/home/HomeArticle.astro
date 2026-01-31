@@ -9,9 +9,9 @@ import { tClawdbotHome, type ClawdbotHomeLocale } from '../../../i18n/clawdbot-h
 
 const t = (key: string) => tClawdbotHome(locale as ClawdbotHomeLocale, key);
 const DOCS = 'https://docs.clawd.bot';
-const DOCS_GETTING_STARTED = `${DOCS}/getting-started`;
-const DOCS_WIZARD = `${DOCS}/wizard`;
-const DOCS_SETUP = `${DOCS}/setup`;
+const DOCS_GETTING_STARTED = `${DOCS}/start/getting-started`;
+const DOCS_WIZARD = `${DOCS}/start/wizard`;
+const DOCS_SETUP = `${DOCS}/start/setup`;
 const DOCS_INSTALL = `${DOCS}/install`;
 const DOCS_SECURITY = `${DOCS}/security`;
 ---
@@ -36,10 +36,16 @@ const DOCS_SECURITY = `${DOCS}/security`;
 
     <h2 id="safe">{t('home_freesafe_safeTitle')}</h2>
     <p>{t('home_freesafe_safeBody')} <a href={DOCS_SECURITY} target="_blank" rel="noopener noreferrer" title="Clawd Bot Security documentation">{t('home_freesafe_docsSecurity')}</a>.</p>
+    <p>{t('home_freesafe_safeNote')}</p>
 
     <h2 id="install-setup">{t('home_install_title')}</h2>
-    <p>{t('home_install_oneLiner')}: <code class="home-article-code">{t('home_install_command')}</code></p>
-    <p>{t('home_install_steps')}</p>
+    <p>{t('home_install_prereq')}. {t('home_install_oneLiner')}: <code class="home-article-code">{t('home_install_command')}</code></p>
+    <ol class="home-article-steps">
+      <li><strong>{t('home_install_step1_title')}</strong> — {t('home_install_step1_desc')}</li>
+      <li><strong>{t('home_install_step2_title')}</strong> — <code class="home-article-code">openclaw onboard --install-daemon</code> {t('home_install_step2_desc')}</li>
+      <li><strong>{t('home_install_step3_title')}</strong> — <code class="home-article-code">openclaw channels</code> {t('home_install_step3_desc')}</li>
+      <li><strong>{t('home_install_step4_title')}</strong> — {t('home_install_step4_desc')}</li>
+    </ol>
     <p>
       <a href={DOCS_GETTING_STARTED} target="_blank" rel="noopener noreferrer" title="Clawd Bot Getting started">{t('home_install_linkGettingStarted')}</a>,
       <a href={DOCS_WIZARD} target="_blank" rel="noopener noreferrer" title="Clawd Bot Wizard">{t('home_install_linkWizard')}</a>,
@@ -52,8 +58,10 @@ const DOCS_SECURITY = `${DOCS}/security`;
     <p><a href={DOCS} target="_blank" rel="noopener noreferrer" title="Clawd Bot Documentation">{t('home_docs_cta')}</a></p>
 
     <h2 id="app">{t('home_app_title')}</h2>
+    <p>{t('home_app_intro')}</p>
     <p><strong>{t('home_app_cli')}</strong> — {t('home_app_cliDesc')}</p>
     <p><strong>{t('home_app_web')}</strong> — {t('home_app_webDesc')}</p>
+    <p><strong>{t('home_app_tui')}</strong> — {t('home_app_tuiDesc')}</p>
     <p><strong>{t('home_app_companion')}</strong> — {t('home_app_companionDesc')}</p>
   </div>
 </article>
@@ -94,13 +102,18 @@ const DOCS_SECURITY = `${DOCS}/security`;
     line-height: 1.7;
     margin-bottom: var(--space-md);
   }
-  .home-article ul {
+  .home-article ul,
+  .home-article ol {
     margin-bottom: var(--space-lg);
     padding-left: 1.5rem;
     color: var(--text-secondary);
     line-height: 1.7;
   }
-  .home-article ul li { margin-bottom: var(--space-sm); }
+  .home-article ul li,
+  .home-article ol li { margin-bottom: var(--space-sm); }
+  .home-article-steps code {
+    font-size: 0.85em;
+  }
   .home-article-code {
     font-family: var(--font-mono);
     font-size: 0.9rem;
