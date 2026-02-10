@@ -1,5 +1,5 @@
 /**
- * Clawd Bot 首页多语言
+ * ClawdBot 首页多语言
  * 与项目 i18n 架构一致：locales/clawdbot-home/*.json + tClawdbotHome(locale, key)
  */
 import en from './locales/clawdbot-home/en.json';

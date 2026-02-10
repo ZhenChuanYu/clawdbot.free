@@ -23,46 +23,54 @@ const DOCS_SECURITY = `${DOCS}/security`;
     <p>{t('home_whatis_diff')}</p>
 
     <h2 id="whats-special">{t('home_whyspecial_title')}</h2>
-    <ul>
-      <li><strong>{t('home_whyspecial_item1_title')}</strong> — {t('home_whyspecial_item1_desc')}</li>
-      <li><strong>{t('home_whyspecial_item2_title')}</strong> — {t('home_whyspecial_item2_desc')}</li>
-      <li><strong>{t('home_whyspecial_item3_title')}</strong> — {t('home_whyspecial_item3_desc')}</li>
-      <li><strong>{t('home_whyspecial_item4_title')}</strong> — {t('home_whyspecial_item4_desc')}</li>
-    </ul>
+    <h3>{t('home_whyspecial_item1_title')}</h3>
+    <p>{t('home_whyspecial_item1_desc')}</p>
+    <h3>{t('home_whyspecial_item2_title')}</h3>
+    <p>{t('home_whyspecial_item2_desc')}</p>
+    <h3>{t('home_whyspecial_item3_title')}</h3>
+    <p>{t('home_whyspecial_item3_desc')}</p>
+    <h3>{t('home_whyspecial_item4_title')}</h3>
+    <p>{t('home_whyspecial_item4_desc')}</p>
 
     <h2 id="free">{t('home_freesafe_freeTitle')}</h2>
     <p>{t('home_freesafe_freeBody')}</p>
     <p>{t('home_freesafe_freeNote')}</p>
 
     <h2 id="safe">{t('home_freesafe_safeTitle')}</h2>
-    <p>{t('home_freesafe_safeBody')} <a href={DOCS_SECURITY} target="_blank" rel="noopener noreferrer" title="Clawd Bot Security documentation">{t('home_freesafe_docsSecurity')}</a>.</p>
+    <p>{t('home_freesafe_safeBody')} <a href={DOCS_SECURITY} target="_blank" rel="noopener noreferrer" title="ClawdBot Security documentation">{t('home_freesafe_docsSecurity')}</a>.</p>
     <p>{t('home_freesafe_safeNote')}</p>
 
     <h2 id="install-setup">{t('home_install_title')}</h2>
     <p>{t('home_install_prereq')}. {t('home_install_oneLiner')}: <code class="home-article-code">{t('home_install_command')}</code></p>
-    <ol class="home-article-steps">
-      <li><strong>{t('home_install_step1_title')}</strong> — {t('home_install_step1_desc')}</li>
-      <li><strong>{t('home_install_step2_title')}</strong> — <code class="home-article-code">openclaw onboard --install-daemon</code> {t('home_install_step2_desc')}</li>
-      <li><strong>{t('home_install_step3_title')}</strong> — <code class="home-article-code">openclaw channels</code> {t('home_install_step3_desc')}</li>
-      <li><strong>{t('home_install_step4_title')}</strong> — {t('home_install_step4_desc')}</li>
-    </ol>
+    <h3>{t('home_install_step1_title')}</h3>
+    <p>{t('home_install_step1_desc')}</p>
+    <h3>{t('home_install_step2_title')}</h3>
+    <p><code class="home-article-code">openclaw onboard --install-daemon</code> {t('home_install_step2_desc')}</p>
+    <h3>{t('home_install_step3_title')}</h3>
+    <p><code class="home-article-code">openclaw channels</code> {t('home_install_step3_desc')}</p>
+    <h3>{t('home_install_step4_title')}</h3>
+    <p>{t('home_install_step4_desc')}</p>
     <p>
-      <a href={DOCS_GETTING_STARTED} target="_blank" rel="noopener noreferrer" title="Clawd Bot Getting started">{t('home_install_linkGettingStarted')}</a>,
-      <a href={DOCS_WIZARD} target="_blank" rel="noopener noreferrer" title="Clawd Bot Wizard">{t('home_install_linkWizard')}</a>,
-      <a href={DOCS_SETUP} target="_blank" rel="noopener noreferrer" title="Clawd Bot Setup">{t('home_install_linkSetup')}</a>,
-      <a href={DOCS_INSTALL} target="_blank" rel="noopener noreferrer" title="Clawd Bot Install and update">{t('home_install_linkInstall')}</a>.
+      <a href={DOCS_GETTING_STARTED} target="_blank" rel="noopener noreferrer" title="ClawdBot Getting started">{t('home_install_linkGettingStarted')}</a>,
+      <a href={DOCS_WIZARD} target="_blank" rel="noopener noreferrer" title="ClawdBot Wizard">{t('home_install_linkWizard')}</a>,
+      <a href={DOCS_SETUP} target="_blank" rel="noopener noreferrer" title="ClawdBot Setup">{t('home_install_linkSetup')}</a>,
+      <a href={DOCS_INSTALL} target="_blank" rel="noopener noreferrer" title="ClawdBot Install and update">{t('home_install_linkInstall')}</a>.
     </p>
 
     <h2 id="docs">{t('home_docs_title')}</h2>
     <p>{t('home_docs_description')}</p>
-    <p><a href={DOCS} target="_blank" rel="noopener noreferrer" title="Clawd Bot Documentation">{t('home_docs_cta')}</a></p>
+    <p><a href={DOCS} target="_blank" rel="noopener noreferrer" title="ClawdBot Documentation">{t('home_docs_cta')}</a></p>
 
     <h2 id="app">{t('home_app_title')}</h2>
     <p>{t('home_app_intro')}</p>
-    <p><strong>{t('home_app_cli')}</strong> — {t('home_app_cliDesc')}</p>
-    <p><strong>{t('home_app_web')}</strong> — {t('home_app_webDesc')}</p>
-    <p><strong>{t('home_app_tui')}</strong> — {t('home_app_tuiDesc')}</p>
-    <p><strong>{t('home_app_companion')}</strong> — {t('home_app_companionDesc')}</p>
+    <h3>{t('home_app_cli')}</h3>
+    <p>{t('home_app_cliDesc')}</p>
+    <h3>{t('home_app_web')}</h3>
+    <p>{t('home_app_webDesc')}</p>
+    <h3>{t('home_app_tui')}</h3>
+    <p>{t('home_app_tuiDesc')}</p>
+    <h3>{t('home_app_companion')}</h3>
+    <p>{t('home_app_companionDesc')}</p>
   </div>
 </article>
 
@@ -96,6 +104,15 @@ const DOCS_SECURITY = `${DOCS}/security`;
     margin-bottom: var(--space-md);
   }
   .home-article h2:first-of-type { margin-top: 0; }
+  .home-article h3 {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-sm);
+  }
+  .home-article h3:first-of-type { margin-top: 0; }
   .home-article p {
     font-size: 1rem;
     color: var(--text-secondary);

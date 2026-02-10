@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Clawd Bot Favicon 用 Logo 生成脚本（第一步：输出正方形 logo 原图）
+ClawdBot Favicon 用 Logo 生成脚本（第一步：输出正方形 logo 原图）
 使用 Gemini API 生成极简、扁平化风格的正方形 logo，供后续生成 favicon 使用。
 
 参考: scripts/create_gemini_image_by_gemini_sdk.py
@@ -19,11 +19,11 @@ base_url = os.environ.get("GEMINI_BASE_URL") or "https://aiberm.com"
 # 输出路径（与 generate_favicons.py 的 INPUT_FILE 一致）
 output_file = "public/logo-original.png"
 
-# 设计说明：Clawd Bot 品牌 - 龙虾/钳子、珊瑚红+青色、深色背景
+# 设计说明：ClawdBot 品牌 - 龙虾/钳子、珊瑚红+青色、深色背景
 prompt = """请按以下两步执行：
 
 第一步（中文描述）：
-请详细描述你将要生成的图片：1）主题：Clawd Bot 品牌 logo，极简风格、扁平化设计；2）主体：一只简洁、易识别的龙虾或钳子造型图标，类似 🦞 但更几何化、适合做 favicon；3）色彩：主色珊瑚红 #ff4d4d，辅助色青色 #00e5cc，背景深色 #050810 或透明；4）构图：正方形画布，图标居中约占 80%，无文字；5）风格：现代、科技感、小尺寸下仍清晰可辨。
+请详细描述你将要生成的图片：1）主题：ClawdBot 品牌 logo，极简风格、扁平化设计；2）主体：一只简洁、易识别的龙虾或钳子造型图标，类似 🦞 但更几何化、适合做 favicon；3）色彩：主色珊瑚红 #ff4d4d，辅助色青色 #00e5cc，背景深色 #050810 或透明；4）构图：正方形画布，图标居中约占 80%，无文字；5）风格：现代、科技感、小尺寸下仍清晰可辨。
 
 第二步（生成图片）：
 根据上述描述生成一张正方形、极简扁平风格的 logo 图片。必须满足：纯正方形、无文字、适合缩小到 16x16 做网站 favicon。"""
@@ -72,7 +72,7 @@ def main():
     )
     config.tools = [{"google_search": {}}]
 
-    print("正在生成 Clawd Bot 正方形 logo（极简扁平风格）...")
+    print("正在生成 ClawdBot 正方形 logo（极简扁平风格）...")
     print(f"API: {base_url} | 模型: {model} | 比例: {aspect_ratio}\n")
 
     response = client.models.generate_content(

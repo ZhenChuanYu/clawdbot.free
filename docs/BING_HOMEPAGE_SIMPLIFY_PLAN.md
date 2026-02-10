@@ -13,7 +13,7 @@
 在现有首页 **main 末尾**（Footer 前）增加一个**纯文本区块**，满足 Bing：
 
 - **单一大区块**，用 `<article>` 或 `<section>` 包住。
-- **结构**：一个 H1（与 title 一致）+ 多个 H2（What is Clawd Bot / Why special / Is it free / Is it safe / Install & setup / Docs / App），每段下 2–4 段纯段落。
+- **结构**：一个 H1（与 title 一致）+ 多个 H2（What is ClawdBot / Why special / Is it free / Is it safe / Install & setup / Docs / App），每段下 2–4 段纯段落。
 - **字数**：整页合计约 800–1500 英文词（或各语言等效），以「问题→答案」形式写。
 - **无卡片、无复杂布局**：仅标题 + 段落 + 少量列表 + 链接。
 - **可选**：该区块用 `id="main-content"`，便于 Bing 识别主体内容。
@@ -27,8 +27,8 @@
 
 把首页改成**一页一主题**的文档式长文：
 
-- **唯一 H1**：如 "Clawd Bot: Personal AI Assistant That Actually Does Things"。
-- **H2**：What is Clawd Bot、What's so special、Is Clawd Bot free、Is Clawd Bot safe、Install & setup、Docs、App。
+- **唯一 H1**：如 "ClawdBot: Personal AI Assistant That Actually Does Things"。
+- **H2**：What is ClawdBot、What's so special、Is ClawdBot free、Is ClawdBot safe、Install & setup、Docs、App。
 - 每节下 **2–4 段纯文本** + 少量 `<ul>` 或有序列表，链接嵌在段落中。
 - **弱化或移除**：大 Hero、多卡片、多 CTA 区块；保留简洁 Header + Footer。
 - **字数**：整页 1000–2000 词（英文），其他语言等效。

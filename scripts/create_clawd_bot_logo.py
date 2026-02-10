@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Clawd Bot Logo 生成脚本
+ClawdBot Logo 生成脚本
 使用 GPT Image 1.5 生成极简风格的正方形 logo
 
 生成的 logo 将保存到 public/logo-original.png
@@ -17,10 +17,10 @@ client = OpenAI(api_key=api_key, base_url=base_url)
 
 
 def generate_logo(output_path="public/logo-original.png"):
-    """生成 Clawd Bot logo"""
+    """生成 ClawdBot logo"""
     
     # Logo 设计提示词：极简风格、扁平化、龙虾主题
-    prompt = """Design a minimalist, flat-style square logo featuring a stylized LOBSTER for "Clawd Bot" brand.
+    prompt = """Design a minimalist, flat-style square logo featuring a stylized LOBSTER for "ClawdBot" brand.
 
 Requirements:
 - Extremely simple and clean lobster silhouette design
@@ -37,7 +37,7 @@ Requirements:
 
 Style reference: Think of app icons like Discord mascot or Twitter bird - simple, bold, instantly recognizable silhouette."""
 
-    print("正在生成 Clawd Bot logo...")
+    print("正在生成 ClawdBot logo...")
     print(f"API: {base_url}")
     print("请求中...")
     

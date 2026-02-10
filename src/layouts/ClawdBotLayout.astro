@@ -1,6 +1,6 @@
 ---
 /**
- * Clawd Bot 专用布局组件
+ * ClawdBot 专用布局组件
  * 深色主题 + 品牌风格
  */
 
@@ -15,7 +15,7 @@ interface Props {
 const { 
   title, 
   description, 
-  keywords = 'Clawd Bot, Clawd Bot AI, Clawd Bot assistant, Clawd Bot personal AI, Clawd Bot WhatsApp, Clawd Bot Telegram, Clawd Bot automation, Clawd Bot open source, Clawd Bot download, Clawd Bot features, Clawd Bot use cases, Clawd Bot integrations, Clawd Bot setup, Clawd Bot tutorial, Clawd Bot guide',
+  keywords = 'ClawdBot, ClawdBot AI, ClawdBot assistant, ClawdBot personal AI, ClawdBot WhatsApp, ClawdBot Telegram, ClawdBot automation, ClawdBot open source, ClawdBot download, ClawdBot features, ClawdBot use cases, ClawdBot integrations, ClawdBot setup, ClawdBot tutorial, ClawdBot guide',
   locale = 'en',
   path = ''
 } = Astro.props;
@@ -43,7 +43,7 @@ const canonicalUrl = path
   <meta charset="UTF-8">
   <link rel="icon" href="/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <meta name="apple-mobile-web-app-title" content="Clawd Bot">
+  <meta name="apple-mobile-web-app-title" content="ClawdBot">
   <link rel="manifest" href="/site.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#050810">
@@ -71,7 +71,7 @@ const canonicalUrl = path
   <title>{title}</title>
   <meta name="description" content={description}>
   <meta name="keywords" content={keywords}>
-  <meta name="author" content="Clawd Bot">
+  <meta name="author" content="ClawdBot">
   <meta name="robots" content="index, follow">
   
   <!-- Canonical URL -->
@@ -86,7 +86,7 @@ const canonicalUrl = path
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:locale" content={locale.replace('-', '_')}>
-  <meta property="og:site_name" content="Clawd Bot">
+  <meta property="og:site_name" content="ClawdBot">
   
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
@@ -117,7 +117,7 @@ const canonicalUrl = path
         "@id": `${BASE_URL}/#website`,
         "@type": "WebSite",
         "inLanguage": locale === 'zh-tw' ? 'zh-TW' : (locale === 'zh' ? 'zh-CN' : 'en-US'),
-        "name": "Clawd Bot",
+        "name": "ClawdBot",
         "url": BASE_URL,
         "description": "Personal AI assistant that runs on your machine. Control it via WhatsApp, Telegram, Discord and more.",
         "potentialAction": {
@@ -140,7 +140,7 @@ const canonicalUrl = path
         },
         "about": {
           "@type": "SoftwareApplication",
-          "name": "Clawd Bot",
+          "name": "ClawdBot",
           "applicationCategory": "UtilitiesApplication",
           "operatingSystem": "macOS, Windows, Linux",
           "offers": {
@@ -153,7 +153,7 @@ const canonicalUrl = path
       {
         "@type": "Organization",
         "@id": `${BASE_URL}/#organization`,
-        "name": "Clawd Bot",
+        "name": "ClawdBot",
         "url": BASE_URL,
         "logo": {
           "@type": "ImageObject",
@@ -167,7 +167,7 @@ const canonicalUrl = path
     ]
   })} />
   
-  <!-- Clawd Bot 样式 - Preload for critical CSS -->
+  <!-- ClawdBot 样式 - Preload for critical CSS -->
   <link rel="preload" href="/styles/clawd-bot.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="/styles/clawd-bot.css"></noscript>
   
@@ -255,17 +255,23 @@ const canonicalUrl = path
   </style>
 </head>
 <body>
-  <!-- noscript 内容用于 BingBot：与首页文章语义一致 -->
+  <!-- noscript 内容用于 BingBot：H1 仅在 slot 的 Hero 中，此处 H2/H3 树状结构 -->
   <noscript>
     <section style="padding: 2rem 1.5rem; max-width: 720px; margin: 0 auto;">
-      <h1>Clawd Bot: Personal AI Assistant That Actually Does Things</h1>
-      <p>Clawd Bot is an open-source personal AI assistant that runs locally. Control it via WhatsApp, Telegram, Discord and more. It automates email, calendar, flight check-in, browsing, and real tasks—not just chat.</p>
-      <h2>What is Clawd Bot?</h2>
-      <p>Clawd Bot is a self-hosted, locally-running AI assistant that can perform real tasks—emails, calendar, flight check-in, browsing, and more—not just give advice. Unlike typical chatbots, it actually executes actions on your behalf.</p>
-      <h2>Is Clawd Bot free? Is it safe?</h2>
-      <p>Yes. Clawd Bot is open source (MIT) and self-hosted for free. Note: the software is free, but you still pay for hardware and API tokens when using cloud models. Your data stays on your machine. See <a href="https://docs.clawd.bot/security">Security</a> in our docs.</p>
-      <h2>Clawdbot install and docs</h2>
-      <p>One-line install: npm install -g openclaw@latest. Full documentation: <a href="https://docs.clawd.bot">docs.clawd.bot</a> — Getting started, Wizard, Setup, Install &amp; update.</p>
+      <h2>ClawdBot: Personal AI Assistant That Actually Does Things</h2>
+      <p>ClawdBot is an open-source personal AI assistant that runs locally. Control it via WhatsApp, Telegram, Discord and more. It automates email, calendar, flight check-in, browsing, and real tasks—not just chat.</p>
+      <h2>What is ClawdBot?</h2>
+      <p>ClawdBot is a self-hosted, locally-running AI assistant that can perform real tasks—emails, calendar, flight check-in, browsing, and more—not just give advice. Unlike typical chatbots, it actually executes actions on your behalf.</p>
+      <h2>Is ClawdBot free? Is it safe?</h2>
+      <h3>Free</h3>
+      <p>ClawdBot is open source (MIT) and self-hosted for free. You may pay for hardware and API tokens when using cloud models.</p>
+      <h3>Safe</h3>
+      <p>Your data stays on your machine. See <a href="https://docs.clawd.bot/security" title="ClawdBot Security">Security</a> in our docs.</p>
+      <h2>ClawdBot install and docs</h2>
+      <h3>Quick install</h3>
+      <p>One-line install: <code>npm install -g openclaw@latest</code>.</p>
+      <h3>Documentation</h3>
+      <p>Full documentation: <a href="https://docs.clawd.bot" title="ClawdBot Documentation">docs.clawd.bot</a> — Getting started, Wizard, Setup, Install &amp; update.</p>
     </section>
   </noscript>
   

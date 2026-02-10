@@ -5,13 +5,13 @@
 | 项目 | 说明 |
 |------|------|
 | 域名 | clawdbot.free |
-| 品牌 | Clawd Bot |
-| 服务 | Clawd Bot 的介绍与使用教程 |
+| 品牌 | ClawdBot |
+| 服务 | ClawdBot 的介绍与使用教程 |
 
 ## 二、首页需回答的核心问题（SEO + 用户意图）
 
-1. **What's so special about Clawd Bot?** — 产品差异化与亮点
-2. **What is a Clawd Bot?** — 产品定义与能力
+1. **What's so special about ClawdBot?** — 产品差异化与亮点
+2. **What is a ClawdBot?** — 产品定义与能力
 3. **Is Clawdbot free?** — 是否免费（开源/自托管）
 4. **Is Clawdbot safe?** — 隐私与安全（数据本地、权限模型）
 5. **Clawdbot docs** — 官方文档入口（docs.clawd.bot）
@@ -24,11 +24,11 @@
 基于联网检索与 docs.clawd.bot 信息，建议新首页结构：
 
 1. **Hero**
-   - 主标题：Clawd Bot / 品牌 Slogan（如 "The AI that actually does things"）
+   - 主标题：ClawdBot / 品牌 Slogan（如 "The AI that actually does things"）
    - 副标题/一句话：开源、本地运行的个人 AI 助手，支持 WhatsApp / Telegram / Discord 等
    - CTA：查看文档、快速安装
 
-2. **What is Clawd Bot?**
+2. **What is ClawdBot?**
    - 定义：自托管、本地运行的 AI 助手，可执行真实任务（邮件、日历、航班值机、浏览等）
    - 与普通聊天机器人的区别：真正执行操作，而非仅给建议
 
@@ -38,11 +38,11 @@
    - 真实自动化（浏览器、Shell、文件、表单等）
    - 可扩展（技能/插件，如 ClawdHub）
 
-4. **Is Clawd Bot free?**
+4. **Is ClawdBot free?**
    - 开源（MIT）、自托管免费
    - 云模型 API 按使用付费；本地模型完全免费
 
-5. **Is Clawd Bot safe?**
+5. **Is ClawdBot safe?**
    - 数据留在本机；官方文档有 Security 章节
    - 执行前可配置权限与审批（Sandbox / Tool Policy / Elevated）
 
@@ -77,7 +77,7 @@
 - **可复用**：ClawdBotLayout（含 meta、canonical、hreflang）、ClawdBotHeader、ClawdBotFooter；样式沿用 `/styles/clawd-bot.css` 及 layout 内全局样式。
 - **新组件**：为上述 1～8 节新建 Astro 组件（如 HomeHero、HomeWhatIs、HomeWhySpecial、HomeFreeSafe、HomeInstallSetup、HomeDocs、HomeApp 等），在 `src/pages/index.astro` 及各语言首页中按顺序挂载。
 - **多语言**：新组件需支持 locale，文案走多语言（与现有 i18n 或每组件内 content 对象一致）。
-- **域名与品牌**：站点内链接与文案统一为「Clawd Bot」；正式上线时 SEO 与 canonical 需对应 clawdbot.free。
+- **域名与品牌**：站点内链接与文案统一为「ClawdBot」；正式上线时 SEO 与 canonical 需对应 clawdbot.free。
 
 ## 六、任务拆解（执行顺序）
 

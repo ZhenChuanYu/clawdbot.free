@@ -30,7 +30,7 @@ async function generateOGImage() {
     
     console.log('✓ 使用 logo: 512.png');
 
-    // 创建背景（Clawd Bot 深色主题 #050810）
+    // 创建背景（ClawdBot 深色主题 #050810）
     const background = await sharp({
       create: {
         width: OG_WIDTH,
@@ -47,7 +47,7 @@ async function generateOGImage() {
       .resize(220, 220, { fit: 'contain' })
       .toBuffer();
 
-    // 创建文字 SVG（Clawd Bot 品牌：珊瑚红标题 + 浅灰副标题）
+    // 创建文字 SVG（ClawdBot 品牌：珊瑚红标题 + 浅灰副标题）
     const titleSvg = `
       <svg width="${OG_WIDTH}" height="${OG_HEIGHT}">
         <style>
@@ -63,7 +63,7 @@ async function generateOGImage() {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
           }
         </style>
-        <text x="600" y="440" text-anchor="middle" class="title">Clawd Bot</text>
+        <text x="600" y="440" text-anchor="middle" class="title">ClawdBot</text>
         <text x="600" y="505" text-anchor="middle" class="subtitle">The AI that actually does things.</text>
       </svg>
     `;
