@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-01-28T03:10:02.461Z",
+  "timestamp": "2026-02-10T21:26:56.415Z",
   "type": "submit-all",
   "totalUrls": 11,
   "urls": [
-    "https://clawd-bot.com/",
-    "https://clawd-bot.com/zh/",
-    "https://clawd-bot.com/zh-tw/",
-    "https://clawd-bot.com/de/",
-    "https://clawd-bot.com/es/",
-    "https://clawd-bot.com/fr/",
-    "https://clawd-bot.com/hi/",
-    "https://clawd-bot.com/ja/",
-    "https://clawd-bot.com/ko/",
-    "https://clawd-bot.com/pt/",
-    "https://clawd-bot.com/ru/"
+    "https://clawdbot.free/",
+    "https://clawdbot.free/zh/",
+    "https://clawdbot.free/zh-tw/",
+    "https://clawdbot.free/de/",
+    "https://clawdbot.free/es/",
+    "https://clawdbot.free/fr/",
+    "https://clawdbot.free/hi/",
+    "https://clawdbot.free/ja/",
+    "https://clawdbot.free/ko/",
+    "https://clawdbot.free/pt/",
+    "https://clawdbot.free/ru/"
   ],
   "result": {
     "success": true,
-    "statusCode": 200,
+    "statusCode": 202,
     "message": "Submitted successfully"
   },
   "results": [
     {
       "batch": 1,
       "success": true,
-      "statusCode": 200,
+      "statusCode": 202,
       "message": "Submitted successfully"
     }
   ]

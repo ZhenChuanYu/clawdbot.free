@@ -2,7 +2,7 @@
 https://pagespeed.web.dev/
 提示词：请使用devtools MCP，访问pagespeed.web.dev，分析nanobanana4k.com首页的Lighthouse性能
 
-
+备注：使用 Lighthouse CLI 分析 clawdbot.free 首页性能
 【安装devtools mcp】
 自动安装方法：给Codex授予Full Access权限，告诉Codex 
 "根据官方文档进行 https://github.com/ChromeDevTools/chrome-devtools-mcp 帮我安装devtools mcp ”
