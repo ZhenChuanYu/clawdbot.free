@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Grok API 项目启动脚本
+# 项目启动脚本
 # 在 3004 端口启动生产预览服务器
 
 # 获取脚本所在目录作为项目目录
@@ -11,7 +11,7 @@ PID_FILE="$PROJECT_DIR/.server.pid"
 LOG_FILE="$PROJECT_DIR/server.log"
 
 echo "======================================"
-echo "🚀 启动 Grok API 服务"
+echo "🚀 启动服务"
 echo "======================================"
 
 # 检查是否已经在运行

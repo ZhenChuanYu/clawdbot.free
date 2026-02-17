@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Grok API 项目停止脚本
+# 项目停止脚本
 
 # 获取脚本所在目录作为项目目录
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -9,7 +9,7 @@ PID_FILE="$PROJECT_DIR/.server.pid"
 PORT=3004
 
 echo "======================================"
-echo "🛑 停止 Grok API 服务"
+echo "🛑 停止服务"
 echo "======================================"
 
 # 检查 PID 文件是否存在

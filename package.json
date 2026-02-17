@@ -1,7 +1,7 @@
 {
-  "name": "grok-api-website",
+  "name": "clawd-bot-website",
   "version": "1.0.0",
-  "description": "Grok API - xAI Grok API access platform",
+  "description": "ClawdBot - Open-source personal AI assistant",
   "private": true,
   "type": "module",
   "scripts": {
