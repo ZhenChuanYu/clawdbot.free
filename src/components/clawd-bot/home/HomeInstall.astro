@@ -1,0 +1,233 @@
+---
+/**
+ * 安装指南 - 简洁版
+ */
+---
+
+<section class="install" id="install">
+  <div class="clawd-container">
+    <h2 class="section-title">Get Started with ClawdBot (OpenClaw)</h2>
+    <p class="section-subtitle">Install ClawdBot in under 5 minutes and start using OpenClaw AI assistant</p>
+    
+    <div class="install-content">
+      <div class="install-steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Install ClawdBot</h3>
+            <p>Install OpenClaw with Node.js 22+</p>
+            <div class="code-block">
+              <code>npm install -g openclaw@latest</code>
+              <button class="copy-btn" aria-label="Copy command">📋</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Initialize OpenClaw</h3>
+            <p>Set up ClawdBot config and daemon</p>
+            <div class="code-block">
+              <code>openclaw onboard --install-daemon</code>
+              <button class="copy-btn" aria-label="Copy command">📋</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Connect ClawdBot</h3>
+            <p>Connect OpenClaw to WhatsApp, Telegram, Discord</p>
+            <div class="code-block">
+              <code>openclaw channels</code>
+              <button class="copy-btn" aria-label="Copy command">📋</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>Start Using ClawdBot</h3>
+            <p>Message your OpenClaw bot from any connected channel</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="install-links">
+        <a href="https://docs.clawd.bot/start/getting-started" target="_blank" rel="noopener noreferrer" class="doc-link">
+          📖 Getting Started Guide
+        </a>
+        <a href="https://docs.clawd.bot/start/wizard" target="_blank" rel="noopener noreferrer" class="doc-link">
+          🧙 Setup Wizard
+        </a>
+        <a href="https://docs.clawd.bot/install" target="_blank" rel="noopener noreferrer" class="doc-link">
+          💾 Install & Update
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .install {
+    padding: 4rem 0;
+    background: var(--bg-deep);
+  }
+  
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .install-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .install-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .step {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+  
+  .step-number {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--coral-bright), var(--coral-mid));
+    color: white;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 77, 77, 0.3);
+  }
+  
+  .step-content {
+    flex: 1;
+  }
+  
+  .step-content h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .step-content p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+  }
+  
+  .code-block {
+    position: relative;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: 0.5rem;
+    padding: 1rem 3rem 1rem 1rem;
+    font-family: 'Monaco', 'Courier New', monospace;
+    overflow-x: auto;
+  }
+  
+  .code-block code {
+    color: var(--cyan-bright);
+    font-size: 0.95rem;
+  }
+  
+  .copy-btn {
+    position: absolute;
+    top: 50%;
+    right: 0.75rem;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+  }
+  
+  .copy-btn:hover {
+    opacity: 1;
+  }
+  
+  .install-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  .doc-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: 0.5rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .doc-link:hover {
+    border-color: var(--coral-bright);
+    background: rgba(255, 77, 77, 0.1);
+    transform: translateY(-2px);
+  }
+  
+  @media (max-width: 768px) {
+    .install {
+      padding: 3rem 0;
+    }
+    
+    .step {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .install-links {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const code = btn.previousElementSibling?.textContent;
+      if (code) {
+        navigator.clipboard.writeText(code);
+        btn.textContent = '✅';
+        setTimeout(() => btn.textContent = '📋', 2000);
+      }
+    });
+  });
+</script>

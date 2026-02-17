@@ -15,7 +15,7 @@ interface Props {
 const { 
   title, 
   description, 
-  keywords = 'ClawdBot, ClawdBot AI, ClawdBot assistant, ClawdBot personal AI, ClawdBot WhatsApp, ClawdBot Telegram, ClawdBot automation, ClawdBot open source, ClawdBot download, ClawdBot features, ClawdBot use cases, ClawdBot integrations, ClawdBot setup, ClawdBot tutorial, ClawdBot guide',
+  keywords = 'ClawdBot, OpenClaw, ClawdBot AI, OpenClaw AI, ClawdBot assistant, OpenClaw assistant, ClawdBot personal AI, OpenClaw personal AI, ClawdBot WhatsApp, OpenClaw Telegram, ClawdBot automation, OpenClaw automation, ClawdBot open source, OpenClaw open source, ClawdBot download, OpenClaw install, ClawdBot features, OpenClaw features, ClawdBot Voice Mode, OpenClaw Live Canvas, ClawdBot ClawHub, OpenClaw setup, ClawdBot tutorial, OpenClaw guide',
   locale = 'en',
   path = ''
 } = Astro.props;
@@ -25,9 +25,9 @@ const BASE_URL = 'https://clawdbot.free';
 // 多语言路径处理
 function getHreflangPath(pagePath: string, lang: string): string {
   if (lang === 'en') {
-    return pagePath || '/';
+    return pagePath ? `/${pagePath}/` : '/';
   }
-  return `/${lang}${pagePath ? `/${pagePath}` : ''}`;
+  return pagePath ? `/${lang}/${pagePath}/` : `/${lang}/`;
 }
 
 // 生成 canonical URL - 考虑语言路径
@@ -74,7 +74,7 @@ const canonicalUrl = path
   <title>{title}</title>
   <meta name="description" content={description}>
   <meta name="keywords" content={keywords}>
-  <meta name="author" content="ClawdBot">
+  <meta name="author" content="ClawdBot OpenClaw">
   <meta name="robots" content="index, follow">
   
   <!-- Canonical URL -->
@@ -316,23 +316,40 @@ const canonicalUrl = path
   </style>
 </head>
 <body>
-  <!-- noscript 内容用于 BingBot：H1 仅在 slot 的 Hero 中，此处 H2/H3 树状结构 -->
+  <!-- noscript 内容用于 BingBot -->
   <noscript>
     <section style="padding: 2rem 1.5rem; max-width: 720px; margin: 0 auto;">
-      <h2>ClawdBot: Personal AI Assistant That Actually Does Things</h2>
-      <p>ClawdBot is an open-source personal AI assistant that runs locally. Control it via WhatsApp, Telegram, Discord and more. It automates email, calendar, flight check-in, browsing, and real tasks—not just chat.</p>
-      <h2>What is ClawdBot?</h2>
-      <p>ClawdBot is a self-hosted, locally-running AI assistant that can perform real tasks—emails, calendar, flight check-in, browsing, and more—not just give advice. Unlike typical chatbots, it actually executes actions on your behalf.</p>
-      <h2>Is ClawdBot free? Is it safe?</h2>
-      <h3>Free</h3>
-      <p>ClawdBot is open source (MIT) and self-hosted for free. You may pay for hardware and API tokens when using cloud models.</p>
-      <h3>Safe</h3>
-      <p>Your data stays on your machine. See <a href="https://docs.clawd.bot/security" title="ClawdBot Security">Security</a> in our docs.</p>
-      <h2>ClawdBot install and docs</h2>
-      <h3>Quick install</h3>
-      <p>One-line install: <code>npm install -g openclaw@latest</code>.</p>
-      <h3>Documentation</h3>
-      <p>Full documentation: <a href="https://docs.clawd.bot" title="ClawdBot Documentation">docs.clawd.bot</a> — Getting started, Wizard, Setup, Install &amp; update.</p>
+      <h1>ClawdBot (OpenClaw): Local Native AI Agent</h1>
+      <p>ClawdBot, also known as OpenClaw, is an open-source personal AI agent with Voice Mode, Live Canvas, and ClawHub ecosystem. OpenClaw runs locally on macOS, Windows, and Linux. ClawdBot connects to WhatsApp, Telegram, and 12+ messaging platforms.</p>
+      
+      <h2>ClawdBot Core Capabilities</h2>
+      <h3>ClawdBot Voice Wake & Talk</h3>
+      <p>ClawdBot offers hands-free interaction powered by ElevenLabs with always-on speech recognition. OpenClaw Voice Mode works on macOS, iOS, and Android.</p>
+      
+      <h3>OpenClaw Live Canvas</h3>
+      <p>OpenClaw Live Canvas is a visual workspace with A2UI rendering for real-time UI, charts, and diagrams. ClawdBot renders interactive interfaces beyond simple text.</p>
+      
+      <h3>ClawdBot ClawHub Ecosystem</h3>
+      <p>ClawdBot ClawHub provides access to hundreds of skills in the registry. Extend OpenClaw capabilities with one command: openclaw skill install.</p>
+      
+      <h3>ClawdBot Multi-Platform Support</h3>
+      <p>OpenClaw connects to 12+ chat platforms: WhatsApp, Telegram, Discord, Slack, iMessage, Signal, Microsoft Teams, and more. ClawdBot works seamlessly across all your messaging apps.</p>
+      
+      <h2>ClawdBot Installation</h2>
+      <h3>Quick Install OpenClaw</h3>
+      <p>Install ClawdBot with Node.js 22+. One-line install: <code>npm install -g openclaw@latest</code></p>
+      
+      <h3>ClawdBot Setup Steps</h3>
+      <p>1. Install ClawdBot: <code>npm install -g openclaw@latest</code></p>
+      <p>2. Initialize OpenClaw: <code>openclaw onboard --install-daemon</code></p>
+      <p>3. Connect ClawdBot: <code>openclaw channels</code> and scan QR for WhatsApp, Telegram, Discord</p>
+      <p>4. Start using ClawdBot: Message your OpenClaw bot from any connected channel.</p>
+      
+      <h2>ClawdBot Privacy & Security</h2>
+      <p>ClawdBot and OpenClaw run entirely on your own device. Your data never leaves your machine with ClawdBot. 100% open source (MIT license).</p>
+      
+      <h2>OpenClaw Documentation</h2>
+      <p>Full ClawdBot documentation: <a href="https://docs.clawd.bot" title="ClawdBot OpenClaw Documentation">docs.clawd.bot</a></p>
     </section>
   </noscript>
   

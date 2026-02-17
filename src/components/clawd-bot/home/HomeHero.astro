@@ -1,7 +1,6 @@
 ---
 /**
- * 首页 Hero：ClawdBot 品牌 + 一句话 + CTA（文档、安装）
- * 使用项目 i18n：src/i18n/clawdbot-home-translations.ts + locales/clawdbot-home/*.json
+ * ClawdBot Hero - 简洁现代风格
  */
 interface Props { locale: string; }
 const { locale } = Astro.props;
@@ -11,97 +10,204 @@ const t = (key: string) => tClawdbotHome(locale as ClawdbotHomeLocale, key);
 const DOCS_URL = 'https://docs.clawd.bot';
 ---
 
-<section class="home-hero" id="hero">
-  <div class="home-hero-bg"></div>
+<section class="hero">
+  <div class="hero-bg"></div>
   <div class="clawd-container">
-    <div class="home-hero-content">
-      <div class="home-hero-badge">
-        <span aria-hidden="true">🦞</span>
-        <span>{t('home_hero_badge')}</span>
-      </div>
-      <h1 class="home-hero-title">{t('home_hero_title')}</h1>
-      <p class="home-hero-subtitle">{t('home_hero_subtitle')}</p>
-      <p class="home-hero-description">{t('home_hero_description')}</p>
-      <div class="home-hero-cta">
-        <a href={DOCS_URL} target="_blank" rel="noopener noreferrer" class="clawd-btn clawd-btn-primary">
-          {t('home_hero_ctaDocs')}
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+    <div class="hero-content">
+      <h1 class="hero-title">OpenClaw (ClawdBot)</h1>
+      <p class="hero-subtitle">ClawdBot: Your Personal AI Agent That Actually Does Things</p>
+      <p class="hero-description">
+        OpenClaw (formerly ClawdBot) is an open-source AI assistant that runs locally on your machine. ClawdBot connects to 12+ messaging platforms including WhatsApp, Telegram, and Discord.
+      </p>
+      <p class="hero-tagline">
+        ClawdBot Voice Mode • OpenClaw Live Canvas • ClawHub Ecosystem
+      </p>
+      <div class="hero-cta">
+        <a href={DOCS_URL} target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          View Documentation
         </a>
-        <a href="#install-setup" class="clawd-btn clawd-btn-secondary">{t('home_hero_ctaInstall')}</a>
+        <a href="#install" class="btn btn-secondary">Quick Install</a>
+      </div>
+    </div>
+    
+    <!-- 核心指标展示 -->
+    <div class="hero-stats">
+      <div class="stat-card">
+        <div class="stat-value">12+</div>
+        <div class="stat-label">Chat Platforms</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">100%</div>
+        <div class="stat-label">Open Source</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">MIT</div>
+        <div class="stat-label">License</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">Local</div>
+        <div class="stat-label">Privacy First</div>
       </div>
     </div>
   </div>
 </section>
 
 <style>
-  .home-hero {
+  .hero {
     position: relative;
-    min-height: 90vh;
+    min-height: 85vh;
     display: flex;
     align-items: center;
-    padding: 6rem 0 4rem;
+    padding: 5rem 0 3rem;
     overflow: hidden;
   }
-  .home-hero-bg {
+  
+  .hero-bg {
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse at top center, rgba(255, 77, 77, 0.12) 0%, transparent 50%),
-                radial-gradient(ellipse at bottom right, rgba(0, 229, 204, 0.08) 0%, transparent 50%);
+    background: 
+      radial-gradient(ellipse at top center, rgba(255, 77, 77, 0.15) 0%, transparent 50%),
+      radial-gradient(ellipse at bottom right, rgba(0, 229, 204, 0.1) 0%, transparent 50%);
     pointer-events: none;
   }
-  .home-hero-content {
+  
+  .hero-content {
     position: relative;
     text-align: center;
-    max-width: 720px;
-    margin: 0 auto;
+    max-width: 800px;
+    margin: 0 auto 3rem;
   }
-  .home-hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    background: var(--bg-elevated);
-    border: 1px solid var(--border-accent);
-    border-radius: var(--radius-full);
-    color: var(--coral-bright);
-    font-size: 0.875rem;
-    font-weight: 500;
-    margin-bottom: 1.5rem;
-  }
-  .home-hero-title {
+  
+  .hero-title {
     font-family: var(--font-display);
-    font-size: clamp(3rem, 10vw, 5rem);
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
     font-weight: 700;
     line-height: 1.1;
     color: var(--text-primary);
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
     letter-spacing: -0.02em;
   }
-  .home-hero-subtitle {
-    font-family: var(--font-display);
-    font-size: clamp(1rem, 3vw, 1.25rem);
+  
+  .hero-subtitle {
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
     font-weight: 500;
     color: var(--coral-bright);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
   }
-  .home-hero-description {
-    font-size: 1.1rem;
+  
+  .hero-description {
+    font-size: 1rem;
     color: var(--text-secondary);
-    line-height: 1.7;
-    margin-bottom: 2rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
   }
-  .home-hero-cta {
+  
+  .hero-tagline {
+    font-size: 0.95rem;
+    color: var(--cyan-bright);
+    margin-bottom: 2rem;
+    font-weight: 500;
+  }
+  
+  .hero-cta {
     display: flex;
-    flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
+    flex-wrap: wrap;
   }
-  .home-hero-cta .clawd-btn { min-width: 160px; }
+  
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.875rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    min-width: 160px;
+  }
+  
+  .btn-primary {
+    background: linear-gradient(135deg, var(--coral-bright), var(--coral-mid));
+    color: white;
+    box-shadow: 0 0 20px rgba(255, 77, 77, 0.3);
+  }
+  
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(255, 77, 77, 0.5);
+  }
+  
+  .btn-secondary {
+    background: var(--bg-elevated);
+    color: var(--text-primary);
+    border: 1px solid var(--border-subtle);
+  }
+  
+  .btn-secondary:hover {
+    border-color: var(--coral-bright);
+    background: rgba(255, 77, 77, 0.1);
+  }
+  
+  .hero-stats {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .stat-card {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: 0.75rem;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .stat-card:hover {
+    border-color: var(--coral-bright);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(255, 77, 77, 0.2);
+  }
+  
+  .stat-value {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--coral-bright);
+    margin-bottom: 0.5rem;
+  }
+  
+  .stat-label {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+  
   @media (max-width: 640px) {
-    .home-hero { padding: 5rem 0 3rem; }
-    .home-hero-cta { flex-direction: column; align-items: center; }
-    .home-hero-cta .clawd-btn { width: 100%; max-width: 280px; }
+    .hero {
+      padding: 4rem 0 2rem;
+    }
+    
+    .hero-stats {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    
+    .hero-cta {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .btn {
+      width: 100%;
+      max-width: 280px;
+    }
   }
 </style>

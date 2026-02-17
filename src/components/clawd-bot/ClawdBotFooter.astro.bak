@@ -33,9 +33,14 @@ const content = {
       community: {
         title: 'Community',
         items: [
-          { label: 'GitHub', href: 'https://github.com/openclaw' },
-          { label: 'Discord', href: 'https://discord.gg/clawdbot' },
+          { label: 'GitHub', href: 'https://github.com/clawdbot/clawdbot' },
+          { label: 'Discord', href: 'https://discord.gg/u4WYaNs5bC' },
+          { label: 'Twitter', href: 'https://twitter.com/clawdbot' },
+          { label: 'Reddit', href: 'https://reddit.com/r/clawdbot' },
+          { label: 'GLM 5 API', href: 'https://glm5api.com' },
+          { label: 'GLM 5', href: 'https://glm-5.org' },
           { label: 'Clawdbot', href: 'https://clawdbot.free' },
+          { label: 'Seedance 2', href: 'https://seedance2.us' }
         ]
       }
     },
@@ -70,8 +75,12 @@ const content = {
       community: {
         title: '社区',
         items: [
-          { label: 'GitHub', href: 'https://github.com/openclaw' },
-          { label: 'Discord', href: 'https://discord.gg/clawdbot' },
+          { label: 'GitHub', href: 'https://github.com/clawdbot/clawdbot' },
+          { label: 'Discord', href: 'https://discord.gg/u4WYaNs5bC' },
+          { label: 'Twitter', href: 'https://twitter.com/clawdbot' },
+          { label: 'Reddit', href: 'https://reddit.com/r/clawdbot' },
+          { label: 'GLM 5 API', href: 'https://glm5api.com' },
+          { label: 'GLM 5', href: 'https://glm-5.org' },
           { label: 'Clawdbot', href: 'https://clawdbot.free' }
         ]
       }
@@ -107,8 +116,12 @@ const content = {
       community: {
         title: 'コミュニティ',
         items: [
-          { label: 'GitHub', href: 'https://github.com/openclaw' },
-          { label: 'Discord', href: 'https://discord.gg/clawdbot' },
+          { label: 'GitHub', href: 'https://github.com/clawdbot/clawdbot' },
+          { label: 'Discord', href: 'https://discord.gg/u4WYaNs5bC' },
+          { label: 'Twitter', href: 'https://twitter.com/clawdbot' },
+          { label: 'Reddit', href: 'https://reddit.com/r/clawdbot' },
+          { label: 'GLM 5 API', href: 'https://glm5api.com' },
+          { label: 'GLM 5', href: 'https://glm-5.org' },
           { label: 'Clawdbot', href: 'https://clawdbot.free' }
         ]
       }
@@ -144,8 +157,12 @@ const content = {
       community: {
         title: '커뮤니티',
         items: [
-          { label: 'GitHub', href: 'https://github.com/openclaw' },
-          { label: 'Discord', href: 'https://discord.gg/clawdbot' },
+          { label: 'GitHub', href: 'https://github.com/clawdbot/clawdbot' },
+          { label: 'Discord', href: 'https://discord.gg/u4WYaNs5bC' },
+          { label: 'Twitter', href: 'https://twitter.com/clawdbot' },
+          { label: 'Reddit', href: 'https://reddit.com/r/clawdbot' },
+          { label: 'GLM 5 API', href: 'https://glm5api.com' },
+          { label: 'GLM 5', href: 'https://glm-5.org' },
           { label: 'Clawdbot', href: 'https://clawdbot.free' }
         ]
       }
@@ -181,8 +198,12 @@ const content = {
       community: {
         title: 'Comunidad',
         items: [
-          { label: 'GitHub', href: 'https://github.com/openclaw' },
-          { label: 'Discord', href: 'https://discord.gg/clawdbot' },
+          { label: 'GitHub', href: 'https://github.com/clawdbot/clawdbot' },
+          { label: 'Discord', href: 'https://discord.gg/u4WYaNs5bC' },
+          { label: 'Twitter', href: 'https://twitter.com/clawdbot' },
+          { label: 'Reddit', href: 'https://reddit.com/r/clawdbot' },
+          { label: 'GLM 5 API', href: 'https://glm5api.com' },
+          { label: 'GLM 5', href: 'https://glm-5.org' },
           { label: 'Clawdbot', href: 'https://clawdbot.free' }
         ]
       }
@@ -218,9 +239,14 @@ const content = {
       community: {
         title: 'Community',
         items: [
-          { label: 'GitHub', href: 'https://github.com/openclaw' },
-          { label: 'Discord', href: 'https://discord.gg/clawdbot' },
+          { label: 'GitHub', href: 'https://github.com/clawdbot/clawdbot' },
+          { label: 'Discord', href: 'https://discord.gg/u4WYaNs5bC' },
+          { label: 'Twitter', href: 'https://twitter.com/clawdbot' },
+          { label: 'Reddit', href: 'https://reddit.com/r/clawdbot' },
+          { label: 'GLM 5 API', href: 'https://glm5api.com' },
+          { label: 'GLM 5', href: 'https://glm-5.org' },
           { label: 'Clawdbot', href: 'https://clawdbot.free' },
+          { label: 'Seedance 2', href: 'https://seedance2.us' }
         ]
       }
     },
@@ -255,8 +281,12 @@ const content = {
       community: {
         title: 'Communauté',
         items: [
-          { label: 'GitHub', href: 'https://github.com/openclaw' },
-          { label: 'Discord', href: 'https://discord.gg/clawdbot' },
+          { label: 'GitHub', href: 'https://github.com/clawdbot/clawdbot' },
+          { label: 'Discord', href: 'https://discord.gg/u4WYaNs5bC' },
+          { label: 'Twitter', href: 'https://twitter.com/clawdbot' },
+          { label: 'Reddit', href: 'https://reddit.com/r/clawdbot' },
+          { label: 'GLM 5 API', href: 'https://glm5api.com' },
+          { label: 'GLM 5', href: 'https://glm-5.org' },
           { label: 'Clawdbot', href: 'https://clawdbot.free' }
         ]
       }
@@ -292,8 +322,12 @@ const content = {
       community: {
         title: 'Comunidade',
         items: [
-          { label: 'GitHub', href: 'https://github.com/openclaw' },
-          { label: 'Discord', href: 'https://discord.gg/clawdbot' },
+          { label: 'GitHub', href: 'https://github.com/clawdbot/clawdbot' },
+          { label: 'Discord', href: 'https://discord.gg/u4WYaNs5bC' },
+          { label: 'Twitter', href: 'https://twitter.com/clawdbot' },
+          { label: 'Reddit', href: 'https://reddit.com/r/clawdbot' },
+          { label: 'GLM 5 API', href: 'https://glm5api.com' },
+          { label: 'GLM 5', href: 'https://glm-5.org' },
           { label: 'Clawdbot', href: 'https://clawdbot.free' }
         ]
       }
@@ -329,8 +363,12 @@ const content = {
       community: {
         title: 'Сообщество',
         items: [
-          { label: 'GitHub', href: 'https://github.com/openclaw' },
-          { label: 'Discord', href: 'https://discord.gg/clawdbot' },
+          { label: 'GitHub', href: 'https://github.com/clawdbot/clawdbot' },
+          { label: 'Discord', href: 'https://discord.gg/u4WYaNs5bC' },
+          { label: 'Twitter', href: 'https://twitter.com/clawdbot' },
+          { label: 'Reddit', href: 'https://reddit.com/r/clawdbot' },
+          { label: 'GLM 5 API', href: 'https://glm5api.com' },
+          { label: 'GLM 5', href: 'https://glm-5.org' },
           { label: 'Clawdbot', href: 'https://clawdbot.free' }
         ]
       }
@@ -366,8 +404,12 @@ const content = {
       community: {
         title: '社區',
         items: [
-          { label: 'GitHub', href: 'https://github.com/openclaw' },
-          { label: 'Discord', href: 'https://discord.gg/clawdbot' },
+          { label: 'GitHub', href: 'https://github.com/clawdbot/clawdbot' },
+          { label: 'Discord', href: 'https://discord.gg/u4WYaNs5bC' },
+          { label: 'Twitter', href: 'https://twitter.com/clawdbot' },
+          { label: 'Reddit', href: 'https://reddit.com/r/clawdbot' },
+          { label: 'GLM 5 API', href: 'https://glm5api.com' },
+          { label: 'GLM 5', href: 'https://glm-5.org' },
           { label: 'Clawdbot', href: 'https://clawdbot.free' }
         ]
       }
@@ -403,8 +445,12 @@ const content = {
       community: {
         title: 'समुदाय',
         items: [
-          { label: 'GitHub', href: 'https://github.com/openclaw' },
-          { label: 'Discord', href: 'https://discord.gg/clawdbot' },
+          { label: 'GitHub', href: 'https://github.com/clawdbot/clawdbot' },
+          { label: 'Discord', href: 'https://discord.gg/u4WYaNs5bC' },
+          { label: 'Twitter', href: 'https://twitter.com/clawdbot' },
+          { label: 'Reddit', href: 'https://reddit.com/r/clawdbot' },
+          { label: 'GLM 5 API', href: 'https://glm5api.com' },
+          { label: 'GLM 5', href: 'https://glm-5.org' },
           { label: 'Clawdbot', href: 'https://clawdbot.free' }
         ]
       }

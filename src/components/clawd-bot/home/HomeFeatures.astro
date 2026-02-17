@@ -1,0 +1,216 @@
+---
+/**
+ * ClawdBot 核心特性展示 - 类似 Gemini3 的数据卡片风格
+ */
+---
+
+<section class="features" id="features">
+  <div class="clawd-container">
+    <h2 class="section-title">ClawdBot (OpenClaw) Core Capabilities</h2>
+    <p class="section-subtitle">Revolutionary features that make ClawdBot and OpenClaw the most powerful personal AI agent for automation and productivity</p>
+    
+    <div class="features-grid">
+      <!-- Voice Mode -->
+      <div class="feature-card highlight">
+        <div class="feature-icon">🎙️</div>
+        <h3 class="feature-title">ClawdBot Voice Wake & Talk</h3>
+        <p class="feature-desc">ClawdBot hands-free interaction powered by ElevenLabs</p>
+        <div class="feature-stat">
+          <span class="stat-number">Always-On</span>
+          <span class="stat-text">Speech Recognition</span>
+        </div>
+      </div>
+      
+      <!-- Live Canvas -->
+      <div class="feature-card highlight">
+        <div class="feature-icon">🎨</div>
+        <h3 class="feature-title">OpenClaw Live Canvas</h3>
+        <p class="feature-desc">OpenClaw visual workspace with A2UI rendering</p>
+        <div class="feature-stat">
+          <span class="stat-number">Real-Time</span>
+          <span class="stat-text">UI & Charts</span>
+        </div>
+      </div>
+      
+      <!-- ClawHub -->
+      <div class="feature-card highlight">
+        <div class="feature-icon">📦</div>
+        <h3 class="feature-title">ClawdBot ClawHub Ecosystem</h3>
+        <p class="feature-desc">ClawdBot ClawHub with hundreds of skills in the registry</p>
+        <div class="feature-stat">
+          <span class="stat-number">100+</span>
+          <span class="stat-text">Skills Available</span>
+        </div>
+      </div>
+      
+      <!-- Multi-Platform -->
+      <div class="feature-card">
+        <div class="feature-icon">💬</div>
+        <h3 class="feature-title">ClawdBot 12+ Chat Platforms</h3>
+        <p class="feature-desc">OpenClaw supports WhatsApp • Telegram • Discord • Slack • iMessage • Signal • Teams</p>
+        <div class="feature-stat">
+          <span class="stat-number">One Bot</span>
+          <span class="stat-text">All Channels</span>
+        </div>
+      </div>
+      
+      <!-- Browser Automation -->
+      <div class="feature-card">
+        <div class="feature-icon">🌐</div>
+        <h3 class="feature-title">OpenClaw Browser Automation</h3>
+        <p class="feature-desc">ClawdBot can navigate, click, fill forms automatically</p>
+        <div class="feature-stat">
+          <span class="stat-number">38K+</span>
+          <span class="stat-text">Lines of Code</span>
+        </div>
+      </div>
+      
+      <!-- Task Execution -->
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3 class="feature-title">ClawdBot Real Task Execution</h3>
+        <p class="feature-desc">OpenClaw handles Email • Calendar • Flight check-in • Smart home</p>
+        <div class="feature-stat">
+          <span class="stat-number">24/7</span>
+          <span class="stat-text">Autonomous Agent</span>
+        </div>
+      </div>
+      
+      <!-- Privacy -->
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h3 class="feature-title">ClawdBot Privacy First</h3>
+        <p class="feature-desc">OpenClaw runs entirely on your own device</p>
+        <div class="feature-stat">
+          <span class="stat-number">100%</span>
+          <span class="stat-text">Local Data</span>
+        </div>
+      </div>
+      
+      <!-- Cross-Platform -->
+      <div class="feature-card">
+        <div class="feature-icon">💻</div>
+        <h3 class="feature-title">OpenClaw Cross-Platform</h3>
+        <p class="feature-desc">ClawdBot works on macOS • Windows • Linux • Raspberry Pi</p>
+        <div class="feature-stat">
+          <span class="stat-number">All OS</span>
+          <span class="stat-text">Supported</span>
+        </div>
+      </div>
+      
+      <!-- Memory -->
+      <div class="feature-card">
+        <div class="feature-icon">🧠</div>
+        <h3 class="feature-title">ClawdBot Persistent Memory</h3>
+        <p class="feature-desc">OpenClaw learns your preferences over time</p>
+        <div class="feature-stat">
+          <span class="stat-number">Context</span>
+          <span class="stat-text">Aware</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .features {
+    padding: 4rem 0;
+    background: var(--bg-surface);
+  }
+  
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .feature-card {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: 0.75rem;
+    padding: 2rem 1.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .feature-card:hover {
+    border-color: var(--coral-bright);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(255, 77, 77, 0.2);
+  }
+  
+  .feature-card.highlight {
+    border-color: var(--coral-bright);
+    background: linear-gradient(135deg, rgba(255, 77, 77, 0.05), rgba(0, 229, 204, 0.05));
+  }
+  
+  .feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .feature-title {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+  }
+  
+  .feature-desc {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+  }
+  
+  .feature-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-subtle);
+  }
+  
+  .stat-number {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--coral-bright);
+  }
+  
+  .stat-text {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+  
+  @media (max-width: 768px) {
+    .features {
+      padding: 3rem 0;
+    }
+    
+    .features-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+</style>

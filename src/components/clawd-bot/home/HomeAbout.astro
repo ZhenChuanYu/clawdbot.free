@@ -1,0 +1,97 @@
+---
+/**
+ * About Section - 简洁说明
+ */
+---
+
+<section class="about" id="about">
+  <div class="clawd-container">
+    <div class="about-content">
+      <h2 class="about-title">About ClawdBot (OpenClaw) Platform</h2>
+      <p class="about-text">
+        ClawdBot (also known as OpenClaw) is an open-source personal AI agent that runs locally on your devices. 
+        OpenClaw is built with revolutionary upgrades in voice interaction, visual workspace, and extensible skill ecosystem. 
+        ClawdBot provides 24/7 AI assistance for email, calendar, browser automation, and smart home control.
+      </p>
+      <p class="about-notice">
+        <strong>Important Notice:</strong> ClawdBot and OpenClaw (formerly Moltbot) are independent 
+        open-source projects. We are not affiliated with Anthropic. This ClawdBot platform provides community 
+        resources and documentation to help you deploy your own OpenClaw AI assistant.
+      </p>
+      <div class="about-cta">
+        <a href="https://docs.clawd.bot" target="_blank" rel="noopener noreferrer" class="cta-btn">
+          Access Official Documentation
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    padding: 4rem 0;
+    background: var(--bg-surface);
+  }
+  
+  .about-content {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .about-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-text {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+  
+  .about-notice {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    padding: 1.5rem;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .about-notice strong {
+    color: var(--coral-bright);
+  }
+  
+  .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, var(--coral-bright), var(--coral-mid));
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 20px rgba(255, 77, 77, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(255, 77, 77, 0.5);
+  }
+  
+  @media (max-width: 768px) {
+    .about {
+      padding: 3rem 0;
+    }
+  }
+</style>
