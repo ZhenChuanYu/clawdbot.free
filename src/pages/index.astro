@@ -11,7 +11,7 @@ import HomeInstall from '../components/clawd-bot/home/HomeInstall.astro';
 import HomeAbout from '../components/clawd-bot/home/HomeAbout.astro';
 
 const locale = 'en';
-const title = 'OpenClaw (ClawdBot) | Local Native AI Agent';
+const title = 'OpenClaw(ClawdBot) - AI that actually does things for you';
 const description = 'Open-source personal AI agent with Voice Mode, Live Canvas & ClawHub. Runs locally on macOS, Windows, and Linux. Connects to WhatsApp, Telegram, and 12+ platforms.';
 ---
 
@@ -24,9 +24,9 @@ const description = 'Open-source personal AI agent with Voice Mode, Live Canvas 
   <ClawdBotHeader locale={locale} />
   <main>
     <HomeHero locale={locale} />
-    <HomeFeatures />
-    <HomeInstall />
-    <HomeAbout />
+    <HomeFeatures locale={locale} />
+    <HomeInstall locale={locale} />
+    <HomeAbout locale={locale} />
   </main>
   <ClawdBotFooter locale={locale} />
 </ClawdBotLayout>

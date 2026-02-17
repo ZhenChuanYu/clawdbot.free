@@ -6,11 +6,14 @@ import ClawdBotLayout from '../../layouts/ClawdBotLayout.astro';
 import ClawdBotHeader from '../../components/clawd-bot/ClawdBotHeader.astro';
 import ClawdBotFooter from '../../components/clawd-bot/ClawdBotFooter.astro';
 import HomeHero from '../../components/clawd-bot/home/HomeHero.astro';
-import HomeArticle from '../../components/clawd-bot/home/HomeArticle.astro';
+import HomeFeatures from '../../components/clawd-bot/home/HomeFeatures.astro';
+import HomeInstall from '../../components/clawd-bot/home/HomeInstall.astro';
+import HomeAbout from '../../components/clawd-bot/home/HomeAbout.astro';
+// import HomeArticle from '../../components/clawd-bot/home/HomeArticle.astro';
 
 const locale = 'hi';
-const title = 'ClawdBot - मुफ्त डाउनलोड और इंस्टॉल';
-const description = 'ClawdBot is an open-source personal AI assistant that runs on your machine. Control it via WhatsApp, Telegram, Discord and more. Automate emails, calendar, flight check-in, smart home and everything else.';
+const title = 'OpenClaw(ClawdBot) - वह AI जो आपके लिए सीधे काम करता है';
+const description = 'OpenClaw (पूर्व में ClawdBot) वॉयस मोड, लाइव कैनवास और ClawHub इकोसिस्टम के साथ एक ओपन-सोर्स व्यक्तिगत AI एजेंट है। macOS, Windows और Linux पर स्थानीय रूप से चलता है। WhatsApp, Telegram और 12+ प्लेटफॉर्म से कनेक्ट होता है।';
 ---
 
 <ClawdBotLayout 
@@ -22,7 +25,9 @@ const description = 'ClawdBot is an open-source personal AI assistant that runs 
   <ClawdBotHeader locale={locale} />
   <main>
     <HomeHero locale={locale} />
-    <HomeArticle locale={locale} />
+    <HomeFeatures locale={locale} />
+    <HomeInstall locale={locale} />
+    <HomeAbout locale={locale} />
   </main>
   <ClawdBotFooter locale={locale} />
 </ClawdBotLayout>

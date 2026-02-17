@@ -1,70 +1,71 @@
 ---
 /**
- * 安装指南 - 简洁版
+ * 安装指南 - 多语言
  */
+interface Props { locale: string; }
+const { locale } = Astro.props;
+import { tClawdbotHome, type ClawdbotHomeLocale } from '../../../i18n/clawdbot-home-translations';
+const t = (key: string) => tClawdbotHome(locale as ClawdbotHomeLocale, key);
 ---
 
 <section class="install" id="install">
   <div class="clawd-container">
-    <h2 class="section-title">Get Started with ClawdBot (OpenClaw)</h2>
-    <p class="section-subtitle">Install ClawdBot in under 5 minutes and start using OpenClaw AI assistant</p>
+    <h2 class="section-title">{t('home_install_section_title')}</h2>
+    <p class="section-subtitle">{t('home_install_section_subtitle')}</p>
     
     <div class="install-content">
       <div class="install-steps">
         <div class="step">
           <div class="step-number">1</div>
           <div class="step-content">
-            <h3>Install ClawdBot</h3>
-            <p>Install OpenClaw with Node.js 22+</p>
+            <h3>{t('home_install_step1_title')}</h3>
+            <p>{t('home_install_step1_desc')}</p>
             <div class="code-block">
               <code>npm install -g openclaw@latest</code>
               <button class="copy-btn" aria-label="Copy command">📋</button>
             </div>
           </div>
         </div>
-        
         <div class="step">
           <div class="step-number">2</div>
           <div class="step-content">
-            <h3>Initialize OpenClaw</h3>
-            <p>Set up ClawdBot config and daemon</p>
+            <h3>{t('home_install_step2_title')}</h3>
+            <p>{t('home_install_step2_desc')}</p>
             <div class="code-block">
               <code>openclaw onboard --install-daemon</code>
               <button class="copy-btn" aria-label="Copy command">📋</button>
             </div>
           </div>
         </div>
-        
         <div class="step">
           <div class="step-number">3</div>
           <div class="step-content">
-            <h3>Connect ClawdBot</h3>
-            <p>Connect OpenClaw to WhatsApp, Telegram, Discord</p>
+            <h3>{t('home_install_step3_title')}</h3>
+            <p>{t('home_install_step3_desc')}</p>
             <div class="code-block">
               <code>openclaw channels</code>
               <button class="copy-btn" aria-label="Copy command">📋</button>
             </div>
           </div>
         </div>
-        
         <div class="step">
           <div class="step-number">4</div>
           <div class="step-content">
-            <h3>Start Using ClawdBot</h3>
-            <p>Message your OpenClaw bot from any connected channel</p>
+            <h3>{t('home_install_step4_title')}</h3>
+            <p>{t('home_install_step4_desc')}</p>
           </div>
         </div>
       </div>
       
       <div class="install-links">
         <a href="https://docs.clawd.bot/start/getting-started" target="_blank" rel="noopener noreferrer" class="doc-link">
-          📖 Getting Started Guide
+          📖 {t('home_install_linkGettingStarted')}
         </a>
         <a href="https://docs.clawd.bot/start/wizard" target="_blank" rel="noopener noreferrer" class="doc-link">
-          🧙 Setup Wizard
+          🧙 {t('home_install_linkWizard')}
         </a>
         <a href="https://docs.clawd.bot/install" target="_blank" rel="noopener noreferrer" class="doc-link">
-          💾 Install & Update
+          💾 {t('home_install_linkInstall')}
         </a>
       </div>
     </div>

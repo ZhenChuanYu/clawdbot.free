@@ -1,26 +1,26 @@
 ---
 /**
- * About Section - 简洁说明
+ * About Section - 多语言
  */
+interface Props { locale: string; }
+const { locale } = Astro.props;
+import { tClawdbotHome, type ClawdbotHomeLocale } from '../../../i18n/clawdbot-home-translations';
+const t = (key: string) => tClawdbotHome(locale as ClawdbotHomeLocale, key);
 ---
 
 <section class="about" id="about">
   <div class="clawd-container">
     <div class="about-content">
-      <h2 class="about-title">About ClawdBot (OpenClaw) Platform</h2>
+      <h2 class="about-title">{t('home_about_title')}</h2>
       <p class="about-text">
-        ClawdBot (also known as OpenClaw) is an open-source personal AI agent that runs locally on your devices. 
-        OpenClaw is built with revolutionary upgrades in voice interaction, visual workspace, and extensible skill ecosystem. 
-        ClawdBot provides 24/7 AI assistance for email, calendar, browser automation, and smart home control.
+        {t('home_about_text')}
       </p>
       <p class="about-notice">
-        <strong>Important Notice:</strong> ClawdBot and OpenClaw (formerly Moltbot) are independent 
-        open-source projects. We are not affiliated with Anthropic. This ClawdBot platform provides community 
-        resources and documentation to help you deploy your own OpenClaw AI assistant.
+        <strong>{t('home_about_notice_label')}</strong> {t('home_about_notice_body')}
       </p>
       <div class="about-cta">
         <a href="https://docs.clawd.bot" target="_blank" rel="noopener noreferrer" class="cta-btn">
-          Access Official Documentation
+          {t('home_about_cta')}
         </a>
       </div>
     </div>

@@ -6,11 +6,14 @@ import ClawdBotLayout from '../../layouts/ClawdBotLayout.astro';
 import ClawdBotHeader from '../../components/clawd-bot/ClawdBotHeader.astro';
 import ClawdBotFooter from '../../components/clawd-bot/ClawdBotFooter.astro';
 import HomeHero from '../../components/clawd-bot/home/HomeHero.astro';
-import HomeArticle from '../../components/clawd-bot/home/HomeArticle.astro';
+import HomeFeatures from '../../components/clawd-bot/home/HomeFeatures.astro';
+import HomeInstall from '../../components/clawd-bot/home/HomeInstall.astro';
+import HomeAbout from '../../components/clawd-bot/home/HomeAbout.astro';
+// import HomeArticle from '../../components/clawd-bot/home/HomeArticle.astro';
 
 const locale = 'ja';
-const title = 'ClawdBot - 無料ダウンロード・インストール';
-const description = 'ClawdBotはあなたのマシン上で動作するオープンソースのパーソナルAIアシスタントです。WhatsApp、Telegram、Discordなどで制御。メール、カレンダー、フライトチェックイン、スマートホームなどすべてを自動化。';
+const title = 'OpenClaw(ClawdBot) - あなたの代わりに実際に動くAI';
+const description = 'OpenClaw（旧ClawdBot）はオープンソースのパーソナルAIエージェント。音声モード、ライブキャンバス、ClawHubエコシステムを搭載。macOS、Windows、Linuxでローカル実行。WhatsApp、Telegramなど12以上のプラットフォームに接続。';
 ---
 
 <ClawdBotLayout 
@@ -22,7 +25,9 @@ const description = 'ClawdBotはあなたのマシン上で動作するオープ
   <ClawdBotHeader locale={locale} />
   <main>
     <HomeHero locale={locale} />
-    <HomeArticle locale={locale} />
+    <HomeFeatures locale={locale} />
+    <HomeInstall locale={locale} />
+    <HomeAbout locale={locale} />
   </main>
   <ClawdBotFooter locale={locale} />
 </ClawdBotLayout>

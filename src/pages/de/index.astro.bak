@@ -1,0 +1,28 @@
+---
+/**
+ * ClawdBot 首页 (Deutsch)
+ */
+import ClawdBotLayout from '../../layouts/ClawdBotLayout.astro';
+import ClawdBotHeader from '../../components/clawd-bot/ClawdBotHeader.astro';
+import ClawdBotFooter from '../../components/clawd-bot/ClawdBotFooter.astro';
+import HomeHero from '../../components/clawd-bot/home/HomeHero.astro';
+import HomeArticle from '../../components/clawd-bot/home/HomeArticle.astro';
+
+const locale = 'de';
+const title = 'ClawdBot - Kostenlos herunterladen & installieren';
+const description = 'ClawdBot ist ein Open-Source persönlicher KI-Assistent, der auf Ihrem Rechner läuft. Steuern Sie ihn über WhatsApp, Telegram, Discord und mehr. Automatisieren Sie E-Mails, Kalender, Flug-Check-in, Smart Home und alles andere.';
+---
+
+<ClawdBotLayout 
+  title={title} 
+  description={description}
+  locale={locale}
+  path=""
+>
+  <ClawdBotHeader locale={locale} />
+  <main>
+    <HomeHero locale={locale} />
+    <HomeArticle locale={locale} />
+  </main>
+  <ClawdBotFooter locale={locale} />
+</ClawdBotLayout>

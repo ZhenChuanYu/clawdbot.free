@@ -1,0 +1,28 @@
+---
+/**
+ * ClawdBot 首页 (हिन्दी)
+ */
+import ClawdBotLayout from '../../layouts/ClawdBotLayout.astro';
+import ClawdBotHeader from '../../components/clawd-bot/ClawdBotHeader.astro';
+import ClawdBotFooter from '../../components/clawd-bot/ClawdBotFooter.astro';
+import HomeHero from '../../components/clawd-bot/home/HomeHero.astro';
+import HomeArticle from '../../components/clawd-bot/home/HomeArticle.astro';
+
+const locale = 'hi';
+const title = 'ClawdBot - मुफ्त डाउनलोड और इंस्टॉल';
+const description = 'ClawdBot is an open-source personal AI assistant that runs on your machine. Control it via WhatsApp, Telegram, Discord and more. Automate emails, calendar, flight check-in, smart home and everything else.';
+---
+
+<ClawdBotLayout 
+  title={title} 
+  description={description}
+  locale={locale}
+  path=""
+>
+  <ClawdBotHeader locale={locale} />
+  <main>
+    <HomeHero locale={locale} />
+    <HomeArticle locale={locale} />
+  </main>
+  <ClawdBotFooter locale={locale} />
+</ClawdBotLayout>

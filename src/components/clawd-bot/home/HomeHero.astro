@@ -14,39 +14,38 @@ const DOCS_URL = 'https://docs.clawd.bot';
   <div class="hero-bg"></div>
   <div class="clawd-container">
     <div class="hero-content">
-      <h1 class="hero-title">OpenClaw (ClawdBot)</h1>
-      <p class="hero-subtitle">ClawdBot: Your Personal AI Agent That Actually Does Things</p>
+      <h1 class="hero-title">{t('home_hero_title')}</h1>
+      <p class="hero-subtitle">{t('home_hero_subtitle')}</p>
       <p class="hero-description">
-        OpenClaw (formerly ClawdBot) is an open-source AI assistant that runs locally on your machine. ClawdBot connects to 12+ messaging platforms including WhatsApp, Telegram, and Discord.
+        {t('home_hero_description')}
       </p>
       <p class="hero-tagline">
-        ClawdBot Voice Mode • OpenClaw Live Canvas • ClawHub Ecosystem
+        {t('home_hero_tagline')}
       </p>
       <div class="hero-cta">
         <a href={DOCS_URL} target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-          View Documentation
+          {t('home_hero_ctaDocs')}
         </a>
-        <a href="#install" class="btn btn-secondary">Quick Install</a>
+        <a href="#install" class="btn btn-secondary">{t('home_hero_ctaInstall')}</a>
       </div>
     </div>
     
-    <!-- 核心指标展示 -->
     <div class="hero-stats">
       <div class="stat-card">
         <div class="stat-value">12+</div>
-        <div class="stat-label">Chat Platforms</div>
+        <div class="stat-label">{t('home_hero_stat_platforms')}</div>
       </div>
       <div class="stat-card">
         <div class="stat-value">100%</div>
-        <div class="stat-label">Open Source</div>
+        <div class="stat-label">{t('home_hero_stat_opensource')}</div>
       </div>
       <div class="stat-card">
         <div class="stat-value">MIT</div>
-        <div class="stat-label">License</div>
+        <div class="stat-label">{t('home_hero_stat_license')}</div>
       </div>
       <div class="stat-card">
         <div class="stat-value">Local</div>
-        <div class="stat-label">Privacy First</div>
+        <div class="stat-label">{t('home_hero_stat_privacy')}</div>
       </div>
     </div>
   </div>

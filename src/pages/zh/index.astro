@@ -6,11 +6,13 @@ import ClawdBotLayout from '../../layouts/ClawdBotLayout.astro';
 import ClawdBotHeader from '../../components/clawd-bot/ClawdBotHeader.astro';
 import ClawdBotFooter from '../../components/clawd-bot/ClawdBotFooter.astro';
 import HomeHero from '../../components/clawd-bot/home/HomeHero.astro';
-import HomeArticle from '../../components/clawd-bot/home/HomeArticle.astro';
+import HomeFeatures from '../../components/clawd-bot/home/HomeFeatures.astro';
+import HomeInstall from '../../components/clawd-bot/home/HomeInstall.astro';
+import HomeAbout from '../../components/clawd-bot/home/HomeAbout.astro';
 
 const locale = 'zh';
-const title = 'ClawdBot - 免费下载安装';
-const description = '开源个人 AI 助手，运行在您的本地机器上。通过 WhatsApp、Telegram、Discord 控制，自动化邮件、日历、航班值机、智能家居等任务。';
+const title = 'OpenClaw(ClawdBot) - 能帮你直接做事的AI';
+const description = 'OpenClaw（原 ClawdBot）开源个人 AI 智能体，支持语音模式、实时画布和 ClawHub 生态。本地运行于 macOS、Windows 和 Linux，连接 WhatsApp、Telegram 等 12+ 平台。';
 ---
 
 <ClawdBotLayout 
@@ -22,7 +24,9 @@ const description = '开源个人 AI 助手，运行在您的本地机器上。�
   <ClawdBotHeader locale={locale} />
   <main>
     <HomeHero locale={locale} />
-    <HomeArticle locale={locale} />
+    <HomeFeatures locale={locale} />
+    <HomeInstall locale={locale} />
+    <HomeAbout locale={locale} />
   </main>
   <ClawdBotFooter locale={locale} />
 </ClawdBotLayout>

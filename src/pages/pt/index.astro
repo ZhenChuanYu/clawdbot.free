@@ -6,11 +6,14 @@ import ClawdBotLayout from '../../layouts/ClawdBotLayout.astro';
 import ClawdBotHeader from '../../components/clawd-bot/ClawdBotHeader.astro';
 import ClawdBotFooter from '../../components/clawd-bot/ClawdBotFooter.astro';
 import HomeHero from '../../components/clawd-bot/home/HomeHero.astro';
-import HomeArticle from '../../components/clawd-bot/home/HomeArticle.astro';
+import HomeFeatures from '../../components/clawd-bot/home/HomeFeatures.astro';
+import HomeInstall from '../../components/clawd-bot/home/HomeInstall.astro';
+import HomeAbout from '../../components/clawd-bot/home/HomeAbout.astro';
+// import HomeArticle from '../../components/clawd-bot/home/HomeArticle.astro';
 
 const locale = 'pt';
-const title = 'ClawdBot - Download e instalação grátis';
-const description = 'ClawdBot é um assistente de IA pessoal open source que roda na sua máquina. Controle via WhatsApp, Telegram, Discord e mais. Automatize emails, calendário, check-in de voos, casa inteligente e tudo mais.';
+const title = 'OpenClaw(ClawdBot) - IA que faz as coisas por você';
+const description = 'OpenClaw (anteriormente ClawdBot) é um agente de IA pessoal de código aberto com Modo de Voz, Canvas ao Vivo e ecossistema ClawHub. Executa localmente no macOS, Windows e Linux. Conecta-se ao WhatsApp, Telegram e mais de 12 plataformas.';
 ---
 
 <ClawdBotLayout 
@@ -22,7 +25,9 @@ const description = 'ClawdBot é um assistente de IA pessoal open source que rod
   <ClawdBotHeader locale={locale} />
   <main>
     <HomeHero locale={locale} />
-    <HomeArticle locale={locale} />
+    <HomeFeatures locale={locale} />
+    <HomeInstall locale={locale} />
+    <HomeAbout locale={locale} />
   </main>
   <ClawdBotFooter locale={locale} />
 </ClawdBotLayout>

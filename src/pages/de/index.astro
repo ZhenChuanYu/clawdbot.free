@@ -6,11 +6,14 @@ import ClawdBotLayout from '../../layouts/ClawdBotLayout.astro';
 import ClawdBotHeader from '../../components/clawd-bot/ClawdBotHeader.astro';
 import ClawdBotFooter from '../../components/clawd-bot/ClawdBotFooter.astro';
 import HomeHero from '../../components/clawd-bot/home/HomeHero.astro';
-import HomeArticle from '../../components/clawd-bot/home/HomeArticle.astro';
+import HomeFeatures from '../../components/clawd-bot/home/HomeFeatures.astro';
+import HomeInstall from '../../components/clawd-bot/home/HomeInstall.astro';
+import HomeAbout from '../../components/clawd-bot/home/HomeAbout.astro';
+// import HomeArticle from '../../components/clawd-bot/home/HomeArticle.astro';
 
 const locale = 'de';
-const title = 'ClawdBot - Kostenlos herunterladen & installieren';
-const description = 'ClawdBot ist ein Open-Source persönlicher KI-Assistent, der auf Ihrem Rechner läuft. Steuern Sie ihn über WhatsApp, Telegram, Discord und mehr. Automatisieren Sie E-Mails, Kalender, Flug-Check-in, Smart Home und alles andere.';
+const title = 'OpenClaw(ClawdBot) - KI, die für Sie wirklich Dinge erledigt';
+const description = 'OpenClaw (ehemals ClawdBot) ist ein Open-Source persönlicher KI-Agent mit Sprachmodus, Live Canvas und ClawHub-Ökosystem. Läuft lokal auf macOS, Windows und Linux. Verbindet sich mit WhatsApp, Telegram und über 12 Plattformen.';
 ---
 
 <ClawdBotLayout 
@@ -22,7 +25,9 @@ const description = 'ClawdBot ist ein Open-Source persönlicher KI-Assistent, de
   <ClawdBotHeader locale={locale} />
   <main>
     <HomeHero locale={locale} />
-    <HomeArticle locale={locale} />
+    <HomeFeatures locale={locale} />
+    <HomeInstall locale={locale} />
+    <HomeAbout locale={locale} />
   </main>
   <ClawdBotFooter locale={locale} />
 </ClawdBotLayout>
