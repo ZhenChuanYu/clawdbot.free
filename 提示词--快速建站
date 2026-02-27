@@ -1,46 +1,60 @@
-第一步：
+第1步：
 你需要做：访问https://clarity.microsoft.com/projects创建项目，获取clarity id
 ai需要做：修改clarity id为 xxxxx
 
-第二步：
+第2步：
 你需要做：描述网站功能，请到 "网站功能描述.txt"文件完善网站的功能描述
-AI需要做：阅读 网站功能描述.txt ，执行整站修改，删除当前首页内容，重构新首页，始终保持简约回复
+AI需要做：
+阅读 网站功能描述.txt 文件，了解网站的功能描述
+参考 如何做好一个官网最佳SEO实践参考.md 文件中的内容，规划官网页面
+联网搜索网站品牌的特点，并展示对应的使用场景
+如有需要可多次联网搜索需要的信息
+你需要重新制作一个首页，而非使用现在的首页，
+你只能参考现在首页的UI，包括字体 颜色 字号 UI风格等
+你还需要补充其他seo相关的东西，并确保网站首页符合最佳SEO实践
+请先规划接下来要做的事情
 
-第三步：
+第3步：
+AI需要做：整站搜索域名，把域名改为正确域名，把联系方式改为 support@{对应域名}
+
+第4步：
 你需要：pnpm dev 访问 localhost:4321 检查页面内容是否与代码对应
-你需要：检查title和description有没有seo优势，是否中性
+你需要：检查title和description有没有seo优势
 AI需要做：检查一遍，检查header和footer，检查多语言功能是否完善，检查两个协议内容是否修改等,更新联系方式 邮件地址改为support@{对应域名}
-AI需要做：检查Heder导航 需不需要补充或优化
+AI需要做：检查Heder导航 需不需要补充或优化 尤其首页按钮的URL结尾必须带/
 
-第四步：
+第5步：
 你需要做：联网确认是否需要补充更多内容
 你需要做：确认页面内容已完善
 AI需要做：检查页面的seo问题
 
-第五步：
+第6步：
 AI需要做：检查 robots.txt和sitemap.xml，注意：隐私政策和服务条款只需要保留英文版
-
-第五步：
-你需要做：访问github.com 创建新仓库，仓库名保持与域名一致
-AI需要做：git切断当前分支与远程分支的链接，与新的git仓库链接，git push到新仓库
-你需要做：访问cloudflare.com 创建page部署git仓库，构建命令是pnpm build，目录是/dist
-你需要做：为page添加域名 @和www
-
-第六步：
-你需要做：访问https://search.google.com/ 添加域名，注意：public/google38886640ffb5f5fa.html是通用的谷歌验证html，无需再次添加，直接验证域名即可
-
-第七步：
-你需要做：访问https://realfavicongenerator.net/ 制作favicon，并把素材解压放到public目录中，替换旧的重名文件
-
-第八步：
 AI需要做：阅读首页，了解我们的服务，然后更改隐私政策和服务条款页面
 AI需要做：全局检查 还有哪些地方的品牌名和域名没有改为正确的名字，尤其注意隐私政策页面和服务条款页面
 AI需要做：检查 indexnow/config.json - 域名和key位置，package.json - 项目名称和描述,public/_redirects - 域名重定向注释
 
-第九步：
-AI需要做：请阅读 提示词-indexnow-生成key的方法 文件中的内容，并制作key文件，修改indexnow/config.json文件中的key配置
+第7步：
+AI需要做：根据scripts/create_favicon.py脚本生成favicon，你需要修改提示词，并且仅修改logo中的字母，改为与网站域名首字母相关的字母，并把素材解压放到public目录中，替换旧的重名文件
+AI需要做：使用 scripts/generate_favicons.py 生成favicon各尺寸文件，并替换public目录中的旧文件，注意，ico格式文件必须包含多个尺寸
+
+第8步：
+你需要做：访问github.com 创建新仓库，仓库名保持与域名一致
+AI需要做：git切断当前分支与远程分支的链接，与新的git仓库链接，要注意，本地每个分支分别对应了不同的远程仓库，最后git push到新仓库
+你需要做：访问cloudflare.com 创建page部署git仓库，构建命令是pnpm build，目录是/dist
+你需要做：为page添加域名 @和www
+
+第9步：
+你需要做：访问https://search.google.com/ 添加域名，注意：public/google38886640ffb5f5fa.html是通用的谷歌验证html，无需再次添加，直接验证域名即可
 
 第10步：
+AI需要做：请阅读 提示词-indexnow-生成key的方法 文件中的内容，并制作key文件，修改indexnow/config.json文件中的key配置
+
+第11步：
 AI需要做：提交所有页面到indexnow，脚本在indexnow目录下，提交前先检查域名和页面地址是否与当前项目匹配，并保持使用 /结果到url
 你需要做：访问https://search.google.com/ 提交首页url以及多语言版的URL
+
+
+第12步：
+访问pagespeed.web.dev，分析网站首页的Lighthouse性能
 
