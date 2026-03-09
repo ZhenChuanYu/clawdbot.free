@@ -15,5 +15,11 @@
 /zh/*  /zh/index.html  200
 /zh-tw/*  /zh-tw/index.html  200
 
+# 特定页面路由（必须在 catch-all 之前）
+/qclaw  /qclaw/index.html  200
+/qclaw/  /qclaw/index.html  200
+/zh/qclaw  /zh/qclaw/index.html  200
+/zh/qclaw/  /zh/qclaw/index.html  200
+
 # 默认路由（英文）
 /*  /index.html  200

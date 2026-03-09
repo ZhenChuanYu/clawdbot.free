@@ -10,6 +10,8 @@ interface Props {
   keywords?: string;
   locale?: string;
   path?: string;
+  singleLang?: boolean; // 禁用多语言 hreflang（单语言页面使用）
+  alternates?: { hreflang: string; href: string }[]; // 自定义 hreflang 对
 }
 
 const { 
@@ -17,7 +19,9 @@ const {
   description, 
   keywords = 'ClawdBot, OpenClaw, ClawdBot AI, OpenClaw AI, ClawdBot assistant, OpenClaw assistant, ClawdBot personal AI, OpenClaw personal AI, ClawdBot WhatsApp, OpenClaw Telegram, ClawdBot automation, OpenClaw automation, ClawdBot open source, OpenClaw open source, ClawdBot download, OpenClaw install, ClawdBot features, OpenClaw features, ClawdBot Voice Mode, OpenClaw Live Canvas, ClawdBot ClawHub, OpenClaw setup, ClawdBot tutorial, OpenClaw guide',
   locale = 'en',
-  path = ''
+  path = '',
+  singleLang = false,
+  alternates = []
 } = Astro.props;
 
 const BASE_URL = 'https://clawdbot.free';
@@ -33,7 +37,7 @@ function getHreflangPath(pagePath: string, lang: string): string {
 // 生成 canonical URL - 考虑语言路径
 // 如果 path 为空，根据 locale 生成正确的首页 URL
 const canonicalUrl = path 
-  ? `${BASE_URL}/${path.replace(/^\//, '')}` 
+  ? `${BASE_URL}/${path.replace(/^\//, '').replace(/\/$/, '')}/` 
   : `${BASE_URL}${getHreflangPath('', locale)}`;
 ---
 
@@ -99,6 +103,7 @@ const canonicalUrl = path
   <meta name="twitter:image" content={`${BASE_URL}/og-image.png`}>
   
   <!-- Hreflang tags -->
+  {!singleLang && <>
   <link rel="alternate" hreflang="en" href={`${BASE_URL}${getHreflangPath(path, 'en')}`}>
   <link rel="alternate" hreflang="zh-CN" href={`${BASE_URL}${getHreflangPath(path, 'zh')}`}>
   <link rel="alternate" hreflang="zh-TW" href={`${BASE_URL}${getHreflangPath(path, 'zh-tw')}`}>
@@ -111,6 +116,10 @@ const canonicalUrl = path
   <link rel="alternate" hreflang="ru" href={`${BASE_URL}${getHreflangPath(path, 'ru')}`}>
   <link rel="alternate" hreflang="hi" href={`${BASE_URL}${getHreflangPath(path, 'hi')}`}>
   <link rel="alternate" hreflang="x-default" href={BASE_URL}>
+  </>}
+  {alternates.length > 0 && alternates.map(a => (
+    <link rel="alternate" hreflang={a.hreflang} href={a.href}>
+  ))}
   
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json" set:html={JSON.stringify({

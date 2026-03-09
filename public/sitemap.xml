@@ -87,4 +87,20 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- QClaw AI Page (English) -->
+  <url>
+    <loc>https://clawdbot.free/qclaw/</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- QClaw AI Page (Simplified Chinese) -->
+  <url>
+    <loc>https://clawdbot.free/zh/qclaw/</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

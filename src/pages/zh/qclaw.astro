@@ -1,0 +1,467 @@
+---
+/**
+ * Qclaw 介绍页面 - 简体中文版
+ * 关键词: Qclaw, Qclaw AI, 腾讯Qclaw, Qclaw OpenClaw
+ */
+import ClawdBotLayout from '../../layouts/ClawdBotLayout.astro';
+import ClawdBotHeader from '../../components/clawd-bot/ClawdBotHeader.astro';
+import ClawdBotFooter from '../../components/clawd-bot/ClawdBotFooter.astro';
+
+const locale = 'zh';
+const title = 'QClaw AI 是什么？腾讯 QClaw 一键部署 OpenClaw 智能体';
+const description = 'QClaw 是腾讯开发的 AI 智能体产品，基于开源框架 OpenClaw 封装，支持一键本地部署，通过微信和 QQ 用自然语言控制电脑。支持 Kimi、MiniMax 等国产大模型。';
+const keywords = 'QClaw, QClaw AI, Qclaw是什么, 腾讯QClaw, Qclaw微信, Qclaw QQ, Qclaw OpenClaw, Qclaw一键部署, Qclaw下载, Qclaw功能, Qclaw智能体, OpenClaw QClaw, 腾讯AI智能体, Qclaw本地部署, Qclaw自然语言';
+---
+
+<ClawdBotLayout
+  title={title}
+  description={description}
+  keywords={keywords}
+  locale={locale}
+  path="zh/qclaw"
+  singleLang={true}
+  alternates={[
+    { hreflang: 'en', href: 'https://clawdbot.free/qclaw/' },
+    { hreflang: 'zh-CN', href: 'https://clawdbot.free/zh/qclaw/' },
+    { hreflang: 'x-default', href: 'https://clawdbot.free/qclaw/' },
+  ]}
+>
+  <ClawdBotHeader locale={locale} />
+  <main>
+    <noscript>
+      <section style="padding:2rem 1.5rem;max-width:720px;margin:0 auto;">
+        <h1>QClaw AI 是什么？腾讯 QClaw 一键部署 OpenClaw 智能体</h1>
+        <p>QClaw 是腾讯开发的 AI 智能体产品，基于开源框架 OpenClaw 封装，支持一键本地部署，通过微信和 QQ 用自然语言控制电脑。</p>
+        <h2>QClaw 核心功能</h2>
+        <p>QClaw AI 支持一键在本地电脑部署 OpenClaw 智能体。QClaw 同时接入微信和 QQ 双端。QClaw 支持 Kimi、MiniMax 等国产大模型及自定义模型。QClaw 本地运行，数据不离开设备。</p>
+        <h2>QClaw 使用步骤</h2>
+        <p>下载 QClaw 一键启动包。扫码绑定微信或 QQ 账号。选择 AI 模型（Kimi、MiniMax 或自定义）。在微信或 QQ 发送自然语言消息控制电脑。</p>
+        <h2>QClaw 与 OpenClaw 的区别</h2>
+        <p>OpenClaw 是开源 AI 智能体框架，QClaw 是腾讯对 OpenClaw 的产品化封装，增加了图形界面和微信/QQ 接入。OpenClaw（ClawdBot）现已可用，免费开源，访问 clawdbot.free。</p>
+      </section>
+    </noscript>
+
+    <!-- Hero -->
+    <section class="qclaw-hero">
+      <div class="clawd-container">
+        <div class="qclaw-hero-inner">
+          <div class="qclaw-badge">🦞 腾讯 · 2026年3月</div>
+          <h1 class="qclaw-title">QClaw AI</h1>
+          <p class="qclaw-subtitle">一键部署 OpenClaw · 微信 & QQ 双端接入</p>
+          <p class="qclaw-desc">
+            QClaw 是腾讯基于开源 AI 智能体框架 <strong>OpenClaw</strong> 封装的产品化工具。
+            无需任何技术背景，一键即可在本地电脑部署强大的 AI 智能体，
+            并通过微信或 QQ 发送自然语言指令，远程控制电脑完成各类任务。
+          </p>
+          <div class="qclaw-hero-cta">
+            <a href="/zh/" class="clawd-btn clawd-btn-primary">免费体验 OpenClaw</a>
+            <a href="#what-is-qclaw" class="clawd-btn clawd-btn-secondary">了解更多 ↓</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What is QClaw -->
+    <section id="what-is-qclaw" class="qclaw-section">
+      <div class="clawd-container">
+        <h2 class="qclaw-section-title">QClaw 是什么？</h2>
+        <p class="qclaw-section-lead">
+          QClaw（也写作 Qclaw）是腾讯内部研发的 AI 智能体产品，于 2026 年 3 月 9 日开始内测。
+          它并非从零构建新框架，而是将热门开源项目 <strong>OpenClaw</strong>（小龙虾）
+          封装成一款桌面应用，让普通用户也能轻松使用 AI 自动化能力。
+        </p>
+        <div class="qclaw-cards">
+          <div class="qclaw-card">
+            <div class="qclaw-card-icon">🚀</div>
+            <h3>一键部署</h3>
+            <p>下载 QClaw 后，在本地电脑一键启动 OpenClaw 智能体。无需命令行，无需手动配置 API，开箱即用。</p>
+          </div>
+          <div class="qclaw-card">
+            <div class="qclaw-card-icon">💬</div>
+            <h3>微信 & QQ 双端接入</h3>
+            <p>QClaw 同时打通微信和 QQ，用户可以直接在手机上发消息，实时控制电脑执行任务。</p>
+          </div>
+          <div class="qclaw-card">
+            <div class="qclaw-card-icon">🤖</div>
+            <h3>多模型支持</h3>
+            <p>QClaw AI 支持 Kimi（月之暗面）、MiniMax 等国产大模型，同时支持自定义模型配置。</p>
+          </div>
+          <div class="qclaw-card">
+            <div class="qclaw-card-icon">🔒</div>
+            <h3>本地运行 · 数据私密</h3>
+            <p>QClaw 完全运行在你自己的电脑上，文件、指令和数据不会上传到远程服务器。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How QClaw Works -->
+    <section class="qclaw-section qclaw-section-alt">
+      <div class="clawd-container">
+        <h2 class="qclaw-section-title">QClaw AI 如何使用？</h2>
+        <div class="qclaw-steps">
+          <div class="qclaw-step">
+            <div class="qclaw-step-num">1</div>
+            <div class="qclaw-step-body">
+              <h3>下载并安装 QClaw</h3>
+              <p>获取 QClaw 一键启动包。如果电脑上已安装 OpenClaw，QClaw 可以自动识别并一键关联，无需重新安装。</p>
+            </div>
+          </div>
+          <div class="qclaw-step">
+            <div class="qclaw-step-num">2</div>
+            <div class="qclaw-step-body">
+              <h3>连接微信或 QQ</h3>
+              <p>在 QClaw 内扫描二维码绑定微信或 QQ 账号，两个平台可同时接入，真正实现双端控制。</p>
+            </div>
+          </div>
+          <div class="qclaw-step">
+            <div class="qclaw-step-num">3</div>
+            <div class="qclaw-step-body">
+              <h3>选择 AI 模型</h3>
+              <p>从 Kimi、MiniMax 等支持的模型中选择，或配置自定义模型接口。QClaw AI 可适配你偏好的大语言模型后端。</p>
+            </div>
+          </div>
+          <div class="qclaw-step">
+            <div class="qclaw-step-num">4</div>
+            <div class="qclaw-step-body">
+              <h3>用聊天控制电脑</h3>
+              <p>在微信或 QQ 里发送自然语言消息，QClaw AI 将指令传递给 OpenClaw 执行：整理文件、填写表单、浏览网页、运行命令等。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QClaw vs OpenClaw -->
+    <section class="qclaw-section">
+      <div class="clawd-container">
+        <h2 class="qclaw-section-title">QClaw 与 OpenClaw 的区别</h2>
+        <p class="qclaw-section-lead">QClaw 不是 OpenClaw 的替代品，而是它的产品化封装层。两者关系如下：</p>
+        <div class="qclaw-compare">
+          <div class="qclaw-compare-col">
+            <div class="qclaw-compare-header qclaw-compare-header-qclaw">QClaw AI</div>
+            <ul class="qclaw-compare-list">
+              <li>带图形界面的桌面应用</li>
+              <li>一键本地部署</li>
+              <li>内置微信 & QQ 接入</li>
+              <li>面向普通用户设计</li>
+              <li>腾讯内部研发（内测中）</li>
+              <li>支持 Kimi、MiniMax、自定义模型</li>
+            </ul>
+          </div>
+          <div class="qclaw-compare-col">
+            <div class="qclaw-compare-header qclaw-compare-header-openclaw">OpenClaw</div>
+            <ul class="qclaw-compare-list">
+              <li>开源智能体框架（MIT 协议）</li>
+              <li>命令行安装，灵活可控</li>
+              <li>支持 12+ 消息平台</li>
+              <li>开发者友好，高度可扩展</li>
+              <li>社区驱动，跨平台支持</li>
+              <li>语音模式、实时画布、ClawHub</li>
+            </ul>
+          </div>
+        </div>
+        <p class="qclaw-compare-note">
+          不想等 QClaw 公测？<a href="/zh/">OpenClaw（ClawdBot）</a>现在就可以免费使用，
+          开源、跨平台，支持 WhatsApp、Telegram、Discord 等。
+        </p>
+      </div>
+    </section>
+
+    <!-- QClaw Features -->
+    <section class="qclaw-section qclaw-section-alt">
+      <div class="clawd-container">
+        <h2 class="qclaw-section-title">QClaw AI 核心功能</h2>
+        <div class="qclaw-features">
+          <div class="qclaw-feature">
+            <span class="qclaw-feature-icon">📁</span>
+            <div>
+              <h3>文件管理</h3>
+              <p>用自然语言让 QClaw AI 整理、重命名、移动或搜索电脑上的文件。</p>
+            </div>
+          </div>
+          <div class="qclaw-feature">
+            <span class="qclaw-feature-icon">📝</span>
+            <div>
+              <h3>表单自动填写</h3>
+              <p>QClaw 可自动填写表单、起草文档，处理重复性数据录入任务。</p>
+            </div>
+          </div>
+          <div class="qclaw-feature">
+            <span class="qclaw-feature-icon">🌐</span>
+            <div>
+              <h3>网页浏览</h3>
+              <p>QClaw AI 可以浏览网页、搜索信息并汇总结果，全程由一条聊天消息触发。</p>
+            </div>
+          </div>
+          <div class="qclaw-feature">
+            <span class="qclaw-feature-icon">⚙️</span>
+            <div>
+              <h3>执行终端命令</h3>
+              <p>通过微信/QQ 远程在本地电脑执行 Shell 命令，QClaw 负责中转和执行。</p>
+            </div>
+          </div>
+          <div class="qclaw-feature">
+            <span class="qclaw-feature-icon">📅</span>
+            <div>
+              <h3>日历与邮件</h3>
+              <p>用自然语言管理日程、发送邮件，QClaw AI 负责具体执行操作。</p>
+            </div>
+          </div>
+          <div class="qclaw-feature">
+            <span class="qclaw-feature-icon">🔗</span>
+            <div>
+              <h3>关联已有 OpenClaw</h3>
+              <p>已在运行 OpenClaw？QClaw 可自动检测并一键关联，无需重新安装。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="qclaw-section">
+      <div class="clawd-container">
+        <h2 class="qclaw-section-title">QClaw 常见问题</h2>
+        <div class="qclaw-faq">
+          <div class="qclaw-faq-item">
+            <h3>QClaw 现在可以下载吗？</h3>
+            <p>截至 2026 年 3 月，QClaw 仍处于腾讯内部测试阶段，尚未公开发布。如需立即使用，可以试试 <a href="/zh/">OpenClaw（ClawdBot）</a>，完全免费开源。</p>
+          </div>
+          <div class="qclaw-faq-item">
+            <h3>QClaw 和 OpenClaw 有什么区别？</h3>
+            <p>OpenClaw 是开源 AI 智能体框架，QClaw 是腾讯对 OpenClaw 的产品化封装，增加了图形界面、一键部署和微信/QQ 原生接入能力。</p>
+          </div>
+          <div class="qclaw-faq-item">
+            <h3>QClaw 支持哪些 AI 模型？</h3>
+            <p>QClaw AI 支持 Kimi（月之暗面）、MiniMax，以及自定义模型配置，专为国产大模型生态设计，同时兼容国际模型。</p>
+          </div>
+          <div class="qclaw-faq-item">
+            <h3>QClaw 安全吗？</h3>
+            <p>QClaw 在本地运行，数据留在你的设备上。但由于智能体可以执行 Shell 命令，建议用户仔细审查授予的权限范围。内测期间 OpenClaw CVE-2026-25253 漏洞也引发了对 QClaw 安全性的关注。</p>
+          </div>
+          <div class="qclaw-faq-item">
+            <h3>不用微信/QQ 能用 QClaw 吗？</h3>
+            <p>QClaw 的主要交互入口是微信和 QQ。如果需要支持 WhatsApp、Telegram、Discord、Slack 等更多平台，可以直接使用 <a href="/zh/">OpenClaw（ClawdBot）</a>。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="qclaw-cta-section">
+      <div class="clawd-container">
+        <div class="qclaw-cta-inner">
+          <h2>现在就用 OpenClaw，无需等待</h2>
+          <p>QClaw 仍在内测中。OpenClaw（ClawdBot）今天就可以使用 —— 免费、开源，支持 macOS、Windows、Linux，以及 WhatsApp、Telegram、Discord 等平台。</p>
+          <a href="/zh/" class="clawd-btn clawd-btn-primary">免费获取 OpenClaw →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <ClawdBotFooter locale={locale} />
+</ClawdBotLayout>
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "QClaw 现在可以下载吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "截至 2026 年 3 月，QClaw 仍处于腾讯内部测试阶段，尚未公开发布。如需立即使用，可以试试 OpenClaw（ClawdBot），完全免费开源，访问 clawdbot.free。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "QClaw 和 OpenClaw 有什么区别？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "OpenClaw 是开源 AI 智能体框架，QClaw 是腾讯对 OpenClaw 的产品化封装，增加了图形界面、一键部署和微信/QQ 原生接入能力。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "QClaw 支持哪些 AI 模型？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "QClaw AI 支持 Kimi（月之暗面）、MiniMax，以及自定义模型配置，专为国产大模型生态设计，同时兼容国际模型。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "QClaw 安全吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "QClaw 在本地运行，数据留在你的设备上。但由于智能体可以执行 Shell 命令，建议用户仔细审查授予的权限范围。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "不用微信/QQ 能用 QClaw 吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "QClaw 的主要交互入口是微信和 QQ。如果需要支持 WhatsApp、Telegram、Discord、Slack 等更多平台，可以直接使用 OpenClaw（ClawdBot），访问 clawdbot.free。"
+      }
+    }
+  ]
+})} />
+
+<style>
+  .qclaw-hero {
+    padding: 8rem 0 5rem;
+    background: radial-gradient(ellipse at top center, rgba(255, 77, 77, 0.1) 0%, transparent 60%),
+                radial-gradient(ellipse at bottom left, rgba(0, 229, 204, 0.06) 0%, transparent 50%);
+    text-align: center;
+  }
+  .qclaw-hero-inner { max-width: 700px; margin: 0 auto; }
+  .qclaw-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-accent);
+    border-radius: var(--radius-full);
+    color: var(--coral-bright);
+    font-size: 0.85rem; font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+  .qclaw-title {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 10vw, 5rem);
+    font-weight: 700; line-height: 1.1;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+  }
+  .qclaw-subtitle {
+    font-size: 1.2rem; font-weight: 500;
+    color: var(--coral-bright);
+    margin-bottom: 1.25rem;
+  }
+  .qclaw-desc {
+    font-size: 1.05rem; color: var(--text-secondary);
+    line-height: 1.75; margin-bottom: 2rem;
+  }
+  .qclaw-desc strong { color: var(--text-primary); }
+  .qclaw-hero-cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+  .qclaw-section { padding: 5rem 0; }
+  .qclaw-section-alt { background: var(--bg-surface); }
+  .qclaw-section-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700; color: var(--text-primary);
+    margin-bottom: 1rem; text-align: center;
+  }
+  .qclaw-section-lead {
+    font-size: 1.05rem; color: var(--text-secondary);
+    line-height: 1.75; text-align: center;
+    max-width: 680px; margin: 0 auto 3rem;
+  }
+
+  .qclaw-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem; margin-top: 3rem;
+  }
+  .qclaw-card {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    transition: border-color var(--transition-normal);
+  }
+  .qclaw-card:hover { border-color: var(--border-accent); }
+  .qclaw-card-icon { font-size: 2rem; margin-bottom: 1rem; }
+  .qclaw-card h3 { font-size: 1.1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.5rem; }
+  .qclaw-card p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.65; }
+
+  .qclaw-steps { display: flex; flex-direction: column; gap: 1.5rem; max-width: 680px; margin: 3rem auto 0; }
+  .qclaw-step { display: flex; gap: 1.5rem; align-items: flex-start; }
+  .qclaw-step-num {
+    flex-shrink: 0;
+    width: 2.5rem; height: 2.5rem;
+    background: linear-gradient(135deg, var(--coral-bright), var(--coral-mid));
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 1rem; color: white;
+  }
+  .qclaw-step-body h3 { font-size: 1.05rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.4rem; }
+  .qclaw-step-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.65; }
+
+  .qclaw-compare {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1.5rem; margin-top: 2.5rem;
+  }
+  .qclaw-compare-col {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+  .qclaw-compare-header {
+    padding: 1rem 1.5rem;
+    font-weight: 700; font-size: 1.1rem;
+    text-align: center;
+  }
+  .qclaw-compare-header-qclaw { background: rgba(255, 77, 77, 0.15); color: var(--coral-bright); }
+  .qclaw-compare-header-openclaw { background: rgba(0, 229, 204, 0.1); color: var(--cyan-bright); }
+  .qclaw-compare-list { list-style: none; padding: 1.25rem 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; }
+  .qclaw-compare-list li { font-size: 0.95rem; color: var(--text-secondary); padding-left: 1.25rem; position: relative; }
+  .qclaw-compare-list li::before { content: '✓'; position: absolute; left: 0; color: var(--coral-bright); font-weight: 700; }
+  .qclaw-compare-note {
+    text-align: center; margin-top: 2rem;
+    font-size: 0.95rem; color: var(--text-secondary);
+  }
+  .qclaw-compare-note a { color: var(--coral-bright); text-decoration: none; }
+  .qclaw-compare-note a:hover { text-decoration: underline; }
+
+  .qclaw-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem; margin-top: 3rem;
+  }
+  .qclaw-feature {
+    display: flex; gap: 1rem; align-items: flex-start;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+  }
+  .qclaw-feature-icon { font-size: 1.75rem; flex-shrink: 0; }
+  .qclaw-feature h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.35rem; }
+  .qclaw-feature p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; }
+
+  .qclaw-faq { display: flex; flex-direction: column; gap: 1.5rem; max-width: 720px; margin: 3rem auto 0; }
+  .qclaw-faq-item {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+  }
+  .qclaw-faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.5rem; }
+  .qclaw-faq-item p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.65; }
+  .qclaw-faq-item a { color: var(--coral-bright); text-decoration: none; }
+  .qclaw-faq-item a:hover { text-decoration: underline; }
+
+  .qclaw-cta-section {
+    padding: 5rem 0;
+    background: radial-gradient(ellipse at center, rgba(255, 77, 77, 0.1) 0%, transparent 70%);
+  }
+  .qclaw-cta-inner { text-align: center; max-width: 560px; margin: 0 auto; }
+  .qclaw-cta-inner h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    font-weight: 700; color: var(--text-primary);
+    margin-bottom: 1rem;
+  }
+  .qclaw-cta-inner p { font-size: 1rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 2rem; }
+
+  @media (max-width: 640px) {
+    .qclaw-compare { grid-template-columns: 1fr; }
+    .qclaw-hero-cta { flex-direction: column; align-items: center; }
+  }
+</style>

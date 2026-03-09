@@ -1,0 +1,481 @@
+---
+/**
+ * Qclaw 介绍页面 - SEO 优化
+ * 关键词: Qclaw, Qclaw AI, QClaw Tencent, QClaw OpenClaw
+ */
+import ClawdBotLayout from '../layouts/ClawdBotLayout.astro';
+import ClawdBotHeader from '../components/clawd-bot/ClawdBotHeader.astro';
+import ClawdBotFooter from '../components/clawd-bot/ClawdBotFooter.astro';
+
+const locale = 'en';
+const title = 'QClaw AI - Tencent One-Click OpenClaw Agent for WeChat & QQ';
+const description = 'QClaw is Tencent\'s AI agent that wraps OpenClaw into a one-click local deployment. Control your PC via WeChat and QQ with natural language. Supports Kimi, MiniMax, and custom AI models.';
+const keywords = 'QClaw, QClaw AI, Qclaw Tencent, Qclaw OpenClaw, Qclaw WeChat, Qclaw QQ, Qclaw AI agent, Qclaw download, Qclaw install, Qclaw features, Qclaw one-click, OpenClaw QClaw, Tencent AI agent, QClaw local deployment, QClaw natural language';
+---
+
+<ClawdBotLayout
+  title={title}
+  description={description}
+  keywords={keywords}
+  locale={locale}
+  path="qclaw"
+  singleLang={true}
+  alternates={[
+    { hreflang: 'en', href: 'https://clawdbot.free/qclaw/' },
+    { hreflang: 'zh-CN', href: 'https://clawdbot.free/zh/qclaw/' },
+    { hreflang: 'x-default', href: 'https://clawdbot.free/qclaw/' },
+  ]}
+>
+  <ClawdBotHeader locale={locale} />
+  <main>
+    <noscript>
+      <section style="padding:2rem 1.5rem;max-width:720px;margin:0 auto;">
+        <h1>QClaw AI - Tencent One-Click OpenClaw Agent</h1>
+        <p>QClaw is Tencent's AI agent product that wraps the open-source OpenClaw framework into a one-click local deployment. Users can control their PC via WeChat and QQ using natural language commands.</p>
+        <h2>QClaw Key Features</h2>
+        <p>QClaw AI supports one-click deployment of OpenClaw on local computers. QClaw integrates with WeChat and QQ for dual-end access. QClaw supports Kimi, MiniMax, and custom AI models. QClaw runs locally — your data stays on your device.</p>
+        <h2>How QClaw Works</h2>
+        <p>Download the QClaw one-click startup package. Connect WeChat or QQ by scanning a QR code. Choose your AI model (Kimi, MiniMax, or custom). Send natural language messages from WeChat or QQ to control your PC.</p>
+        <h2>QClaw vs OpenClaw</h2>
+        <p>OpenClaw is the open-source AI agent framework. QClaw is Tencent's productized wrapper around OpenClaw, adding a GUI and WeChat/QQ integration. OpenClaw (ClawdBot) is available now at clawdbot.free — free and open-source.</p>
+      </section>
+    </noscript>
+
+    <!-- Hero -->
+    <section class="qclaw-hero">
+      <div class="clawd-container">
+        <div class="qclaw-hero-inner">
+          <div class="qclaw-badge">🦞 Tencent · March 2026</div>
+          <h1 class="qclaw-title">QClaw AI</h1>
+          <p class="qclaw-subtitle">One-Click OpenClaw Agent via WeChat & QQ</p>
+          <p class="qclaw-desc">
+            QClaw is Tencent's productized wrapper around the open-source <strong>OpenClaw</strong> AI agent framework.
+            It lets anyone deploy a powerful local AI agent in one click — no technical setup required —
+            and control their computer through natural language commands sent directly inside WeChat or QQ.
+          </p>
+          <div class="qclaw-hero-cta">
+            <a href="/" class="clawd-btn clawd-btn-primary">Try OpenClaw Free</a>
+            <a href="#what-is-qclaw" class="clawd-btn clawd-btn-secondary">Learn More ↓</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What is QClaw -->
+    <section id="what-is-qclaw" class="qclaw-section">
+      <div class="clawd-container">
+        <h2 class="qclaw-section-title">What Is QClaw?</h2>
+        <p class="qclaw-section-lead">
+          QClaw (also written as Qclaw) is an AI agent product developed internally at Tencent, first reported in internal testing on March 9, 2026.
+          Rather than building a new agent framework from scratch, QClaw packages the popular open-source <strong>OpenClaw</strong> agent
+          into a streamlined desktop application — making advanced AI automation accessible to non-technical users.
+        </p>
+        <div class="qclaw-cards">
+          <div class="qclaw-card">
+            <div class="qclaw-card-icon">🚀</div>
+            <h3>One-Click Deployment</h3>
+            <p>Download QClaw and deploy OpenClaw on your local machine instantly. No command line, no API keys to configure manually — just install and go.</p>
+          </div>
+          <div class="qclaw-card">
+            <div class="qclaw-card-icon">💬</div>
+            <h3>WeChat & QQ Integration</h3>
+            <p>QClaw bridges OpenClaw with both WeChat and QQ. Send natural language commands from your phone and watch your PC execute them in real time.</p>
+          </div>
+          <div class="qclaw-card">
+            <div class="qclaw-card-icon">🤖</div>
+            <h3>Multi-Model Support</h3>
+            <p>QClaw AI supports domestic models including Kimi (Moonshot AI) and MiniMax, as well as custom model configurations for enterprise use.</p>
+          </div>
+          <div class="qclaw-card">
+            <div class="qclaw-card-icon">🔒</div>
+            <h3>Local & Private</h3>
+            <p>QClaw runs entirely on your own computer. Your files, commands, and data stay on your machine — not on a remote server.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How QClaw Works -->
+    <section class="qclaw-section qclaw-section-alt">
+      <div class="clawd-container">
+        <h2 class="qclaw-section-title">How QClaw AI Works</h2>
+        <div class="qclaw-steps">
+          <div class="qclaw-step">
+            <div class="qclaw-step-num">1</div>
+            <div class="qclaw-step-body">
+              <h3>Download & Install QClaw</h3>
+              <p>Get the QClaw one-click startup package. If OpenClaw is already installed on your machine, QClaw can link to it automatically with a single click.</p>
+            </div>
+          </div>
+          <div class="qclaw-step">
+            <div class="qclaw-step-num">2</div>
+            <div class="qclaw-step-body">
+              <h3>Connect WeChat or QQ</h3>
+              <p>Scan a QR code inside QClaw to link your WeChat or QQ account. Both platforms are supported simultaneously — dual-end access out of the box.</p>
+            </div>
+          </div>
+          <div class="qclaw-step">
+            <div class="qclaw-step-num">3</div>
+            <div class="qclaw-step-body">
+              <h3>Choose Your AI Model</h3>
+              <p>Select from supported models like Kimi or MiniMax, or configure a custom model endpoint. QClaw AI adapts to your preferred LLM backend.</p>
+            </div>
+          </div>
+          <div class="qclaw-step">
+            <div class="qclaw-step-num">4</div>
+            <div class="qclaw-step-body">
+              <h3>Control Your PC via Chat</h3>
+              <p>Send natural language messages from WeChat or QQ. QClaw AI relays them to OpenClaw, which executes tasks: organizing files, filling forms, browsing the web, running commands, and more.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QClaw vs OpenClaw -->
+    <section class="qclaw-section">
+      <div class="clawd-container">
+        <h2 class="qclaw-section-title">QClaw vs OpenClaw</h2>
+        <p class="qclaw-section-lead">QClaw is not a replacement for OpenClaw — it's a productized layer on top of it. Here's how they relate:</p>
+        <div class="qclaw-compare">
+          <div class="qclaw-compare-col">
+            <div class="qclaw-compare-header qclaw-compare-header-qclaw">QClaw AI</div>
+            <ul class="qclaw-compare-list">
+              <li>Desktop app with GUI</li>
+              <li>One-click local deployment</li>
+              <li>WeChat & QQ integration built-in</li>
+              <li>Designed for non-technical users</li>
+              <li>Developed by Tencent (internal testing)</li>
+              <li>Supports Kimi, MiniMax, custom models</li>
+            </ul>
+          </div>
+          <div class="qclaw-compare-col">
+            <div class="qclaw-compare-header qclaw-compare-header-openclaw">OpenClaw</div>
+            <ul class="qclaw-compare-list">
+              <li>Open-source agent framework (MIT)</li>
+              <li>CLI-based setup</li>
+              <li>Supports 12+ messaging platforms</li>
+              <li>Full developer control & extensibility</li>
+              <li>Community-driven, cross-platform</li>
+              <li>Voice Mode, Live Canvas, ClawHub</li>
+            </ul>
+          </div>
+        </div>
+        <p class="qclaw-compare-note">
+          Want the full power of OpenClaw without waiting for QClaw's public release?
+          <a href="/">ClawdBot (OpenClaw)</a> is available now — free, open-source, and runs on macOS, Windows, and Linux.
+        </p>
+      </div>
+    </section>
+
+    <!-- QClaw Features -->
+    <section class="qclaw-section qclaw-section-alt">
+      <div class="clawd-container">
+        <h2 class="qclaw-section-title">QClaw AI Key Features</h2>
+        <div class="qclaw-features">
+          <div class="qclaw-feature">
+            <span class="qclaw-feature-icon">📁</span>
+            <div>
+              <h3>File Management</h3>
+              <p>Ask QClaw AI to organize, rename, move, or search files on your computer using plain language.</p>
+            </div>
+          </div>
+          <div class="qclaw-feature">
+            <span class="qclaw-feature-icon">📝</span>
+            <div>
+              <h3>Form Automation</h3>
+              <p>QClaw can automatically fill out forms, draft documents, and handle repetitive data entry tasks.</p>
+            </div>
+          </div>
+          <div class="qclaw-feature">
+            <span class="qclaw-feature-icon">🌐</span>
+            <div>
+              <h3>Web Browsing</h3>
+              <p>QClaw AI can browse the web, search for information, and summarize results — all triggered from a chat message.</p>
+            </div>
+          </div>
+          <div class="qclaw-feature">
+            <span class="qclaw-feature-icon">⚙️</span>
+            <div>
+              <h3>Shell Commands</h3>
+              <p>Execute terminal commands on your machine remotely. QClaw relays instructions from WeChat/QQ to your local shell.</p>
+            </div>
+          </div>
+          <div class="qclaw-feature">
+            <span class="qclaw-feature-icon">📅</span>
+            <div>
+              <h3>Calendar & Email</h3>
+              <p>Manage your schedule and send emails through natural language — QClaw AI handles the execution.</p>
+            </div>
+          </div>
+          <div class="qclaw-feature">
+            <span class="qclaw-feature-icon">🔗</span>
+            <div>
+              <h3>Existing OpenClaw Link</h3>
+              <p>Already running OpenClaw? QClaw can detect and link to your existing installation with one click, no reinstall needed.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="qclaw-section">
+      <div class="clawd-container">
+        <h2 class="qclaw-section-title">QClaw FAQ</h2>
+        <div class="qclaw-faq">
+          <div class="qclaw-faq-item">
+            <h3>Is QClaw available to download now?</h3>
+            <p>As of March 2026, QClaw is in internal testing at Tencent and not yet publicly available. For a fully available alternative, <a href="/">OpenClaw (ClawdBot)</a> is free and open-source.</p>
+          </div>
+          <div class="qclaw-faq-item">
+            <h3>What is the difference between QClaw and OpenClaw?</h3>
+            <p>OpenClaw is the open-source AI agent framework. QClaw is Tencent's productized packaging of OpenClaw, adding a GUI, one-click setup, and native WeChat/QQ integration.</p>
+          </div>
+          <div class="qclaw-faq-item">
+            <h3>What AI models does QClaw support?</h3>
+            <p>QClaw AI supports Kimi (Moonshot AI), MiniMax, and custom model configurations. It is designed to work with Chinese domestic LLMs as well as international models.</p>
+          </div>
+          <div class="qclaw-faq-item">
+            <h3>Is QClaw safe to use?</h3>
+            <p>QClaw runs locally on your machine, which means your data stays on your device. However, as with any agent that can execute shell commands, users should review what permissions they grant. Note that OpenClaw CVE-2026-25253 drew scrutiny around QClaw's security posture during testing.</p>
+          </div>
+          <div class="qclaw-faq-item">
+            <h3>Can I use QClaw without WeChat or QQ?</h3>
+            <p>QClaw's primary interface is WeChat and QQ. For a platform-agnostic experience supporting WhatsApp, Telegram, Discord, Slack, and 12+ more, use <a href="/">OpenClaw (ClawdBot)</a> directly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="qclaw-cta-section">
+      <div class="clawd-container">
+        <div class="qclaw-cta-inner">
+          <h2>Try OpenClaw Now — No Waiting</h2>
+          <p>QClaw is still in testing. OpenClaw (ClawdBot) is available today — free, open-source, and works on any platform with WhatsApp, Telegram, Discord, and more.</p>
+          <a href="/" class="clawd-btn clawd-btn-primary">Get OpenClaw Free →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <ClawdBotFooter locale={locale} />
+</ClawdBotLayout>
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is QClaw available to download now?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "As of March 2026, QClaw is in internal testing at Tencent and not yet publicly available. For a fully available alternative, OpenClaw (ClawdBot) is free and open-source at clawdbot.free."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between QClaw and OpenClaw?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "OpenClaw is the open-source AI agent framework. QClaw is Tencent's productized packaging of OpenClaw, adding a GUI, one-click setup, and native WeChat/QQ integration."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What AI models does QClaw support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "QClaw AI supports Kimi (Moonshot AI), MiniMax, and custom model configurations. It is designed to work with Chinese domestic LLMs as well as international models."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is QClaw safe to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "QClaw runs locally on your machine, which means your data stays on your device. However, as with any agent that can execute shell commands, users should review what permissions they grant."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use QClaw without WeChat or QQ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "QClaw's primary interface is WeChat and QQ. For a platform-agnostic experience supporting WhatsApp, Telegram, Discord, Slack, and 12+ more, use OpenClaw (ClawdBot) directly at clawdbot.free."
+      }
+    }
+  ]
+})} />
+
+<style>
+  /* Hero */
+  .qclaw-hero {
+    padding: 8rem 0 5rem;
+    background: radial-gradient(ellipse at top center, rgba(255, 77, 77, 0.1) 0%, transparent 60%),
+                radial-gradient(ellipse at bottom left, rgba(0, 229, 204, 0.06) 0%, transparent 50%);
+    text-align: center;
+  }
+  .qclaw-hero-inner { max-width: 700px; margin: 0 auto; }
+  .qclaw-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-accent);
+    border-radius: var(--radius-full);
+    color: var(--coral-bright);
+    font-size: 0.85rem; font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+  .qclaw-title {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 10vw, 5rem);
+    font-weight: 700; line-height: 1.1;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+  }
+  .qclaw-subtitle {
+    font-size: 1.2rem; font-weight: 500;
+    color: var(--coral-bright);
+    text-transform: uppercase; letter-spacing: 0.06em;
+    margin-bottom: 1.25rem;
+  }
+  .qclaw-desc {
+    font-size: 1.05rem; color: var(--text-secondary);
+    line-height: 1.75; margin-bottom: 2rem;
+  }
+  .qclaw-desc strong { color: var(--text-primary); }
+  .qclaw-hero-cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+  /* Sections */
+  .qclaw-section { padding: 5rem 0; }
+  .qclaw-section-alt { background: var(--bg-surface); }
+  .qclaw-section-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700; color: var(--text-primary);
+    margin-bottom: 1rem; text-align: center;
+  }
+  .qclaw-section-lead {
+    font-size: 1.05rem; color: var(--text-secondary);
+    line-height: 1.75; text-align: center;
+    max-width: 680px; margin: 0 auto 3rem;
+  }
+
+  /* Cards */
+  .qclaw-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem; margin-top: 3rem;
+  }
+  .qclaw-card {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    transition: border-color var(--transition-normal);
+  }
+  .qclaw-card:hover { border-color: var(--border-accent); }
+  .qclaw-card-icon { font-size: 2rem; margin-bottom: 1rem; }
+  .qclaw-card h3 { font-size: 1.1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.5rem; }
+  .qclaw-card p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.65; }
+
+  /* Steps */
+  .qclaw-steps { display: flex; flex-direction: column; gap: 1.5rem; max-width: 680px; margin: 3rem auto 0; }
+  .qclaw-step { display: flex; gap: 1.5rem; align-items: flex-start; }
+  .qclaw-step-num {
+    flex-shrink: 0;
+    width: 2.5rem; height: 2.5rem;
+    background: linear-gradient(135deg, var(--coral-bright), var(--coral-mid));
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 1rem; color: white;
+  }
+  .qclaw-step-body h3 { font-size: 1.05rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.4rem; }
+  .qclaw-step-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.65; }
+
+  /* Compare */
+  .qclaw-compare {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1.5rem; margin-top: 2.5rem;
+  }
+  .qclaw-compare-col {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+  .qclaw-compare-header {
+    padding: 1rem 1.5rem;
+    font-weight: 700; font-size: 1.1rem;
+    text-align: center;
+  }
+  .qclaw-compare-header-qclaw { background: rgba(255, 77, 77, 0.15); color: var(--coral-bright); }
+  .qclaw-compare-header-openclaw { background: rgba(0, 229, 204, 0.1); color: var(--cyan-bright); }
+  .qclaw-compare-list { list-style: none; padding: 1.25rem 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; }
+  .qclaw-compare-list li { font-size: 0.95rem; color: var(--text-secondary); padding-left: 1.25rem; position: relative; }
+  .qclaw-compare-list li::before { content: '✓'; position: absolute; left: 0; color: var(--coral-bright); font-weight: 700; }
+  .qclaw-compare-note {
+    text-align: center; margin-top: 2rem;
+    font-size: 0.95rem; color: var(--text-secondary);
+  }
+  .qclaw-compare-note a { color: var(--coral-bright); text-decoration: none; }
+  .qclaw-compare-note a:hover { text-decoration: underline; }
+
+  /* Features */
+  .qclaw-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem; margin-top: 3rem;
+  }
+  .qclaw-feature {
+    display: flex; gap: 1rem; align-items: flex-start;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+  }
+  .qclaw-feature-icon { font-size: 1.75rem; flex-shrink: 0; }
+  .qclaw-feature h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.35rem; }
+  .qclaw-feature p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; }
+
+  /* FAQ */
+  .qclaw-faq { display: flex; flex-direction: column; gap: 1.5rem; max-width: 720px; margin: 3rem auto 0; }
+  .qclaw-faq-item {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+  }
+  .qclaw-faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.5rem; }
+  .qclaw-faq-item p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.65; }
+  .qclaw-faq-item a { color: var(--coral-bright); text-decoration: none; }
+  .qclaw-faq-item a:hover { text-decoration: underline; }
+
+  /* CTA Section */
+  .qclaw-cta-section {
+    padding: 5rem 0;
+    background: radial-gradient(ellipse at center, rgba(255, 77, 77, 0.1) 0%, transparent 70%);
+  }
+  .qclaw-cta-inner {
+    text-align: center; max-width: 560px; margin: 0 auto;
+  }
+  .qclaw-cta-inner h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    font-weight: 700; color: var(--text-primary);
+    margin-bottom: 1rem;
+  }
+  .qclaw-cta-inner p {
+    font-size: 1rem; color: var(--text-secondary);
+    line-height: 1.7; margin-bottom: 2rem;
+  }
+
+  @media (max-width: 640px) {
+    .qclaw-compare { grid-template-columns: 1fr; }
+    .qclaw-hero-cta { flex-direction: column; align-items: center; }
+  }
+</style>
